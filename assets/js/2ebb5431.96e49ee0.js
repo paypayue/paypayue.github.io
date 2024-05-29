@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[5507],{5025:e=>{e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"Entidades","slug":"/category/entidades","permalink":"/category/entidades","sidebar":"docs","navigation":{"previous":{"title":"Gera\xe7\xe3o de SDKs","permalink":"/sdks"},"next":{"title":"Consultar entidade","permalink":"/entities/get"}}}}')}}]);
