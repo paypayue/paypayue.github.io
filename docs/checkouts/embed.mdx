@@ -1,0 +1,122 @@
+---
+sidebar_position: 5
+---
+
+# Checkout incorporado numa página web
+
+Para obter o link da incorporação é necessário realizar um pedido POST /checkouts com os dados pretendidos.
+
+O parâmetro `redirects` do tipo `action` é obrigatório e deverá conter o url para onde o cliente deve ser redireccionado após o processamento do pagamento.
+O parâmetro id do checkout é automaticamente concatenado ao url no momento do redireccionamento.
+
+```json
+    {
+		...
+
+		"redirects": [
+			{
+				"type": "action", // <== Redireccionamento obrigatório
+				"url": "https://www.url-action.dominio"
+			}
+		]
+	}
+```
+
+> **POST** /checkouts
+
+Criação do checkout com os seguintes dados:
+
+- **Idioma:** Português
+- **Layout da página:** Incorporado
+- **Montante:** 5€
+- **Método de pagamento:** Cartão de Crédito/Débito (CC)
+- **Código do produto:** REFPRODUTO_1
+- **Descrição do produto:** Computador
+- **Cliente:**
+  - **Número de cliente:** 1,
+  - **Primeiro nome:** José,
+  - **Último nome:** Silva,
+  - **Telefone:** 351#961234567,
+  - **Email:** jose.silva@email.com
+- **Morada de cobrança:**
+  - **País:** Portugal,
+  - **Cidade:** Lisboa,
+  - **Morada:** Rua Domingos Monteiro nº 7 A,
+  - **Código Postal:** 1050-074
+- **Redirecionamentos:**
+  - **Após o pagamento:** https://www.url-action.dominio
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="pedido" label="Pedido">
+
+```json
+{
+	"payment": {
+		"amount": 500,
+		"code": "REFPRODUTO_1",
+		"summary": "Computador",
+		"customer": {
+			"customerId": "1",
+			"firstName": "José",
+			"lastName": "Silva",
+			"phoneNumber": "351#961234567",
+			"email": "jose.silva@email.com"
+		},
+		"billingAddress": {
+			"country": "PT",
+			"city": "Lisboa",
+			"street1": "Rua Domingos Monteiro nº 7 A",
+			"postCode": "1050-074"
+		},
+		"paymentMethod": {
+			"code": "CC" // <== Método de pagamento
+		}
+	},
+	"page": {
+		"language": "PT",
+		"layout": "embed" // <== Incorporado
+	},
+	"redirects": [
+		{
+			"type": "action", // <== Redireccionamento obrigatório
+			"url": "https://www.url-action.dominio"
+		}
+	]
+}
+```
+
+</TabItem>
+<TabItem value="resposta" label="Resposta">
+
+```json
+{
+	"apiVersion": "1.0",
+	"date": "2022-01-03T14:16:17+00:00",
+	"success": true,
+	"data": {
+		"id": "0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb",
+		"createdAt": "2022-01-03 14:16:17",
+		"checkoutUrl": "https://paypay.pt/paypay/checkout/v2/embed/0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb?page_layout=embed",
+		"paymentId": "42690",
+		"stateDetails": {
+			"state": "PaymentReady",
+			"timestamp": "2022-01-03T14:16:17+00:00"
+		}
+	}
+}
+```
+
+</TabItem>
+</Tabs>
+
+Para criar o formulário de pagamento basta adicionar as seguintes linhas HTML/JavaScript à sua página.
+O `{id}` deve ser substituído pelo id retornado na resposta do pedido,no exemplo anterior seria o 0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb.
+
+```html
+<form class="paymentWidgets"></form>
+
+<script src="https://paypay.pt/paypay/checkout/v2/embed/{id}?page_layout=embed"></script>
+```

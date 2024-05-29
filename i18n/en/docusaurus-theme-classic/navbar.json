@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Guides",
+    "description": "The title in the navbar"
+  },
+  "item.label.Especificação": {
+    "message": "Specification",
+    "description": "Api details"
+  },
+  "logo.alt": {
+    "message": "Home",
+    "description": "The alt text of navbar logo"
+  }
+}

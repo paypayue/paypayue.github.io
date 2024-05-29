@@ -1,0 +1,92 @@
+---
+sidebar_position: 3
+---
+
+# Checkout embedded in mobile application
+
+Checkout can be embedded into mobile applications using the "Webview" component and the "Deep linking" engine available in Android and iOS.
+
+Useful references:
+
+- https://developer.android.com/training/app-links/deep-linking
+- https://blog.devgenius.io/deep-linking-in-ios-f5bfa2959d0a
+- https://en.yeeply.com/blog/deep-linking-android-ios-apps/
+
+The process works as follows:
+
+1. (Back-end) Generate the checkout link through the /checkouts resource;
+2. (Application) Open the link obtained previously in Android/iOS webview;
+3. (Webview) Wait for the user to complete the payment;
+4. (Application) User returned to the application;
+5. (Back-end) View checkout status via API;
+6. (Application) Display the application view according to the needs of the user.
+
+### Generation of the checkout link for Webview
+
+The `redirects` parameter of the `action` type must contain the url "Deep link" will invoke the application after payment.
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="request" label="Request">
+
+```json
+{
+	"payment": {
+		"amount": 500,
+		"code": "REFPRODUTO_1",
+		"summary": "Computador",
+		"customer": {
+			"customerId": "1",
+			"firstName": "José",
+			"lastName": "Silva",
+			"phoneNumber": "351#961234567",
+			"email": "jose.silva@email.com"
+		},
+		"billingAddress": {
+			"country": "PT",
+			"city": "Lisboa",
+			"street1": "Rua Domingos Monteiro nº 7 A",
+			"postCode": "1050-074"
+		},
+		"paymentMethod": {
+			"code": "CC" // <== Método de pagamento
+		}
+	},
+	"page": {
+		"language": "PT",
+		"layout": "default" // <== Incorporado
+	},
+	"redirects": [
+		{
+			"type": "action",
+			"url": "https://www.myapp.com" // <== URL deep Link
+		}
+	]
+}
+```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```json
+{
+	"apiVersion": "1.0",
+	"date": "2022-01-03T14:16:17+00:00",
+	"success": true,
+	"data": {
+		"id": "0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb",
+		"createdAt": "2022-01-03 14:16:17",
+		"checkoutUrl": "https://paypay.pt/paypay/checkout/v2/embed/0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb?page_layout=default",
+		"paymentId": "42690",
+		"stateDetails": {
+			"state": "PaymentReady",
+			"timestamp": "2022-01-03T14:16:17+00:00"
+		}
+	}
+}
+```
+
+</TabItem>
+</Tabs>

@@ -1,0 +1,143 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #356B89;
+  --ifm-color-primary-dark: #2D4E79;
+  --ifm-color-primary-darker: #263469;
+  --ifm-color-primary-darkest: #1E1F58;
+  --ifm-color-primary-light: #4F8D9A;
+  --ifm-color-primary-lighter: #69ABAA;
+  --ifm-color-primary-lightest: #83BBB0;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #356B89;
+  --ifm-color-primary-dark: #2D4E79;
+  --ifm-color-primary-darker: #263469;
+  --ifm-color-primary-darkest: #1E1F58;
+  --ifm-color-primary-light: #4F8D9A;
+  --ifm-color-primary-lighter: #69ABAA;
+  --ifm-color-primary-lightest: #83BBB0;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+.panel {
+  background: #fff;
+  height: 93.5%;
+  margin: 0 -768px 0 0;
+  position: fixed;
+  right: 0px;
+  top: 60px;
+  -webkit-transition: .5s ease-out;
+  -moz-transition: .5s ease-out;
+  -o-transition: .5s ease-out;
+  -ms-transition: .5s ease-out;
+  transition: .5s ease-out;
+  min-width: 500px;
+  width: 40%;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .panel{
+    min-width: 290px;
+  }
+}
+
+.panel.out {
+  margin: 0;
+}
+
+.panel-content,
+.panel-content iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.panel-content iframe{
+  border-left: 1px solid var(--ifm-toc-border-color);
+}
+
+.open-panel-btn {
+  position: absolute;
+  top: 190px;
+  right: 689px;
+  width: 100px;
+  height: 30px;
+  background-size: cover;
+  cursor: pointer;
+  font-weight: 600;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.open-panel-btn:hover {
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+
+.close-panel-btn{
+  position: absolute;
+  color: black;
+  top: -1px;
+  left: -51px;
+  border: 1px solid var(--ifm-toc-border-color);
+  padding: 14px 15px;
+  background-color: var(--ifm-navbar-background-color);
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
+
+.btn-api {
+  cursor: pointer;
+  background-color: var(--ifm-color-primary-dark);
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.btn-api:hover {
+  opacity: 0.7;
+}
+
+a#specification > svg {
+  display: none;
+}
+
+a.navbar__item.navbar__link:not(#specification):last-of-type{
+  display: none;
+}
+
+@media (min-width: 570px) {
+  .btn-api--move-top{
+    position: relative;
+    top: -53px;
+  }
+  .btn-api--float-right{
+    float: right;
+  }
+}
+
+:not(.docs-wrapper) #slideout {
+  display: none;
+}

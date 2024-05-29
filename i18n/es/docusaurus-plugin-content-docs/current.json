@@ -1,0 +1,23 @@
+{
+  "version.label": {
+    "message": "Próxima"
+  },
+  "sidebar.docs.category.Entidades": {
+    "message": "Entidades"
+  },
+  "sidebar.docs.category.Checkouts": {
+    "message": "Checkouts"
+  },
+  "sidebar.docs.category.Pagamentos": {
+    "message": "Pagos"
+  },
+  "sidebar.docs.category.Clientes": {
+    "message": "Clientes"
+  },
+  "sidebar.docs.category.Métodos de Pagamento": {
+    "message": "Métodos de Pago"
+  },
+  "sidebar.docs.category.Webhooks": {
+    "message": "Webhooks"
+  }
+}
