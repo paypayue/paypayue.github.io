@@ -138,6 +138,6 @@ a.navbar__item.navbar__link:not(#specification):last-of-type{
   }
 }
 
-:not(.docs-wrapper) #slideout {
+html:not(.docs-wrapper) #slideout {
   display: none;
 }
