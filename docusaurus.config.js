@@ -12,7 +12,7 @@ const api = '/api'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'PayPay - Api documentations',
+  title: 'PayPay - Api documentation',
   favicon: 'img/favicon.png',
 
   // Set the production url of your site here
