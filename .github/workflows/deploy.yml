@@ -7,7 +7,7 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         environment: deployment
-
+        
         steps:
             - name: read vars
               run: echo "site is ${{vars.SITE}}"
@@ -25,6 +25,8 @@ jobs:
 
             - name: Build site
               run: npm run build
+              env:
+                  SITE: ${{vars.SITE}}
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
