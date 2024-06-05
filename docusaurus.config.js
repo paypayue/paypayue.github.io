@@ -5,7 +5,6 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-console.log('teste: ', process.env.SITE);
 
 const site = process.env.SITE;
 const api = '/api'
