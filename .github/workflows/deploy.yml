@@ -6,7 +6,8 @@ on:
 jobs:
     deploy:
         runs-on: ubuntu-latest
-
+        environment: deployment
+        
         steps:
             - name: Checkout code
               uses: actions/checkout@v3
@@ -21,6 +22,10 @@ jobs:
 
             - name: Build site
               run: npm run build
+              env:
+                  SITE: ${{vars.SITE}}
+                  PROJECT_NAME: ${{vars.PROJECT_NAME}}
+                  API_URL_SPECIFICATION: ${{vars.API_URL_SPECIFICATION}}
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
