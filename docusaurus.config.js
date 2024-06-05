@@ -6,7 +6,7 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
-const site = 'https://paypayue.github.io';
+const site = process.env.SITE;
 const api = '/api'
 
 /** @type {import('@docusaurus/types').Config} */
@@ -23,7 +23,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'paypayue', // Usually your GitHub org/user name.
-  projectName: 'paypayue.github.io', // Usually your repo name.
+  projectName: process.env.PROJECT_NAME, // Usually your repo name.
   deploymentBranch: 'deployment',
   trailingSlash: false,
 
@@ -85,7 +85,7 @@ const config = {
           route: api,
           configuration: {
             spec: {
-              url: 'https://paypay.pt/paypay/api/docs/api.json',
+              url: process.env.API_URL_SPECIFICATION,
             },
           },
         }
