@@ -6,7 +6,7 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
-const site = 'https://paypayue.github.io';
+const site = 'https://paypayue-dev.github.io';
 const api = '/api'
 
 /** @type {import('@docusaurus/types').Config} */
@@ -23,7 +23,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'paypayue', // Usually your GitHub org/user name.
-  projectName: 'paypayue.github.io', // Usually your repo name.
+  projectName: 'paypayue-dev.github.io', // Usually your repo name.
   deploymentBranch: 'deployment',
   trailingSlash: false,
 
