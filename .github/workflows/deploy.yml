@@ -1,5 +1,3 @@
-env:
-    SITE: ${{ vars.SITE }}
 on:
     push:
         branches:
@@ -23,6 +21,8 @@ jobs:
 
             - name: Build site
               run: npm run build
+              env:
+                SITE: ${{ vars.SITE }}
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
