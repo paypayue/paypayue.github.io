@@ -6,8 +6,13 @@ on:
 jobs:
     deploy:
         runs-on: ubuntu-latest
+        env:
+            SITE: ${{ vars.SITE }}
 
         steps:
+            - name: read vars
+              run: echo "site is ${{env.SITE}}"
+            
             - name: Checkout code
               uses: actions/checkout@v3
 
@@ -21,8 +26,6 @@ jobs:
 
             - name: Build site
               run: npm run build
-              env:
-                SITE: ${{ vars.SITE }}
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
