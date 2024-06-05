@@ -5,7 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-console.log('teste: ', process.vars.SITE);
+console.log('teste: ', process.env.SITE);
 
 const site = 'https://paypayue-dev.github.io';
 const api = '/api'
