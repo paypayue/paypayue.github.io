@@ -1,3 +1,5 @@
+env:
+    SITE: ${{ vars.SITE }}
 on:
     push:
         branches:
