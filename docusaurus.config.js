@@ -85,7 +85,7 @@ const config = {
           route: api,
           configuration: {
             spec: {
-              url: 'https://paypay.pt/paypay/api/docs/api.json',
+              url: 'https://paypay.acin.pt/apialfa/docs/api.yaml',
             },
           },
         }
