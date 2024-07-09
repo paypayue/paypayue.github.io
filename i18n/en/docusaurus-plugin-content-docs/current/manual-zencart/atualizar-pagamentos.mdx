@@ -2,15 +2,15 @@
 sidebar_position: 4
 ---
 
-# Atualizar os pagamentos manualmente
+# Manual update of payments
 
-Todos os pagamentos são processados automaticamente. No entanto, caso verifique alguma situação em que o pagamento foi efetuado, mas não foi atualizado na loja ZenCart, o administrador poderá atualizar manualmente todos os pagamentos pendentes. Para tal, deverá aceder ao separador ‘Módulos’ > ‘Pagamentos’ e clicar na opção ‘Edit’ > ‘Update’.
+All payments are automatically processed. However, if there is a situation where the payment has been made and the status of the purchase has not been updated in the Zen Cart shop, the administrator can manually update all outstanding payments. To do so, go to ‘Modules’ > ‘Payment Modules’ and click on ‘Edit’ > ‘Update’.
 
 ![atualizar pagamento manualmente](../../../../../_media/zencart-18.png)
 
-<h2>Aspetos a ter em conta nesta integração:</h2>
+<h2>Aspects to take into account in this integration:</h2>
 
-- Pode apresentar os dados de pagamento (referência ou link para pagamento) em qualquer área (fatura, resumo da compra, etc.) basta que insira o código
+- You can display the payment details (payment reference or link) in any area (invoice, purchase summary, etc.) by entering the code
 
 ```php
 <?php
@@ -18,13 +18,12 @@ Todos os pagamentos são processados automaticamente. No entanto, caso verifique
 ?>
 ```
 
-no ficheiro correspondente à zona que deseja apresentar a informação (este procedimento requer conhecimento básico de PHP e HTML). Caso o ID da encomenda não seja apresentado em nenhuma das variáveis indicadas, deverá verificar qual a variável que deve ser utilizada.
+in the file corresponding to the area in which you want the information to appear (this procedure requires basic knowledge of PHP and HTML). If the order identifier does not appear in any of the variables indicated, you should check which variable should be used.
 
-- Para a desinstalação do plugin, deverá executar o ficheiro ‘uninstall.sql’ (disponibilizado em conjunto com os ficheiros do plugin) e desinstalar o plugin na área de administração.
+- To uninstall the plugin, you must run the ‘uninstall.sql’ file (provided with the plugin files) and uninstall the plugin in the administration area.
 
-<div class="theme-admonition theme-admonition-info admonition_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module alert alert--warning">
-    <div class="admonitionHeading_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module"><span class="admonitionIcon_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div>
-    <div class="admonitionContent_node_modules-@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module">
-        <p>Se executar o ficheiro ‘uninstall.sql’, todos os dados relativos aos pagamentos efetuados a partir do plugin Paypay, serão eliminados permanentemente.</p>
-    </div>
-</div>
+:::warning
+
+If you run the ‘uninstall.sql’ file, all data relating to payments made from the Paypay plugin will be permanently deleted.
+
+:::

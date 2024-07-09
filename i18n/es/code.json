@@ -277,7 +277,7 @@
     "message": "Guías"
   },
   "homepage.guiasDescription": {
-    "message": "Esta guía describe los requisitos y pasos necesarios para la integración con PayPay para los clientes que desean integrar nuestros servicios de pago directamente en sus aplicaciones."
+    "message": "Consulte los recursos y pasos necesarios para integrar servicios de pago directamente en su aplicación."
   },
   "homepage.guiasButton": {
     "message": "Consultar Guías"
@@ -286,7 +286,7 @@
     "message": "Especificación API"
   },
   "homepage.apiDescription": {
-    "message": "PayPay también admite integraciones con su software de gestión a través de nuestra API"
+    "message": "Integre su aplicación con nuestra API."
   },
   "homepage.apiButton": {
     "message": "Consulta API"
@@ -295,7 +295,7 @@
     "message": "Integraciones"
   },
   "homepage.integracoesDescription": {
-    "message": "PayPay ofrece varias integraciones y plugins gratuitos que le permiten combinar servicios de pago, a través de Multibanco, Tarjeta de crédito/débito y MB WAY, con tiendas de comercio electrónico y software de facturación."
+    "message": "Descubra nuestro software y plugins gratuitos que le permitirán conectar rápidamente los servicios de pago a su tienda de comercio electrónico/software de facturación."
   },
   "homepage.integracoesButton": {
     "message": "Consultar Integraciones"

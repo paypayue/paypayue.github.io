@@ -24,7 +24,7 @@ export default function HomepageFeatures() {
               </Heading>
               <p>
                 <Translate id="homepage.guiasDescription">
-                  Este guia descreve os requisitos e passos necessários para a integração com a PayPay para os clientes que pretendam integrar os nossos serviços de pagamento diretamente nas suas aplicações.
+                  Consulte os recursos e passos necessários de forma a integrar serviços de pagamento diretamente na sua aplicação.
                 </Translate>
               </p>
             </div>
@@ -46,7 +46,7 @@ export default function HomepageFeatures() {
               </Heading>
               <p>
                 <Translate id="homepage.apiDescription">
-                  A PayPay suporta ainda integrações com o seu software de gestão através da nossa API
+                  Integre a sua aplicação com a nossa API
                 </Translate>
               </p>
             </div>
@@ -68,14 +68,14 @@ export default function HomepageFeatures() {
               </Heading>
               <p>
                 <Translate id="homepage.integracoesDescription">
-                  A PayPay disponibiliza diversas integrações e plugins gratuitos que permitem unir os serviços de pagamento, por Multibanco, Cartão de Crédito/Débito e MB WAY, com lojas de e-commerce e softwares de faturação.
+                  Conheça os nossos softwares e plugins gratuitos que permitem unir rapidamente os serviços de pagamento na sua loja de e-commerce/software de faturação.
                 </Translate>
               </p>
             </div>
             <div className={styles.buttons}>
               <Link
                 className="button button--secondary button--lg"
-                to='/docs/integrations/intro'>
+                to='/integrations'>
                 <Translate id="homepage.integracoesButton">Consultar Integrações</Translate>
               </Link>
             </div>
