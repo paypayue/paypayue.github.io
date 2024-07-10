@@ -299,5 +299,14 @@
   },
   "homepage.integracoesButton": {
     "message": "View Integrations"
+  },
+  "integrations.title": {
+    "message": "Integrations"
+  },
+  "integrations.consultGuide": {
+    "message": "View Guides"
+  },
+  "integrations.checkWebsite": {
+    "message": "Visit Website"
   }
 }
