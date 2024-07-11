@@ -308,5 +308,8 @@
   },
   "integrations.checkWebsite": {
     "message": "Visita el sitio web"
+  },
+  "integrations.download": {
+    "message": "Descargar"
   }
 }

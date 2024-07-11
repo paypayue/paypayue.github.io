@@ -308,5 +308,8 @@
   },
   "integrations.checkWebsite": {
     "message": "Visit Website"
+  },
+  "integrations.download": {
+    "message": "Download"
   }
 }

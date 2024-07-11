@@ -1,62 +1,66 @@
-# Integrações
-
 import React, { useEffect } from "react";
 import Link from '@docusaurus/Link';
+import Translate from '@docusaurus/Translate';
+
+<h1><Translate id='integrations.title'>Integrações</Translate></h1>
+
+export const consultarGuia = <Translate id='integrations.consultGuide'>Consultar Guia</Translate>
+export const checkWebsite = <Translate id='integrations.checkWebsite'>Visitar website</Translate>
 
 export const integrationsList = [
     {
         title: 'WooCommerce',
         logoSrc: 'img/woocommerce.png',
         linkTo: 'docs/category/woocommerce',
-        linkText: 'Consultar guia',
+        linkText: consultarGuia,
         downloadHref: 'https://wordpress.org/plugins/paypay-pagamentos-multibanco-e-cartao-de-creditodebito/',
     },
     {
         title: 'PrestaShop',
         logoSrc: 'img/prestashop.png',
         linkTo: 'docs/category/prestashop',
-        linkText: 'Consultar guia',
+        linkText: consultarGuia,
         downloadHref: 'https://paypay.pt/paypay/public/plugins/prestashop-plugins.zip',
     },
     {
         title: 'OpenCart',
         logoSrc: 'img/opencart.png',
         linkTo: 'docs/category/opencart',
-        linkText: 'Consultar guia',
+        linkText: consultarGuia,
         downloadHref: 'https://www.opencart.com/index.php?route=extension/extension/info&extension_id=27224'
     },
     {
         title: 'zencart',
         logoSrc: 'img/zencart.png',
         linkTo: 'docs/category/zencart',
-        linkText: 'Consultar guia',
+        linkText: consultarGuia,
         downloadHref: 'https://www.zen-cart.com/downloads.php?do=file&id=2094'
     },
     {
         title: 'VirtueMart',
         logoSrc: 'img/virtuemart.png',
         linkTo: 'docs/category/virtuemart',
-        linkText: 'Consultar guia',
+        linkText: consultarGuia,
         downloadHref: 'https://extensions.joomla.org/extension/extension-specific/virtuemart-extensions/paypay/',
     },
     // {
     //     title: 'oscommerce',
     //     logoSrc: 'img/os_commerce.png',
     //     linkTo: 'docs/category/oscommerce',
-    //     linkText: 'Disponível na loja'
+    //     linkText: consultarGuia,
     //     downloadHref: 'https://apps.oscommerce.com/Apps&JHMvS&paypay-oscommerce'
     // },
     {
         title: 'iGest',
         logoSrc: 'img/igest.png',
         linkHref: 'https://www.igest.pt/',
-        linkText: 'Visitar website'
+        linkText: checkWebsite
     },
     {
         title: 'invoicexpress',
         logoSrc: 'img/invoice_express.png',
         linkHref: 'https://invoicexpress.com/receber-pagamentos',
-        linkText: 'Visitar website'
+        linkText: checkWebsite
     }
 ]
 
@@ -84,7 +88,9 @@ export const ListaIntegracoes = () => {
                             <div className="integracoes__footer">{linkText}</div>
                         </Link>
                         {downloadHref && (
-                                <a href={downloadHref} target="_blank" className="integracoes__panel integracoes__panel--second-btn">Descarregar</a>
+                                <a href={downloadHref} target="_blank" className="integracoes__panel integracoes__panel--second-btn">
+                                    <Translate id='integrations.download'>Descarregar</Translate>
+                                </a>
                             )
                         }
                     </div>
