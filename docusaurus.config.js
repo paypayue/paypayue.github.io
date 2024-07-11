@@ -8,6 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 const site = process.env.SITE;
 const api = '/api'
+const baseUrl = '/'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -18,7 +19,7 @@ const config = {
   url: 'http://10.11.16.37/',//site 'https://paypayue-dev.github.io'
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/cristiano/paypay/public/api/',// '/'
+  baseUrl: baseUrl,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -31,7 +32,8 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
 
   customFields : {
-    docsApi: site + api
+    docsApi: site + api,
+    baseUrl: baseUrl
   },
 
   // Even if you don't use internalization, you can use this field to set useful

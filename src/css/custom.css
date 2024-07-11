@@ -152,10 +152,6 @@ a.navbar__item.navbar__link:not(#specification):last-of-type{
   }
 }
 
-html:not(.docs-wrapper) #slideout {
-  display: none;
-}
-
 .integracoes__panel {
   display: block;
   height: 235px;
