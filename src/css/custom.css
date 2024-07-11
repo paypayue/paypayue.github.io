@@ -222,3 +222,7 @@ a.navbar__item.navbar__link:not(#specification):last-of-type{
   font-weight: 600;
   padding: 5px 15px;
 }
+
+.darklight-reference {
+  display: none;
+}
