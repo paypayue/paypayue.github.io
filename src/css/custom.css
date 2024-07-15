@@ -226,3 +226,54 @@ a.navbar__item.navbar__link:not(#specification):last-of-type{
 .darklight-reference {
   display: none;
 }
+
+.hero__subtitle {
+  text-align: left;
+}
+
+@media screen and (max-width: 996px) {
+  .hero__subtitle {
+    text-align: center;
+  }
+}
+
+.hero__subtitle--primary {
+  font-size: 48px;
+  font-weight: 800;
+}
+@media screen and (min-width: 997px) {
+  .hero__subtitle--primary {
+    margin-top: 75px;
+  }
+}
+
+.hero__subtitle--secondary {
+  font-size: 16px;
+}
+
+html[data-theme="light"] .hero__subtitle{
+  color: #174275;
+}
+html[data-theme="dark"] .hero__subtitle{
+  color: #fff;
+}
+
+.hero__logo {
+  height: 314.02px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+@media screen and (max-width: 996px) {
+  .hero__logo {
+    height: 140px;
+  }
+}
+
+html[data-theme="light"] .hero__logo {
+  background-image: url(../../static/img/homepage-screens-light.svg);
+}
+
+html[data-theme="dark"] .hero__logo {
+  background-image: url(../../static/img/homepage-screens-dark.svg);
+}
