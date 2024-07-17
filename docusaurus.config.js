@@ -83,6 +83,7 @@ const config = {
       /**@type {import('@scalar/docusaurus').ScalarOptions} */
       (
         {
+          id: 'scalar-docusaurus',
           label: 'Especificação',
           route: api,
           configuration: {
@@ -97,6 +98,7 @@ const config = {
       '@easyops-cn/docusaurus-search-local',
       (
         {
+          id: 'search-local-docusaurus',
           hashed: true,
           indexDocs: true,
           indexPages: false,
