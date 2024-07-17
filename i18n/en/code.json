@@ -271,10 +271,10 @@
     "description": "The title of the tag list page"
   },
   "homepage.headerTitle": {
-    "message": "Welcome!"
+    "message": "Hello!"
   },
   "homepage.headerDescription": {
-    "message": "Aqui pode aceder à área de desenvolvimento do PayPay"
+    "message": "Aqui pode aceder à área de desenvolvimento da PayPay"
   },
   "homepage.guias": {
     "message": "Guides"

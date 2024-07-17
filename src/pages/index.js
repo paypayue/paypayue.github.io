@@ -12,12 +12,12 @@ function HomepageHeader() {
           <div className='col col--6 order-mobile-2'>
             <p className='hero__subtitle hero__subtitle--primary'>
               <Translate id="homepage.headerTitle">
-                Bem vindo!
+                Olá!
               </Translate>
             </p>
             <p className='hero__subtitle hero__subtitle--secondary'>
               <Translate id="homepage.headerDescription">
-                Aqui pode aceder à área de desenvolvimento do PayPay
+                Aqui pode aceder à área de desenvolvimento da PayPay
               </Translate>
             </p>
           </div>

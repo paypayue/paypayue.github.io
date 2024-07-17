@@ -306,10 +306,10 @@
     "description": "The ARIA label and placeholder for search button"
   },
   "homepage.headerTitle": {
-    "message": "Bienvenido!"
+    "message": "Olá!"
   },
   "homepage.headerDescription": {
-    "message": "Aqui pode aceder à área de desenvolvimento do PayPay"
+    "message": "Aqui pode aceder à área de desenvolvimento da PayPay"
   },
   "homepage.guias": {
     "message": "Guías"
