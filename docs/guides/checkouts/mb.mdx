@@ -1,0 +1,71 @@
+---
+sidebar_position: 7
+---
+
+# Checkout Multibanco
+
+> **POST** /checkouts
+
+Criação do checkout com os seguintes dados:
+
+- **Idioma:** Português
+- **Layout da página:** web
+- **Montante:** 5€
+- **Método de pagamento:** Multibanco (MB)
+- **Código do produto:** REFPRODUTO_1
+- **Descrição do produto:** Computador
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="pedido" label="Pedido">
+
+```json
+{
+	"payment": {
+		"amount": 500,
+		"code": "REFPRODUTO_1",
+		"summary": "Computador",
+		"paymentMethod": {
+			"code": "MB" // <== Método de pagamento
+		}
+	},
+	"page": {
+		"language": "PT",
+		"layout": "web"
+	}
+}
+```
+
+</TabItem>
+<TabItem value="resposta" label="Resposta">
+
+```json
+{
+	"apiVersion": "1.0",
+	"date": "2022-01-03T14:16:17+00:00",
+	"success": true,
+	"data": {
+		"id": "pyKP1B9IaK9J47wTSNB4mUnv2h4DJW8HzomddMp1",
+		"createdAt": "2022-01-03 14:16:17",
+		"checkoutUrl": "https://paypay.pt/paypay/referencia/referencia_c/pay/a9017d05790c0d076388750a12cd0a1f536cea71/paypay/uJUsP8LTEuRjt0Ar32tWMzuhVLP1oVLgqoXRJofu",
+		"paymentId": "42696",
+		"stateDetails": {
+			"state": "PaymentReady",
+			"timestamp": "2022-01-03T14:16:17+00:00"
+		}
+	}
+}
+```
+
+</TabItem>
+</Tabs>
+
+Na resposta é devolvido o `id` que identifica o checkout perante a API.
+O `checkoutUrl` é o link para aceder a página e realizar o pagamento.
+O `paymentId` é o id que identifica o pagamento.
+
+Ao aceder ao `checkoutUrl` é apresentada a seguinte página:
+
+![Checkout MB](../../../_media/checkout-mb.jpg)

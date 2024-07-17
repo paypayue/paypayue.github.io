@@ -1,0 +1,104 @@
+# Registered card payment
+
+With a registered payment method it is now possible to immediately request payment.
+
+1. Obtain UUID of registered payment method;
+2. Payment with sending payment method.
+
+### 1. Obtain UUID of registered payment method
+
+Obtaining the UUID of the payment method can be done via [View payment methods saved by the customer](../paymentMethods/getPaymentMethods.mdx)
+
+### 2. Payment with sending payment method
+
+Make a payment request by sending the UUID of the customer and the UUID of the payment method.
+
+> The payment is processed as a card not present (CNP) operation and no further authentication should be requested.
+
+> **POST** /payments
+
+import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe(
+			"payments",
+			"payments/post/payments"
+		)
+	}
+>
+	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="request" label="Request">
+
+```json
+{
+	"type": "payment",
+	"amount": 100,
+	"customer": {
+		"uuid": "e2343605-cf46-43de-b20b-9b7d1c95a9b2"
+	},
+	"paymentMethod": {
+		"uuid": "90068f83-7623-4de5-91c7-ac447c504ebf"
+	}
+}
+```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```json
+{
+	"apiVersion": "1.4.0",
+	"date": "2022-01-10T13:04:22+00:00",
+	"success": true,
+	"data": {
+		"id": "42786",
+		"type": "payment",
+		"referenceDetails": {
+			"reference": "A0000A722"
+		},
+		"stateDetails": {
+			"state": "confirmed",
+			"createdAt": "2022-01-10T10:29:13+00:00"
+		},
+		"paymentMethod": {
+			"uuid": "90068f83-7623-4de5-91c7-ac447c504ebf",
+			"code": "CC",
+			"type": "DEFAULT",
+			"details": {
+				"phoneNumber": "351#961879263",
+				"createRegistration": true
+			}
+		},
+		"amount": 10,
+		"createdAt": "2022-01-10T10:28:14+00:00",
+		"updatedAt": "2022-01-10T11:39:39+00:00",
+		"validDate": {
+			"start": "2022-01-10T10:28:14+00:00",
+			"end": "2022-07-10T23:59:59+01:00"
+		},
+		"availableMethods": [],
+		"paymentFee": {
+			"netAmount": "0.00095000",
+			"taxAmount": "0.00017100"
+		},
+		"customer": {
+			"uuid": "e2343605-cf46-43de-b20b-9b7d1c95a9b2",
+			"customerId": "agashf123",
+			"firstName": "José",
+			"lastName": "Silva",
+			"email": "email@mail.com",
+			"createdAt": "2022-01-10T10:28:14+00:00"
+		}
+	}
+}
+```
+
+</TabItem>
+</Tabs>

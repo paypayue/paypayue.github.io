@@ -8,30 +8,32 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 const site = process.env.SITE;
 const api = '/api'
+const baseUrl = '/'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'PayPay - Api documentation',
+  title: 'PayPay - API documentation',
   favicon: 'img/favicon.png',
 
   // Set the production url of your site here
   url: site,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: baseUrl,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'paypayue', // Usually your GitHub org/user name.
-  projectName: process.env.PROJECT_NAME, // Usually your repo name.
-  deploymentBranch: 'deployment',
+  // organizationName: 'paypayue', // Usually your GitHub org/user name.
+  // projectName: process.env.PROJECT_NAME, // Usually your repo name.
+  // deploymentBranch: 'deployment',
   trailingSlash: false,
 
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   customFields : {
-    docsApi: site + api
+    docsApi: site + api,
+    baseUrl: baseUrl
   },
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -63,7 +65,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/',
+          routeBasePath: '/docs',
           path: './docs',
           sidebarPath: './sidebars.js',
         },
@@ -91,6 +93,21 @@ const config = {
         }
       )
     ],
+    [
+      '@easyops-cn/docusaurus-search-local',
+      (
+        {
+          hashed: true,
+          indexDocs: true,
+          indexPages: false,
+          indexBlog: false,
+          language: ['pt','es','en'],
+          explicitSearchResultPath: true,
+          ignoreFiles: [/docs\/manual-oscommerce\/oscommerce\/.*/],//remover após regularização do woocommerce
+          searchBarShortcutHint: false
+        }
+      )
+    ]
   ],
 
   themeConfig:
@@ -104,12 +121,17 @@ const config = {
         }
       },
       navbar: {
-        title: 'Guias',
         logo: {
           alt: 'Home',
-          src: 'img/logo.svg',
+          src: 'img/logo-full.svg',
         },
         items: [
+          {
+            type: 'docSidebar',
+            sidebarId: 'guides',
+            position: 'left',
+            label: 'Guias',
+          },
           {
             id: 'specification',
             label: 'Especificação',
@@ -117,9 +139,24 @@ const config = {
             target: '_self'
           },
           {
+            label: 'Integrações',
+            to: 'integrations'
+          },
+          {
+            href: 'https://www.paypay.pt/',
+            label: 'PayPay',
+            target: '_self',
+            position: 'right',
+          },
+          {
             type: 'localeDropdown',
             position: 'right',
           },
+          {
+            type: 'search',
+            position: 'right',
+            className: 'searchbar--on-dark'
+          }
         ],
       },
       prism: {

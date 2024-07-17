@@ -1,11 +1,12 @@
 {
-  "title": {
-    "message": "Guías",
-    "description": "The title in the navbar"
+  "item.label.Guias": {
+    "message": "Guías"
   },
   "item.label.Especificação": {
-    "message": "Especificación",
-    "description": "Detalles de la API"
+    "message": "Especificación"
+  },
+  "item.label.Integrações" : {
+    "message": "Integraciones"
   },
   "logo.alt": {
     "message": "Home",

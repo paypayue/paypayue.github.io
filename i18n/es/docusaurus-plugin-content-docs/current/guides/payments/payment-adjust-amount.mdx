@@ -1,0 +1,83 @@
+# Cambiar el monto de un pago preautorizado
+
+#### PATCH /payments/\{id}/amount
+
+import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe(
+			"payments",
+			"payments/patch/payments/{id}/amount"
+		)
+	}
+>
+	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="solicitud" label="Solicitud">
+
+```json
+{
+	"amount": 100
+}
+```
+
+</TabItem>
+<TabItem value="respuesta" label="Respuesta">
+
+```json
+{
+	"date": "2022-12-02T17:12:02+00:00",
+	"success": true,
+	"apiVersion": "1.5.0",
+	"data": {
+		"id": "75273",
+		"type": "authorization",
+		"referenceDetails": {
+			"reference": "A00012609"
+		},
+		"stateDetails": {
+			"state": "confirmed",
+			"createdAt": "2022-12-02T17:07:28+00:00"
+		},
+		"paymentMethod": {
+			"uuid": "7e353d40-646a-4397-bd17-47c309b3cb2c",
+			"code": "CC",
+			"type": "DEFAULT"
+		},
+		"amount": 100,
+		"createdAt": "2022-12-02T17:07:27+00:00",
+		"updatedAt": "2022-12-02T17:07:28+00:00",
+		"validDate": {
+			"start": "2022-12-02T17:07:27+00:00",
+			"end": "2023-06-02T23:59:59+01:00"
+		},
+		"paymentFee": {
+			"netAmount": "0.55250000",
+			"taxAmount": "0.09945000"
+		},
+		"bankAccount": {
+			"code": "O9uFVmSZ",
+			"bankName": "Banco",
+			"last4digits": "8513"
+		},
+		"customer": {
+			"uuid": "65OOPP5AHyJPZW399Cg5tlUX2fwzEkO8cOez",
+			"customerId": "1",
+			"firstName": "José",
+			"lastName": "Silva",
+			"email": "teste@teste.teste",
+			"phoneNumber": "351#123456789",
+			"createdAt": "2021-12-03T17:33:24+00:00"
+		}
+	}
+}
+```
+
+</TabItem>
+</Tabs>

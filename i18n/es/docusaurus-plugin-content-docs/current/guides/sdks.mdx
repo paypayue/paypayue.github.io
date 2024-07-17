@@ -1,0 +1,31 @@
+---
+sidebar_position: 3
+---
+
+# Generación de SDKs
+
+El recurso **SDK** permite generar un SDK para un lenguaje de programación deseado, facilitando así la integración con la API.
+
+> La herramienta de código abierto [OpenAPI Generator Online](http://api.openapi-generator.tech/index.html) se utiliza para generar SDKs en varios lenguajes de programación.
+
+> **Atención:** PayPay no mantiene la herramienta de generación de código ni proporciona soporte técnico para el código generado.
+
+**Operaciones disponibles documentación swagger/openapi:**
+
+import ClickShowIframe from "../../../../../src/utils/ClickShowIframe";
+
+<button className="btn-api"
+	onClick={() =>
+		ClickShowIframe("sdk", "sdk/get/sdks/{language}/options")
+	}
+>
+	<span>Generación de SDK en varios lenguajes</span>
+</button>
+<br /><br />
+<button className="btn-api"
+	onClick={() =>
+		ClickShowIframe("sdk", "sdk/post/sdks/{language}")
+	}
+>
+	<span>Listar las opciones de generación del SDK</span>
+</button>

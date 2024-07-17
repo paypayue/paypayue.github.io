@@ -1,0 +1,29 @@
+---
+sidebar_position: 4
+---
+
+# Atualizar os pagamentos manualmente
+
+Todos os pagamentos são processados automaticamente. No entanto, caso verifique alguma situação em que o pagamento foi efetuado, mas não foi atualizado na loja ZenCart, o administrador poderá atualizar manualmente todos os pagamentos pendentes. Para tal, deverá aceder ao separador ‘Módulos’ > ‘Pagamentos’ e clicar na opção ‘Edit’ > ‘Update’.
+
+![atualizar pagamento manualmente](../../../_media/zencart-18.png)
+
+<h2>Aspetos a ter em conta nesta integração:</h2>
+
+- Pode apresentar os dados de pagamento (referência ou link para pagamento) em qualquer área (fatura, resumo da compra, etc.) basta que insira o código
+
+```php
+<?php
+    echo paypay::getPaymentLayout(!empty($zv_orders_id) ? $zv_orders_id : $_GET['order_id']);
+?>
+```
+
+no ficheiro correspondente à zona que deseja apresentar a informação (este procedimento requer conhecimento básico de PHP e HTML). Caso o ID da encomenda não seja apresentado em nenhuma das variáveis indicadas, deverá verificar qual a variável que deve ser utilizada.
+
+- Para a desinstalação do plugin, deverá executar o ficheiro ‘uninstall.sql’ (disponibilizado em conjunto com os ficheiros do plugin) e desinstalar o plugin na área de administração.
+
+:::warning
+
+Se executar o ficheiro ‘uninstall.sql’, todos os dados relativos aos pagamentos efetuados a partir do plugin Paypay, serão eliminados permanentemente.
+
+:::

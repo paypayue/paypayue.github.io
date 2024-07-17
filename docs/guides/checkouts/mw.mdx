@@ -1,0 +1,85 @@
+---
+sidebar_position: 8
+---
+
+# Checkout MB WAY
+
+> **POST** /checkouts
+
+Criação do checkout com os seguintes dados:
+
+- **Idioma:** Português
+- **Layout da página:** web
+- **Montante:** 5€
+- **Método de pagamento:** MBWay (MW)
+- **Código do produto:** REFPRODUTO_1
+- **Descrição do produto:** Computador
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="pedido" label="Pedido">
+
+```json
+{
+	"payment": {
+		"amount": 500,
+		"code": "REFPRODUTO_1",
+		"summary": "Computador",
+		"paymentMethod": {
+			"code": "MW" // <== Método de pagamento
+		}
+	},
+	"page": {
+		"language": "PT",
+		"layout": "web"
+	},
+	"redirects": [
+		{
+			"type": "success",
+			"url": "https://www.url-apos-sucesso.dominio"
+		},
+		{
+			"type": "cancel",
+			"url": "https://www.url-apos-cancelamento.dominio"
+		},
+		{
+			"type": "back",
+			"url": "https://www.url-voltar.dominio"
+		}
+	]
+}
+```
+
+</TabItem>
+<TabItem value="resposta" label="Resposta">
+
+```json
+{
+	"apiVersion": "1.0",
+	"date": "2022-01-03T14:16:17+00:00",
+	"success": true,
+	"data": {
+		"id": "nD5IxuqS40xZgPDRra5RqGelWmbVY5hOFnI3QfJc",
+		"createdAt": "2022-01-03 14:16:17",
+		"checkoutUrl": "https://paypay.pt/paypay/referencia/referencia_c/pay/a04120574e15134a6352f9619ea6cfbf051c18e9/paypay/nD5IxuqS40xZgPDRra5RqGelWmbVY5hOFnI3QfJc",
+		"paymentId": "42697",
+		"stateDetails": {
+			"state": "PaymentReady",
+			"timestamp": "2022-01-03T14:16:17+00:00"
+		}
+	}
+}
+```
+
+</TabItem>
+</Tabs>
+
+Na resposta é devolvido o `id` que identifica o checkout perante a API.
+O `checkoutUrl` é o link para aceder a página e realizar o pagamento.
+O `paymentId` é o id que identifica o pagamento.
+
+Ao aceder ao `checkoutUrl` é apresentada a seguinte página:
+
+![Checkout MW](../../../_media/checkout-mw.jpg)

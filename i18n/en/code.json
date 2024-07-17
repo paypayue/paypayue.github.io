@@ -269,5 +269,50 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "homepage.headerTitle": {
+    "message": "Hello!"
+  },
+  "homepage.headerDescription": {
+    "message": "Aqui pode aceder à área de desenvolvimento da PayPay"
+  },
+  "homepage.guias": {
+    "message": "Guides"
+  },
+  "homepage.guiasDescription": {
+    "message": "See the resources and steps needed to integrate payment services directly into your application."
+  },
+  "homepage.guiasButton": {
+    "message": "View Guides"
+  },
+  "homepage.api": {
+    "message": "API Specification"
+  },
+  "homepage.apiDescription": {
+    "message": "Integrate your application with our API."
+  },
+  "homepage.apiButton": {
+    "message": "View API"
+  },
+  "homepage.integracoes": {
+    "message": "Integrations"
+  },
+  "homepage.integracoesDescription": {
+    "message": "Discover our free software and plugins that will allow you to quickly connect payment services to your e-commerce store/invoicing software."
+  },
+  "homepage.integracoesButton": {
+    "message": "View Integrations"
+  },
+  "integrations.title": {
+    "message": "Integrations"
+  },
+  "integrations.consultGuide": {
+    "message": "View Guides"
+  },
+  "integrations.checkWebsite": {
+    "message": "Visit Website"
+  },
+  "integrations.download": {
+    "message": "Download"
   }
 }

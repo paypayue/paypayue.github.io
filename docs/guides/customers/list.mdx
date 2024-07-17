@@ -1,0 +1,102 @@
+# Listar cliente
+
+> **GET** /customers
+
+A listagem dos clientes pode ser efetuada utilizando os seguintes filtros:
+
+- **Email** (email)
+- **Identificador do cliente** (customerId)
+- **Limitar os resultados** (limit)
+
+**1.** Obter o cliente com o email jose.silva@email.com.
+
+import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe(
+			"customers",
+			"customers/get/customers"
+		)
+	}
+>
+	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="pedido" label="Pedido">
+
+```
+GET /customers?email=jose.silva@email.com
+```
+
+</TabItem>
+<TabItem value="resposta" label="Resposta">
+
+```json
+{
+	"apiVersion": "1.0",
+	"date": "2021-12-07T18:01:19+01:00",
+	"success": true,
+	"data": [
+		{
+			"uuid": "e2343605-cf46-43de-b20b-9b7d1c95a9b2",
+			"customerId": "1",
+			"firstName": "José",
+			"lastName": "Silva",
+			"email": "jose.silva@email.com",
+			"phoneNumber": "351#961234567",
+			"createdAt": "2021-12-07T18:01:19+00:00"
+		}
+	]
+}
+```
+
+</TabItem>
+</Tabs>
+
+**2.** Obter os dois primeiros clientes.
+
+<Tabs>
+<TabItem value="pedido" label="Pedido">
+
+```
+GET /customers?limit=2
+```
+
+</TabItem>
+<TabItem value="resposta" label="Resposta">
+
+```json
+{
+	"apiVersion": "1.0",
+	"date": "2021-12-07T18:01:19+05:00",
+	"success": true,
+	"data": [
+		{
+			"uuid": "e2343605-cf46-43de-b20b-9b7d1c95a9b2",
+			"customerId": "1",
+			"firstName": "José",
+			"lastName": "Silva",
+			"email": "jose.silva@email.com",
+			"phoneNumber": "351#961234567",
+			"createdAt": "2021-12-07T18:01:19+00:00"
+		},
+		{
+			"uuid": "g2343605-cf46-43de-b20b-9b7d1c95a9b2",
+			"customerId": "2",
+			"firstName": "Maria",
+			"lastName": "José",
+			"email": "maria.jose@email.com",
+			"phoneNumber": "351#917894584",
+			"createdAt": "2021-12-07T18:01:19+01:00"
+		}
+	]
+}
+```
+
+</TabItem>
+</Tabs>

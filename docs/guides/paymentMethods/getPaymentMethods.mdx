@@ -1,0 +1,97 @@
+# Listagem dos métodos de pagamento guardados pelo cliente
+
+> **GET** /customers/_\{uuid}_/paymentMethods
+
+A listagem do métodos de pagamentos pode ser efetuada utilizando os seguintes filtros:
+
+- **Tipo** (type)
+
+**1.** Obter os métodos de pagamento armazenados pelo cliente com o _uuid_ e2343605-cf46-43de-b20b-9b7d1c95a9b2
+
+import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe(
+			"customer-payment-methods",
+			"customer-payment-methods/get/customers/{uuid}/paymentMethods"
+		)
+	}
+>
+	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="pedido" label="Pedido">
+
+```json
+GET /customers/e2343605-cf46-43de-b20b-9b7d1c95a9b2/paymentMethods
+```
+
+</TabItem>
+<TabItem value="resposta" label="Resposta">
+
+```json
+{
+	"apiVersion": "1.0",
+	"date": "2021-12-09T14:54:56+00:00",
+	"success": true,
+	"data": [
+		{
+			"code": "CC",
+			"uuid": "90068f83-7623-4de5-91c7-ac447c504ebf",
+			"brand": "VISA",
+			"last4Digits": "0809",
+			"holder": "Jose Silva",
+			"expiryMonth": "05",
+			"expiryYear": "2026"
+		},
+		{
+			"code": "MW",
+			"uuid": "f1233605-cf46-43de-b20b-9b7d1c95a9b2",
+			"last3Digits": "414",
+			"countryCode": "351"
+		}
+	]
+}
+```
+
+</TabItem>
+</Tabs>
+
+**2.** Obter os métodos de pagamento através do cartão de crédito/débito guardados pelo cliente com o _uuid_ e2343605-cf46-43de-b20b-9b7d1c95a9b2
+
+<Tabs>
+<TabItem value="pedido" label="Pedido">
+
+```json
+GET /customers/e2343605-cf46-43de-b20b-9b7d1c95a9b2/paymentMethods?type=CC
+```
+
+</TabItem>
+<TabItem value="resposta" label="Resposta">
+
+```json
+{
+	"apiVersion": "1.0",
+	"date": "2021-12-09T14:54:56+00:00",
+	"success": true,
+	"data": [
+		{
+			"code": "CC",
+			"uuid": "90068f83-7623-4de5-91c7-ac447c504ebf",
+			"brand": "VISA",
+			"last4Digits": "0809",
+			"holder": "Jose Silva",
+			"expiryMonth": "05",
+			"expiryYear": "2026"
+		}
+	]
+}
+```
+
+</TabItem>
+</Tabs>

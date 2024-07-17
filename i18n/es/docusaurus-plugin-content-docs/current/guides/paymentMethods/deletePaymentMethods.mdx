@@ -1,0 +1,38 @@
+# Eliminar un método de pago guardado por el cliente
+
+> **DELETE** /customers/_\{uuid}_/paymentMethods/_\{paymentMethod_uuid}_
+
+import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe(
+			"customer-payment-methods",
+			"customer-payment-methods/delete/customers/{uuid}/paymentMethods/{paymentMethod_uuid}"
+		)
+	}
+>
+	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="solicitud" label="Solicitud">
+
+```json
+DELETE /customers/_e2343605-cf46-43de-b20b-9b7d1c95a9b2_/paymentMethods/_90068f83-7623-4de5-91c7-ac447c504ebf_
+```
+
+</TabItem>
+<TabItem value="respuesta" label="Respuesta">
+
+```json
+HTTP Code: 204
+```
+
+</TabItem>
+</Tabs>
+
+**Nota:** Los métodos de pago solo pueden ser eliminados por la entidad que creó el cliente.

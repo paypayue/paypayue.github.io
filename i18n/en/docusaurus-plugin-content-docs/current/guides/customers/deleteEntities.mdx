@@ -1,0 +1,40 @@
+# Delete an entity associated with the customer
+
+> **DELETE** /customers/_\{uuid}_/entities/_\{clientId}_
+
+To remove the association of the customer with an entity it is necessary to know the _uuid_ of the customer and the _clientId_ of the entities.
+
+import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe(
+			"customer-entities",
+			"customer-entities/delete/customers/{uuid}/entities/{clientId}"
+		)
+	}
+>
+	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="request" label="Request">
+
+```js
+DELETE /customers/_e2343605-cf46-43de-b20b-9b7d1c95a9b2_/entities/_523308191_
+```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```js
+HTTP Code: 204
+```
+
+</TabItem>
+</Tabs>
+
+**Note:** Only the entity that created the client can disassociate it from another entity.

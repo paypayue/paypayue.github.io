@@ -269,5 +269,85 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etiquetas",
     "description": "The title of the tag list page"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Resultados de pesquisa para \"{query}\"",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Search the documentation",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.searchContext.everywhere": {
+    "message": "Everywhere"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "1 document found|{count} documents found",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "No documents were found",
+    "description": "The paragraph for empty search result"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "No results"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "See all results outside \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "See all results within \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "See all results"
+  },
+  "theme.SearchBar.label": {
+    "message": "Search",
+    "description": "The ARIA label and placeholder for search button"
+  },
+  "homepage.headerTitle": {
+    "message": "Olá!"
+  },
+  "homepage.headerDescription": {
+    "message": "Aqui pode aceder à área de desenvolvimento da PayPay"
+  },
+  "homepage.guias": {
+    "message": "Guías"
+  },
+  "homepage.guiasDescription": {
+    "message": "Consulte los recursos y pasos necesarios para integrar servicios de pago directamente en su aplicación."
+  },
+  "homepage.guiasButton": {
+    "message": "Consultar Guías"
+  },
+  "homepage.api": {
+    "message": "Especificación API"
+  },
+  "homepage.apiDescription": {
+    "message": "Integre su aplicación con nuestra API."
+  },
+  "homepage.apiButton": {
+    "message": "Consulta API"
+  },
+  "homepage.integracoes": {
+    "message": "Integraciones"
+  },
+  "homepage.integracoesDescription": {
+    "message": "Descubra nuestro software y plugins gratuitos que le permitirán conectar rápidamente los servicios de pago a su tienda de comercio electrónico/software de facturación."
+  },
+  "homepage.integracoesButton": {
+    "message": "Consultar Integraciones"
+  },
+  "integrations.title": {
+    "message": "Integraciones"
+  },
+  "integrations.consultGuide": {
+    "message": "Consultar Guías"
+  },
+  "integrations.checkWebsite": {
+    "message": "Visita el sitio web"
+  },
+  "integrations.download": {
+    "message": "Descargar"
   }
 }

@@ -1,0 +1,108 @@
+---
+sidebar_position: 2
+---
+
+# Passos de Configuração
+
+No ambiente de administração/backoffice da sua loja VirtueMart aceda ao menu ‘Extensions’> ‘Manage’ e selecione a opção ‘Install’.
+
+![configuracao1](../../../_media/virtuemart-1.PNG)
+
+A instalação poderá ser efetuada através de duas opções:
+
+- [Instalação a partir da loja](#instalação-a-partir-da-loja)
+- [Instalação a partir do upload do ficheiro](#instalação-a-partir-do-upload-do-ficheiro)
+
+## Instalação a partir da loja
+
+![configuracao2](../../../_media/virtuemart-2.PNG)
+
+Selecione a opção ‘Install from Web’ e introduza o nome da plataforma PayPay’.
+
+![configuracao3](../../../_media/virtuemart-3.PNG)
+
+Selecione o plugin da PayPay.
+
+![configuracao4](../../../_media/virtuemart-4.PNG)
+
+Clique em ‘Install’.
+
+![configuracao5](../../../_media/virtuemart-5.PNG)
+
+Confirme a instalação ao clicar na opção ‘Install’.
+
+## Instalação a partir do upload do ficheiro
+
+Selecione a opção ‘Upload Package File’
+
+![configuracao6](../../../_media/virtuemart-6.PNG)
+
+‘arraste’ o ficheiro para a área de uploads, ou então selecione o ficheiro.
+
+![configuracao7](../../../_media/virtuemart-7.PNG)
+
+Se a instalação for executada com sucesso será apresentada a mensagem de sucesso.
+
+![configuracao8](../../../_media/virtuemart-8.PNG)
+
+Após a instalação, aceda ao menu ‘VirtueMart’ > ‘Payment Methods’ para criar as formas de pagamento (Multibanco, Cartão de Crédito/Débito ou MB Way).
+
+Clique em ‘New’.
+
+![configuracao9](../../../_media/virtuemart-9.PNG)
+
+Na área ‘Payment Method Information’ preencha o formulário com os dados referentes à forma de pagamento que pretende adicionar, sendo que no campo ‘Payment Method’ deve selecionar a opção ‘PayPay’. De seguida, clique em ‘Save’.
+
+![configuracao10](../../../_media/virtuemart-10.PNG)
+
+Após o passo anterior, clique na área ‘Configuration’ e introduza os dados de integração com a PayPay que são apresentados no backoffice (integrações). No final clique em ‘Save’.
+
+:::warning
+
+Deverá selecionar a mesma forma de pagamento que introduziu no passo anterior.
+
+:::
+
+![configuracao11](../../../_media/virtuemart-11.PNG)
+
+Se os dados introduzidos estiverem corretos será apresentada a mensagem de sucesso.
+
+![configuracao12](../../../_media/virtuemart-12.PNG)
+
+Caso contrário será apresentada a seguinte mensagem de erro.
+
+![configuracao13](../../../_media/virtuemart-13.PNG)
+
+Após a configuração poderá visualizar as formas de pagamento criadas.
+
+![configuracao14](../../../_media/virtuemart-14.PNG)
+
+Poderá utilizar o ambiente de teste para testar a integração antes de iniciar em ambiente de produção. Para tal, deverá utilizar os seguintes dados de acesso:
+
+<table>
+    <tr>
+        <td>NIF:</td>
+        <td>507983807</td>
+    </tr>
+    <tr>
+        <td>Código de Plataforma:</td>
+        <td>0037</td>
+    </tr>
+    <tr>
+        <td>Chave de encriptação:</td>
+        <td>UCYNgCLV9BwjBI5FIJi7GPNI</td>
+    </tr>
+</table>
+
+Aceda a https://paypay.acin.pt/paypaybeta/ e consulte o estado dos pagamentos:
+
+<table>
+    <tr>
+        <td>Utilizador:</td>
+        <td>virtuemart@paypaybeta.pt</td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td>yGj2eYVMENk4</td>
+    </tr>
+</table>

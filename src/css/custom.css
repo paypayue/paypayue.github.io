@@ -102,21 +102,23 @@
   display: none;
 }
 
-.btn-api {
+.btn-api,
+.btn-download {
   cursor: pointer;
   background-color: var(--ifm-color-primary-dark);
   border: none;
-  color: white;
+  color: white !important;
   padding: 15px 15px;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-block;
   font-size: 16px;
   font-weight: 700;
   border-radius: 4px;
 }
 
-.btn-api:hover {
+.btn-api:hover,
+.btn-download:hover {
   opacity: 0.7;
 }
 
@@ -124,7 +126,7 @@ a#specification > svg {
   display: none;
 }
 
-a.navbar__item.navbar__link:not(#specification):last-of-type{
+.navbar__items:not(.navbar__items--right) a.navbar__item.navbar__link:not(#specification):last-of-type {
   display: none;
 }
 
@@ -138,6 +140,157 @@ a.navbar__item.navbar__link:not(#specification):last-of-type{
   }
 }
 
-html:not(.docs-wrapper) #slideout {
+@media (max-width: 996px) {
+  .btn-download {
+    margin-bottom: calc(var(--ifm-h1-vertical-rhythm-bottom)*var(--ifm-leading));
+  }
+}
+
+@media (min-width: 997px) {
+  .btn-download {
+    float: right;
+  }
+}
+
+.integracoes__panel {
+  display: block;
+  height: 235px;
+  color: unset!important;
+  box-shadow: 0px 0px 3px 0 #c1c1c1;
+  border-radius: 6px;
+  border: none;
+  background-color: inherit;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.integracoes__panel:hover{
+  background-color: #F5F5F5!important;
+}
+
+.integracoes__panel:not(:has(.integracoes__footer)) .integracoes__heading,
+.integracoes__panel:not(:has(.integracoes__footer)) .integracoes__body{
+  padding-top: 33px;
+}
+
+.integracoes__panel--has-second-btn{
+  height: 206.14px;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 0;
+}
+
+.integracoes__panel--second-btn{
+  margin-bottom: 20px;
+  border-radius: 0 0 6px 6px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 15px;
+  width: 100%;
+  height: unset;
+}
+
+.integracoes__heading {
+  padding: 70px 15px 70px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.integracoes__panel--has-second-btn .integracoes__heading {
+  padding: 56px 15px 56px 15px;
+}
+
+.integracoes__logo-box{
+  height: 63px;
+}
+
+.integracoes__logo-box img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.integracoes__body{
+  padding: 20px 15px;
+  height: 95px;
+}
+
+.integracoes__footer {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top: none;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 15px;
+}
+
+.darklight-reference {
   display: none;
+}
+
+.hero__subtitle {
+  text-align: left;
+}
+
+@media screen and (max-width: 996px) {
+  .hero__subtitle {
+    text-align: center;
+    line-height: 1.1;
+  }
+}
+
+.hero__subtitle--primary {
+  font-size: 48px;
+  font-weight: 800;
+}
+@media screen and (min-width: 997px) {
+  .hero__subtitle--primary {
+    margin-top: 75px;
+  }
+}
+
+.hero__subtitle--secondary {
+  font-size: 16px;
+}
+
+html[data-theme="light"] .hero__subtitle{
+  color: #174275;
+}
+html[data-theme="dark"] .hero__subtitle{
+  color: #fff;
+}
+
+.hero__logo {
+  height: 314.02px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+@media screen and (max-width: 996px) {
+  .hero__logo {
+    height: 140px;
+    background-position: center;
+    margin-bottom: 16px;
+  }
+}
+
+html[data-theme="light"] .hero__logo {
+  background-image: url(../../static/img/homepage-screens-light.svg);
+}
+
+html[data-theme="dark"] .hero__logo {
+  background-image: url(../../static/img/homepage-screens-dark.svg);
+}
+
+html[data-theme="dark"] .searchbar--on-dark .navbar__search-input{
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23FFFFFF' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' height='16px' width='16px'%3E%3Cpath d='M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382A4.15609 4.15609 0 0 1 6.02945 10.20327Zm9.69195 4.2199L10.8989 9.59979A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z'/%3E%3C/svg%3E")
+}
+
+@media screen and (max-width: 996px) {
+  .order-mobile-1 {
+    order: 1;
+  }
+
+  .order-mobile-2 {
+    order: 2;
+  }
 }

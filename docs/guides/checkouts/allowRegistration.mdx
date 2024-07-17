@@ -1,0 +1,96 @@
+---
+sidebar_position: 4
+---
+
+# Checkout com possibilidade de armazenar método de pagamento
+
+> **POST** /checkouts
+
+Criação do checkout com os seguintes dados:
+
+- **Idioma:** Português
+- **Layout da página:** basic
+- **Montante:** 5€
+- **Método de pagamento:** Multibanco (MB)
+- **Possibilidade de guardar o método de pagamento**
+- **Código do produto:** REFPRODUTO_1
+- **Descrição do produto:** Computador
+- **Redirecionamentos:**
+  - **Após sucesso no pagamento:** https://www.url-apos-sucesso.dominio
+  - **Após cancelamento do pagamento:** https://www.url-apos-cancelamento.dominio
+  - **Botão voltar:** https://www.url-voltar.dominio
+
+Para permitir o armazenamento do método de pagamento é necessário enviar o parâmetro `allowRegistration` e o `uuid` do cliente, que pode ser obtido através do [consultar cliente](../customers/list.mdx)
+
+O método de pagamento apenas é armazenado com o consentimento do cliente e após o pagamento ser realizado com sucesso.
+
+Os métodos de pagamento armazenados podem ser consultados através do consultar métodos de pagamento.
+
+**Nota:** O aramazenamento do método de pagamento apenas esta disponível para os **pagamentos** com **Cartão de Crédito/Débito e MBWay** e no `layout` **basic** e **default**.
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="pedido" label="Pedido">
+
+```json
+{
+	"payment": {
+		"amount": 500,
+		"code": "REFPRODUTO_1",
+		"summary": "Computador",
+		"customer": {
+			"uuid": "e2343605-cf46-43de-b20b-9b7d1c95a9b2" // <== Indicar o uuid do cliente
+		},
+		"billingAddress": {
+			"country": "PT",
+			"city": "Lisboa",
+			"street1": "Rua Domingos Monteiro nº 7 A",
+			"postCode": "1050-074"
+		},
+		"paymentMethod": {
+			"code": "CC",
+			"details": {
+				"allowRegistration": true // <== Indicar a possibilidade de armazenar o método de pagamento
+			}
+		}
+	},
+	"page": {
+		"language": "PT",
+		"layout": "basic" // <== Indicar o layout que permite armazenar o método de pagamento
+	}
+}
+```
+
+</TabItem>
+<TabItem value="resposta" label="Resposta">
+
+```json
+{
+	"apiVersion": "1.0",
+	"date": "2022-01-03T14:16:17+00:00",
+	"success": true,
+	"data": {
+		"id": "pyKP1B9IaK9J47wTSNB4mUnv2h4DJW8HzomddMp1",
+		"createdAt": "2022-01-03 14:16:17",
+		"checkoutUrl": "https://paypay.pt/paypay/referencia/referencia_c/pay/4d0757e6d4db52fae248e1a2e9f10a1e8cdb0a25/paypay/pyKP1B9IaK9J47wTSNB4mUnv2h4DJW8HzomddMp1",
+		"paymentId": "42690",
+		"stateDetails": {
+			"state": "PaymentReady",
+			"timestamp": "2022-01-03T14:16:17+00:00"
+		}
+	}
+}
+```
+
+</TabItem>
+</Tabs>
+
+Na resposta é devolvido o `id` que identifica o checkout perante a API.
+O `checkoutUrl` é o link para aceder a página e realizar o pagamento.
+O `paymentId` é o id que identifica o pagamento.
+
+Ao aceder ao `checkoutUrl` é apresentada a seguinte página:
+
+![Checkout registration](../../../_media/checkout-cc-registration.png)

@@ -1,0 +1,38 @@
+# Eliminar cliente
+
+> **DELETE** /customers/_\{uuid}_
+
+import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe(
+			"customers",
+			"customers/delete/customers/{uuid}"
+		)
+	}
+>
+	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="solicitud" label="Solicitud">
+
+```js
+DELETE /customers/_e2343605-cf46-43de-b20b-9b7d1c95a9b2_
+```
+
+</TabItem>
+<TabItem value="respuesta" label="Respuesta">
+
+```js
+HTTP Code: 204
+```
+
+</TabItem>
+</Tabs>
+
+**Nota:** La eliminación de clientes solo puede realizarla la entidad que lo creó.

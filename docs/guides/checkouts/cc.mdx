@@ -1,0 +1,115 @@
+---
+sidebar_position: 6
+---
+
+# Checkout Cartão de Crédito/Débito
+
+descrição do produto, dados do cliente e morada de cobrança
+
+> **POST** /checkouts
+
+Criação do checkout com os seguintes dados:
+
+- **Idioma:** Português
+- **Layout da página:** web
+- **Montante:** 5€
+- **Método de pagamento:** Cartão de Crédito/Débito (CC)
+- **Código do produto:** REFPRODUTO_1
+- **Descrição do produto:** Computador
+- **Cliente:**
+  - **Número de cliente:** 1,
+  - **Primeiro nome:** José,
+  - **Último nome:** Silva,
+  - **Telefone:** 351#961234567,
+  - **Email:** jose.silva@email.com
+- **Morada de cobrança:**
+  - **País:** Portugal,
+  - **Cidade:** Lisboa,
+  - **Morada:** Rua Domingos Monteiro nº 7 A,
+  - **Código Postal:** 1050-074
+- **Redirecionamentos:**
+  - **Após sucesso no pagamento:** https://www.url-apos-sucesso.dominio
+  - **Após cancelamento do pagamento:** https://www.url-apos-cancelamento.dominio
+  - **Botão voltar:** https://www.url-voltar.dominio
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="pedido" label="Pedido">
+
+```json
+{
+	"payment": {
+		"amount": 500,
+		"code": "REFPRODUTO_1",
+		"summary": "Computador",
+		"customer": {
+			"customerId": "1",
+			"firstName": "José",
+			"lastName": "Silva",
+			"phoneNumber": "351#961234567",
+			"email": "jose.silva@email.com"
+		},
+		"billingAddress": {
+			"country": "PT",
+			"city": "Lisboa",
+			"street1": "Rua Domingos Monteiro nº 7 A",
+			"postCode": "1050-074"
+		},
+		"paymentMethod": {
+			"code": "CC" // <== Método de pagamento
+		}
+	},
+	"page": {
+		"language": "PT",
+		"layout": "web"
+	},
+	"redirects": [
+		{
+			"type": "success",
+			"url": "https://www.url-apos-sucesso.dominio"
+		},
+		{
+			"type": "cancel",
+			"url": "https://www.url-apos-cancelamento.dominio"
+		},
+		{
+			"type": "back",
+			"url": "https://www.url-voltar.dominio"
+		}
+	]
+}
+```
+
+</TabItem>
+<TabItem value="resposta" label="Resposta">
+
+```json
+{
+	"apiVersion": "1.0",
+	"date": "2022-01-03T14:16:17+00:00",
+	"success": true,
+	"data": {
+		"id": "pyKP1B9IaK9J47wTSNB4mUnv2h4DJW8HzomddMp1",
+		"createdAt": "2022-01-03 14:16:17",
+		"checkoutUrl": "https://paypay.pt/paypay/referencia/referencia_c/pay/4d0757e6d4db52fae248e1a2e9f10a1e8cdb0a25/paypay/pyKP1B9IaK9J47wTSNB4mUnv2h4DJW8HzomddMp1",
+		"paymentId": "42690",
+		"stateDetails": {
+			"state": "PaymentReady",
+			"timestamp": "2022-01-03T14:16:17+00:00"
+		}
+	}
+}
+```
+
+</TabItem>
+</Tabs>
+
+Na resposta é devolvido o `id` que identifica o checkout perante a API.
+O `checkoutUrl` é o link para aceder a página e realizar o pagamento.
+O `paymentId` é o id que identifica o pagamento.
+
+Ao aceder ao `checkoutUrl` é apresentada a seguinte página:
+
+![Checkout CC](../../../_media/checkout-cc.jpg)

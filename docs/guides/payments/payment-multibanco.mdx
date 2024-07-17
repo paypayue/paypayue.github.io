@@ -1,0 +1,147 @@
+# Pagamento com MULTIBANCO
+
+Para iniciar um pagamento com MB apenas necessita do gerar uma referência de 9 dígitos e disponibilizar ao consumidor.
+
+O processo funciona da seguinte forma:
+
+1. Geração de referência Multibanco;
+2. O utilizador paga a referência no Multibanco/Homebanking;
+3. A SIBS comunica à PayPay a confirmação;
+4. A PayPay notifica o estado do pagamento;
+
+O fluxo seguinte ilustra o funcionamento do pagamento por Multibanco:
+
+![MB flow](../../../_media/mb_flow.jpg)
+
+### 1. Gerar referência Multibanco
+
+> **POST** /payments/references
+
+import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe(
+			"payments",
+			"payments/post/payments/references"
+		)
+	}
+>
+	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="pedido" label="Pedido">
+
+```json
+{
+	"type": "payment",
+	"amount": 100,
+	"callbackUrl": "https://teste.pt", // Opcional se usar webhooks
+	"availableMethods": [
+		{
+			"code": "MB",
+			"type": "NORMAL" // Ou REALTIME
+		}
+	],
+	"validDate": {
+		"start": "2022-04-01T14:45:56+00:00",
+		"end": "2022-04-30T23:59:59+01:00"
+	}
+}
+```
+
+</TabItem>
+<TabItem value="resposta" label="Resposta">
+
+```json
+{
+	"apiVersion": "1.4.0",
+	"date": "2022-03-09T14:45:56+00:00",
+	"success": true,
+	"data": {
+		"id": "50438",
+		"type": "payment",
+		"referenceDetails": {
+			"entity": "12797",
+			"reference": "002492617"
+		},
+		"stateDetails": {
+			"state": "pending"
+		},
+		"amount": 100,
+		"createdAt": "2022-03-09T14:45:56+00:00",
+		"updatedAt": "2022-03-09T14:45:56+00:00",
+		"validDate": {
+			"start": "2022-04-01T14:45:56+00:00",
+			"end": "2022-04-30T23:59:59+01:00"
+		},
+		"availableMethods": [
+			{
+				"code": "MB",
+				"type": "NORMAL",
+				"name": "Multibanco"
+			}
+		]
+	}
+}
+```
+
+</TabItem>
+</Tabs>
+
+### 2. O utilizador paga a referência
+
+Caso tenha especificado um URL de callback ou Webhook será enviada uma notificação.
+
+### 3. Consultar do estado do pagamento
+
+> **GET** ​/payments/\{id}
+
+<button className="btn-api btn-api--float-right btn-api--move-top"
+	onClick={() =>
+		ClickShowIframe(
+			"payments",
+			"payments/get/payments/{id}"
+		)
+	}
+>
+	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+```json
+{
+	"apiVersion": "1.4.0",
+	"date": "2022-03-09T14:45:56+00:00",
+	"success": true,
+	"data": {
+		"id": "50438",
+		"type": "payment",
+		"referenceDetails": {
+			"entity": "12797",
+			"reference": "002492617"
+		},
+		"stateDetails": {
+			"state": "confirmed",
+			"createdAt": "2021-10-07T18:07:46+01:00"
+		},
+		"amount": 100,
+		"createdAt": "2022-03-09T14:45:56+00:00",
+		"updatedAt": "2022-03-09T14:45:56+00:00",
+		"validDate": {
+			"start": "2022-04-01T14:45:56+00:00",
+			"end": "2022-04-30T23:59:59+01:00"
+		},
+		"availableMethods": [
+			{
+				"code": "MB",
+				"type": "NORMAL",
+				"name": "Multibanco"
+			}
+		]
+	}
+}
+```
