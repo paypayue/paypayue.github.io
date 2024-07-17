@@ -8,12 +8,6 @@ export default function Root({children}) {
         siteConfig: {customFields}
     } = useDocusaurusContext();
 
-    const handleClose = () => {
-        document.getElementById("slideout").classList.remove("out");
-        document.getElementById("open-panel").classList.remove("hidden");
-        document.getElementById("close-panel").classList.add("hidden");
-    };
-
     const location = useLocation();
     const locationMatchGuides = matchPath(location.pathname, {
         path: customFields.baseUrl + "docs/guides/*/",
@@ -36,6 +30,12 @@ export default function Root({children}) {
     }, []);
 
     if (locationMatchGuides) {
+        const handleClose = () => {
+            document.getElementById("slideout").classList.remove("out");
+            document.getElementById("open-panel").classList.remove("hidden");
+            document.getElementById("close-panel").classList.add("hidden");
+        };
+
         return (
             <>
                 <div className="panel" id="slideout">
