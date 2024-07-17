@@ -9,7 +9,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className='container'>
         <div className='row'>
-          <div className='col col--6'>
+          <div className='col col--6 order-mobile-2'>
             <p className='hero__subtitle hero__subtitle--primary'>
               <Translate id="homepage.headerDescription">
                 Bem vindo!
@@ -17,7 +17,7 @@ function HomepageHeader() {
             </p>
             <p className='hero__subtitle hero__subtitle--secondary'>Aqui pode aceder à área de desenvolvimento do PayPay</p>
           </div>
-          <div className='col col--6'>
+          <div className='col col--6 order-mobile-1'>
             <div className='hero__logo'></div>
           </div>
         </div>

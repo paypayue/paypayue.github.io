@@ -122,7 +122,7 @@ const config = {
       navbar: {
         logo: {
           alt: 'Home',
-          src: 'img/logo.svg',
+          src: 'img/logo-full.svg',
         },
         items: [
           {
