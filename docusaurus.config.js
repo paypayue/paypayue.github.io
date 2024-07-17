@@ -78,21 +78,21 @@ const config = {
   ],
 
   plugins: [
-    [
-      '@scalar/docusaurus',
-      /**@type {import('@scalar/docusaurus').ScalarOptions} */
-      (
-        {
-          label: 'Especificação',
-          route: api,
-          configuration: {
-            spec: {
-              url: process.env.API_URL_SPECIFICATION,
-            },
-          },
-        }
-      )
-    ],
+    // [
+    //   '@scalar/docusaurus',
+    //   /**@type {import('@scalar/docusaurus').ScalarOptions} */
+    //   (
+    //     {
+    //       label: 'Especificação',
+    //       route: api,
+    //       configuration: {
+    //         spec: {
+    //           url: process.env.API_URL_SPECIFICATION,
+    //         },
+    //       },
+    //     }
+    //   )
+    // ],
     [
       '@easyops-cn/docusaurus-search-local',
       (
