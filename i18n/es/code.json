@@ -305,8 +305,11 @@
     "message": "Search",
     "description": "The ARIA label and placeholder for search button"
   },
+  "homepage.headerTitle": {
+    "message": "Bienvenido!"
+  },
   "homepage.headerDescription": {
-    "message": "La forma más sencilla de gestionar los pagos"
+    "message": "Aqui pode aceder à área de desenvolvimento do PayPay"
   },
   "homepage.guias": {
     "message": "Guías"

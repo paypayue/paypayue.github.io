@@ -270,8 +270,11 @@
     "message": "Tags",
     "description": "The title of the tag list page"
   },
+  "homepage.headerTitle": {
+    "message": "Welcome!"
+  },
   "homepage.headerDescription": {
-    "message": "The simplest way to manage payments"
+    "message": "Aqui pode aceder à área de desenvolvimento do PayPay"
   },
   "homepage.guias": {
     "message": "Guides"

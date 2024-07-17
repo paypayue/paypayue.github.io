@@ -11,11 +11,15 @@ function HomepageHeader() {
         <div className='row'>
           <div className='col col--6 order-mobile-2'>
             <p className='hero__subtitle hero__subtitle--primary'>
-              <Translate id="homepage.headerDescription">
+              <Translate id="homepage.headerTitle">
                 Bem vindo!
               </Translate>
             </p>
-            <p className='hero__subtitle hero__subtitle--secondary'>Aqui pode aceder à área de desenvolvimento do PayPay</p>
+            <p className='hero__subtitle hero__subtitle--secondary'>
+              <Translate id="homepage.headerDescription">
+                Aqui pode aceder à área de desenvolvimento do PayPay
+              </Translate>
+            </p>
           </div>
           <div className='col col--6 order-mobile-1'>
             <div className='hero__logo'></div>
