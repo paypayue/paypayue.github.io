@@ -103,7 +103,8 @@ const config = {
           indexBlog: false,
           language: ['pt','es','en'],
           explicitSearchResultPath: true,
-          ignoreFiles: [/docs\/manual-oscommerce\/oscommerce\/.*/]//remover após regularização do woocommerce
+          ignoreFiles: [/docs\/manual-oscommerce\/oscommerce\/.*/],//remover após regularização do woocommerce
+          searchBarShortcutHint: false
         }
       )
     ]
