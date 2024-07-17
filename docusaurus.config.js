@@ -75,6 +75,21 @@ const config = {
         },
       }),
     ],
+    [
+      '@easyops-cn/docusaurus-search-local',
+      (
+        {
+          hashed: true,
+          indexDocs: true,
+          indexPages: false,
+          indexBlog: false,
+          language: ['pt','es','en'],
+          explicitSearchResultPath: true,
+          ignoreFiles: [/docs\/manual-oscommerce\/oscommerce\/.*/],//remover após regularização do woocommerce
+          searchBarShortcutHint: false
+        }
+      )
+    ]
   ],
 
   plugins: [
@@ -94,22 +109,6 @@ const config = {
         }
       )
     ],
-    [
-      '@easyops-cn/docusaurus-search-local',
-      (
-        {
-          id: 'search-local-docusaurus',
-          hashed: true,
-          indexDocs: true,
-          indexPages: false,
-          indexBlog: false,
-          language: ['pt','es','en'],
-          explicitSearchResultPath: true,
-          ignoreFiles: [/docs\/manual-oscommerce\/oscommerce\/.*/],//remover após regularização do woocommerce
-          searchBarShortcutHint: false
-        }
-      )
-    ]
   ],
 
   themeConfig:
