@@ -22,7 +22,6 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.4.0",
     "@docusaurus/types": "^3.4.0",
-    "@easyops-cn/docusaurus-search-local": "^0.44.3",
     "@scalar/docusaurus": "^0.3.5"
   }
 }
