@@ -82,7 +82,6 @@ const config = {
       'docusaurus-lunr-search',
       (
         {
-          id: 'local-search',
           languages: ['pt','es','en'],
         }
       )
@@ -92,7 +91,6 @@ const config = {
       /**@type {import('@scalar/docusaurus').ScalarOptions} */
       (
         {
-          id: 'scalar-docusaurus',
           label: 'Especificação',
           route: api,
           configuration: {
