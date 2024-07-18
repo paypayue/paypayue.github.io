@@ -144,6 +144,11 @@ const config = {
           {
             type: 'localeDropdown',
             position: 'right',
+          },
+          {
+            type: 'search',
+            position: 'right',
+            className: 'searchbar--on-dark'
           }
         ],
       },

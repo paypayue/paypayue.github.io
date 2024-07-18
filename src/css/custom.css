@@ -294,3 +294,7 @@ html[data-theme="dark"] .searchbar--on-dark .navbar__search-input{
     order: 2;
   }
 }
+
+.plugin-id-default .navbar__item .dropdown .dropdown--hoverable {
+  display: none;
+}

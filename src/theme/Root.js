@@ -13,21 +13,10 @@ export default function Root({children}) {
         path: customFields.baseUrl + "docs/guides/*/",
         exact: true
     })
-
-    useEffect(() => {
-        document.addEventListener('click', function (event) {
-            window.setTimeout(() => {
-                document.body.classList.remove('dark-mode');
-                if (document.getElementsByClassName('scalar-api-reference').length){
-                    document.querySelector('.navbar__item.dropdown').classList.add('hidden');
-                }
-            }, 1000);
-            if (event.target.matches('.navbar__brand img') || event.target.matches('.navbar__brand b')) {
-                document.getElementById('slideout').style.display = '';
-            }
-            return;
-        }, false);
-    }, []);
+    const locationMatchApi = matchPath(location.pathname, {
+        path: customFields.baseUrl + "api/*/",
+        exact: true
+    })
 
     if (locationMatchGuides) {
         const handleClose = () => {
@@ -50,8 +39,18 @@ export default function Root({children}) {
                 {children}
             </>
         );
-    }
-    else {
+    } else {
+        if (locationMatchApi) {
+            useEffect(() => {
+                window.setTimeout(() => {
+                    document.body.classList.remove('dark-mode');
+                    if (document.getElementsByClassName('scalar-api-reference').length){
+                        document.querySelector('.navbar__item.dropdown').classList.add('hidden');
+                    }
+                }, 1000);
+            }, []);
+        }
+
         return (
             <>
                 {children}
