@@ -13,10 +13,10 @@ export default function Root({children}) {
         path: customFields.baseUrl + "docs/guides/*/",
         exact: true
     })
-    const locationMatchApi = matchPath(location.pathname, {
-        path: customFields.baseUrl + "api/*/",
-        exact: true
-    })
+    // const locationMatchApi = matchPath(location.pathname, {
+    //     path: customFields.baseUrl + "api/*/",
+    //     exact: true
+    // })
 
     if (locationMatchGuides) {
         const handleClose = () => {
@@ -40,16 +40,16 @@ export default function Root({children}) {
             </>
         );
     } else {
-        if (locationMatchApi) {
-            useEffect(() => {
-                window.setTimeout(() => {
-                    document.body.classList.remove('dark-mode');
-                    if (document.getElementsByClassName('scalar-api-reference').length){
-                        document.querySelector('.navbar__item.dropdown').classList.add('hidden');
-                    }
-                }, 1000);
-            }, []);
-        }
+        // if (locationMatchApi) {
+        //     useEffect(() => {
+        //         window.setTimeout(() => {
+        //             document.body.classList.remove('dark-mode');
+        //             if (document.getElementsByClassName('scalar-api-reference').length){
+        //                 document.querySelector('.navbar__item.dropdown').classList.add('hidden');
+        //             }
+        //         }, 1000);
+        //     }, []);
+        // }
 
         return (
             <>
