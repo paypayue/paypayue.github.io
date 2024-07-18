@@ -79,15 +79,6 @@ const config = {
 
   plugins: [
     [
-      'docusaurus-lunr-search',
-      (
-        {
-          id: 'local-search',
-          languages: ['pt','es','en'],
-        }
-      )
-    ],
-    [
       '@scalar/docusaurus',
       /**@type {import('@scalar/docusaurus').ScalarOptions} */
       (
@@ -103,6 +94,15 @@ const config = {
         }
       )
     ],
+    // [
+    //   'docusaurus-lunr-search',
+    //   (
+    //     {
+    //       id: 'local-search',
+    //       languages: ['pt','es','en'],
+    //     }
+    //   )
+    // ],
   ],
 
   themeConfig:
