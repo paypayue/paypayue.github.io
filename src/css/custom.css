@@ -295,6 +295,6 @@ html[data-theme="dark"] .searchbar--on-dark .navbar__search-input{
   }
 }
 
-.plugin-id-default .dropdown.dropdown--hoverable {
+.plugin-\@scalar\/docusaurus .dropdown.dropdown--hoverable {
   display: none;
 }
