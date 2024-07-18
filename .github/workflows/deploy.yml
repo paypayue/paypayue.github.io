@@ -18,7 +18,7 @@ jobs:
                   node-version: 18 # Use Node.js 18 here
 
             - name: Remove Docusaurus cache
-              run: npm run clear
+              run: npm run docusaurus clear
 
             - name: Install dependencies
               run: npm install
