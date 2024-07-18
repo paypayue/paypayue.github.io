@@ -94,15 +94,15 @@ const config = {
         }
       )
     ],
-    // [
-    //   'docusaurus-lunr-search',
-    //   (
-    //     {
-    //       id: 'local-search',
-    //       languages: ['pt','es','en'],
-    //     }
-    //   )
-    // ],
+    [
+      'docusaurus-lunr-search',
+      (
+        {
+          id: 'local-search',
+          languages: ['pt','es','en'],
+        }
+      )
+    ],
   ],
 
   themeConfig:
