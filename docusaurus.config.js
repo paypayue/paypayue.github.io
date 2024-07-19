@@ -82,7 +82,11 @@ const config = {
       'docusaurus-lunr-search',
       (
         {
+          maxHits: '8',
           languages: ['pt','es','en'],
+          excludeRoutes: [
+            'docs/manual-oscommerce/**/*'
+          ]//remover após regularização do oscommerce
         }
       )
     ],
