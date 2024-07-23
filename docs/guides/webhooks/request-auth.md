@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+description: ''
+---
+
 # Autenticação dos pedidos
 
 O seguinte header é enviado no pedido HTTP de forma a permitir verificar a sua integridade e autenticidade:

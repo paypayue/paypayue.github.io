@@ -1,8 +1,9 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
+description: Possibilitar ao utilizador a guardar do método de pagamento para utilizações futuras.
 ---
 
-# Checkout com possibilidade de armazenar método de pagamento
+# Possibilitar a tokenização do método de pagamento
 
 > **POST** /checkouts
 
@@ -24,7 +25,7 @@ Para permitir o armazenamento do método de pagamento é necessário enviar o pa
 
 O método de pagamento apenas é armazenado com o consentimento do cliente e após o pagamento ser realizado com sucesso.
 
-Os métodos de pagamento armazenados podem ser consultados através do consultar métodos de pagamento.
+Os métodos de pagamento armazenados podem ser consultados através do [consultar métodos de pagamento](../paymentMethods/getPaymentMethods.mdx).
 
 **Nota:** O aramazenamento do método de pagamento apenas esta disponível para os **pagamentos** com **Cartão de Crédito/Débito e MBWay** e no `layout` **basic** e **default**.
 

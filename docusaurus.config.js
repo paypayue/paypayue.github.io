@@ -9,6 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const site = process.env.SITE;
 const api = '/api'
 const baseUrl = '/'
+const apiUrlSpecification = process.env.API_URL_SPECIFICATION;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -99,7 +100,7 @@ const config = {
           route: api,
           configuration: {
             spec: {
-              url: process.env.API_URL_SPECIFICATION,
+              url: apiUrlSpecification,
             },
           },
         }

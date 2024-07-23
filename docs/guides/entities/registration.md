@@ -1,3 +1,7 @@
+---
+description: Redireccionar o utilizador para o formulário de adesão com os dados pré-preenchidos.
+---
+
 # Pré-preenchimento do formulário de adesão
 
 Para facilitar a adesão do seu cliente à PayPay, disponibilizamos o seguinte método para pré-preencher o formulário de adesão.
@@ -51,4 +55,4 @@ Exemplo da estrutura de dados a ser submetida como formulário `application/x-ww
 }
 ```
 
-A estrutura de dados completa, bem como as opções para _economicActivity_ e _availableMethods_ pode ser consultada [aqui](https://paypay.pt/paypay/api/#model-Registration).
+A estrutura de dados completa, bem como as opções para _economicActivity_ e _availableMethods_ pode ser consultada [aqui](/api#model/entityregistration).
