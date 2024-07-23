@@ -51,4 +51,9 @@ Exemplo da estrutura de dados a ser submetida como formulário `application/x-ww
 }
 ```
 
-A estrutura de dados completa, bem como as opções para _economicActivity_ e _availableMethods_ pode ser consultada [aqui](https://paypay.pt/paypay/api/#model-Registration).
+A estrutura de dados completa, bem como as opções para _economicActivity_ e _availableMethods_ pode ser consultada <a href="#" onClick={() =>
+		ClickShowIframe(
+			"entities",
+			"entities/post/entities"
+		)
+	} >aqui</a>.
