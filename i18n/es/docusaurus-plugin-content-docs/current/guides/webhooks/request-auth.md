@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+description: ""
+---
+
 # Autenticación de las solicitudes
 
 El siguiente encabezado se envía en la solicitud HTTP para permitir verificar su integridad y autenticidad:

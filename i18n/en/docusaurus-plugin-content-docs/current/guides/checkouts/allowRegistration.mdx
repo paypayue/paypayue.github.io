@@ -1,8 +1,9 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
+description: Possibilitar ao utilizador a guardar do método de pagamento para utilizações futuras.
 ---
 
-# Checkout with possibility to store payment method
+# Possibilitar a tokenização do método de pagamento
 
 > **POST** /checkouts
 
@@ -24,7 +25,7 @@ To allow storage of the payment method it is necessary to send the `allowRegistr
 
 The payment method is only stored with the consent of the customer and after successful payment.
 
-The stored payment methods can be viewed via [view payment methods](../paymentMethods/getPaymentMethods.mdx).
+The stored payment methods can be viewed via [view payment methods](../customers/getPaymentMethods.mdx).
 
 **Note:** Payment method storage is only available for **payments** with **Credit/Debit Card and MBWay** and in the **basic** and **default** Layout.
 

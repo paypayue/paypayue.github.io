@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+description: ""
+---
+
 # Authentication of requests
 
 The following header is sent in the HTTP request in order to allow verifying its integrity and authenticity:

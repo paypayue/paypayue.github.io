@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+description: ""
+---
+
 # Tipos de eventos disponibles
 
 | Acción                   | Descripción                                                                                                                       |

@@ -1,23 +1,28 @@
-# Register payment method (tokenization)
+---
+sidebar_position: 6
+description: Guardar o método de pagamento para utilizações futuras.
+---
 
-Tokenization is the process by which confidential payment data of customers can be securely stored by creating a token.
-To create a token, the following steps must be followed:
+# Tokenização do método de pagamento
 
-1. Obtain the UUID of the customer;
-2. Purchase through checkout using the registered customer id.
+La tokenización es el proceso por el cual los datos confidenciales de pago de los clientes se almacenan de forma segura mediante la creación de un token.
+Para crear un token, hay que seguir los siguientes pasos:
 
-### 1. Obtain the UUID of the customer
+1. Obtener el UUID del cliente;
+2. Compra a través de checkout usando el id del cliente registrado.
 
-The first step is to obtain the UUID of the customer who wants to register his/her payment method. This can be done through:
+### 1. Obtener el UUID del cliente
 
-- [Create customer](../customers/create.mdx)
-- [View customer](../customers/get.mdx)
+El primer paso es obtener el UUID del cliente que desea registrar su método de pago. Esto puede hacerse a través de:
 
-### 2. Complete payment through checkout
+- [Crear cliente](../customers/create.mdx)
+- [Consultar cliente](../customers/get.mdx)
 
-For the payment method to be available a successful payment must be completed.
+### 2. Concluir el pago a través de checkout
 
-> **POST** /checkouts
+Para que el método de pago esté disponible es necesario concluir un pago con éxito.
+
+#### POST /checkouts
 
 import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 
@@ -29,14 +34,14 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		)
 	}
 >
-	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs>
-<TabItem value="request" label="Request">
+<TabItem value="solicitud" label="Solicitud">
 
 ```json
 {
@@ -62,7 +67,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="response" label="Response">
+<TabItem value="respuesta" label="Respuesta">
 
 ```json
 {
@@ -85,9 +90,9 @@ import TabItem from "@theme/TabItem";
 </TabItem>
 </Tabs>
 
-### 3. View customer payment methods
+### 3. Consultar métodos de pago del cliente
 
-Once the payment has been successfully completed, the payment method is added to the payment methods of the customer.
+Una vez realizado el pago con éxito, el método de pago es añadido a los métodos de pago del cliente.
 
 > **GET** ​/customers​/\{uuid}​/paymentMethods
 
@@ -99,7 +104,7 @@ Once the payment has been successfully completed, the payment method is added to
 		)
 	}
 >
-	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
 ```json

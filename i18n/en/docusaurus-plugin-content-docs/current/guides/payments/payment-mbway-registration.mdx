@@ -1,16 +1,21 @@
-# Guardar MB WAY
+---
+sidebar_position: 5
+description: Guardar o método MB WAY para compras futuras
+---
 
-Para guardar el método MB WAY para futuras compras, basta con realizar un pago a través de MB WAY con éxito.
+# Save MB WAY
 
-El proceso funciona como sigue:
+To save the MB WAY method for future purchases, it is only necessary to make a successful payment via MB WAY.
 
-1. Notificar [pago MB WAY](../payments/payment-mbway.mdx) con la indicación de la flag `createRegistration=true` y el UUID del cliente;
-2. El usuario confirma el pago en la aplicación;
-3. Consulta del pago o [Consulta de los métodos del cliente](./getPaymentMethods.mdx).
+The process works as follows:
 
-### 1. Notificación de pago MB WAY con registro
+1. Notify [MB WAY payment](../payments/payment-mbway.mdx) indicating the flag `createRegistration=true` and the UUID of the customer;
+2. User confirms payment in the application;
+3. View payment or View customer methods.
 
-#### POST /payments
+### 1. Notification of MB WAY payment with registration
+
+> **POST** /payments
 
 import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 
@@ -22,14 +27,14 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		)
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs>
-<TabItem value="solicitud" label="Solicitud">
+<TabItem value="request" label="Request">
 
 ```json
 {
@@ -49,7 +54,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="respuesta" label="Respuesta">
+<TabItem value="response" label="Response">
 
 ```json
 {
@@ -88,11 +93,11 @@ import TabItem from "@theme/TabItem";
 </TabItem>
 </Tabs>
 
-### 2. El usuario valida el pago en la aplicación MB WAY
+### 2. The User validates the payment on the MB WAY application
 
 ![MB WAY confirmed](../../../../../../_media/mbway-confirmed.jpg)
 
-### 3. Consulta del estado del pago
+### 3. View the status of the payment
 
 > **GET** ​/payments/\{id}
 
@@ -104,7 +109,7 @@ import TabItem from "@theme/TabItem";
 		)
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
 ```json
