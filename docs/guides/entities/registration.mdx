@@ -2,13 +2,13 @@
 description: Redireccionar o utilizador para o formulário de adesão com os dados pré-preenchidos.
 ---
 
-# Pre-filling the registration form
+# Pré-preenchimento do formulário de adesão
 
-To make it easier for your customer to register in PayPay, we provide the following method to pre-fill the registration form.
+Para facilitar a adesão do seu cliente à PayPay, disponibilizamos o seguinte método para pré-preencher o formulário de adesão.
 
-The submission of data should be done via browser by submitting a form to the url: https://paypay.pt/aderir. After this step the user is redirected to PayPay registration page with pre-filled data.
+O envio dos dados deve ser feito via browser, submetendo um formulário para o url: https://paypay.pt/aderir. O utilizador é redirecionado para a página de adesão da PayPay com os dados pré-preenchidos.
 
-Example of the data structure to be submitted via form `application/x-www-form-urlencoded`:
+Exemplo da estrutura de dados a ser submetida como formulário `application/x-www-form-urlencoded`:
 
 ```json
 {
@@ -55,4 +55,6 @@ Example of the data structure to be submitted via form `application/x-www-form-u
 }
 ```
 
-The complete data structure, as well as the options for _economicActivity_ and _availableMethods_ can be consulted [here](https://paypay.pt/paypay/api/#model-Registration).
+import ClickShowIframe from "../../src/utils/ClickShowIframe";
+
+A estrutura de dados completa, bem como as opções para _economicActivity_ e _availableMethods_ pode ser consultada <button className="link-api" onClick={ () => ClickShowIframe( "model", "models", "model/entityregistration") } > <span>aqui</span> </button>.
