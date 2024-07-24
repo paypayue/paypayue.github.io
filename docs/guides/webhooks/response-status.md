@@ -1,5 +1,5 @@
 ---
-description: ''
+description: ""
 ---
 
 # Tratamento da resposta obtida
@@ -28,4 +28,3 @@ A numeração que se segue após o `/payments` corresponde a posição desse pag
 ### Política de tentativas:
 
 Serão realizadas 3 tentativas num intervalo de 30 em 30 minutos.
-

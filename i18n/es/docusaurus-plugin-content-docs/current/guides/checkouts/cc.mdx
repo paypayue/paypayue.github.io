@@ -5,9 +5,9 @@ description: Exemplo utilizando o cartão de crédito/débito
 
 # Checkout Tarjeta de Crédito/Débito
 
-descripción del producto, datos del cliente y dirección de facturación
+import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 
-> **POST** /checkouts
+> **POST** /checkouts <button className="btn-api btn-api--float-right" onClick={() => ClickShowIframe( "checkouts", "checkouts/post/checkouts" ) } > <span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span> </button>
 
 Creación del checkout con los siguientes datos:
 

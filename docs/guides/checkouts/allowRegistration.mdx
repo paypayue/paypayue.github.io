@@ -5,7 +5,9 @@ description: Possibilitar ao utilizador a guardar do método de pagamento para u
 
 # Possibilitar a tokenização do método de pagamento
 
-> **POST** /checkouts
+import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+
+> **POST** /checkouts <button className="btn-api btn-api--float-right" onClick={() => ClickShowIframe( "checkouts", "checkouts/post/checkouts" ) } > <span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span> </button>
 
 Criação do checkout com os seguintes dados:
 
@@ -25,7 +27,7 @@ Para permitir o armazenamento do método de pagamento é necessário enviar o pa
 
 O método de pagamento apenas é armazenado com o consentimento do cliente e após o pagamento ser realizado com sucesso.
 
-Os métodos de pagamento armazenados podem ser consultados através do [consultar métodos de pagamento](../paymentMethods/getPaymentMethods.mdx).
+Os métodos de pagamento armazenados podem ser consultados através do [consultar métodos de pagamento](../customers/getPaymentMethods.mdx).
 
 **Nota:** O aramazenamento do método de pagamento apenas esta disponível para os **pagamentos** com **Cartão de Crédito/Débito e MBWay** e no `layout` **basic** e **default**.
 

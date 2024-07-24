@@ -103,23 +103,39 @@
 }
 
 .btn-api,
-.btn-download {
+.btn-download,
+.link-api {
   cursor: pointer;
-  background-color: var(--ifm-color-primary-dark);
-  border: none;
-  color: white !important;
-  padding: 15px 15px;
-  text-align: center;
   text-decoration: none !important;
   display: inline-block;
+  border: none;
+}
+
+.btn-api,
+.btn-download {
+  background-color: var(--ifm-color-primary-dark);
+  color: white !important;
+  padding: 15px;
   font-size: 16px;
   font-weight: 700;
   border-radius: 4px;
+  text-align: center;
 }
 
 .btn-api:hover,
 .btn-download:hover {
   opacity: 0.7;
+}
+
+.link-api {
+  background-color: transparent;
+  color: var(--ifm-color-primary-dark) !important;
+  font-size: 15px;
+  padding: 0;
+}
+
+.link-api:hover {
+  text-decoration: underline !important;
 }
 
 a#specification > svg {

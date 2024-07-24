@@ -23,7 +23,9 @@ El parámetro id del checkout se concatena automáticamente a la url en el momen
 	}
 ```
 
-> **POST** /checkouts
+import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+
+> **POST** /checkouts <button className="btn-api btn-api--float-right" onClick={() => ClickShowIframe( "checkouts", "checkouts/post/checkouts" ) } > <span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span> </button>
 
 Creación del checkout con los siguientes datos:
 
