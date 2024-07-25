@@ -11,10 +11,10 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
-		ClickShowIframe(
-			"payments",
-			"payments/patch/payments/{id}/amount"
-		)
+		ClickShowIframe({
+			idMenuOption: "payments",
+			idOption: "payments/patch/payments/{id}/amount"
+		})
 	}
 >
 	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>

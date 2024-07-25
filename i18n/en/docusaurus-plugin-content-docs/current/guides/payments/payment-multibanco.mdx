@@ -25,10 +25,10 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
-		ClickShowIframe(
-			"payments",
-			"payments/post/payments/references"
-		)
+		ClickShowIframe({
+			idMenuOption: "payments",
+			idOption: "payments/post/payments/references"
+		})
 	}
 >
 	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
@@ -107,10 +107,10 @@ If the user has specified a callback URL or Webhook a notification will be sent.
 
 <button className="btn-api btn-api--float-right btn-api--move-top"
 	onClick={() =>
-		ClickShowIframe(
-			"payments",
-			"payments/get/payments/{id}"
-		)
+		ClickShowIframe({
+			idMenuOption: "payments",
+			idOption: "payments/get/payments/{id}"
+		})
 	}
 >
 	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>

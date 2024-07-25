@@ -28,10 +28,10 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
-		ClickShowIframe(
-			"checkouts",
-			"checkouts/post/checkouts"
-		)
+		ClickShowIframe({
+			idMenuOption: "checkouts",
+			idOption: "checkouts/post/checkouts"
+		})
 	}
 >
 	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
@@ -98,10 +98,10 @@ Once the payment has been successfully completed, the payment method is added to
 
 <button className="btn-api btn-api--float-right btn-api--move-top"
 	onClick={() =>
-		ClickShowIframe(
-			"customer-payment-methods",
-			"customer-payment-methods/get/customers/{uuid}/paymentMethods"
-		)
+		ClickShowIframe({
+			idMenuOption: "customer-payment-methods",
+			idOption: "customer-payment-methods/get/customers/{uuid}/paymentMethods"
+		})
 	}
 >
 	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>

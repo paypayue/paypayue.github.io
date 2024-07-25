@@ -16,7 +16,7 @@ import ClickShowIframe from "../../../../../src/utils/ClickShowIframe";
 
 <button className="btn-api"
 	onClick={() =>
-		ClickShowIframe("sdk", "sdk/get/sdks/{language}/options")
+		ClickShowIframe({idMenuOption: "sdk",  idOption: "sdk/get/sdks/{language}/options"})
 	}
 >
 	<span>Generación de SDK en varios lenguajes</span>
@@ -24,7 +24,7 @@ import ClickShowIframe from "../../../../../src/utils/ClickShowIframe";
 <br /><br />
 <button className="btn-api"
 	onClick={() =>
-		ClickShowIframe("sdk", "sdk/post/sdks/{language}")
+		ClickShowIframe({idMenuOption: "sdk",  idOption: "sdk/post/sdks/{language}"})
 	}
 >
 	<span>Listar las opciones de generación del SDK</span>
