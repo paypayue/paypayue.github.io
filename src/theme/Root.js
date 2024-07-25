@@ -9,16 +9,27 @@ export default function Root({children}) {
     } = useDocusaurusContext();
 
     const location = useLocation();
-    const locationMatchGuides = matchPath(location.pathname, {
+    const locationMatchGuidesPT = matchPath(location.pathname, {
         path: customFields.baseUrl + "docs/guides/*/",
         exact: true
     })
+
+    const locationMatchGuidesES = matchPath(location.pathname, {
+        path: customFields.baseUrl + "es/docs/guides/*/",
+        exact: true
+    })
+
+    const locationMatchGuidesEN = matchPath(location.pathname, {
+        path: customFields.baseUrl + "en/docs/guides/*/",
+        exact: true
+    })
+
     // const locationMatchApi = matchPath(location.pathname, {
     //     path: customFields.baseUrl + "api/*/",
     //     exact: true
     // })
 
-    if (locationMatchGuides) {
+    if (locationMatchGuidesPT || locationMatchGuidesES || locationMatchGuidesEN) {
         const handleClose = () => {
             document.getElementById("slideout").classList.remove("out");
             document.getElementById("open-panel").classList.remove("hidden");
