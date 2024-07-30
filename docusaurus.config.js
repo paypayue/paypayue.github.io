@@ -34,7 +34,25 @@ const config = {
 
   customFields : {
     docsApi: site + api,
-    baseUrl: baseUrl
+    baseUrl: baseUrl,
+    footerCopyrightLinks: [
+      {
+        i18nId: 'copyright.pPrivacidade',
+        title: 'Política de Privacidade',
+        link: 'https://stackoverflow.com/questions/tagged/docusaurus'
+      },
+      {
+        i18nId: 'copyright.pSeguranca',
+        title: 'Política de Segurança',
+        link: 'https://stackoverflow.com/questions/tagged/docusaurus'
+      },
+      {
+        i18nId: 'copyright.elogios',
+        title: 'Elogios, Sugestões e Reclamações',
+        link: 'https://stackoverflow.com/questions/tagged/docusaurus'
+      },
+    ]
+
   },
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -156,6 +174,25 @@ const config = {
             className: 'searchbar--on-dark'
           }
         ],
+      },
+      footer: {
+        links: [
+          {
+            html: `
+                <a href="#" target="_blank">
+                  <div title="Linkedin" class="footer-social footer-social--lk"></div>
+                </a>
+              `,
+          },
+          {
+            html: `
+                <a href="#" target="_blank">
+                  <div title="Youtube" class="footer-social footer-social--yt"></div>
+                </a>
+              `,
+          },
+        ],
+        copyright: `© PayPay ${new Date().getFullYear()} - Todos os direitos reservados`,
       },
       prism: {
         theme: prismThemes.github,
