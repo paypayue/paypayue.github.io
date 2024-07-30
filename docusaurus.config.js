@@ -39,17 +39,17 @@ const config = {
       {
         i18nId: 'copyright.pPrivacidade',
         title: 'Política de Privacidade',
-        link: 'https://stackoverflow.com/questions/tagged/docusaurus'
+        link: 'https://paypay.acin.pt/paypayalfa/index_c/politicaPrivacidade'
       },
       {
         i18nId: 'copyright.pSeguranca',
         title: 'Política de Segurança',
-        link: 'https://stackoverflow.com/questions/tagged/docusaurus'
+        link: 'https://paypay.acin.pt/paypayalfa/index_c/politicaSeguranca'
       },
       {
         i18nId: 'copyright.elogios',
         title: 'Elogios, Sugestões e Reclamações',
-        link: 'https://stackoverflow.com/questions/tagged/docusaurus'
+        link: 'https://www.livroreclamacoes.pt/'
       },
     ]
 
