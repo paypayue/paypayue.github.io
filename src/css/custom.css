@@ -15,6 +15,7 @@
   --ifm-color-primary-lightest: #83BBB0;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-footer-background-color: transparent;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -313,4 +314,92 @@ html[data-theme="dark"] .searchbar--on-dark .navbar__search-input{
 
 .plugin-\@scalar\/docusaurus .dropdown.dropdown--hoverable {
   display: none;
+}
+
+.footer {
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+html[data-theme="light"] .footer{
+  border-top-color: #dadada;
+}
+
+html [data-theme="dark"] .footer{
+  border-top-color: #444950;
+}
+
+.footer-social{
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+html[data-theme="light"] .footer-social--lk {
+  background-image: url(../../static/img/footer-social-lk-black.svg);
+}
+
+html[data-theme="light"] .footer-social--yt {
+  background-image: url(../../static/img/footer-social-yt-black.svg);
+}
+
+html[data-theme="dark"] .footer-social--lk {
+  background-image: url(../../static/img/footer-social-lk-white.svg);
+}
+
+html[data-theme="dark"] .footer-social--yt {
+  background-image: url(../../static/img/footer-social-yt-white.svg);
+}
+
+.footer__bottom {
+  text-align: left;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  padding: 5px 0;
+}
+html[data-theme="light"] .footer-copyright {
+  color: #1d1d1d;
+}
+html[data-theme="dark"] .footer-copyright {
+  color: #fff;
+}
+
+.footer__link-copyright {
+  color: inherit;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.footer__link-separator {
+  color: inherit;
+}
+
+.footer__links {
+  margin-bottom: 0;
+  height: 32px;
+  text-align: right;
+}
+
+@media screen and (max-width: 996px) {
+  .footer__bottom,
+  .footer__links {
+    text-align: center;
+  }
+
+  .footer__link-separator {
+    display: unset;
+  }
+}
+
+.footer__link-item--logos {
+  width: fit-content;
+  display: inline-block;
+}
+
+.footer__link-item--logos:last-child {
+  margin-left: 10px;
 }
