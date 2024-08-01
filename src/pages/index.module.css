@@ -3,16 +3,34 @@
  * and scoped locally.
  */
 
+@media screen and (min-width: 997px) {
+  .hero__box {
+    padding: 83px 0;
+  }
+}
+
 html[data-theme="light"] .heroBanner {
-  background-color: #DCE7FC;
+  background-blend-mode: saturation;
+  background: linear-gradient(269.4deg, rgb(255 255 0 / 0%) -26.42%, #DCE7FD 51.82%);
 }
 
 html[data-theme="dark"] .heroBanner {
-  background-color: #85A3DD;
+  background-blend-mode: hue;
+  background: linear-gradient(269.4deg, rgb(255 255 0 / 0%) -26.42%, #2b4d89 51.82%);
+}
+
+@media screen and (max-width: 996px) {
+  html[data-theme="light"] .heroBanner {
+    background: linear-gradient(269.4deg, rgba(255, 255, 255, 0) -26.42%, #E8F0FF 51.82%);
+  }
+
+  html[data-theme="dark"] .heroBanner {
+    background: linear-gradient(269.4deg, rgba(0, 0, 0, 0) -26.42%, #334C85 51.82%);
+  }
 }
 
 .heroBanner {
-  padding: 1.562rem 0 0;
+  padding: 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -23,6 +41,70 @@ html[data-theme="dark"] .heroBanner {
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 5rem 2rem 2rem 2rem;
   }
+}
+
+.hero__subtitle {
+  text-align: left;
+  margin: 16px 0;
+  line-height: 1.1;
+}
+
+.hero__subtitle--primary {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.hero__subtitle--secondary {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+html[data-theme="light"] .hero__subtitle{
+  color: #174275;
+}
+html[data-theme="dark"] .hero__subtitle{
+  color: #fff;
+}
+
+.hero__logo {
+  height: 314.02px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+@media screen and (max-width: 996px) {
+  .hero__logo {
+    height: 250px;
+    background-position: center;
+  }
+}
+
+html[data-theme="light"] .hero__logo {
+  background-image: url(../../static/img/homepage-screens-light.svg);
+}
+
+html[data-theme="dark"] .hero__logo {
+  background-image: url(../../static/img/homepage-screens-dark.svg);
+}
+
+.hero__header {
+  margin-bottom: 0;
+  border: 1px solid;
+  border-radius: 99px;
+  width: fit-content;
+  padding: 4px 12px;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+html[data-theme="light"] .hero__header {
+  color: #334C85;
+  border-color: #B3C9FF;
+}
+
+html[data-theme="dark"] .hero__header {
+  color: #E5EEFF;
+  border-color: #B6C9F0;
 }

@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
 import Translate from '@docusaurus/Translate';
@@ -17,71 +16,73 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          <div className={clsx('col col--4')}>
-            <div className={styles.features__circleBg}>
-              <IconGuias className={styles.features__icon} />
+          <div className={clsx('col col--12')}>
+            <div className={styles["features__title"]}>
+              O portal do desenvolvedor da PayPay expande a documentação de referência regular com documentação contextual, guias para desenvolvedores e tudo o que os utilizadores da API necessitam.
             </div>
-            <div className="text--center padding-horiz--md">
-              <Heading as="h3">
-                <Translate id="homepage.guias">Guias</Translate>
-              </Heading>
-              <p className={styles.features__description}>
-                <Translate id="homepage.guiasDescription">
-                  Consulte os recursos e passos necessários de forma a integrar serviços de pagamento diretamente na sua aplicação.
-                </Translate>
-              </p>
-            </div>
-            {/* <div className={styles.buttons}>
-              <Link
-                className="button button--secondary button--lg"
-                to='/docs/guides/intro'>
-                <Translate id="homepage.guiasButton">Consultar Guias</Translate>
-              </Link>
-            </div> */}
           </div>
           <div className={clsx('col col--4')}>
-            <div className={styles.features__circleBg}>
-              <IconApi className={styles.features__icon} />
+            <div className={styles["features__card"]}>
+              <div className={styles["features__card-circleBg"]}>
+                <IconGuias className={styles["features__card-icon"]} />
+              </div>
+              <div className="text--left">
+                <p className={styles["features__card-title"]}>
+                  <Translate id="homepage.guias">Guias</Translate>
+                </p>
+                <p className={styles["features__card-description"]}>
+                  <Translate id="homepage.guiasDescription">
+                    Este guia descreve os requisitos e passos necessários para a integração com a PayPay para os clientes que pretendam integrar os nossos serviços de pagamento diretamente nas suas aplicações.
+                  </Translate>
+                </p>
+                <Link className={styles["features__card-link"]} to='/docs/guides/intro'>
+                  <Translate id="homepage.guiasButton">Saber mais</Translate>{' >'}
+                </Link>
+              </div>
             </div>
-            <div className="text--center padding-horiz--md">
-              <Heading as="h3">
-                <Translate id="homepage.api">Especificação API</Translate>
-              </Heading>
-              <p className={styles.features__description}>
-                <Translate id="homepage.apiDescription">
-                  Integre a sua aplicação com a nossa API
-                </Translate>
-              </p>
-            </div>
-            {/* <div className={styles.buttons}>
-              <Link
-                className="button button--secondary button--lg"
-                href={customFields.docsApi}>
-                <Translate id="homepage.apiButton">Consultar Especificação API</Translate>
-              </Link>
-            </div> */}
           </div>
           <div className={clsx('col col--4')}>
-            <div className={styles.features__circleBg}>
-              <IconIntegracoes className={styles.features__icon} />
+            <div className={styles["features__card"]}>
+              <div className={styles["features__card-circleBg"]}>
+                <IconApi className={styles["features__card-icon"]} />
+              </div>
+              <div className="text--left">
+                <p className={styles["features__card-title"]}>
+                  <Translate id="homepage.api">Especificação API</Translate>
+                </p>
+                <p className={clsx(
+                  styles["features__card-description"],
+                  styles["features__card-description--api"]
+                )}>
+                  <Translate id="homepage.apiDescription">
+                    A PayPay suporta integrações com o seu software de gestão através da nossa API. Aqui encontrará detalhes técnicos para facilitar a integração.
+                  </Translate>
+                </p>
+                <Link className={styles["features__card-link"]} href={customFields.docsApi}>
+                  <Translate id="homepage.apiButton">Saber mais</Translate>{' >'}
+                </Link>
+              </div>
             </div>
-            <div className="text--center padding-horiz--md">
-              <Heading as="h3">
-                <Translate id="homepage.integracoes">Integrações</Translate>
-              </Heading>
-              <p className={styles.features__description}>
-                <Translate id="homepage.integracoesDescription">
-                  Conheça os nossos softwares e plugins gratuitos que permitem unir rapidamente os serviços de pagamento na sua loja de e-commerce/software de faturação.
-                </Translate>
-              </p>
+          </div>
+          <div className={clsx('col col--4')}>
+            <div className={styles["features__card"]}>
+              <div className={styles["features__card-circleBg"]}>
+                <IconIntegracoes className={styles["features__card-icon"]} />
+              </div>
+              <div className="text--left">
+                <p className={styles["features__card-title"]}>
+                  <Translate id="homepage.integracoes">Integrações</Translate>
+                </p>
+                <p className={styles["features__card-description"]}>
+                  <Translate id="homepage.integracoesDescription">
+                    Este guia descreve os requisitos e passos necessários para a integração com a PayPay para os clientes que pretendam integrar os nossos serviços de pagamento diretamente nas suas aplicações.
+                  </Translate>
+                </p>
+                <Link className={styles["features__card-link"]} to='/integrations'>
+                  <Translate id="homepage.integracoesButton">Saber mais</Translate>{' >'}
+                </Link>
+              </div>
             </div>
-            {/* <div className={styles.buttons}>
-              <Link
-                className="button button--secondary button--lg"
-                to='/integrations'>
-                <Translate id="homepage.integracoesButton">Consultar Integrações</Translate>
-              </Link>
-            </div> */}
           </div>
         </div>
       </div>

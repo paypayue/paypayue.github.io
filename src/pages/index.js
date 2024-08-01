@@ -6,23 +6,28 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero hero--primary', styles["heroBanner"])}>
       <div className='container'>
         <div className='row'>
-          <div className='col col--6 order-mobile-2'>
-            <p className='hero__subtitle hero__subtitle--primary'>
-              <Translate id="homepage.headerTitle">
-                Olá!
-              </Translate>
-            </p>
-            <p className='hero__subtitle hero__subtitle--secondary'>
-              <Translate id="homepage.headerDescription">
-                Aqui pode aceder à área de desenvolvimento da PayPay
-              </Translate>
-            </p>
+          <div className='col col--6'>
+            <div className={styles["hero__box"]}>
+              <p className={clsx(styles["hero__header"], styles["text--left"])}>
+                DOCUMENTAÇÃO
+              </p>
+              <p className={clsx(styles["hero__subtitle"], styles["hero__subtitle--primary"])}>
+                <Translate id="homepage.headerTitle">
+                  Documentação técnica
+                </Translate>
+              </p>
+              <p className={clsx(styles["hero__subtitle"], styles["hero__subtitle--secondary"])}>
+                <Translate id="homepage.headerDescription">
+                  Aqui encontra todos os recursos necessários para integrar e otimizar os serviços de pagamento da PayPay.
+                </Translate>
+              </p>
+            </div>
           </div>
-          <div className='col col--6 order-mobile-1'>
-            <div className='hero__logo'></div>
+          <div className='col col--6'>
+            <div className={styles["hero__logo"]}></div>
           </div>
         </div>
       </div>

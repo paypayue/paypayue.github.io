@@ -285,72 +285,8 @@ a#specification > svg {
   display: none;
 }
 
-.hero__subtitle {
-  text-align: left;
-}
-
-@media screen and (max-width: 996px) {
-  .hero__subtitle {
-    text-align: center;
-    line-height: 1.1;
-  }
-}
-
-.hero__subtitle--primary {
-  font-size: 48px;
-  font-weight: 800;
-}
-@media screen and (min-width: 997px) {
-  .hero__subtitle--primary {
-    margin-top: 75px;
-  }
-}
-
-.hero__subtitle--secondary {
-  font-size: 16px;
-}
-
-html[data-theme="light"] .hero__subtitle{
-  color: #174275;
-}
-html[data-theme="dark"] .hero__subtitle{
-  color: #fff;
-}
-
-.hero__logo {
-  height: 314.02px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
-}
-@media screen and (max-width: 996px) {
-  .hero__logo {
-    height: 140px;
-    background-position: center;
-    margin-bottom: 16px;
-  }
-}
-
-html[data-theme="light"] .hero__logo {
-  background-image: url(../../static/img/homepage-screens-light.svg);
-}
-
-html[data-theme="dark"] .hero__logo {
-  background-image: url(../../static/img/homepage-screens-dark.svg);
-}
-
 html[data-theme="dark"] .searchbar--on-dark .navbar__search-input{
   background-image: url("data:image/svg+xml,%3Csvg fill='%23FFFFFF' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' height='16px' width='16px'%3E%3Cpath d='M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382A4.15609 4.15609 0 0 1 6.02945 10.20327Zm9.69195 4.2199L10.8989 9.59979A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z'/%3E%3C/svg%3E")
-}
-
-@media screen and (max-width: 996px) {
-  .order-mobile-1 {
-    order: 1;
-  }
-
-  .order-mobile-2 {
-    order: 2;
-  }
 }
 
 .plugin-\@scalar\/docusaurus .dropdown.dropdown--hoverable {
