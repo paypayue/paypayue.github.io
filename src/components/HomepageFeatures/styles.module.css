@@ -7,7 +7,12 @@
 
 .features__title {
   margin-bottom: 40px;
-  font-size: 18px;
+  font-size: 20px;
+}
+@media screen and (max-width: 996px) {
+  .features__title {
+    font-size:18px;
+  }
 }
 
 html[data-theme="light"] .features__title {
