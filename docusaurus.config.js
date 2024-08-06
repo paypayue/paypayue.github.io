@@ -64,15 +64,15 @@ const config = {
     path: './i18n',
     localeConfigs: {
       pt: {
-        label: 'Português',
+        label: 'PT',
         htmlLang: 'pt',
       },
       es: {
-        label: 'Español',
+        label: 'ES',
         htmlLang: 'es',
       },
       en: {
-        label: 'English',
+        label: 'EN',
         htmlLang: 'en',
       }
     }
@@ -137,9 +137,12 @@ const config = {
         }
       },
       navbar: {
+        title: 'Docs',
         logo: {
           alt: 'Home',
           src: 'img/logo-full.svg',
+          srcDark: 'img/logo-full-dark.svg',
+          className: 'brand-logo'
         },
         items: [
           {
@@ -159,8 +162,9 @@ const config = {
             to: 'integrations'
           },
           {
+            id: 'paypay',
             href: 'https://www.paypay.pt/',
-            label: 'PayPay',
+            label: 'Ir para PayPay.pt',
             target: '_self',
             position: 'right',
           },

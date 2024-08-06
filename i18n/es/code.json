@@ -270,38 +270,38 @@
     "message": "Etiquetas",
     "description": "The title of the tag list page"
   },
+  "homepage.header": {
+    "message": "DOCUMENTACIÓN"
+  },
   "homepage.headerTitle": {
-    "message": "Hola!"
+    "message": "Documentação técnica"
   },
   "homepage.headerDescription": {
-    "message": "Aqui pode aceder à área de desenvolvimento da PayPay"
+    "message": "Aquí encontrarás todos los recursos necesarios para integrar y optimizar los servicios de pago de PayPay."
+  },
+  "homepage.featuresTitle": {
+    "message": "El portal de desarrolladores de PayPay amplía la documentación de referencia habitual con documentación contextual, guías para desarrolladores y todo lo que los usuarios de la API necesitan."
+  },
+  "homepage.featuresButton": {
+    "message": "Más información"
   },
   "homepage.guias": {
     "message": "Guías"
   },
   "homepage.guiasDescription": {
-    "message": "Consulte los recursos y pasos necesarios para integrar servicios de pago directamente en su aplicación."
-  },
-  "homepage.guiasButton": {
-    "message": "Consultar Guías"
+    "message": "Este guía describe los requisitos y pasos necesarios para la integración con PayPay para los clientes que deseen integrar nuestros servicios de pago directamente en sus aplicaciones."
   },
   "homepage.api": {
     "message": "Especificación API"
   },
   "homepage.apiDescription": {
-    "message": "Integre su aplicación con nuestra API."
-  },
-  "homepage.apiButton": {
-    "message": "Consulta API"
+    "message": "PayPay admite integraciones con su software de gestión a través de nuestra API. Aquí encontrará detalles técnicos para facilitar la integración."
   },
   "homepage.integracoes": {
     "message": "Integraciones"
   },
   "homepage.integracoesDescription": {
-    "message": "Descubra nuestro software y plugins gratuitos que le permitirán conectar rápidamente los servicios de pago a su tienda de comercio electrónico/software de facturación."
-  },
-  "homepage.integracoesButton": {
-    "message": "Consultar Integraciones"
+    "message": "El PayPay ofrece diversas integraciones y complementos gratuitos que permiten la conexión de los servicios de pago por cajero automático, tarjeta de crédito / débito y MB WAY, con tiendas de comercio electrónico y software de facturación."
   },
   "integrations.title": {
     "message": "Integraciones"

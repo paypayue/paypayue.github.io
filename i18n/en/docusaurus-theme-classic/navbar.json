@@ -9,6 +9,9 @@
   "item.label.Integrações" : {
     "message": "Integrations"
   },
+  "item.label.Ir para PayPay.pt": {
+    "message": "Go To PayPay.pt"
+  },
   "logo.alt": {
     "message": "Home",
     "description": "The alt text of navbar logo"

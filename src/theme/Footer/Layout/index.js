@@ -6,7 +6,6 @@ export default function FooterLayout({style, links, logo, copyright}) {
       className={clsx('footer', {
         'footer--dark': style === 'dark',
       })}>
-      <div className="container container-fluid">
         <div className="row">
           <div className='col col--10'>
             {(logo || copyright) && (
@@ -20,7 +19,6 @@ export default function FooterLayout({style, links, logo, copyright}) {
             {links}
           </div>
         </div>
-      </div>
     </footer>
   );
 }
