@@ -10,6 +10,9 @@ const site = process.env.SITE;
 const api = '/api'
 const baseUrl = '/'
 const apiUrlSpecification = process.env.API_URL_SPECIFICATION;
+const footerElogios = process.env.FOOTER_ELOGIOS;
+const footerPoliticasPrivacidade = process.env.FOOTER_POLITICAS_PRIVACIDADE;
+const footerPoliticasSeguranca = process.env.FOOTER_POLITICAS_SEGURANCA;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -39,17 +42,17 @@ const config = {
       {
         i18nId: 'copyright.pPrivacidade',
         title: 'Política de Privacidade',
-        link: 'https://paypay.acin.pt/paypayalfa/index_c/politicaPrivacidade'
+        link: footerPoliticasPrivacidade
       },
       {
         i18nId: 'copyright.pSeguranca',
         title: 'Política de Segurança',
-        link: 'https://paypay.acin.pt/paypayalfa/index_c/politicaSeguranca'
+        link: footerPoliticasSeguranca
       },
       {
         i18nId: 'copyright.elogios',
         title: 'Elogios, Sugestões e Reclamações',
-        link: 'https://www.livroreclamacoes.pt/'
+        link: footerElogios
       },
     ]
 
@@ -183,14 +186,14 @@ const config = {
         links: [
           {
             html: `
-                <a href="#" target="_blank">
+                <a href="https://www.linkedin.com/company/paypay" target="_blank">
                   <div title="Linkedin" class="footer-social footer-social--lk"></div>
                 </a>
               `,
           },
           {
             html: `
-                <a href="#" target="_blank">
+                <a href="https://www.youtube.com/user/PayPayPT" target="_blank">
                   <div title="Youtube" class="footer-social footer-social--yt"></div>
                 </a>
               `,
