@@ -401,6 +401,46 @@ html[data-theme="dark"] .navbar__title {
   color: #B6C9F0;
 }
 
-.iconLanguage_node_modules-\@docusaurus-theme-classic-lib-theme-NavbarItem-LocaleDropdownNavbarItem-styles-module {
+.iconLanguage_node_modules-\@docusaurus-theme-classic-lib-theme-NavbarItem-LocaleDropdownNavbarItem-styles-module,
+.navbar__link svg {
   display: none;
+}
+
+.navbar__logo {
+  width: 121.14px;
+}
+
+.brand-logo {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: inline-block!important;
+}
+@media only screen and (max-width: 409px) {
+  .navbar__logo {
+    width: 31px;
+  }
+
+  html[data-theme="light"] .brand-logo {
+    background-image: url('../../static/img/logo-mobile.svg')!important;
+  }
+
+  html[data-theme="dark"] .brand-logo {
+    background-image: url('../../static/img/logo-mobile-dark.svg')!important;
+  }
+}
+
+@media (min-width: 997px) and (max-width: 1029px) {
+  .navbar__logo {
+    width: 31px;
+  }
+
+  html[data-theme="light"] .brand-logo {
+    background-image: url('../../static/img/logo-mobile.svg')!important;
+  }
+
+  html[data-theme="dark"] .brand-logo {
+    background-image: url('../../static/img/logo-mobile-dark.svg')!important;
+  }
 }

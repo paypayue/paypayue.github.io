@@ -137,9 +137,12 @@ const config = {
         }
       },
       navbar: {
+        title: 'Docs',
         logo: {
           alt: 'Home',
           src: 'img/logo-full.svg',
+          srcDark: 'img/logo-full-dark.svg',
+          className: 'brand-logo'
         },
         items: [
           {
