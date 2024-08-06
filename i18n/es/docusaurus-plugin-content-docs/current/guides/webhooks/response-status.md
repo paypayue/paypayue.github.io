@@ -8,9 +8,9 @@ La respuesta a los webhooks debe devolver un código de estado de éxito: `200`,
 
 ### Casos de erro específicos
 
-Se durante a receção do webhook pretender indicar casos de erro específicos, para que estes voltem a ser reenviados nas próximas comunicações, terá que incluir no payload esses casos e responder com o status code diferente dos de sucesso.
+Si durante la recepción del webhook desea indicar casos de error específicos, para que estos sean reenviados en las próximas comunicaciones, deberá incluir esos casos en el payload y responder con un código de estado diferente de los de éxito.
 
-A numeração que se segue após o `/payments` corresponde a posição desse pagamento no pedido do webhook.
+La numeración que sigue después de `/payments` corresponde a la posición de ese pago en la solicitud del webhook.
 
 ```json
 {

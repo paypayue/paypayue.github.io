@@ -18,7 +18,9 @@ export default function HomepageFeatures() {
         <div className="row">
           <div className={clsx('col col--12')}>
             <div className={styles["features__title"]}>
-              O portal do desenvolvedor da PayPay expande a documentação de referência regular com documentação contextual, guias para desenvolvedores e tudo o que os utilizadores da API necessitam.
+              <Translate id="homepage.featuresTitle">
+                O portal do desenvolvedor da PayPay expande a documentação de referência regular com documentação contextual, guias para desenvolvedores e tudo o que os utilizadores da API necessitam.
+              </Translate>
             </div>
           </div>
           <div className={clsx('col col--4')}>
@@ -36,7 +38,7 @@ export default function HomepageFeatures() {
                   </Translate>
                 </p>
                 <Link className={styles["features__card-link"]} to='/docs/guides/intro'>
-                  <Translate id="homepage.guiasButton">Saber mais</Translate>{' >'}
+                  <Translate id="homepage.featuresButton">Saber mais</Translate>{' >'}
                 </Link>
               </div>
             </div>
@@ -59,7 +61,7 @@ export default function HomepageFeatures() {
                   </Translate>
                 </p>
                 <Link className={styles["features__card-link"]} href={customFields.docsApi}>
-                  <Translate id="homepage.apiButton">Saber mais</Translate>{' >'}
+                  <Translate id="homepage.featuresButton">Saber mais</Translate>{' >'}
                 </Link>
               </div>
             </div>
@@ -75,11 +77,11 @@ export default function HomepageFeatures() {
                 </p>
                 <p className={styles["features__card-description"]}>
                   <Translate id="homepage.integracoesDescription">
-                    Este guia descreve os requisitos e passos necessários para a integração com a PayPay para os clientes que pretendam integrar os nossos serviços de pagamento diretamente nas suas aplicações.
+                    A PayPay disponibiliza diversas integrações e plugins gratuitos que permitem unir os serviços de pagamento, por Multibanco, Cartão de Crédito/Débito e MB WAY, com lojas de e-commerce e softwares de faturação.
                   </Translate>
                 </p>
                 <Link className={styles["features__card-link"]} to='/integrations'>
-                  <Translate id="homepage.integracoesButton">Saber mais</Translate>{' >'}
+                  <Translate id="homepage.featuresButton">Saber mais</Translate>{' >'}
                 </Link>
               </div>
             </div>

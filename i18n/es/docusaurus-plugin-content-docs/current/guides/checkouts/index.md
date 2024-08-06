@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-description: Solução integrada para solicitar pagamentos no seu site.
+description: Solución integrada para solicitar pagos en tu sitio web.
 ---
 
 # Iniciación

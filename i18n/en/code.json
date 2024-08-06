@@ -270,38 +270,38 @@
     "message": "Tags",
     "description": "The title of the tag list page"
   },
+  "homepage.header": {
+    "message": "DOCUMENTATION"
+  },
   "homepage.headerTitle": {
-    "message": "Hello!"
+    "message": "Technical Documentation"
   },
   "homepage.headerDescription": {
-    "message": "Aqui pode aceder à área de desenvolvimento da PayPay"
+    "message": "Here you will find all the resources needed to integrate and optimize PayPay's payment services."
+  },
+  "homepage.featuresTitle": {
+    "message": "The PayPay developer portal expands regular reference documentation with contextual documentation, developer guides, and everything API users need."
+  },
+  "homepage.featuresButton": {
+    "message": "More information"
   },
   "homepage.guias": {
     "message": "Guides"
   },
   "homepage.guiasDescription": {
-    "message": "See the resources and steps needed to integrate payment services directly into your application."
-  },
-  "homepage.guiasButton": {
-    "message": "View Guides"
+    "message": "This guide outlines the requirements and steps necessary for integration with PayPay for customers who wish to integrate our payment services directly into their applications."
   },
   "homepage.api": {
     "message": "API Specification"
   },
   "homepage.apiDescription": {
-    "message": "Integrate your application with our API."
-  },
-  "homepage.apiButton": {
-    "message": "View API"
+    "message": "PayPay supports integrations with your management software through our API. Here you will find technical details to facilitate the integration."
   },
   "homepage.integracoes": {
     "message": "Integrations"
   },
   "homepage.integracoesDescription": {
-    "message": "Discover our free software and plugins that will allow you to quickly connect payment services to your e-commerce store/invoicing software."
-  },
-  "homepage.integracoesButton": {
-    "message": "View Integrations"
+    "message": "PayPay offers various integrations and free plugins that allow you to attach the payment services for ATM, Credit / Debit Card and MB WAY, with e-commerce shops and billing software."
   },
   "integrations.title": {
     "message": "Integrations"

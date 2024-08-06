@@ -12,7 +12,9 @@ function HomepageHeader() {
           <div className='col col--6'>
             <div className={styles["hero__box"]}>
               <p className={clsx(styles["hero__header"], styles["text--left"])}>
-                DOCUMENTAÇÃO
+                <Translate id="homepage.header">
+                  DOCUMENTAÇÃO
+                </Translate>
               </p>
               <p className={clsx(styles["hero__subtitle"], styles["hero__subtitle--primary"])}>
                 <Translate id="homepage.headerTitle">
