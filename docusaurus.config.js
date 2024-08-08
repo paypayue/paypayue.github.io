@@ -117,8 +117,41 @@ const config = {
       /**@type {import('@scalar/docusaurus').ScalarOptions} */
       (
         {
+          id: 'scalar1',
           label: 'Especificação',
           route: api,
+          configuration: {
+            spec: {
+              url: apiUrlSpecification,
+            },
+          },
+        }
+      )
+    ],
+    [
+      '@scalar/docusaurus',
+      /**@type {import('@scalar/docusaurus').ScalarOptions} */
+      (
+        {
+          id: 'scalar2',
+          label: 'Especificação',
+          route: '/es' + api,
+          configuration: {
+            spec: {
+              url: apiUrlSpecification,
+            },
+          },
+        }
+      )
+    ],
+    [
+      '@scalar/docusaurus',
+      /**@type {import('@scalar/docusaurus').ScalarOptions} */
+      (
+        {
+          id: 'scalar3',
+          label: 'Especificação',
+          route: '/en' + api,
           configuration: {
             spec: {
               url: apiUrlSpecification,
@@ -154,12 +187,12 @@ const config = {
             position: 'left',
             label: 'Guias',
           },
-          {
-            id: 'specification',
-            label: 'Especificação',
-            href: site + api,
-            target: '_self'
-          },
+          // {
+          //   id: 'specification',
+          //   label: 'Especificação',
+          //   href: baseUrl + api, // site + api
+          //   target: '_self'
+          // },
           {
             label: 'Integrações',
             to: 'integrations'
