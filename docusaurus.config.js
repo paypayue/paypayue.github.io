@@ -187,12 +187,6 @@ const config = {
             position: 'left',
             label: 'Guias',
           },
-          // {
-          //   id: 'specification',
-          //   label: 'Especificação',
-          //   href: baseUrl + api, // site + api
-          //   target: '_self'
-          // },
           {
             label: 'Integrações',
             to: 'integrations'

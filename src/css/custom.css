@@ -184,11 +184,7 @@ a#specification > svg {
   display: none;
 }
 
-/* .navbar__items:not(.navbar__items--right) a.navbar__item.navbar__link:not(#specification):last-of-type {
-  display: none;
-} */
-
-.navbar__link:nth-child(5),
+.navbar__link:nth-child(6),
 .navbar__link:nth-child(7){
     display: none;
 }
