@@ -6,10 +6,10 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
-const site = process.env.SITE;
+const site = 'http://10.11.16.37' // process.env.SITE
 const api = '/api'
-const baseUrl = '/'
-const apiUrlSpecification = process.env.API_URL_SPECIFICATION;
+const baseUrl = '/cristiano/paypay/public/api/' // '/'
+const apiUrlSpecification = 'https://paypay.acin.pt/paypayalfa/api/docs/api.json'; // process.env.API_URL_SPECIFICATION
 const footerElogios = process.env.FOOTER_ELOGIOS;
 const footerPoliticasPrivacidade = process.env.FOOTER_POLITICAS_PRIVACIDADE;
 const footerPoliticasSeguranca = process.env.FOOTER_POLITICAS_SEGURANCA;
@@ -117,41 +117,8 @@ const config = {
       /**@type {import('@scalar/docusaurus').ScalarOptions} */
       (
         {
-          id: 'scalar1',
           label: 'Especificação',
           route: api,
-          configuration: {
-            spec: {
-              url: apiUrlSpecification,
-            },
-          },
-        }
-      )
-    ],
-    [
-      '@scalar/docusaurus',
-      /**@type {import('@scalar/docusaurus').ScalarOptions} */
-      (
-        {
-          id: 'scalar2',
-          label: 'Nada0',
-          route: '/es' + api,
-          configuration: {
-            spec: {
-              url: apiUrlSpecification,
-            },
-          },
-        }
-      )
-    ],
-    [
-      '@scalar/docusaurus',
-      /**@type {import('@scalar/docusaurus').ScalarOptions} */
-      (
-        {
-          id: 'scalar3',
-          label: 'Nada1',
-          route: '/en' + api,
           configuration: {
             spec: {
               url: apiUrlSpecification,
@@ -186,6 +153,12 @@ const config = {
             sidebarId: 'guides',
             position: 'left',
             label: 'Guias',
+          },
+          {
+            id: 'specification',
+            label: 'Especificação',
+            href: site + api,
+            target: '_self'
           },
           {
             label: 'Integrações',
