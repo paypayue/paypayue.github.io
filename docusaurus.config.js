@@ -134,7 +134,7 @@ const config = {
       (
         {
           id: 'scalar2',
-          label: 'Especificação',
+          label: 'EspecificaçãoES',
           route: '/es' + api,
           configuration: {
             spec: {
@@ -150,7 +150,7 @@ const config = {
       (
         {
           id: 'scalar3',
-          label: 'Especificação',
+          label: 'EspecificaçãoEN',
           route: '/en' + api,
           configuration: {
             spec: {
