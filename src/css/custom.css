@@ -383,31 +383,13 @@ html[data-theme="dark"] .footer__copyright {
   margin-left: 10px;
 }
 
-.navbar__title {
-  font-size: 16px;
-  font-weight: 500;
-  padding: 2px 8px;
-  border-radius: 5px;
-  text-transform: uppercase;
-}
-
-html[data-theme="light"] .navbar__title {
-  background-color: rgba(51, 76, 133, 0.2);
-  color: #334C85;
-}
-
-html[data-theme="dark"] .navbar__title {
-  background-color: rgba(133, 163, 221, 0.2);
-  color: #B6C9F0;
-}
-
 .iconLanguage_node_modules-\@docusaurus-theme-classic-lib-theme-NavbarItem-LocaleDropdownNavbarItem-styles-module,
 .navbar__link svg {
   display: none;
 }
 
 .navbar__logo {
-  width: 121.14px;
+  width: 174px;
 }
 
 .brand-logo {
@@ -419,7 +401,7 @@ html[data-theme="dark"] .navbar__title {
 }
 @media only screen and (max-width: 409px) {
   .navbar__logo {
-    width: 31px;
+    width: 87px;
   }
 
   html[data-theme="light"] .brand-logo {
@@ -433,7 +415,7 @@ html[data-theme="dark"] .navbar__title {
 
 @media (min-width: 997px) and (max-width: 1029px) {
   .navbar__logo {
-    width: 31px;
+    width: 87px;
   }
 
   html[data-theme="light"] .brand-logo {

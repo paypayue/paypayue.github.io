@@ -140,7 +140,6 @@ const config = {
         }
       },
       navbar: {
-        title: 'Docs',
         logo: {
           alt: 'Home',
           src: 'img/logo-full.svg',
