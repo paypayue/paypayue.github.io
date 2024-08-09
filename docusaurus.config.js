@@ -162,7 +162,8 @@ const config = {
           },
           {
             label: 'Integrações',
-            to: 'integrations'
+            type: 'docSidebar',
+            sidebarId: 'integrations',
           },
           {
             id: 'paypay',

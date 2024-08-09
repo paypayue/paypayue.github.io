@@ -1,66 +1,66 @@
+---
+sidebar_position: 1
+---
+
+# Integrations
+
 import React, { useEffect } from "react";
 import Link from '@docusaurus/Link';
-import Translate from '@docusaurus/Translate';
-
-<h1><Translate id='integrations.title'>Integrações</Translate></h1>
-
-export const consultarGuia = <Translate id='integrations.consultGuide'>Consultar Guia</Translate>
-export const checkWebsite = <Translate id='integrations.checkWebsite'>Visitar website</Translate>
 
 export const integrationsList = [
     {
         title: 'WooCommerce',
-        logoSrc: 'img/woocommerce.png',
-        linkTo: 'docs/category/woocommerce',
-        linkText: consultarGuia,
+        logoSrc: '../../img/woocommerce.png',
+        linkTo: '../category/woocommerce',
+        linkText: 'View Guides',
         downloadHref: 'https://wordpress.org/plugins/paypay-pagamentos-multibanco-e-cartao-de-creditodebito/',
     },
     {
         title: 'PrestaShop',
-        logoSrc: 'img/prestashop.png',
-        linkTo: 'docs/category/prestashop',
-        linkText: consultarGuia,
+        logoSrc: '../../img/prestashop.png',
+        linkTo: '../category/prestashop',
+        linkText: 'View Guides',
         downloadHref: 'https://paypay.pt/paypay/public/plugins/prestashop-plugins.zip',
     },
     {
         title: 'OpenCart',
-        logoSrc: 'img/opencart.png',
-        linkTo: 'docs/category/opencart',
-        linkText: consultarGuia,
+        logoSrc: '../../img/opencart.png',
+        linkTo: '../category/opencart',
+        linkText: 'View Guides',
         downloadHref: 'https://www.opencart.com/index.php?route=extension/extension/info&extension_id=27224'
     },
     {
         title: 'zencart',
-        logoSrc: 'img/zencart.png',
-        linkTo: 'docs/category/zencart',
-        linkText: consultarGuia,
+        logoSrc: '../../img/zencart.png',
+        linkTo: '../category/zencart',
+        linkText: 'View Guides',
         downloadHref: 'https://www.zen-cart.com/downloads.php?do=file&id=2094'
     },
     {
         title: 'VirtueMart',
-        logoSrc: 'img/virtuemart.png',
-        linkTo: 'docs/category/virtuemart',
-        linkText: consultarGuia,
+        logoSrc: '../../img/virtuemart.png',
+        linkTo: '../category/virtuemart',
+        linkText: 'View Guides',
         downloadHref: 'https://extensions.joomla.org/extension/extension-specific/virtuemart-extensions/paypay/',
     },
     // {
     //     title: 'oscommerce',
-    //     logoSrc: 'img/os_commerce.png',
-    //     linkTo: 'docs/category/oscommerce',
-    //     linkText: consultarGuia,
+    //     logoSrc: '../../img/os_commerce.png',
+    //     linkTo: '../category/oscommerce',
+    //     linkText: 'View Guides',
     //     downloadHref: 'https://apps.oscommerce.com/Apps&JHMvS&paypay-oscommerce'
     // },
     {
         title: 'iGest',
-        logoSrc: 'img/igest.png',
+        logoSrc: '../../img/igest.png',
         linkHref: 'https://www.igest.pt/',
-        linkText: checkWebsite
+        linkText: 'Visit Website'
     },
     {
         title: 'invoicexpress',
-        logoSrc: 'img/invoice_express.png',
+        logoSrc: '../../img/invoice_express.png',
         linkHref: 'https://invoicexpress.com/receber-pagamentos',
-        linkText: checkWebsite
+        linkText: 'Visit Website'
     }
 ]
 
@@ -89,7 +89,7 @@ export const ListaIntegracoes = () => {
                         </Link>
                         {downloadHref && (
                                 <a href={downloadHref} target="_blank" className="integracoes__panel integracoes__panel--second-btn">
-                                    <Translate id='integrations.download'>Descarregar</Translate>
+                                    Download
                                 </a>
                             )
                         }
