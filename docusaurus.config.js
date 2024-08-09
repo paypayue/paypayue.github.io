@@ -6,10 +6,10 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
-const site = 'http://10.11.16.37' // process.env.SITE
+const site = process.env.SITE;
 const api = '/api'
-const baseUrl = '/cristiano/paypay/public/api/' // '/'
-const apiUrlSpecification = 'https://paypay.acin.pt/paypayalfa/api/docs/api.json'; // process.env.API_URL_SPECIFICATION
+const baseUrl = '/'
+const apiUrlSpecification = process.env.API_URL_SPECIFICATION;
 const footerElogios = process.env.FOOTER_ELOGIOS;
 const footerPoliticasPrivacidade = process.env.FOOTER_POLITICAS_PRIVACIDADE;
 const footerPoliticasSeguranca = process.env.FOOTER_POLITICAS_SEGURANCA;
