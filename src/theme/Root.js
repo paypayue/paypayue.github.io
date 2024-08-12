@@ -31,7 +31,9 @@ export default function Root({children}) {
 
     if (locationMatchGuidesPT || locationMatchGuidesES || locationMatchGuidesEN) {
         useEffect(() => {
-            document.querySelector('.active-on-selected').classList.add('navbar__link--active')
+            window.setTimeout(() => {
+                document.querySelector('.active-on-selected').classList.add('navbar__link--active');
+            }, 850);
         }, []);
 
         const handleClose = () => {
