@@ -30,12 +30,6 @@ export default function Root({children}) {
     // })
 
     if (locationMatchGuidesPT || locationMatchGuidesES || locationMatchGuidesEN) {
-        useEffect(() => {
-            window.setTimeout(() => {
-                document.querySelector('.active-on-selected').classList.add('navbar__link--active');
-            }, 850);
-        }, []);
-
         const handleClose = () => {
             document.getElementById("slideout").classList.remove("out");
             document.getElementById("open-panel").classList.remove("hidden");
@@ -57,16 +51,11 @@ export default function Root({children}) {
             </>
         );
     } else {
-        // if (locationMatchApi) {
-        //     useEffect(() => {
-        //         window.setTimeout(() => {
-        //             document.body.classList.remove('dark-mode');
-        //             if (document.getElementsByClassName('scalar-api-reference').length){
-        //                 document.querySelector('.navbar__item.dropdown').classList.add('hidden');
-        //             }
-        //         }, 1000);
-        //     }, []);
-        // }
+        useEffect(() => {
+            window.setTimeout(() => {
+                document.querySelector('.active-on-selected').classList.add('navbar__link--active');
+            }, 850);
+        }, []);
 
         return (
             <>
