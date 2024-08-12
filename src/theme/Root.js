@@ -30,6 +30,10 @@ export default function Root({children}) {
     // })
 
     if (locationMatchGuidesPT || locationMatchGuidesES || locationMatchGuidesEN) {
+        useEffect(() => {
+            document.querySelector('.active-on-selected').classList.add('navbar__link--active')
+        }, []);
+
         const handleClose = () => {
             document.getElementById("slideout").classList.remove("out");
             document.getElementById("open-panel").classList.remove("hidden");

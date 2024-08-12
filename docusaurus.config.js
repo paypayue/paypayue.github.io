@@ -157,7 +157,8 @@ const config = {
             id: 'specification',
             label: 'Especificação',
             href: site + api,
-            target: '_self'
+            target: '_self',
+            className: 'active-on-selected',
           },
           {
             label: 'Integrações',
