@@ -1,0 +1,32 @@
+---
+sidebar_position: 5
+title: 'Problems identified WooCommerce'
+sidebar_label: 'Problems identified'
+description: ''
+---
+
+[Block-based layout on the WooCommerce checkout page](#block-based-layout-on-the-woocommerce-checkout-page)
+
+[High performance order storage](#high-performance-order-storage)
+
+## Block-based layout on the WooCommerce checkout page
+
+The PayPay WooCommerce plugin does not support the block payment layout. If you are using this type of layout, the payment methods will not be displayed on the checkout page. You will need to change the checkout section to use the classic checkout mode. To do this, follow these steps:
+
+1. On the WordPress administration page, find the checkout page and click on ‘Edit’.
+
+![problemas1](../../../../../../_media/woocomerce-22.png)
+
+2. After editing the page, select the block associated with the payment methods.
+
+![problemas2](../../../../../../_media/woocomerce-23.png)
+
+3. If the checkout page is using the block checkout layout, a warning will appear in the right-hand pane of the edit page. Click ‘Update’ to save the changes. The payment methods should now appear when checking out.
+
+![problemas3](../../../../../../_media/woocomerce-24.png)
+
+## High performance order storage
+
+The PayPay WooCommerce plugin does not support high performance order storage. If you use this type of storage, you will need to switch to ‘WordPress posts storage (legacy)’ and save the changes.
+
+![problemas4](../../../../../../_media/woocomerce-25.png)

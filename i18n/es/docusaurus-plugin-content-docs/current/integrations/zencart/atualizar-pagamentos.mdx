@@ -1,0 +1,31 @@
+---
+sidebar_position: 4
+title: 'Actualizar los pagos manualmente WooCommerce'
+sidebar_label: 'Actualizar los pagos manualmente'
+description: ''
+---
+
+Todos los pagos se procesan automáticamente. Sin embargo, si se ha realizado un pago y no se ha actualizado el estado de la compra en la tienda Zen Cart, el administrador podrá actualizar manualmente todos los pagos pendientes. Para ello, vaya a la pestaña ‘Modules’ > ‘Payment Modules’ y haga clic en la opción ‘Edit’ > ‘Update’.
+
+![atualizar pagamento manualmente](../../../../../../_media/zencart-18.png)
+
+<h2>Aspectos a tener en cuenta en esta integración:</h2>
+
+- Puede mostrar los detalles del pago (referencia o enlace de pago) en cualquier área (factura, resumen de compra, etc.) insertando el código
+
+```php
+<?php
+    echo paypay::getPaymentLayout(!empty($zv_orders_id) ? $zv_orders_id : $_GET['order_id']);
+?>
+```
+
+en el fichero correspondiente al área en la que desea que aparezca la información (este procedimiento requiere conocimientos básicos de PHP y HTML). Si el identificador del pedido no aparece en ninguna de las variables indicadas, deberá comprobar qué variable deberá utilizarse.
+
+- Para desinstalar el plugin, debe ejecutar el fichero ‘uninstall.sql’ (proporcionado
+junto con los ficheros del plugin) y desinstalar el plugin en el área de administración.
+
+:::warning
+
+Si ejecuta el fichero ‘uninstall.sql’, todos los datos relativos a los pagos realizados desde el plugin Paypay serán eliminados permanentemente.
+
+:::

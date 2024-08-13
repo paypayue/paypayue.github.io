@@ -269,5 +269,59 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etiquetas",
     "description": "The title of the tag list page"
+  },
+  "homepage.header": {
+    "message": "DOCUMENTACIÓN"
+  },
+  "homepage.headerTitle": {
+    "message": "Documentación técnica"
+  },
+  "homepage.headerDescription": {
+    "message": "Aquí encontrarás todos los recursos necesarios para integrar y optimizar los servicios de pago de PayPay."
+  },
+  "homepage.featuresTitle": {
+    "message": "El portal de desarrolladores de PayPay amplía la documentación de referencia habitual con documentación contextual, guías para desarrolladores y todo lo que los usuarios de la API necesitan."
+  },
+  "homepage.featuresButton": {
+    "message": "Más información"
+  },
+  "homepage.guias": {
+    "message": "Guías"
+  },
+  "homepage.guiasDescription": {
+    "message": "Este guía describe los requisitos y pasos necesarios para la integración con PayPay para los clientes que deseen integrar nuestros servicios de pago directamente en sus aplicaciones."
+  },
+  "homepage.api": {
+    "message": "Especificación API"
+  },
+  "homepage.apiDescription": {
+    "message": "PayPay admite integraciones con su software de gestión a través de nuestra API. Aquí encontrará detalles técnicos para facilitar la integración."
+  },
+  "homepage.integracoes": {
+    "message": "Integraciones"
+  },
+  "homepage.integracoesDescription": {
+    "message": "El PayPay ofrece diversas integraciones y complementos gratuitos que permiten la conexión de los servicios de pago por cajero automático, tarjeta de crédito / débito y MB WAY, con tiendas de comercio electrónico y software de facturación."
+  },
+  "integrations.title": {
+    "message": "Integraciones"
+  },
+  "integrations.consultGuide": {
+    "message": "Consultar Guías"
+  },
+  "integrations.checkWebsite": {
+    "message": "Visita el sitio web"
+  },
+  "integrations.download": {
+    "message": "Descargar"
+  },
+  "copyright.pPrivacidade": {
+    "message": "Política de Privacidad"
+  },
+  "copyright.pSeguranca": {
+    "message": "Política de seguridad"
+  },
+  "copyright.elogios": {
+    "message": "Elogios, Sugerencias y Reclamos"
   }
 }

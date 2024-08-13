@@ -269,5 +269,59 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "homepage.header": {
+    "message": "DOCUMENTATION"
+  },
+  "homepage.headerTitle": {
+    "message": "Technical Documentation"
+  },
+  "homepage.headerDescription": {
+    "message": "Here you will find all the resources needed to integrate and optimize PayPay's payment services."
+  },
+  "homepage.featuresTitle": {
+    "message": "The PayPay developer portal expands regular reference documentation with contextual documentation, developer guides, and everything API users need."
+  },
+  "homepage.featuresButton": {
+    "message": "More information"
+  },
+  "homepage.guias": {
+    "message": "Guides"
+  },
+  "homepage.guiasDescription": {
+    "message": "This guide outlines the requirements and steps necessary for integration with PayPay for customers who wish to integrate our payment services directly into their applications."
+  },
+  "homepage.api": {
+    "message": "API Specification"
+  },
+  "homepage.apiDescription": {
+    "message": "PayPay supports integrations with your management software through our API. Here you will find technical details to facilitate the integration."
+  },
+  "homepage.integracoes": {
+    "message": "Integrations"
+  },
+  "homepage.integracoesDescription": {
+    "message": "PayPay offers various integrations and free plugins that allow you to attach the payment services for ATM, Credit / Debit Card and MB WAY, with e-commerce shops and billing software."
+  },
+  "integrations.title": {
+    "message": "Integrations"
+  },
+  "integrations.consultGuide": {
+    "message": "View Guides"
+  },
+  "integrations.checkWebsite": {
+    "message": "Visit Website"
+  },
+  "integrations.download": {
+    "message": "Download"
+  },
+  "copyright.pPrivacidade": {
+    "message": "Privacy policy"
+  },
+  "copyright.pSeguranca": {
+    "message": "Security policy"
+  },
+  "copyright.elogios": {
+    "message": "Acknowledgements, Suggestions and Complaints"
   }
 }

@@ -1,6 +1,15 @@
 import OpenIframe from "./OpenIframe";
 
-const ClickShowIframe = (menuOption, option = null) => {
+const ClickShowIframe = ({typeMenu = 'tag', idMenuOption, idOption = null}) => {
+    let menuOptionType = (typeMenu !== 'model') ? 'sidebar-tag/' : 'sidebar-models';
+    let menuOptionHash = (typeMenu !== 'model') ? '#tag/' : '#model/';
+
+    let firstTargetId =(typeMenu !== 'model') ? menuOptionType + idMenuOption : menuOptionType;
+    let firstTargetHash = menuOptionHash + idMenuOption;
+
+    let secondTargetId =(typeMenu !== 'model') ? menuOptionType + idOption : menuOptionType;
+    let secondTargetHash = menuOptionHash + idMenuOption;
+
     let iframePanel = document.getElementById('iframePanel');
     let previousOptionIsOpen = iframePanel.contentDocument.querySelectorAll('li.sidebar-group-item ul');
 
@@ -9,14 +18,14 @@ const ClickShowIframe = (menuOption, option = null) => {
     }
 
     window.setTimeout(() => {
-        iframePanel.contentDocument.getElementById('sidebar-tag/' + menuOption).querySelector('button').click();
+        iframePanel.contentDocument.getElementById(firstTargetId).querySelector('button').click();
     }, 700);
-    iframePanel.contentWindow.location.hash = '#tag/' + menuOption;
+    iframePanel.contentWindow.location.hash = firstTargetHash;
 
     window.setTimeout(() => {
-        iframePanel.contentDocument.getElementById('sidebar-tag/' + option).querySelector('a.sidebar-heading-link').click();
+        iframePanel.contentDocument.getElementById(secondTargetId).querySelector('a.sidebar-heading-link').click();
     }, 1000);
-    iframePanel.contentWindow.location.hash = '#tag/' + option;
+    iframePanel.contentWindow.location.hash = secondTargetHash;
 
     OpenIframe();
 };

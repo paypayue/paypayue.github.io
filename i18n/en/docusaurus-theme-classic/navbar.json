@@ -1,11 +1,16 @@
 {
-  "title": {
-    "message": "Guides",
-    "description": "The title in the navbar"
+  "item.label.Guias": {
+    "message": "Guides"
   },
   "item.label.Especificação": {
     "message": "Specification",
     "description": "Api details"
+  },
+  "item.label.Integrações" : {
+    "message": "Integrations"
+  },
+  "item.label.Ir para PayPay.pt": {
+    "message": "Go to PayPay.pt"
   },
   "logo.alt": {
     "message": "Home",

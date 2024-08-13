@@ -2,22 +2,22 @@
   "version.label": {
     "message": "Next"
   },
-  "sidebar.docs.category.Entidades": {
+  "sidebar.guides.category.Entidades": {
     "message": "Entities"
   },
-  "sidebar.docs.category.Checkouts": {
+  "sidebar.guides.category.Checkouts": {
     "message": "Checkouts"
   },
-  "sidebar.docs.category.Pagamentos": {
+  "sidebar.guides.category.Pagamentos": {
     "message": "Payments"
   },
-  "sidebar.docs.category.Clientes": {
+  "sidebar.guides.category.Clientes": {
     "message": "Customers"
   },
-  "sidebar.docs.category.Métodos de Pagamento": {
+  "sidebar.guides.category.Métodos de Pagamento": {
     "message": "Payment Methods"
   },
-  "sidebar.docs.category.Webhooks": {
+  "sidebar.guides.category.Webhooks": {
     "message": "Webhooks"
   }
 }
