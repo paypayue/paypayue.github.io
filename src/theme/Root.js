@@ -51,31 +51,21 @@ export default function Root({children}) {
             </>
         );
 
-    } else if (locationMatchApi) {
-        console.log('IFapi');
-        useEffect(() => {
-            console.log('USEEFECTapi')
-            window.setTimeout(() => {
-                document.querySelector('.active-on-selected').classList.add('navbar__link--active');
-            }, 850);
-        }, []);
-
-        return (
-            <>
-                {children}
-            </>
-        );
     } else {
-
-        if (locationMatchApi) {
-            console.log('IFapi');
-            useEffect(() => {
-                console.log('USEEFECTapi')
+        const specificationClass = document.querySelector('.active-on-selected').classList
+        useEffect(() => {
+            if (locationMatchApi) {
                 window.setTimeout(() => {
-                    document.querySelector('.active-on-selected').classList.add('navbar__link--active');
+                    specificationClass.add('navbar__link--active');
                 }, 850);
-            }, []);
-        }
+            } else {
+                window.setTimeout(() => {
+                    if (specificationClass.contains('navbar__link--active')) {
+                        specificationClass.remove('navbar__link--active');
+                    }
+                }, 850);
+            }
+        }, []);
 
         return (
             <>
