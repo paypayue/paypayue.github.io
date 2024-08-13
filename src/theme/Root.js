@@ -51,24 +51,19 @@ export default function Root({children}) {
             </>
         );
 
-    } else if (locationMatchApi) {
-
-        useEffect(() => {
-            window.setTimeout(() => {
-                document.querySelector('.active-on-selected').classList.add('navbar__link--active');
-            }, 850);
-        }, []);
-
-        return (
-            <>
-                {children}
-            </>
-        );
-
     } else {
 
+        if (locationMatchApi) {
+            useEffect(() => {
+                window.setTimeout(() => {
+                    document.querySelector('.active-on-selected').classList.add('navbar__link--active');
+                }, 850);
+            }, []);
+        }
+
         return (
             <>
+                {location.pathname}
                 {children}
             </>
         );
