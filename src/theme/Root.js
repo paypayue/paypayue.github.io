@@ -52,16 +52,15 @@ export default function Root({children}) {
         );
 
     } else {
-        const specificationClass = document.querySelector('.active-on-selected').classList
         useEffect(() => {
             if (locationMatchApi) {
                 window.setTimeout(() => {
-                    specificationClass.add('navbar__link--active');
+                    document.querySelector('.active-on-selected').classList.add('navbar__link--active');
                 }, 850);
             } else {
                 window.setTimeout(() => {
-                    if (specificationClass.contains('navbar__link--active')) {
-                        specificationClass.remove('navbar__link--active');
+                    if (document.querySelector('.active-on-selected').classList.contains('navbar__link--active')) {
+                        document.querySelector('.active-on-selected').classList.remove('navbar__link--active');
                     }
                 }, 850);
             }
