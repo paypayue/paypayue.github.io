@@ -24,10 +24,10 @@ export default function Root({children}) {
         exact: true
     })
 
-    // const locationMatchApi = matchPath(location.pathname, {
-    //     path: customFields.baseUrl + "api/*/",
-    //     exact: true
-    // })
+    const locationMatchApi = matchPath(location.pathname, {
+        path: customFields.baseUrl + "api/*/",
+        exact: true
+    })
 
     if (locationMatchGuidesPT || locationMatchGuidesES || locationMatchGuidesEN) {
         const handleClose = () => {
@@ -50,12 +50,22 @@ export default function Root({children}) {
                 {children}
             </>
         );
-    } else {
+
+    } else if (locationMatchApi) {
+
         useEffect(() => {
             window.setTimeout(() => {
                 document.querySelector('.active-on-selected').classList.add('navbar__link--active');
             }, 850);
         }, []);
+
+        return (
+            <>
+                {children}
+            </>
+        );
+
+    } else {
 
         return (
             <>
