@@ -51,6 +51,20 @@ export default function Root({children}) {
             </>
         );
 
+    } else if (locationMatchApi) {
+        console.log('IFapi');
+        useEffect(() => {
+            console.log('USEEFECTapi')
+            window.setTimeout(() => {
+                document.querySelector('.active-on-selected').classList.add('navbar__link--active');
+            }, 850);
+        }, []);
+
+        return (
+            <>
+                {children}
+            </>
+        );
     } else {
 
         if (locationMatchApi) {
