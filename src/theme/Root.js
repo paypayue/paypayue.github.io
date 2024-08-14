@@ -25,7 +25,7 @@ export default function Root({children}) {
     })
 
     const locationMatchApi = matchPath(location.pathname, {
-        path: customFields.baseUrl + "api/*/",
+        path: customFields.baseUrl + "api",
         exact: true
     })
 
@@ -51,22 +51,21 @@ export default function Root({children}) {
             </>
         );
 
+    } else if (locationMatchApi) {
+
+        useEffect(() => {
+            window.setTimeout(() => {
+                document.querySelector('.active-on-selected').classList.add('navbar__link--active');
+            }, 850);
+        }, []);
+
+        return (
+            <>
+                {children}
+            </>
+        )
+
     } else {
-        if (locationMatchApi) {
-            useEffect(() => {
-                window.setTimeout(() => {
-                    document.querySelector('.active-on-selected').classList.add('navbar__link--active');
-                }, 850);
-            }, []);
-        } else {
-            useEffect(() => {
-                window.setTimeout(() => {
-                    if (document.querySelector('.active-on-selected').classList.contains('navbar__link--active')) {
-                        document.querySelector('.active-on-selected').classList.remove('navbar__link--active');
-                    }
-                }, 850);
-            }, []);
-        }
 
         return (
             <>
