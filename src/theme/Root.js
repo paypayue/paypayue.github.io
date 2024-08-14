@@ -25,7 +25,7 @@ export default function Root({children}) {
     })
 
     const locationMatchApi = matchPath(location.pathname, {
-        path: customFields.baseUrl + "api/*/",
+        path: customFields.baseUrl + "api",
         exact: true
     })
 
@@ -63,7 +63,7 @@ export default function Root({children}) {
             <>
                 {children}
             </>
-        );
+        )
 
     } else {
 
