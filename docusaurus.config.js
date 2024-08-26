@@ -16,11 +16,11 @@ const footerPoliticasSeguranca = process.env.FOOTER_POLITICAS_SEGURANCA;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'PayPay -API documentation',
+  title: 'PayPay - API documentation',
   favicon: 'img/favicon.png',
 
   // Set the production url of your site here
-  url: site,
+  url: site + '?cache=1',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: baseUrl,
