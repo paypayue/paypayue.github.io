@@ -27,4 +27,4 @@ A numeração que se segue após o `/payments` corresponde a posição desse pag
 
 ### Política de tentativas:
 
-Serão realizadas 3 tentativas num intervalo de 30 em 30 minutos.
+Após a primeira tentativa falhada, a próxima tentativa será realizada após 1 minuto, depois 2, 3, 5 até aos 24 minutos.

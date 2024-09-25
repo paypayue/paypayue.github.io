@@ -27,4 +27,4 @@ The numbering that follows `/payments` corresponds to the position of that payme
 
 ### Attempt policy
 
-There will be 3 attempts at an interval of 30 minutes.
+After the first failed attempt, the next attempt will be made after 1 minute, then 2, 3, 5 up to 24 minutes.

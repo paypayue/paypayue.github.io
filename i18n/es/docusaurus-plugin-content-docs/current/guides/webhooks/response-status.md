@@ -28,3 +28,4 @@ La numeración que sigue después de `/payments` corresponde a la posición de e
 ### Política de intentos
 
 Se realizarán 3 intentos cada 30 minutos.
+Después del primer intento fallido, el siguiente intento se realizará después de 1 minuto, luego 2, 3, 5 hasta 24 minutos.
