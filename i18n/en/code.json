@@ -271,7 +271,7 @@
     "description": "The title of the tag list page"
   },
   "homepage.header": {
-    "message": "DOCUMENTATION"
+    "message": ""
   },
   "homepage.headerTitle": {
     "message": "Technical Documentation"
@@ -280,6 +280,9 @@
     "message": "Here you will find all the resources needed to integrate and optimize PayPay's payment services."
   },
   "homepage.featuresTitle": {
+    "message": ""
+  },
+  "homepage.featuresSubtitle": {
     "message": "The PayPay developer portal expands regular reference documentation with contextual documentation, developer guides, and everything API users need."
   },
   "homepage.featuresButton": {

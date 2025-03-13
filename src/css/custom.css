@@ -5,69 +5,223 @@
  */
 
  @font-face {
-  font-family: 'Roboto';
+  font-family: InterVariable;
   font-style: normal;
-  font-weight: 100;
-  src: local('Roboto Thin'), local('Roboto-Thin'), url("../../static/fonts/Roboto-Thin.ttf");
+  font-weight: 100 900;
   font-display: swap;
+  src: url("../../static/fonts/InterVariable.woff2") format("woff2");
 }
-
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'), url("../../static/fonts/Roboto-Light.ttf");
+  font-family: InterVariable;
+  font-style: italic;
+  font-weight: 100 900;
   font-display: swap;
+  src: url("../../static/fonts/InterVariable-Italic.woff2") format("woff2");
 }
-
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto Regular'), local('Roboto-Regular'), url("../../static/fonts/Roboto-Regular.ttf");
   font-display: swap;
+  src: url("../../static/fonts/Inter-Regular.woff2") format("woff2");
 }
-
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../static/fonts/Inter-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'), url("../../static/fonts/Roboto-Medium.ttf");
   font-display: swap;
+  src: url("../../static/fonts/Inter-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../static/fonts/Inter-MediumItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../static/fonts/Inter-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../static/fonts/Inter-SemiBoldItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "InterDisplay";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../static/fonts/InterDisplay-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "InterDisplay";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../static/fonts/InterDisplay-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "InterDisplay";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../static/fonts/InterDisplay-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "InterDisplay";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../static/fonts/InterDisplay-MediumItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "InterDisplay";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../static/fonts/InterDisplay-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "InterDisplay";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../static/fonts/InterDisplay-SemiBoldItalic.woff2") format("woff2");
 }
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url("../../static/fonts/Roboto-Bold.ttf");
-  font-display: swap;
+@font-feature-values InterVariable {
+  @character-variant {
+      cv01: 1; cv02: 2; cv03: 3; cv04: 4; cv05: 5; cv06: 6; cv07: 7; cv08: 8;
+      cv09: 9; cv10: 10; cv11: 11; cv12: 12; cv13: 13;
+      alt-1:            1; /* Alternate one */
+      alt-3:            9; /* Flat-top three */
+      open-4:           2; /* Open four */
+      open-6:           3; /* Open six */
+      open-9:           4; /* Open nine */
+      lc-l-with-tail:   5; /* Lower-case L with tail */
+      simplified-u:     6; /* Simplified u */
+      alt-double-s:     7; /* Alternate German double s */
+      uc-i-with-serif:  8; /* Upper-case i with serif */
+      uc-g-with-spur:  10; /* Capital G with spur */
+      single-story-a:  11; /* Single-story a */
+      compact-lc-f:    12; /* Compact f */
+      compact-lc-t:    13; /* Compact t */
+  }
+  @styleset {
+      ss01: 1; ss02: 2; ss03: 3; ss04: 4; ss05: 5; ss06: 6; ss07: 7; ss08: 8;
+      open-digits: 1;                /* Open digits */
+      disambiguation: 2;             /* Disambiguation (with zero) */
+      disambiguation-except-zero: 4; /* Disambiguation (no zero) */
+      round-quotes-and-commas: 3;    /* Round quotes &amp; commas */
+      square-punctuation: 7;         /* Square punctuation */
+      square-quotes: 8;              /* Square quotes */
+      circled-characters: 5;         /* Circled characters */
+      squared-characters: 6;         /* Squared characters */
+  }
+}
+@font-feature-values Inter {
+  @character-variant {
+      cv01: 1; cv02: 2; cv03: 3; cv04: 4; cv05: 5; cv06: 6; cv07: 7; cv08: 8;
+      cv09: 9; cv10: 10; cv11: 11; cv12: 12; cv13: 13;
+      alt-1:            1; /* Alternate one */
+      alt-3:            9; /* Flat-top three */
+      open-4:           2; /* Open four */
+      open-6:           3; /* Open six */
+      open-9:           4; /* Open nine */
+      lc-l-with-tail:   5; /* Lower-case L with tail */
+      simplified-u:     6; /* Simplified u */
+      alt-double-s:     7; /* Alternate German double s */
+      uc-i-with-serif:  8; /* Upper-case i with serif */
+      uc-g-with-spur:  10; /* Capital G with spur */
+      single-story-a:  11; /* Single-story a */
+      compact-lc-f:    12; /* Compact f */
+      compact-lc-t:    13; /* Compact t */
+  }
+  @styleset {
+      ss01: 1; ss02: 2; ss03: 3; ss04: 4; ss05: 5; ss06: 6; ss07: 7; ss08: 8;
+      open-digits: 1;                /* Open digits */
+      disambiguation: 2;             /* Disambiguation (with zero) */
+      disambiguation-except-zero: 4; /* Disambiguation (no zero) */
+      round-quotes-and-commas: 3;    /* Round quotes &amp; commas */
+      square-punctuation: 7;         /* Square punctuation */
+      square-quotes: 8;              /* Square quotes */
+      circled-characters: 5;         /* Circled characters */
+      squared-characters: 6;         /* Squared characters */
+  }
+}
+@font-feature-values InterDisplay {
+  @character-variant {
+      cv01: 1; cv02: 2; cv03: 3; cv04: 4; cv05: 5; cv06: 6; cv07: 7; cv08: 8;
+      cv09: 9; cv10: 10; cv11: 11; cv12: 12; cv13: 13;
+      alt-1:            1; /* Alternate one */
+      alt-3:            9; /* Flat-top three */
+      open-4:           2; /* Open four */
+      open-6:           3; /* Open six */
+      open-9:           4; /* Open nine */
+      lc-l-with-tail:   5; /* Lower-case L with tail */
+      simplified-u:     6; /* Simplified u */
+      alt-double-s:     7; /* Alternate German double s */
+      uc-i-with-serif:  8; /* Upper-case i with serif */
+      uc-g-with-spur:  10; /* Capital G with spur */
+      single-story-a:  11; /* Single-story a */
+      compact-lc-f:    12; /* Compact f */
+      compact-lc-t:    13; /* Compact t */
+  }
+  @styleset {
+      ss01: 1; ss02: 2; ss03: 3; ss04: 4; ss05: 5; ss06: 6; ss07: 7; ss08: 8;
+      open-digits: 1;                /* Open digits */
+      disambiguation: 2;             /* Disambiguation (with zero) */
+      disambiguation-except-zero: 4; /* Disambiguation (no zero) */
+      round-quotes-and-commas: 3;    /* Round quotes &amp; commas */
+      square-punctuation: 7;         /* Square punctuation */
+      square-quotes: 8;              /* Square quotes */
+      circled-characters: 5;         /* Circled characters */
+      squared-characters: 6;         /* Squared characters */
+  }
 }
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #356B89;
-  --ifm-color-primary-dark: #2D4E79;
-  --ifm-color-primary-darker: #263469;
-  --ifm-color-primary-darkest: #1E1F58;
-  --ifm-color-primary-light: #4F8D9A;
-  --ifm-color-primary-lighter: #69ABAA;
-  --ifm-color-primary-lightest: #83BBB0;
+  --ifm-color-primary-lightest: #2b24fb;
+  --ifm-color-primary-lighter: #0d05fa;
+  --ifm-color-primary-light: #0c04ef;
+  --ifm-color-primary: #0B04D9;
+  --ifm-color-primary-dark: #0a04c3;
+  --ifm-color-primary-darker: #0903b8;
+  --ifm-color-primary-darkest: #080398;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-footer-background-color: transparent;
-  --ifm-font-family-base: "Roboto", "Helvetica Neue", "sans-serif";
+  --ifm-font-family-base: Inter, "sans-serif";
+  --ifm-spacing-horizontal: 24px;
+  @supports (font-variation-settings: normal) {
+    font-family: InterVariable, sans-serif;
+  }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #356B89;
-  --ifm-color-primary-dark: #2D4E79;
-  --ifm-color-primary-darker: #263469;
-  --ifm-color-primary-darkest: #1E1F58;
-  --ifm-color-primary-light: #4F8D9A;
-  --ifm-color-primary-lighter: #69ABAA;
-  --ifm-color-primary-lightest: #83BBB0;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-color-primary-lighter: #f4f7ff;
+  --ifm-color-primary-light: #dee8ff;
+  --ifm-color-primary: #B3C9FF;
+  --ifm-color-primary-dark: #88aaff;
+  --ifm-color-primary-darker: #729bff;
+  --ifm-color-primary-darkest: #316cff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -210,11 +364,18 @@ a#specification > svg {
   }
 }
 
+.integracoes__description {
+  margin-bottom: 32px;
+  color: var(--ifm-font-color-base);
+  font-size: 16px;
+  letter-spacing: -0.32px;
+  line-height: 1.5;
+}
+
 .integracoes__panel {
   display: block;
   height: 235px;
   color: unset!important;
-  box-shadow: 0px 0px 3px 0 #c1c1c1;
   border-radius: 6px;
   border: none;
   background-color: #f8fafc;
@@ -225,6 +386,14 @@ a#specification > svg {
 
 .integracoes__panel:hover{
   background-color: #F5F5F5!important;
+}
+
+.integracoes__panel:hover:not(.integracoes__panel--second-btn) {
+  color: #0B04D9 !important;
+
+  .integracoes__icon svg {
+    transform: rotate(45deg);
+  }
 }
 
 .integracoes__panel:not(:has(.integracoes__footer)) .integracoes__heading,
@@ -239,6 +408,7 @@ a#specification > svg {
 }
 
 .integracoes__panel--second-btn{
+  border-top: 1px solid #E2E8F0;
   margin-bottom: 20px;
   border-radius: 0 0 6px 6px;
   font-size: 12px;
@@ -249,18 +419,19 @@ a#specification > svg {
 }
 
 .integracoes__heading {
-  padding: 70px 15px 70px 15px;
+  padding: 55px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
 
 .integracoes__panel--has-second-btn .integracoes__heading {
-  padding: 56px 15px 56px 15px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .integracoes__logo-box{
-  height: 63px;
+  height: 94px;
 }
 
 .integracoes__logo-box img {
@@ -280,6 +451,20 @@ a#specification > svg {
   font-size: 12px;
   font-weight: 600;
   padding: 5px 15px;
+  color: #0B04D9;
+}
+
+.integracoes__icon {
+  display: inline;
+  margin-left: 8px;
+
+  svg {
+    transition: transform 0.25s ease-in-out;
+  }
+
+  svg path {
+    stroke: #0B04D9;
+  }
 }
 
 .darklight-reference {
@@ -339,6 +524,16 @@ html[data-theme="dark"] .footer-social--yt {
 .footer__copyright {
   font-size: 14px;
   padding: 5px 0;
+  line-height: 1.4286;
+}
+
+@media screen and (max-width: 996px) {
+  .reset-pd {
+    padding: 0;
+  }
+  .footer__copyright {
+    padding: 0 0 24px;
+  }
 }
 html[data-theme="light"] .footer__copyright {
   color: #1D1D1D;
@@ -355,6 +550,7 @@ html[data-theme="dark"] .footer__copyright {
 
 .footer__link-separator {
   color: inherit;
+  margin: 0 0.29rem;
 }
 
 .footer__links {
@@ -389,7 +585,7 @@ html[data-theme="dark"] .footer__copyright {
 }
 
 .navbar__logo {
-  width: 174px;
+  width: 156px;
 }
 
 .brand-logo {
@@ -401,7 +597,7 @@ html[data-theme="dark"] .footer__copyright {
 }
 @media only screen and (max-width: 409px) {
   .navbar__logo {
-    width: 87px;
+    width: 81px;
   }
 
   html[data-theme="light"] .brand-logo {

@@ -271,7 +271,7 @@
     "description": "The title of the tag list page"
   },
   "homepage.header": {
-    "message": "DOCUMENTACIÓN"
+    "message": ""
   },
   "homepage.headerTitle": {
     "message": "Documentación técnica"
@@ -280,6 +280,9 @@
     "message": "Aquí encontrarás todos los recursos necesarios para integrar y optimizar los servicios de pago de PayPay."
   },
   "homepage.featuresTitle": {
+    "message": ""
+  },
+  "homepage.featuresSubtitle": {
     "message": "El portal de desarrolladores de PayPay amplía la documentación de referencia habitual con documentación contextual, guías para desarrolladores y todo lo que los usuarios de la API necesitan."
   },
   "homepage.featuresButton": {

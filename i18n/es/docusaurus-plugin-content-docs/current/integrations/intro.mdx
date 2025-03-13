@@ -66,37 +66,47 @@ export const integrationsList = [
 
 export const ListaIntegracoes = () => {
     return (
-        <div className="container-fluid">
-            <div className="row">
-                {integrationsList.map(({title, logoSrc, linkTo, linkHref, linkText, downloadHref}, idx) => (
-                    <div className='col col--4' key={idx}>
-                        <Link
-                            href={linkHref ? linkHref : ''}
-                            to={linkTo ? linkTo : ''}
-                            target="_blank"
-                            className={
-                                'integracoes__panel' +
-                                (downloadHref ? ' integracoes__panel--has-second-btn' : '')
-                            }
-                            title={title}
-                        >
-                            <div className="integracoes__heading">
-                                <div className="integracoes__logo-box">
-                                    <img src={logoSrc} />
-                                </div>
-                            </div>
-                            <div className="integracoes__footer">{linkText}</div>
-                        </Link>
-                        {downloadHref && (
-                                <a href={downloadHref} target="_blank" className="integracoes__panel integracoes__panel--second-btn">
-                                    Descarregar
-                                </a>
-                            )
-                        }
-                    </div>
-                ))}
+        <>
+            <div className="integracoes__description">
+                a espera de tradução
             </div>
-        </div>
+            <div className="container-fluid">
+                <div className="row">
+                    {integrationsList.map(({title, logoSrc, linkTo, linkHref, linkText, downloadHref}, idx) => (
+                        <div className='col col--4' key={idx}>
+                            <Link
+                                href={linkHref ? linkHref : ''}
+                                to={linkTo ? linkTo : ''}
+                                target="_blank"
+                                className={
+                                    'integracoes__panel' +
+                                    (downloadHref ? ' integracoes__panel--has-second-btn' : '')
+                                }
+                                title={title}
+                            >
+                                <div className="integracoes__heading">
+                                    <div className="integracoes__logo-box">
+                                        <img src={logoSrc} />
+                                    </div>
+                                </div>
+                                <div className="integracoes__footer">
+                                    {linkText}
+                                    <div className="integracoes__icon">
+                                        <IconLink/>
+                                    </div>
+                                </div>
+                            </Link>
+                            {downloadHref && (
+                                    <a href={downloadHref} target="_blank" className="integracoes__panel integracoes__panel--second-btn">
+                                        Descarregar
+                                    </a>
+                                )
+                            }
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </>
     )
 }
 
