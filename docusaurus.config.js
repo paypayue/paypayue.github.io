@@ -111,7 +111,22 @@ const config = {
           ]//remover após regularização do oscommerce
         }
       )
-    ]
+    ],
+    [
+      '@scalar/docusaurus',
+      /**@type {import('@scalar/docusaurus').ScalarOptions} */
+      (
+        {
+          label: 'Especificação',
+          route: api,
+          configuration: {
+            spec: {
+              url: apiUrlSpecification,
+            },
+          },
+        }
+      )
+    ],
   ],
 
   themeConfig:
