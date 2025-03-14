@@ -7,7 +7,7 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         environment: deployment
-        
+
         steps:
             - name: Checkout code
               uses: actions/checkout@v3
@@ -22,6 +22,9 @@ jobs:
 
             - name: Remove Docusaurus cache
               run: npm run clear
+
+            - name: Create translation files
+              run: npm run write-translations -- --locale es && npm run write-translations -- --locale en
 
             - name: Build site
               run: npm run build

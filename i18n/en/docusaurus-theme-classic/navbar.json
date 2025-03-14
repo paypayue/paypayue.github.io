@@ -1,16 +1,19 @@
 {
   "item.label.Guias": {
-    "message": "Guides"
+    "message": "Guides",
+    "description": "Navbar item with label Guias"
   },
   "item.label.Especificação": {
     "message": "Specification",
-    "description": "Api details"
+    "description": "Navbar item with label Especificação"
   },
-  "item.label.Integrações" : {
-    "message": "Integrations"
+  "item.label.Integrações": {
+    "message": "Integrations",
+    "description": "Navbar item with label Integrações"
   },
   "item.label.Ir para PayPay.pt": {
-    "message": "Go to PayPay.pt"
+    "message": "Go to PayPay.pt",
+    "description": "Navbar item with label Ir para PayPay.pt"
   },
   "logo.alt": {
     "message": "Home",

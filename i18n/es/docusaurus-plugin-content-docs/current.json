@@ -1,23 +1,65 @@
 {
   "version.label": {
-    "message": "Próxima"
+    "message": "Próxima",
+    "description": "The label for version current"
   },
   "sidebar.guides.category.Entidades": {
-    "message": "Entidades"
+    "message": "Entidades",
+    "description": "The label for category Entidades in sidebar guides"
   },
   "sidebar.guides.category.Checkouts": {
-    "message": "Checkouts"
+    "message": "Checkouts",
+    "description": "The label for category Checkouts in sidebar guides"
   },
   "sidebar.guides.category.Pagamentos": {
-    "message": "Pagos"
+    "message": "Pagos",
+    "description": "The label for category Pagamentos in sidebar guides"
   },
   "sidebar.guides.category.Clientes": {
-    "message": "Clientes"
+    "message": "Clientes",
+    "description": "The label for category Clientes in sidebar guides"
   },
   "sidebar.guides.category.Métodos de Pagamento": {
     "message": "Métodos de Pago"
   },
   "sidebar.guides.category.Webhooks": {
-    "message": "Webhooks"
+    "message": "Webhooks",
+    "description": "The label for category Webhooks in sidebar guides"
+  },
+  "sidebar.integrations.category.OpenCart": {
+    "message": "OpenCart",
+    "description": "The label for category OpenCart in sidebar integrations"
+  },
+  "sidebar.integrations.category.PrestaShop": {
+    "message": "PrestaShop",
+    "description": "The label for category PrestaShop in sidebar integrations"
+  },
+  "sidebar.integrations.category.Versões Anteriores Prestashop": {
+    "message": "Versiones Anteriores de Prestashop",
+    "description": "The label for category Versões Anteriores Prestashop in sidebar integrations"
+  },
+  "sidebar.integrations.category.PrestaShop 1.7": {
+    "message": "PrestaShop 1.7",
+    "description": "The label for category PrestaShop 1.7 in sidebar integrations"
+  },
+  "sidebar.integrations.category.VirtueMart": {
+    "message": "VirtueMart",
+    "description": "The label for category VirtueMart in sidebar integrations"
+  },
+  "sidebar.integrations.category.WooCommerce": {
+    "message": "WooCommerce",
+    "description": "The label for category WooCommerce in sidebar integrations"
+  },
+  "sidebar.integrations.category.ZenCart": {
+    "message": "ZenCart",
+    "description": "The label for category ZenCart in sidebar integrations"
+  },
+  "sidebar.soap.category.Pagamentos": {
+    "message": "Pagamentos",
+    "description": "The label for category Pagamentos in sidebar soap"
+  },
+  "sidebar.soap.category.Webhooks": {
+    "message": "Webhooks",
+    "description": "The label for category Webhooks in sidebar soap"
   }
 }
