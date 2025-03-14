@@ -25,7 +25,7 @@ export default function HomepageFeatures() {
             </div>
             <div className={styles["features__subtitle"]}>
               <Translate id="homepage.featuresSubtitle">
-                O portal do desenvolvedor da PayPay expande a documentação de referência regular com documentação contextual, guias para desenvolvedores e tudo o que os utilizadores da API necessitam.
+                O portal do programador da PayPay expande a documentação de referência regular com documentação contextual, guias para desenvolvedores e tudo o que os utilizadores da API necessitam.
               </Translate>
             </div>
           </div>
