@@ -1,0 +1,22 @@
+{
+  "logo.alt": {
+    "message": "Home",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Guias": {
+    "message": "Guias",
+    "description": "Navbar item with label Guias"
+  },
+  "item.label.Especificação": {
+    "message": "Especificação",
+    "description": "Navbar item with label Especificação"
+  },
+  "item.label.Integrações": {
+    "message": "Integrações",
+    "description": "Navbar item with label Integrações"
+  },
+  "item.label.Ir para PayPay.pt": {
+    "message": "Ir para PayPay.pt",
+    "description": "Navbar item with label Ir para PayPay.pt"
+  }
+}
