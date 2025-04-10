@@ -6,6 +6,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import IconGuias from '@site/static/img/icon-guias.svg'
 import IconApi from '@site/static/img/icon-api.svg'
 import IconIntegracoes from '@site/static/img/icon-integracoes.svg'
+import IconLink from '@site/static/img/icon-link.svg'
 
 export default function HomepageFeatures() {
   const {
@@ -19,7 +20,12 @@ export default function HomepageFeatures() {
           <div className={clsx('col col--12')}>
             <div className={styles["features__title"]}>
               <Translate id="homepage.featuresTitle">
-                O portal do desenvolvedor da PayPay expande a documentação de referência regular com documentação contextual, guias para desenvolvedores e tudo o que os utilizadores da API necessitam.
+                Sobre esta documentação
+              </Translate>
+            </div>
+            <div className={styles["features__subtitle"]}>
+              <Translate id="homepage.featuresSubtitle">
+                O portal do programador da PayPay expande a documentação de referência regular com documentação contextual, guias para desenvolvedores e tudo o que os utilizadores da API necessitam.
               </Translate>
             </div>
           </div>
@@ -38,7 +44,10 @@ export default function HomepageFeatures() {
                   </Translate>
                 </p>
                 <Link className={styles["features__card-link"]} to='/docs/guides/intro'>
-                  <Translate id="homepage.featuresButton">Saber mais</Translate>{' >'}
+                  <Translate id="homepage.featuresButton">Saber mais</Translate>
+                  <div className={styles["features__card-link-icon"]}>
+                    <IconLink/>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -52,16 +61,16 @@ export default function HomepageFeatures() {
                 <p className={styles["features__card-title"]}>
                   <Translate id="homepage.api">Especificação API</Translate>
                 </p>
-                <p className={clsx(
-                  styles["features__card-description"],
-                  styles["features__card-description--api"]
-                )}>
+                <p className={styles["features__card-description"]}>
                   <Translate id="homepage.apiDescription">
                     A PayPay suporta integrações com o seu software de gestão através da nossa API. Aqui encontrará detalhes técnicos para facilitar a integração.
                   </Translate>
                 </p>
                 <Link className={styles["features__card-link"]} href={customFields.docsApi}>
-                  <Translate id="homepage.featuresButton">Saber mais</Translate>{' >'}
+                  <Translate id="homepage.featuresButton">Saber mais</Translate>
+                  <div className={styles["features__card-link-icon"]}>
+                    <IconLink/>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -81,7 +90,10 @@ export default function HomepageFeatures() {
                   </Translate>
                 </p>
                 <Link className={styles["features__card-link"]} to='/docs/integrations/intro'>
-                  <Translate id="homepage.featuresButton">Saber mais</Translate>{' >'}
+                  <Translate id="homepage.featuresButton">Saber mais</Translate>
+                  <div className={styles["features__card-link-icon"]}>
+                    <IconLink/>
+                  </div>
                 </Link>
               </div>
             </div>
