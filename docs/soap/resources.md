@@ -18,7 +18,6 @@ title: Recursos
 | Código | Descrição  |
 |:--- |:-----------|
 | **DEFAULT** | Emite de acordo com a integração no backoffice |
-| **NORMAL** | Referência MB tradicional (apenas disponível para MB) |
 | **REALTIME** | Referência MB Real-time (apenas disponível para MB) |
 
 ### Códigos de Erro

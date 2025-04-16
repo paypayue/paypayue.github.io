@@ -45,7 +45,7 @@
 				},
 				{
 					"code": "MB",
-					"type": "NORMAL",
+					"type": "REALTIME",
 					"name": "Multibanco"
 				},
 				{
