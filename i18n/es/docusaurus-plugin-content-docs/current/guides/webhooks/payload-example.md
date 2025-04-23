@@ -63,7 +63,8 @@
 				"bankName": "Banco",
 				"last4digits": "8513"
 			}
-		}
+		},
+		...
 	]
 }
 ```
