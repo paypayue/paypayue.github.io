@@ -1,0 +1,182 @@
+---
+sidebar_position: 2
+title: 'Listar terminais'
+description: 'Obtenha a lista de todos os terminais associados à integração, com opções de filtro e paginação'
+---
+
+import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe({
+			idMenuOption: "terminals",
+			idOption: "terminals/get/terminals"
+		})
+	}
+>
+	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+# Listar terminais
+
+Obtenha a lista de todos os terminais associados à integração, com opções de filtro e paginação.
+
+## Endpoint
+
+> **GET** /terminals
+
+## Parâmetros de pesquisa
+
+Todos os parâmetros são opcionais e podem ser combinados para refinar a pesquisa:
+
+| Parâmetro | Tipo | Descrição | Exemplo |
+|-----------|------|-----------|---------|
+| `terminalId` | string | Filtrar pelo id do terminal | `123456789` |
+| `name` | string | Filtrar pelo nome do terminal | `loja-centro`, `armazem-norte` |
+| `page` | integer | Número da página (paginação) | `1`, `2`, `3` |
+| `limit` | string | Número de resultados por página | `10`, `25`, `50` (max: 500) |
+| `sort` | string | Ordenar resultados | `createdAt`, `-created_at`, `terminalId` |
+
+## Exemplos
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+### Listar todos os terminais
+
+<Tabs>
+<TabItem value="pedido-1" label="Pedido">
+
+```js
+GET /terminals
+```
+
+</TabItem>
+<TabItem value="resposta-1" label="Resposta">
+
+```json
+{
+ "date": "2021-12-07T18:01:19+00:00",
+ "success": true,
+ "data": [
+  {
+    "uuid": "3df21709-b2f5-4ec6-93f9-c5855e0da879",
+    "terminalId": "806030356",
+    "name": "name",
+    "model": "model",
+    "processor": "processor",
+    "supplier": "supplier",
+    "features": {
+      "allowRemoteTransactions": true,
+      "allowGenerateQrCode": false,
+      "allowRealTimeTransactionSinchronization": true
+    },
+    "createdAt": "2025-08-21T09:46:39+01:00",
+    "updatedAt": "2025-08-22T16:16:56+01:00"
+  },
+  {
+    "uuid": "1467a1e6-e6b5-425f-9810-21d428091068",
+    "terminalId": "713149748",
+    "name": "name",
+    "model": "model",
+    "processor": "processor",
+    "supplier": "supplier",
+    "features": {
+      "allowRemoteTransactions": false,
+      "allowGenerateQrCode": false,
+      "allowRealTimeTransactionSinchronization": false
+    },
+    "createdAt": "2025-08-20T17:17:02+01:00",
+    "updatedAt": "2025-08-29T11:06:52+01:00"
+  },
+ ],
+ "meta": {
+   "totalPages": 3,
+   "totalCount": 6,
+   "currentPage": 1
+ },
+ "links": {
+   "first": "https://paypay.pt/api/terminals?sort=-createdAt%2CterminalId&limit=2&page=1",
+   "last": "https://paypay.pt/api/terminals?sort=-createdAt%2CterminalId&limit=2&page=3",
+   "next": "https://paypay.pt/api/terminals?sort=-createdAt%2CterminalId&limit=2&page=2"
+ }
+}
+```
+
+</TabItem>
+</Tabs>
+
+### Múltiplos filtros combinados
+
+<Tabs>
+<TabItem value="pedido-2" label="Pedido">
+
+```js
+GET /terminals?terminalId=806030356&sort=-createdAt
+```
+
+</TabItem>
+<TabItem value="resposta-2" label="Resposta">
+
+```json
+{
+ "date": "2021-12-07T18:01:19+00:00",
+ "success": true,
+ "data": [
+  {
+    "uuid": "3df21709-b2f5-4ec6-93f9-c5855e0da879",
+    "terminalId": "806030356",
+    "name": "name",
+    "model": "model",
+    "processor": "processor",
+    "supplier": "supplier",
+    "features": {
+      "allowRemoteTransactions": true,
+      "allowGenerateQrCode": false,
+      "allowRealTimeTransactionSinchronization": true
+    },
+    "createdAt": "2025-08-21T09:46:39+01:00",
+    "updatedAt": "2025-08-22T16:16:56+01:00"
+  }
+ ],
+ "meta": {
+   "totalPages": 1,
+   "totalCount": 1,
+   "currentPage": 1
+ },
+ "links": {
+   "first": "https://paypay.pt/api/terminals?sort=-createdAt%2CterminalId&limit=2&page=1",
+   "last": "https://paypay.pt/api/terminals?sort=-createdAt%2CterminalId&limit=2&page=1"
+ }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Estrutura da Resposta
+
+| Campo | Tipo | Descrição |
+|-------|------|-----------|
+| `uuid` | string | Identificador único do terminal |
+| `terminalId` | string | Id do terminal |
+| `name` | string | Nome do terminal |
+| `model` | string | Modelo do terminal |
+| `processor` | string | Nome do processador das transações |
+| `supplier` | datetime | Nome do fornecedor do terminal |
+| `features.allowRemoteTransactions` | boolean | Indica se o terminal aceita transações remotas (Suportado apenas em terminais cloud) |
+| `features.allowGenerateQrCode` | boolean | Indica se o terminal tem a possibilidade de gerar QR Codes |
+| `features.allowRealTimeTransactionSinchronization` | boolean | Indica se o terminal sincroniza as transações em realtime com o backoffice PayPay |
+| `createdAt` | datetime | Data de criação do registo |
+| `updatedAt` | datetime | Data da última atualização |
+
+:::important Terminais Cloud
+Os terminais que têm a funcionalidade **_allowRemoteTransactions_** ativa, são os terminais do tipo Cloud.
+:::
+
+## Próximos Passos
+
+Agora que sabe listar terminais, explore:
+
+- **[Informação de Terminal](/docs/guides/terminals/cloud/get-terminal)** - Informações completas de um terminal específico
+- **[Enviar Pedido de Pagamento](/docs/guides/terminals/cloud/create-payment)** - Enviar pedido de pagamento para terminal cloud

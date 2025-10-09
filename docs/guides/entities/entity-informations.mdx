@@ -8,6 +8,8 @@ description: Informações tais como nome, NIF e estado da adesão.
 
 O parâmetro **clientId** é o NIF da entidade.
 
+Se existir entidades associadas à integração, as mesmas podem ser consultadas através deste recurso, utilizando o NIF da entidade que pretende consultar.
+
 **Nota:** Para aceder a esta operação não é necessário autenticar-se com o _PayPay-ClientId_.
 
 import ClickShowIframe from "../../../src/utils/ClickShowIframe";
@@ -30,7 +32,7 @@ import TabItem from "@theme/TabItem";
 <TabItem value="pedido" label="Pedido">
 
 ```php
-    GET /entities/_123456789_
+    GET /entities/123456789
 ```
 
 </TabItem>
@@ -38,17 +40,13 @@ import TabItem from "@theme/TabItem";
 
 ```json
 {
-	"apiVersion": "1.0",
-	"date": "2021-12-07T18:01:19+00:00",
-	"success": true,
-	"data": {
-		"clientId": "123456789",
-		"name": "Entidade PayPay",
-		"stateDetails": {
-			"state": "approved",
-			"createdAt": "2021-10-07T17:01:19+00:00"
-		}
-	}
+  "clientId": "123456789",
+  "name": "Entidade PayPay",
+  "createdAt": "2021-10-07T17:01:19+00:00"
+  "stateDetails": {
+	"state": "approved",
+	"updatedAt": "2021-10-07T17:01:19+00:00"
+  }
 }
 ```
 

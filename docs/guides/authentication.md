@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 # Autenticação
@@ -19,21 +19,3 @@ PayPay-ClientId: <clientId>
   - Password: Private Key
 
 - `<clientId>` - NIF da entidade
-
-#### Credenciais de testes
-
-Solicitar credenciais [@apoio](mailto:apoio@paypay.pt) indicando o motivo/finalidade da integração.
-
-### Ambiente de Testes
-
-Deverá testar a integração da sua aplicação com o PayPay, nos seguintes endereços:
-
-```
-https://paypay.acin.pt/api
-```
-
-### Ambiente de Produção
-
-```
-https://paypay.pt/api
-```

@@ -3,7 +3,7 @@ sidebar_position: 2
 description: Embutir na sua página web sem necessidade de sair do seu site.
 ---
 
-# Embutir numa página web
+# Embutir na página web
 
 Para obter o link da incorporação é necessário realizar um pedido POST /checkouts com os dados pretendidos.
 
@@ -11,16 +11,16 @@ O parâmetro `redirects` do tipo `action` é obrigatório e deverá conter o url
 O parâmetro id do checkout é automaticamente concatenado ao url no momento do redireccionamento.
 
 ```json
-    {
-		...
+{
+	...
 
-		"redirects": [
-			{
-				"type": "action", // <== Redireccionamento obrigatório
-				"url": "https://www.url-action.dominio"
-			}
-		]
-	}
+	"redirects": [
+		{
+			"type": "action", // <== Redireccionamento obrigatório
+			"url": "https://www.url-action.dominio"
+		}
+	]
+}
 ```
 
 import ClickShowIframe from "../../../src/utils/ClickShowIframe";
