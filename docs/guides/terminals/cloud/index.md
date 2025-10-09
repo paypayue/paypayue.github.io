@@ -25,18 +25,6 @@ O Terminal Cloud é uma solução avançada que permite integração completa en
                                             └──────────────┘
 ```
 
-## Vantagens do Terminal Cloud
-
-- 🚀 **Automação completa**: Zero intervenção manual
-- 🔗 **Integração total**: API REST moderna e documentada
-- 📊 **Rastreabilidade**: Associação ordem ↔ pagamento
-- ⚡ **Agilidade**: Processo 40% mais rápido que introdução manual
-- 🔒 **Segurança**: Encriptação end-to-end e conformidade PCI-DSS
-- 🔄 **Sincronização bidirecional**: Sistema ↔ Terminal ↔ Backoffice
-- 🎯 **Precisão**: Elimina erros de digitação
-- 📱 **Notificações em tempo real**: Webhook com todos os detalhes
-
-
 ## Resolução de Problemas Comuns
 
 | Problema | Causa Provável | Solução |

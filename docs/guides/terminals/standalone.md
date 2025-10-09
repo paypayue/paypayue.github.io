@@ -48,15 +48,6 @@ O Terminal Standalone funciona de forma autónoma com sincronização automátic
 ## Fluxo de Pagamento
 Consulte o [fluxo de pagamento](/docs/guides/terminals#fluxo-de-pagamento-no-terminal).
 
-## Vantagens do Terminal Standalone
-
-- ⚡ **Rapidez**: Processo simples e direto (transação completa em menos de 30 segundos)
-- 🔒 **Segurança**: Encriptação end-to-end e conformidade PCI-DSS
-- 📱 **Autonomia**: Funciona independentemente de sistemas externos
-- 🔄 **Sincronização automática**: Dados sempre atualizados no backoffice em tempo real
-- 🔔 **Notificações opcionais**: Webhook disponível para integração básica
-- 💰 **Sem custos de integração**: Sem necessidade de desenvolvimento técnico
-
 ## Resolução de Problemas Comuns
 
 | Problema | Solução |
