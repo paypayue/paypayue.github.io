@@ -35,8 +35,7 @@ import ClickShowIframe from "../../../../src/utils/ClickShowIframe";
 
 O seu sistema inicia a devolução remotamente através da API PayPay:
 
-**Fluxo:**
-1. Sistema envia pedido para API PayPay:
+1. O sistema envia o pedido para API PayPay:
 
 ##### Endpoint
 
@@ -57,11 +56,11 @@ POST /terminals/{uuid}/refunds/{paymentId}
 |-----------|------|-------------|-----------|
 | `uuid` | string | ✅ Sim | UUID do terminal para o qual irá ser enviado o pedido de pagamento |
 | `paymentId` | string | ✅ Sim | ID do pagamento PayPay que deseja devolver |
-| `amount` | integer | ✅ Sim | Montante que deseja devovler |
+| `amount` | integer | ✅ Sim | Montante que deseja devolver |
 
 
-1. API PayPay comunica com o terminal de forma **assíncrona**
-2. Terminal recebe e apresenta o valor automaticamente ao operador
+1. API PayPay comunica com o terminal de forma **assíncrona**;
+2. Terminal recebe e apresenta o valor automaticamente ao operador;
 
 :::info Tempo de espera
 O terminal aguarda **1 minuto** pela apresentação do cartão.
@@ -135,13 +134,12 @@ Após o pedido de devolução ser enviado pela API, o processo no terminal segue
 
 O cliente apresenta o mesmo cartão usado no pagamento original:
 
-**Fluxo:**
-1. Terminal apresenta o valor da devolução ao operador
+1. Terminal apresenta o valor da devolução ao operador;
 2. Cliente apresenta o cartão através de um dos métodos:
-   - **Contactless**: Aproxima cartão ou dispositivo móvel
-   - **Chip**: Insere cartão no terminal
-   - **Banda magnética**: Passa o cartão
-3. Terminal valida se o cartão corresponde ao pagamento original
+   - **Contactless**: Aproxima cartão ou dispositivo móvel.
+   - **Chip**: Insere cartão no terminal.
+   - **Banda magnética**: Passa o cartão.
+3. Terminal valida se o cartão corresponde ao pagamento original.
 
 :::warning Validação do Cartão
 O cartão deve ser o **mesmo utilizado no pagamento original**. Se for apresentado um cartão diferente, a devolução será recusada.
@@ -151,36 +149,33 @@ O cartão deve ser o **mesmo utilizado no pagamento original**. Se for apresenta
 
 Dependendo do valor e tipo de cartão, pode ser necessária autenticação:
 
-**Fluxo:**
-1. Dados do cartão são lidos e validados pelo terminal
+1. Dados do cartão são lidos e validados pelo terminal;
 2. Sistema verifica se autenticação é necessária:
-   - **Se sim**: Cliente introduz PIN
-     - Se PIN correto: Prossegue para processamento
-     - Se PIN incorreto: Nova tentativa ou cancelamento (máx. 3 tentativas)
-   - **Se não**: Processamento direto para autorização
+   - **Se sim**: Cliente introduz PIN.
+     - Se PIN correto: Prossegue para processamento.
+     - Se PIN incorreto: Nova tentativa ou cancelamento (máx. 3 tentativas).
+   - **Se não**: Processamento direto para autorização.
 
 **Tipos de autenticação:**
-- **PIN**: Normalmente requerido para devoluções
-- **Sem autenticação**: Em alguns casos de valores reduzidos
+- **PIN**: Normalmente requerido para devoluções.
+- **Sem autenticação**: Em alguns casos de valores reduzidos.
 
 ### 4. Processamento e Confirmação
 
 O terminal comunica com a rede de pagamentos para processar a devolução:
 
-**Fluxo:**
-1. Terminal valida dados e envia pedido para rede de pagamento
-2. Rede contacta banco emissor para processar devolução
+1. Terminal valida dados e envia pedido para rede de pagamento;
+2. Rede contacta banco emissor para processar devolução;
 3. Resposta é enviada de volta ao terminal:
-   - **Aprovada**: Devolução processada com sucesso
-   - **Recusada**: Mensagem de erro apresentada
+   - **Aprovada**: Devolução processada com sucesso.
+   - **Recusada**: Mensagem de erro apresentada.
 
 ### 5. Notificação ao Sistema
 
 Após a confirmação, o seu sistema é notificado:
 
-**Fluxo:**
-1. Transação é sincronizada com backoffice PayPay em tempo real
-2. A PayPay notifica via **Webhook** o seu sistema com detalhes da devolução
+1. A Transação é sincronizada com backoffice PayPay em tempo real;
+2. A PayPay notifica via **Webhook** o seu sistema com detalhes da devolução.
 
 :::tip Webhook Essencial
 Configure webhooks para receber notificações automáticas do resultado da devolução. A resposta da API indica apenas que o pedido foi enviado ao terminal, não o resultado final.

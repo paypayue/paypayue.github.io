@@ -25,8 +25,7 @@ import ClickShowIframe from "../../../../src/utils/ClickShowIframe";
 
 O seu sistema inicia o pagamento remotamente através da API PayPay:
 
-**Fluxo:**
-1. Sistema envia pedido para API PayPay:
+1. O sistema envia o pedido para API PayPay:
 
 ##### Endpoint
 
@@ -53,8 +52,8 @@ POST /terminals/{uuid}/payments
 | `summary` | string | ❌ Não | Descrição indicado pelo comerciante, por exemplo, descrição da encomenda do sistema |
 
 
-2. API PayPay comunica com o terminal de forma **assíncrona**
-3. Terminal recebe e apresenta o valor automaticamente ao operador
+2. API PayPay comunica com o terminal de forma **assíncrona**;
+3. Terminal recebe e apresenta o valor automaticamente ao operador;
 
 :::info Tempo de espera
 O terminal aguarda **1 minuto** pela apresentação do cartão.

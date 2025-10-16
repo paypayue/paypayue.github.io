@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Início
 
-O Terminal Cloud é uma solução avançada que permite integração completa entre o terminal de pagamento e sistema do cliente através de API REST, possibilitando automação e controlo remoto das transações.
+O Terminal Cloud é uma solução avançada que permite integração completa entre o terminal de pagamento e o sistema do cliente através de API REST, possibilitando automação e controlo remoto das transações.
 
 ## Arquitetura da Integração
 
@@ -41,5 +41,5 @@ O Terminal Cloud é uma solução avançada que permite integração completa en
 
 Explore a documentação completa para integração:
 
-- **[Configuração de Webhooks](/docs/guides/terminals/webhooks/)** - Setup de notificações
-- **[Enviar Pedido de Pagamento](/docs/guides/terminals/cloud/create-payment)** - Enviar pedido de pagamento para terminal cloud
+- **[Configuração de Webhooks](/docs/guides/terminals/webhooks/)** - Setup de notificações.
+- **[Enviar Pedido de Pagamento](/docs/guides/terminals/cloud/create-payment)** - Enviar pedido de pagamento para terminal cloud.

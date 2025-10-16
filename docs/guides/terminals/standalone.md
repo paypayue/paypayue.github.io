@@ -61,5 +61,5 @@ Consulte o [fluxo de pagamento](/docs/guides/terminals#fluxo-de-pagamento-no-ter
 
 Agora que conhece o fluxo de pagamento, explore:
 
-- **[Configuração de Webhooks](/docs/guides/terminals/webhooks/)** - Receba notificações automáticas de transações
-- **[FAQ](/docs/guides/terminals/faq/)** - Respostas às perguntas mais frequentes
+- **[Configuração de Webhooks](/docs/guides/terminals/webhooks/)** - Receba notificações automáticas de transações.
+- **[FAQ](/docs/guides/terminals/faq/)** - Respostas às perguntas mais frequentes.

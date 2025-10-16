@@ -88,13 +88,13 @@ GET /terminals/3df21709-b2f5-4ec6-93f9-c5855e0da879
 | `updatedAt` | datetime | Data da última atualização |
 
 :::important Terminais Cloud
-Os terminais que têm a funcionalidade **_allowRemoteTransactions_** ativa, são os terminais do tipo Cloud.
+Os terminais que têm a funcionalidade **_allowRemoteTransactions_** ativa, são do tipo Cloud.
 :::
 
 ## Próximos Passos
 
 Com acesso aos detalhes do terminal, pode:
 
-- **[Enviar Pedido de Pagamento](/docs/guides/terminals/cloud/create-payment)** - Enviar pedido de pagamento para terminal cloud
-- **[Enviar Pedido de Reembolso](/docs/guides/terminals/cloud/create-refund)** - Enviar pedido de devolução para terminal cloud
-- **[Configurar Webhooks](/docs/guides/terminals/webhooks/)** - Receber notificações em tempo real
+- **[Enviar Pedido de Pagamento](/docs/guides/terminals/cloud/create-payment)** - Enviar pedido de pagamento para terminal cloud.
+- **[Enviar Pedido de Reembolso](/docs/guides/terminals/cloud/create-refund)** - Enviar pedido de devolução para terminal cloud.
+- **[Configurar Webhooks](/docs/guides/terminals/webhooks/)** - Receber notificações em tempo real.
