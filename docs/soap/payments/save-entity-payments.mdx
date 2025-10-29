@@ -1,0 +1,55 @@
+---
+sidebar_position: 5
+title: 'Pedidos com gama de referências'
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+<Translate id="soap.payments.saveEntityPayments.intro">A gama de referências deve estar previamente configurada no PayPay só serão aceites referências que estejam dentro da gama configurada. Em ambiente de testes poderá ser solicitada a criação de uma gama de referências para testes.</Translate>
+
+<br/>
+
+### saveEntityPayments
+
+<Translate id="soap.payments.saveEntityPayments.description">Este método permite enviar referências multibanco emitidas localmente por uma aplicação com gama de referências configurada.</Translate>
+
+#### <Translate id="soap.payments.saveEntityPayments.requestParams">Parâmetros do pedido</Translate>
+
+| <Translate id="soap.payments.saveEntityPayments.table.field">Campo</Translate> | <Translate id="soap.payments.saveEntityPayments.table.type">Tipo</Translate> | <Translate id="soap.payments.saveEntityPayments.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **entity** | RequestEntity | <Translate id="soap.payments.saveEntityPayments.entity">Dados de integração da entidade</Translate>  |
+| **- platformCode** | String | <Translate id="soap.payments.saveEntityPayments.platformCode">Código da plataforma</Translate> |
+| **- hash** | String | <Translate id="soap.payments.saveEntityPayments.hash">Hash de autenticação</Translate>  |
+| **- lang** | String | <Translate id="soap.payments.saveEntityPayments.lang">Código de idioma</Translate> |
+| **- date** | String | <Translate id="soap.payments.saveEntityPayments.date">Data de acesso</Translate> |
+| **- nif** | String | <Translate id="soap.payments.saveEntityPayments.nif">NIF da entidade</Translate> |
+| **paymentReferences** | RequestPaymentReference[]  | <Translate id="soap.payments.saveEntityPayments.paymentReferences">Lista de referências de pagamento</Translate> |
+| **- referenceEntity** | String | <Translate id="soap.payments.saveEntityPayments.referenceEntity">Entidade multibanco (5 dígitos)</Translate> |
+| **- reference** | String | <Translate id="soap.payments.saveEntityPayments.reference">Número da referência (9 dígitos = 7 dígitos da gama + 2 checkdigits)</Translate> |
+| **- amount** | Int | <Translate id="soap.payments.saveEntityPayments.amount">Montante da referência (em cêntimos, ex: 1000=10,00EUR)</Translate> |
+| **- creationDate** | String | <Translate id="soap.payments.saveEntityPayments.creationDate">Data de emissão da referência</Translate> |
+| **- productCode** | String | <Translate id="soap.payments.saveEntityPayments.productCode">Código do produto (opcional)</Translate> |
+| **- productDesc** | String | <Translate id="soap.payments.saveEntityPayments.productDesc">Descrição do produto (opcional)</Translate> |
+| **- validStartDate\*** | ISO8601 | <Translate id="soap.payments.saveEntityPayments.validStartDate">Data de início da validade da referência</Translate> |
+| **- validEndDate\*** | ISO8601 | <Translate id="soap.payments.saveEntityPayments.validEndDate">Data limite de pagamento da referência</Translate> |
+
+\*\* <Translate id="soap.payments.saveEntityPayments.dateNote">As datas de validade devem estar no formato ISO8601 (ex: 2014-09-27T18&colon;30&colon;49-03&colon;00).</Translate>
+
+
+#### <Translate id="soap.payments.saveEntityPayments.responseParams">Parâmetros da resposta</Translate>
+
+<Translate id="soap.payments.saveEntityPayments.responseNote">Nota: Quando existem referências processadas com erros é devolvida a lista de erros e a respetiva referência.</Translate> (<a href="../resources#erros-de-resposta-saveentitypayments">Ver Lista</a>)
+
+| Campo | Tipo | Descrição |
+|:--- |:-----------|:-----|
+| **integrationState** | ResponseIntegrationState | Contém a informação da integração  |
+| **- state** | Int | Estado do Resultado (sucesso=1, parcial=2, erro=0) |
+| **- code** | String | Código de erro/sucesso |
+| **- message** | Int | Mensagem de erro/sucesso |
+| **paymentReferenceErrors** | ResponsePaymentReferenceError[] | Lista de detalhes de pagamentos |
+| **- errorCode** | String | Código de erro  |
+| **- errorMessage** | String | Mensagem do erro  |
+| **- referenceEntity** | String | Entidade multibanco (5 dígitos) |
+| **- reference** | String | Referência do pagamento |

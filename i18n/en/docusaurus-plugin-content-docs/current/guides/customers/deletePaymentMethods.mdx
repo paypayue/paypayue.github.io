@@ -1,13 +1,20 @@
 ---
 sidebar_position: 8
+title: Delete a payment method
 description: ''
+hide_table_of_contents: true
 ---
 
-# Delete a payment method
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-> **DELETE** /customers/_\{uuid}_/paymentMethods/_\{paymentMethod_uuid}_
+# <Translate id="customers.deletePaymentMethods.title">Eliminar método de pagamento</Translate>
 
-import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+:::info
+<Translate id="customers.deletePaymentMethods.noteDescription">Os métodos de pagamento, apenas podem ser eliminados pela entidade que criou o cliente.</Translate>
+:::
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -17,21 +24,18 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="customers.deletePaymentMethods.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="request" label="Request">
+<TabItem value="pedido" label={<Translate id="customers.deletePaymentMethods.tabs.request">Pedido</Translate>}>
 
-```json
-DELETE /customers/_e2343605-cf46-43de-b20b-9b7d1c95a9b2_/paymentMethods/_90068f83-7623-4de5-91c7-ac447c504ebf_
+```php
+DELETE /customers/{uuid}/paymentMethods/{paymentMethod_uuid}
 ```
 
 </TabItem>
-<TabItem value="response" label="Response">
+<TabItem value="resposta" label={<Translate id="customers.deletePaymentMethods.tabs.response">Resposta</Translate>}>
 
 ```json
 HTTP Code: 204
@@ -39,5 +43,3 @@ HTTP Code: 204
 
 </TabItem>
 </Tabs>
-
-**Note:** Payment methods can only be deleted by the entity that created the customer.

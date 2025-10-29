@@ -1,19 +1,29 @@
 ---
 sidebar_position: 9
+title: Associate the customer with other entities
 description: ''
+hide_table_of_contents: true
 ---
 
-# Associate the customer with other entities
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-> **POST** /customers/_\{uuid}_/entities
+# <Translate id="customers.postEntities.title">Associar o cliente a outras entidades</Translate>
 
-The association of a customer with other entities, allows the record of the customer to be available in the intended entities.
+:::info
+<Translate id="customers.postEntities.noteDescription">A associação do cliente, apenas pode ser realizada pela entidade que o criou.</Translate>
+:::
 
-To perform this association it is necessary to know the _uuid_ of the customer and the _clientId_ of the entities.
+<p><Translate id="customers.postEntities.intro">A associação de um cliente a outras entidades, permite que o registo do cliente fique disponível nas entidades desejadas.</Translate></p>
 
-**1.** Associate the customer with the _uuid_ e2343605-cf46-43de-b20b-9b7d1c95a9b2 and the entity with the _clientId_ 523308191 e 559514166
+<Translate id="customers.postEntities.requirement">Para realizar essa associação é necessário conhecer o</Translate> <em>uuid</em> <Translate id="customers.postEntities.requirement2">do cliente e o</Translate> <em>clientId</em> <Translate id="customers.postEntities.requirement3">das entidades.</Translate>
 
-import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+<br/>
+<br/>
+
+<Translate id="customers.postEntities.example">Associar o cliente com o</Translate> <em>uuid</em> e2343605-cf46-43de-b20b-9b7d1c95a9b2 <Translate id="customers.postEntities.example2">a entidade com o</Translate> <em>clientId</em> 523308191 e 559514166
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -23,14 +33,11 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="customers.postEntities.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="request" label="Request">
+<TabItem value="pedido" label={<Translate id="customers.postEntities.tabs.request">Pedido</Translate>}>
 
 **POST** /customers/_e2343605-cf46-43de-b20b-9b7d1c95a9b2_/entities
 
@@ -41,7 +48,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="response" label="Response">
+<TabItem value="resposta" label={<Translate id="customers.postEntities.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -56,5 +63,3 @@ import TabItem from "@theme/TabItem";
 
 </TabItem>
 </Tabs>
-
-**Note:** Customer association can only be performed by the entity that created it.

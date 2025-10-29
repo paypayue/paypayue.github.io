@@ -1,10 +1,14 @@
 {
+  "logo.alt": {
+    "message": "Home",
+    "description": "The alt text of navbar logo"
+  },
   "item.label.Guias": {
     "message": "Guías",
     "description": "Navbar item with label Guias"
   },
   "item.label.Especificação": {
-    "message": "Especificación",
+    "message": "Especificacíon",
     "description": "Navbar item with label Especificação"
   },
   "item.label.Integrações": {
@@ -12,11 +16,7 @@
     "description": "Navbar item with label Integrações"
   },
   "item.label.Ir para PayPay.pt": {
-    "message": "Ir a PayPay.pt",
+    "message": "Ir para PayPay.pt",
     "description": "Navbar item with label Ir para PayPay.pt"
-  },
-  "logo.alt": {
-    "message": "Home",
-    "description": "The alt text of navbar logo"
   }
 }

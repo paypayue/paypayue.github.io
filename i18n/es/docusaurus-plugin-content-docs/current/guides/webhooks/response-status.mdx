@@ -1,0 +1,37 @@
+---
+title: Tratamiento de la respuesta obtenida
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+# <Translate id="webhooks.responseStatus.title">Tratamento da resposta obtida</Translate>
+
+<Translate id="webhooks.responseStatus.intro">A resposta aos webhooks deverá devolver um status code de sucesso:</Translate> <code>200</code>, <code>201</code>, <code>202</code>, <code>204</code>. <Translate id="webhooks.responseStatus.intro2">Outros status codes (incluindo códigos de redirecionamento) serão reconhecidos como erro e serão realizadas novas tentativas de comunicação.</Translate>
+
+### <Translate id="webhooks.responseStatus.specificErrors">Casos de erro específicos</Translate>
+
+<p><Translate id="webhooks.responseStatus.specificErrorsDescription">Se durante a receção do webhook pretender indicar casos de erro específicos, para que estes voltem a ser reenviados nas próximas comunicações, terá que incluir no payload esses casos e responder com o status code diferente dos de sucesso.</Translate></p>
+
+<Translate id="webhooks.responseStatus.paymentPosition">A numeração que se segue após o</Translate> <code>/payments</code> <Translate id="webhooks.responseStatus.paymentPosition2">corresponde a posição desse pagamento no pedido do webhook.</Translate>
+
+<br/>
+<br/>
+
+```json
+{
+    "errors": [
+        {
+            "source": { "pointer": "/payments/0" }
+        },
+        {
+            "source": { "pointer": "/payments/1" }
+        }
+    ]
+}
+```
+
+### <Translate id="webhooks.responseStatus.retryPolicy">Política de tentativas:</Translate>
+
+<p><Translate id="webhooks.responseStatus.retryDescription">Após a primeira tentativa falhada, a próxima tentativa será realizada após 1 minuto, depois 2, 3, 5 até aos 24 minutos.</Translate></p>

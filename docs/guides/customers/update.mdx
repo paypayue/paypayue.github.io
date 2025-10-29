@@ -1,23 +1,30 @@
 ---
 sidebar_position: 4
+title: Atualizar dados do cliente
 description: ''
+hide_table_of_contents: true
 ---
 
-# Atualizar dados do cliente
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-> **PUT** /customers/_\{uuid}_
+# <Translate id="customers.update.title">Atualizar dados do cliente</Translate>
 
-Pode ser atualizada a seguinte informação:
+:::info
+<Translate id="customers.update.noteDescription">A atualização dos dados do cliente, apenas pode ser realizada pela entidade que o criou.</Translate>
+:::
 
-- **Identificador do cliente** (customerId)
-- **Primeiro nome** (firstName)
-- **Último nome** (lastName)
-- **Email** (email)
-- **Número de telefone** (phoneNumber)
+<p><Translate id="customers.update.intro">Pode ser atualizada a seguinte informação:</Translate></p>
 
-**1.** Atualizar o número de telefone do cliente.
+- **<Translate id="customers.update.field.customerId">Identificador do cliente</Translate>** (customerId);
+- **<Translate id="customers.update.field.firstName">Primeiro nome</Translate>** (firstName);
+- **<Translate id="customers.update.field.lastName">Último nome</Translate>** (lastName);
+- **<Translate id="customers.update.field.email">Email</Translate>** (email);
+- **<Translate id="customers.update.field.phoneNumber">Número de telefone</Translate>** (phoneNumber).
 
-import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+**1.** <Translate id="customers.update.example">Atualizar o número de telefone do cliente.</Translate>
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -27,16 +34,15 @@ import ClickShowIframe from "../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="customers.update.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="pedido" label="Pedido">
+<TabItem value="pedido" label={<Translate id="customers.update.tabs.request">Pedido</Translate>}>
 
-**PUT** /customers/_e2343605-cf46-43de-b20b-9b7d1c95a9b2_
+```php
+PUT /customers/{uuid}
+```
 
 ```json
 {
@@ -45,7 +51,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="resposta" label="Resposta">
+<TabItem value="resposta" label={<Translate id="customers.update.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -66,5 +72,3 @@ import TabItem from "@theme/TabItem";
 
 </TabItem>
 </Tabs>
-
-**Nota:** A atualização dos dados do cliente, apenas pode ser realizada pela entidade que o criou.

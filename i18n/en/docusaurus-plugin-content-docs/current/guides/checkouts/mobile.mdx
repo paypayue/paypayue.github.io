@@ -1,36 +1,43 @@
 ---
 sidebar_position: 3
-description: Using the 'Webview' component and the 'Deep linking' mechanism provided on Android and iOS.
+title: Embed in mobile application
+description: ''
+hide_table_of_contents: true
 ---
 
-# Embed in mobile application
+import Translate from '@docusaurus/Translate';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-Checkout can be embedded into mobile applications using the "Webview" component and the "Deep linking" engine available in Android and iOS.
+# <Translate id="mobile.title">Incorporar em aplicação móvel</Translate>
 
-Useful references:
+<Translate id="mobile.intro">O checkout pode ser incorporado em aplicações móveis utilizando o componente</Translate> "Webview" <Translate id="mobile.intro2">e o mecanismo</Translate> "Deep linking" <Translate id="mobile.intro3">disponibilizado em Android e iOS.</Translate>
+
+<p><Translate id="mobile.references">Referências úteis:</Translate></p>
 
 - https://developer.android.com/training/app-links/deep-linking
 - https://blog.devgenius.io/deep-linking-in-ios-f5bfa2959d0a
 - https://en.yeeply.com/blog/deep-linking-android-ios-apps/
 
-The process works as follows:
+<p><Translate id="mobile.process">O processo funciona da seguinte forma:</Translate></p>
 
-1. (Back-end) Generate the checkout link through the /checkouts resource;
-2. (Application) Open the link obtained previously in Android/iOS webview;
-3. (Webview) Wait for the user to complete the payment;
-4. (Application) User returned to the application;
-5. (Back-end) View checkout status via API;
-6. (Application) Display the application view according to the needs of the user.
+1. <Translate id="mobile.step1">(Back-end) Geração do link de checkout através do recurso /checkouts;</Translate>
+2. <Translate id="mobile.step2">(Aplicação) Abrir o link obtido anteriormente em webview Android/iOS;</Translate>
+3. <Translate id="mobile.step3">(Webview) Aguardar que o utilizador conclua o pagamento;</Translate>
+4. <Translate id="mobile.step4">(Aplicação) Utilizador regressou à aplicação;</Translate>
+5. <Translate id="mobile.step5">(Back-end) Consultar o estado do checkout via API;</Translate>
+6. <Translate id="mobile.step6">(Aplicação) Apresentar a view da aplicação de acordo;</Translate>
 
-### Generation of the checkout link for Webview
+### Generating the checkout link for Webview
 
-The `redirects` parameter of the `action` type must contain the url "Deep link" will invoke the application after payment.
-
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+<Translate id="mobile.webview.description">O parâmetro</Translate> <code>redirects</code> <Translate id="mobile.webview.description2">do tipo</Translate> <code>action</code> <Translate id="mobile.webview.description3">deverá conter o url</Translate> "Deep link" <Translate id="mobile.webview.description4">irá invocar a aplicação após o pagamento.</Translate>
 
 <Tabs>
-<TabItem value="request" label="Request">
+<TabItem value="pedido" label={<Translate id="mobile.tabs.request">Pedido</Translate>}>
+
+```php
+POST /checkouts
+```
 
 ```json
 {
@@ -69,7 +76,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="response" label="Response">
+<TabItem value="resposta" label={<Translate id="mobile.tabs.response">Resposta</Translate>}>
 
 ```json
 {

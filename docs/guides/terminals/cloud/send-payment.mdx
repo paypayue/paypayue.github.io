@@ -1,0 +1,128 @@
+---
+sidebar_position: 4
+description: ''
+title: Enviar pedido de pagamento
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+
+## <Translate id="terminals.cloud.sendPayment.flow">Fluxo de Pagamento</Translate>
+
+<Translate id="terminals.cloud.sendPayment.flowDescription">O processo de pagamento com o terminal cloud envolve comunicação entre o seu sistema e o terminal:</Translate>
+
+### <Translate id="terminals.cloud.sendPayment.section1">1. Iniciação do Pagamento (via API)</Translate>
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe({
+			idMenuOption: "terminals",
+			idOption: "terminals/post/terminals/{uuid}"
+		})
+	}
+>
+	<span><Translate id="terminals.cloud.sendPayment.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+<p><Translate id="terminals.cloud.sendPayment.section1Description">O seu sistema inicia o pagamento remotamente através da API PayPay:</Translate></p>
+
+1. <Translate id="terminals.cloud.sendPayment.step1">O sistema envia o pedido para API PayPay:</Translate>
+
+##### <Translate id="terminals.cloud.sendPayment.endpoint">Endpoint</Translate>
+
+```php
+POST /terminals/{uuid}/payments
+```
+
+##### <Translate id="terminals.cloud.sendPayment.basicExample">Exemplo básico</Translate>
+```json
+{
+  "amount": 100,
+  "code": "sale-code",
+  "summary": "sale-description"
+}
+```
+
+##### <Translate id="terminals.cloud.sendPayment.parameters">Parâmetros</Translate>
+
+| <Translate id="terminals.cloud.sendPayment.table.parameter">Parâmetro</Translate> | <Translate id="terminals.cloud.sendPayment.table.type">Tipo</Translate> | <Translate id="terminals.cloud.sendPayment.table.required">Obrigatório</Translate> | <Translate id="terminals.cloud.sendPayment.table.description">Descrição</Translate> |
+|-----------|------|-------------|-----------|
+| <code>uuid</code> | string | ✅ <Translate id="terminals.cloud.sendPayment.yes">Sim</Translate> | <Translate id="terminals.cloud.sendPayment.param.uuid">UUID do terminal para o qual irá ser enviado o pedido de pagamento</Translate> |
+| <code>amount</code> | integer | ✅ <Translate id="terminals.cloud.sendPayment.yes">Sim</Translate> | <Translate id="terminals.cloud.sendPayment.param.amount">Montante</Translate> |
+| <code>code</code> | string | ❌ <Translate id="terminals.cloud.sendPayment.no">Não</Translate> | <Translate id="terminals.cloud.sendPayment.param.code">Código indicado pelo comerciante, por exemplo, código da encomenda do sistema</Translate> |
+| <code>summary</code> | string | ❌ <Translate id="terminals.cloud.sendPayment.no">Não</Translate> | <Translate id="terminals.cloud.sendPayment.param.summary">Descrição indicado pelo comerciante, por exemplo, descrição da encomenda do sistema</Translate> |
+
+
+2. <Translate id="terminals.cloud.sendPayment.step2">API PayPay comunica com o terminal de forma</Translate> <strong>assíncrona</strong>;
+3. <Translate id="terminals.cloud.sendPayment.step3">Terminal recebe e apresenta o valor automaticamente ao operador;</Translate>
+
+:::info
+<Translate id="terminals.cloud.sendPayment.waitTimeDescription">O terminal aguarda</Translate> <strong> <Translate id="terminals.cloud.sendPayment.oneMinute">1 minuto</Translate> </strong> <Translate id="terminals.cloud.sendPayment.waitTimeDescription2">pela apresentação do cartão.</Translate>
+:::
+
+4. <Translate id="terminals.cloud.sendPayment.step4">API PayPay devolve a resposta do sucesso ou não do pedido assíncrono, enquanto o terminal aguarda pela apresentação do cartão.</Translate>
+
+##### <Translate id="terminals.cloud.sendPayment.apiResponse">Resposta da API</Translate>
+
+```json
+{
+  "date": "2025-09-01T13:06:22+01:00",
+  "success": true,
+  "data": {
+      "id": "1",
+      "clientId": "502056800",
+      "type": "payment",
+      "amount": 100,
+      "stateDetails": {
+          "state": "pending_confirmation",
+          "createdAt": "2025-09-01T13:06:22+01:00"
+      },
+      "paymentMethod": {
+          "code": "CC",
+          "type": "TPA"
+      },
+      "code": "order-code",
+      "summary": "product-description",
+      "availableMethods": [
+        {
+          "code": "CC",
+          "type": "TPA",
+          "name": "Credit\/Debit card Physical TPA"
+        }
+      ],
+      "bankAccount": {
+        "code": "O9uFVmSZ",
+        "bankName": "Banco",
+        "last4digits": "8513"
+      },
+      "createdAt": "2025-09-01T13:06:22+01:00",
+      "updatedAt": "2025-09-01T13:06:22+01:00"
+  }
+}
+```
+
+## <Translate id="terminals.cloud.sendPayment.responseStructure">Estrutura da Resposta</Translate>
+
+| <Translate id="terminals.cloud.sendPayment.responseTable.field">Campo</Translate> | <Translate id="terminals.cloud.sendPayment.responseTable.type">Tipo</Translate> | <Translate id="terminals.cloud.sendPayment.responseTable.description">Descrição</Translate> |
+|-------|------|-----------|
+| <code>id</code> | string | <Translate id="terminals.cloud.sendPayment.field.id">ID do pagamento PayPay</Translate> |
+| <code>clientId</code> | string | <Translate id="terminals.cloud.sendPayment.field.clientId">NIF da entidade a que o pagamento ficou associado</Translate> |
+| <code>type</code> | string | <Translate id="terminals.cloud.sendPayment.field.type">Tipo de operação</Translate> |
+| <code>stateDetails.state</code> | string | <Translate id="terminals.cloud.sendPayment.field.state">Estado do pagamento</Translate> |
+| <code>stateDetails.createdAt</code> | datetime | <Translate id="terminals.cloud.sendPayment.field.stateCreatedAt">Date do estado</Translate> |
+| <code>paymentMethod</code> | object | <Translate id="terminals.cloud.sendPayment.field.paymentMethod">Método de pagamento escolhido para pagamento</Translate> |
+| <code>code</code> | string | <Translate id="terminals.cloud.sendPayment.field.code">Código indicado pelo comerciante</Translate> |
+| <code>summary</code> | string | <Translate id="terminals.cloud.sendPayment.field.summary">Descrição indicado pelo comerciante</Translate> |
+| <code>availableMethods</code> | object | <Translate id="terminals.cloud.sendPayment.field.availableMethods">Formas de pagamento disponíveis para o pagamento</Translate>|
+| <code>bankAccount</code> | object | <Translate id="terminals.cloud.sendPayment.field.bankAccount">Identificação do banco que irá receber os fundos</Translate> |
+| <code>createdAt</code> | datetime | <Translate id="terminals.cloud.sendPayment.field.createdAt">Data de criação do registo</Translate> |
+| <code>updatedAt</code> | datetime | <Translate id="terminals.cloud.sendPayment.field.updatedAt">Data da última atualização</Translate> |
+
+<br/>
+
+:::info
+<Translate id="terminals.cloud.sendPayment.responseInfoDescription">A estrutura da resposta varia consoante os parâmetros enviados no pedido. Por exemplo se enviar informação do cliente</Translate> (<code>customer</code>) <Translate id="terminals.cloud.sendPayment.responseInfoDescription2">a mesma é retornada também.</Translate>
+:::
+
+5. [<Translate id="terminals.cloud.sendPayment.terminalFlow">Fluxo de Pagamento no terminal</Translate>](/docs/guides/terminals#fluxo-de-pagamento-no-terminal)

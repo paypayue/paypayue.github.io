@@ -3,10 +3,10 @@ import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
 import Translate from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import IconGuias from '@site/static/img/icon-guias.svg'
-import IconApi from '@site/static/img/icon-api.svg'
-import IconIntegracoes from '@site/static/img/icon-integracoes.svg'
-import IconLink from '@site/static/img/icon-link.svg'
+import IconGuias from '/img/icon-guias.svg'
+import IconApi from '/img/icon-api.svg'
+import IconIntegracoes from '/img/icon-integracoes.svg'
+import IconLink from '/img/icon-link.svg'
 
 export default function HomepageFeatures() {
   const {

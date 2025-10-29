@@ -15,6 +15,10 @@
     "message": "Pagos",
     "description": "The label for category Pagamentos in sidebar guides"
   },
+  "sidebar.guides.category.Terminais": {
+    "message": "Terminales",
+    "description": "The label for category Terminales in sidebar guides"
+  },
   "sidebar.guides.category.Clientes": {
     "message": "Clientes",
     "description": "The label for category Clientes in sidebar guides"

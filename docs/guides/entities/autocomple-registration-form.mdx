@@ -1,14 +1,26 @@
 ---
-description: Redireccionar o utilizador para o formulário de adesão com os dados pré-preenchidos.
+title: Pré-preenchimento do formulário de adesão
+description: ''
+hide_table_of_contents: true
 ---
 
-# Pré-preenchimento do formulário de adesão
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-Para facilitar a adesão do seu cliente à PayPay, disponibilizamos o seguinte método para pré-preencher o formulário de adesão.
+export const AderirLink = () => {
+  const {siteConfig} = useDocusaurusContext();
+  return <a href={`${siteConfig.url}/aderir`}>{siteConfig.url}/aderir</a>;
+};
 
-O envio dos dados deve ser feito via browser através do método POST para o URL: https://paypay.pt/aderir.
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
 
-Exemplo da estrutura de dados a ser submetida como formulário `application/x-www-form-urlencoded`:
+# <Translate id="entities.autocomplete.title">Pré-preenchimento do formulário de adesão</Translate>
+
+<p><Translate id="entities.autocomplete.intro">Para facilitar a adesão do seu cliente à PayPay, disponibilizamos o seguinte método para pré-preencher o formulário de adesão.</Translate></p>
+
+<Translate id="entities.autocomplete.instructions">O envio dos dados deve ser feito via browser através do método POST para o URL:</Translate> <AderirLink />.
+
+<Translate id="entities.autocomplete.example">Exemplo da estrutura de dados a ser submetida como formulário</Translate> <code>application/x-www-form-urlencoded</code>:
 
 ```json
 {
@@ -44,6 +56,4 @@ Exemplo da estrutura de dados a ser submetida como formulário `application/x-ww
 }
 ```
 
-import ClickShowIframe from "../../../src/utils/ClickShowIframe";
-
-A estrutura de dados completa, bem como as opções para _economicActivity_ e _availableMethods_ pode ser consultada <button className="link-api" onClick={ () => ClickShowIframe( {typeMenu: "model", idMenuOption: "models", idOption: "model/entityregistration"} ) } > <span>aqui</span> </button>.
+<Translate id="entities.autocomplete.footer.part1">A estrutura de dados completa, bem como as opções para</Translate>{' '}<code>economicActivity</code>{' '}<Translate id="entities.autocomplete.footer.part2">e</Translate>{' '}<code>availableMethods</code>{' '}<Translate id="entities.autocomplete.footer.part3">pode ser consultada</Translate>{' '}<button className="link-api" onClick={() => ClickShowIframe({typeMenu: "model", idMenuOption: "models", idOption: "model/entityregistration"})}><span><Translate id="entities.autocomplete.link">aqui</Translate></span></button>.

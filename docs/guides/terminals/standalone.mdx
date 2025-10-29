@@ -1,0 +1,71 @@
+---
+sidebar_position: 4
+title: Standalone
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+<Translate id="terminals.standalone.intro">O Terminal Standalone da PayPay é uma solução autónoma que permite aceitar pagamentos com cartão de forma simples e rápida, sem necessidade de integração técnica complexa.</Translate>
+
+<br/>
+
+## <Translate id="terminals.standalone.architecture">Arquitetura da Integração</Translate>
+
+<p><Translate id="terminals.standalone.architectureDescription">O Terminal Standalone funciona de forma autónoma com sincronização automática para o backoffice da PayPay. Opcionalmente, pode integrar-se com sistemas externos através de webhooks.</Translate></p>
+
+<pre>
+{`┌─────────────────────────────────────────────────────────┐
+│                   `}<Translate id="terminals.standalone.diagram.title">TERMINAL STANDALONE</Translate>{`                   │
+│                                                         │
+│  ┌──────────────┐                                       │
+│  │   `}<Translate id="terminals.standalone.diagram.operator">Operador</Translate>{`   │ ──→ `}<Translate id="terminals.standalone.diagram.manualValue">Introduz valor manualmente</Translate>{`        │
+│  └──────────────┘                                       │
+│         │                                               │
+│         ↓                                               │
+│  ┌──────────────┐                                       │
+│  │   `}<Translate id="terminals.standalone.diagram.terminal">Terminal</Translate>{`   │ ──→ `}<Translate id="terminals.standalone.diagram.processLocal">Processa pagamento localmente</Translate>{`     │
+│  │   `}<Translate id="terminals.standalone.diagram.local">(Local)</Translate>{`    │                                       │
+│  └──────────────┘                                       │
+│         │                                               │
+│         ↓                                               │
+│  ┌──────────────┐                                       │
+│  │  `}<Translate id="terminals.standalone.diagram.network">Rede de</Translate>{`     │ ──→ `}<Translate id="terminals.standalone.diagram.authorization">Autorização bancária</Translate>{`              │
+│  │  `}<Translate id="terminals.standalone.diagram.payments">Pagamentos</Translate>{`  │                                       │
+│  └──────────────┘                                       │
+└─────────────────────────────────────────────────────────┘
+         │
+         │ (`}<Translate id="terminals.standalone.diagram.autoSync">Sincronização automática</Translate>{`)
+         ↓
+┌─────────────────┐
+│   `}<Translate id="terminals.standalone.diagram.backoffice">Backoffice</Translate>{`    │ ──→ `}<Translate id="terminals.standalone.diagram.visualization">Visualização e gestão</Translate>{`
+│    PayPay       │     `}<Translate id="terminals.standalone.diagram.transactions">de transações</Translate>{`
+└─────────────────┘
+         │
+         │ (`}<Translate id="terminals.standalone.diagram.webhookOptional">Webhook - Opcional</Translate>{`)
+         ↓
+┌─────────────────┐
+│  `}<Translate id="terminals.standalone.diagram.yourSystem">Seu Sistema</Translate>{`    │ ──→ `}<Translate id="terminals.standalone.diagram.notifications">Recebe notificações</Translate>{`
+│   `}<Translate id="terminals.standalone.diagram.optional">(Opcional)</Translate>{`    │     `}<Translate id="terminals.standalone.diagram.ofTransactions">de transações</Translate>{`
+└─────────────────┘`}
+</pre>
+
+## <Translate id="terminals.standalone.paymentFlow">Fluxo de Pagamento</Translate>
+<Translate id="terminals.standalone.paymentFlowDescription">Consulte o</Translate> [<Translate id="terminals.standalone.paymentFlowLink">fluxo de pagamento</Translate>](/docs/guides/terminals#fluxo-de-pagamento-no-terminal).
+
+## <Translate id="terminals.standalone.troubleshooting">Resolução de Problemas Comuns</Translate>
+
+| <Translate id="terminals.standalone.table.problem">Problema</Translate> | <Translate id="terminals.standalone.table.solution">Solução</Translate> |
+|----------|---------|
+| <Translate id="terminals.standalone.problem1">Transação recusada</Translate> | <Translate id="terminals.standalone.solution1">Verificar fundos, validade do cartão ou contactar banco emissor</Translate> |
+| <Translate id="terminals.standalone.problem2">Terminal não responde</Translate> | <Translate id="terminals.standalone.solution2">Verificar conexão à internet e reiniciar terminal</Translate> |
+| <Translate id="terminals.standalone.problem3">Erro na impressão</Translate> | <Translate id="terminals.standalone.solution3">Verificar papel e configurações de impressão</Translate> |
+| <Translate id="terminals.standalone.problem4">PIN incorreto</Translate> | <Translate id="terminals.standalone.solution4">Cliente pode tentar novamente (máximo 3 tentativas)</Translate> |
+
+## <Translate id="terminals.standalone.nextSteps">Próximos Passos</Translate>
+
+<p><Translate id="terminals.standalone.nextStepsDescription">Agora que conhece o fluxo de pagamento, explore:</Translate></p>
+
+- **[<Translate id="terminals.standalone.link1">Configuração de Webhooks</Translate>](/docs/guides/terminals/webhooks/)** - <Translate id="terminals.standalone.link1Description">Receba notificações automáticas de transações.</Translate>
+- **[<Translate id="terminals.standalone.link2">FAQ</Translate>](/docs/guides/terminals/faq/)** - <Translate id="terminals.standalone.link2Description">Respostas às perguntas mais frequentes.</Translate>

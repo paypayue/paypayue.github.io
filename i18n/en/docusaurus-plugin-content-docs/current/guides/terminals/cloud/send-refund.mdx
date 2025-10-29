@@ -1,0 +1,184 @@
+---
+sidebar_position: 4
+description: ''
+title: Send a refund request
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+
+:::info
+<Translate id="terminals.cloud.sendRefund.paymentStateDescription">O pagamento só pode ser devolvido se tiver no estado</Translate> <strong>Confirmado</strong>.
+:::
+
+<p><Translate id="terminals.cloud.sendRefund.checkState">Pode consultar o estado do pagamento no endpoint:</Translate></p>
+```php
+GET /payments/{id}
+```
+
+## <Translate id="terminals.cloud.sendRefund.types">Tipos de Devolução</Translate>
+
+- <Translate id="terminals.cloud.sendRefund.type1">Devolução total</Translate>
+- <Translate id="terminals.cloud.sendRefund.type2">Devolução parcial</Translate>
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe({
+			idMenuOption: "terminals",
+			idOption: "terminals/post/terminals/{uuid}/refunds/{paymentId}"
+		})
+	}
+>
+	<span><Translate id="terminals.cloud.sendRefund.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+### <Translate id="terminals.cloud.sendRefund.section1">1. Iniciação da Devolução (via API)</Translate>
+
+<p><Translate id="terminals.cloud.sendRefund.section1Description">O seu sistema inicia a devolução remotamente através da API PayPay:</Translate></p>
+
+1. <Translate id="terminals.cloud.sendRefund.step1">O sistema envia o pedido para API PayPay:</Translate>
+
+##### <Translate id="terminals.cloud.sendRefund.endpoint">Endpoint</Translate>
+
+```php
+POST /terminals/{uuid}/refunds/{paymentId}
+```
+
+##### <Translate id="terminals.cloud.sendRefund.basicExample">Exemplo básico</Translate>
+```json
+{
+  "amount": 100,
+}
+```
+
+##### <Translate id="terminals.cloud.sendRefund.parameters">Parâmetros</Translate>
+
+| <Translate id="terminals.cloud.sendRefund.table.parameter">Parâmetro</Translate> | <Translate id="terminals.cloud.sendRefund.table.type">Tipo</Translate> | <Translate id="terminals.cloud.sendRefund.table.required">Obrigatório</Translate> | <Translate id="terminals.cloud.sendRefund.table.description">Descrição</Translate> |
+|-----------|------|-------------|-----------|
+| <code>uuid</code> | string | ✅ <Translate id="terminals.cloud.sendRefund.yes">Sim</Translate> | <Translate id="terminals.cloud.sendRefund.param.uuid">UUID do terminal para o qual irá ser enviado o pedido de pagamento</Translate> |
+| <code>paymentId</code> | string | ✅ <Translate id="terminals.cloud.sendRefund.yes">Sim</Translate> | <Translate id="terminals.cloud.sendRefund.param.paymentId">ID do pagamento PayPay que deseja devolver</Translate> |
+| <code>amount</code> | integer | ✅ <Translate id="terminals.cloud.sendRefund.yes">Sim</Translate> | <Translate id="terminals.cloud.sendRefund.param.amount">Montante que deseja devolver</Translate> |
+
+
+2. <Translate id="terminals.cloud.sendRefund.step2">API PayPay comunica com o terminal de forma</Translate> <strong>assíncrona</strong>;
+3. <Translate id="terminals.cloud.sendRefund.step3">Terminal recebe e apresenta o valor automaticamente ao operador;</Translate>
+
+:::info
+<Translate id="terminals.cloud.sendRefund.waitTimeDescription">O terminal aguarda</Translate> <strong> <Translate id="terminals.cloud.sendRefund.oneMinute">1 minuto</Translate> </strong> <Translate id="terminals.cloud.sendRefund.waitTimeDescription2">pela apresentação do cartão.</Translate>
+:::
+
+4. <Translate id="terminals.cloud.sendRefund.step4">API PayPay devolve a resposta do sucesso ou não do pedido assíncrono, enquanto o terminal aguarda pela apresentação do cartão.</Translate>
+
+##### <Translate id="terminals.cloud.sendRefund.apiResponse">Resposta da API</Translate>
+
+```json
+{
+    "date": "2025-09-01T12:46:22+01:00",
+    "success": true,
+    "data": {
+        "id": "3",
+        "clientId": "502056800",
+        "type": "refund",
+        "amount": 50,
+        "initialPaymentId": "1",
+        "stateDetails": {
+            "state": "pending_confirmation",
+            "createdAt": "2025-09-01T12:46:22+01:00"
+        },
+        "paymentMethod": {
+            "code": "CC",
+            "type": "TPA",
+            "details": {
+                "brand": "VISA",
+                "last4Digits": "7193"
+            }
+        },
+        "availableMethods": [
+            {
+                "code": "CC",
+                "type": "TPA",
+                "name": "Credit Debit card Physical TPA"
+            }
+        ],
+        "bankAccount": {
+            "code": "O9uFVmSZ",
+            "bankName": "Banco",
+            "last4digits": "8513"
+        },
+        "createdAt": "2025-09-01T12:46:22+01:00",
+        "updatedAt": "2025-09-01T12:46:22+01:00"
+    }
+}
+```
+
+## <Translate id="terminals.cloud.sendRefund.responseStructure">Estrutura da Resposta</Translate>
+
+| <Translate id="terminals.cloud.sendRefund.responseTable.field">Campo</Translate> | <Translate id="terminals.cloud.sendRefund.responseTable.type">Tipo</Translate> | <Translate id="terminals.cloud.sendRefund.responseTable.description">Descrição</Translate> |
+|-------|------|-----------|
+| <code>id</code> | string | <Translate id="terminals.cloud.sendRefund.field.id">ID da devolução PayPay</Translate> |
+| <code>clientId</code> | string | <Translate id="terminals.cloud.sendRefund.field.clientId">NIF da entidade a que o pagamento ficou associado</Translate> |
+| <code>type</code> | string | <Translate id="terminals.cloud.sendRefund.field.type">Tipo de operação</Translate> |
+| <code>stateDetails.state</code> | string | <Translate id="terminals.cloud.sendRefund.field.state">Estado do pagamento</Translate> |
+| <code>stateDetails.createdAt</code> | datetime | <Translate id="terminals.cloud.sendRefund.field.stateCreatedAt">Date do estado</Translate> |
+| <code>paymentMethod</code> | object | <Translate id="terminals.cloud.sendRefund.field.paymentMethod">Método de pagamento do pagamento original</Translate> |
+| <code>availableMethods</code> | object | <Translate id="terminals.cloud.sendRefund.field.availableMethods">Formas de pagamento disponíveis para a devolução</Translate> |
+| <code>bankAccount</code> | object | <Translate id="terminals.cloud.sendRefund.field.bankAccount">Identificação do banco que irá receber os fundos</Translate> |
+| <code>createdAt</code> | datetime | <Translate id="terminals.cloud.sendRefund.field.createdAt">Data de criação do registo</Translate> |
+| <code>updatedAt</code> | datetime | <Translate id="terminals.cloud.sendRefund.field.updatedAt">Data da última atualização</Translate> |
+
+
+## <Translate id="terminals.cloud.sendRefund.terminalFlow">Fluxo de devolução no terminal</Translate>
+
+<Translate id="terminals.cloud.sendRefund.terminalFlowDescription">Após o pedido de devolução ser enviado pela API, o processo no terminal segue estes passos:</Translate>
+
+### <Translate id="terminals.cloud.sendRefund.section2">2. Apresentação do Cartão</Translate>
+
+<p><Translate id="terminals.cloud.sendRefund.section2Description">O cliente apresenta o mesmo cartão usado no pagamento original:</Translate></p>
+
+1. <Translate id="terminals.cloud.sendRefund.section2Step1">Terminal apresenta o valor da devolução ao operador;</Translate>
+2. <Translate id="terminals.cloud.sendRefund.section2Step2">Cliente apresenta o cartão através de um dos métodos:</Translate>
+   - **<Translate id="terminals.cloud.sendRefund.contactless">Contactless</Translate>**: <Translate id="terminals.cloud.sendRefund.contactlessDescription">Aproxima cartão ou dispositivo móvel.</Translate>
+   - **<Translate id="terminals.cloud.sendRefund.chip">Chip</Translate>**: <Translate id="terminals.cloud.sendRefund.chipDescription">Insere cartão no terminal.</Translate>
+   - **<Translate id="terminals.cloud.sendRefund.magnetic">Banda magnética</Translate>**: <Translate id="terminals.cloud.sendRefund.magneticDescription">Passa o cartão.</Translate>
+3. <Translate id="terminals.cloud.sendRefund.section2Step3">Terminal valida se o cartão corresponde ao pagamento original.</Translate>
+
+:::warning
+<Translate id="terminals.cloud.sendRefund.cardValidationDescription">O cartão deve ser o</Translate> <strong><Translate id="terminals.cloud.sendRefund.sameCardUsed">mesmo utilizado no pagamento original</Translate></strong>. <Translate id="terminals.cloud.sendRefund.cardValidationDescription2">Se for apresentado um cartão diferente, a devolução será recusada.</Translate>
+:::
+
+### <Translate id="terminals.cloud.sendRefund.section3">3. Autenticação</Translate>
+
+<p><Translate id="terminals.cloud.sendRefund.section3Description">Dependendo do valor e tipo de cartão, pode ser necessária autenticação:</Translate></p>
+
+1. <Translate id="terminals.cloud.sendRefund.section3Step1">Dados do cartão são lidos e validados pelo terminal;</Translate>
+2. <Translate id="terminals.cloud.sendRefund.section3Step2">Sistema verifica se autenticação é necessária:</Translate>
+   - **<Translate id="terminals.cloud.sendRefund.ifYes">Se sim</Translate>**: <Translate id="terminals.cloud.sendRefund.enterPin">Cliente introduz PIN.</Translate>
+     - <Translate id="terminals.cloud.sendRefund.correctPin">Se PIN correto: Prossegue para processamento.</Translate>
+     - <Translate id="terminals.cloud.sendRefund.incorrectPin">Se PIN incorreto: Nova tentativa ou cancelamento (máx. 3 tentativas).</Translate>
+   - **<Translate id="terminals.cloud.sendRefund.ifNo">Se não</Translate>**: <Translate id="terminals.cloud.sendRefund.directProcessing">Processamento direto para autorização.</Translate>
+
+**<Translate id="terminals.cloud.sendRefund.authTypes">Tipos de autenticação:</Translate>**
+- **PIN**: <Translate id="terminals.cloud.sendRefund.pinDescription">Normalmente requerido para devoluções.</Translate>
+- **<Translate id="terminals.cloud.sendRefund.noAuth">Sem autenticação</Translate>**: <Translate id="terminals.cloud.sendRefund.noAuthDescription">Em alguns casos de valores reduzidos.</Translate>
+
+### <Translate id="terminals.cloud.sendRefund.section4">4. Processamento e Confirmação</Translate>
+
+<p><Translate id="terminals.cloud.sendRefund.section4Description">O terminal comunica com a rede de pagamentos para processar a devolução:</Translate></p>
+
+1. <Translate id="terminals.cloud.sendRefund.section4Step1">Terminal valida dados e envia pedido para rede de pagamento;</Translate>
+2. <Translate id="terminals.cloud.sendRefund.section4Step2">Rede contacta banco emissor para processar devolução;</Translate>
+3. <Translate id="terminals.cloud.sendRefund.section4Step3">Resposta é enviada de volta ao terminal:</Translate>
+   - **<Translate id="terminals.cloud.sendRefund.approved">Aprovada</Translate>**: <Translate id="terminals.cloud.sendRefund.approvedDescription">Devolução processada com sucesso.</Translate>
+   - **<Translate id="terminals.cloud.sendRefund.declined">Recusada</Translate>**: <Translate id="terminals.cloud.sendRefund.declinedDescription">Mensagem de erro apresentada.</Translate>
+
+### <Translate id="terminals.cloud.sendRefund.section5">5. Notificação ao Sistema</Translate>
+
+<Translate id="terminals.cloud.sendRefund.section5Description">Após a confirmação, o seu sistema é notificado:</Translate>
+
+1. <Translate id="terminals.cloud.sendRefund.section5Step1">A Transação é sincronizada com backoffice PayPay em tempo real;</Translate>
+2. <Translate id="terminals.cloud.sendRefund.section5Step2">A PayPay notifica via</Translate> <strong>Webhook</strong> <Translate id="terminals.cloud.sendRefund.section5Step2b">o seu sistema com detalhes da devolução.</Translate>
+
+:::tip
+<Translate id="terminals.cloud.sendRefund.webhookEssentialDescription">Configure webhooks para receber notificações automáticas do resultado da devolução. A resposta da API indica apenas que o pedido foi enviado ao terminal, não o resultado final.</Translate>
+:::

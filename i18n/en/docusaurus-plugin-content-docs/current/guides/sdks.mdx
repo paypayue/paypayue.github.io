@@ -1,31 +1,47 @@
 ---
 sidebar_position: 3
+title: SDKs generation
+hide_table_of_contents: true
 ---
 
-# SDKs generation
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
 
-The **SDK** feature allows an SDK to be generated for a desired programming language, thus facilitating integration with the API.
+# <Translate id="guides.sdks.title">Geração de SDKs</Translate>
 
-> The open source tool [OpenAPI Generator Online](http://api.openapi-generator.tech/index.html) is used to generate SDKs in several programming languages.
+<p>
+<Translate id="guides.sdks.intro.part1">O recurso</Translate>
+{' '}<strong>SDK</strong>{' '}
+<Translate id="guides.sdks.intro.part2">permite que seja gerado um SDK para uma linguagem de programação desejada, facilitando assim a integração com a API.</Translate>
+</p>
 
-> **Attention:** PayPay does not maintain the code generation tool or provide technical support for the generated code.
+<p>
+<Translate id="guides.sdks.tool.part1">É utilizada a ferramenta open source</Translate>
+{' '}
+<a href="http://api.openapi-generator.tech/index.html">OpenAPI Generator Online</a>
+{' '}
+<Translate id="guides.sdks.tool.part2">para gerar SDKs em várias linguagens de programação.</Translate>
+</p>
 
-**Operations available swagger/openapi documentation:**
+:::info
+<Translate id="guides.sdks.cautionDescription">A PayPay não mantém a ferramenta de geração de código nem fornece suporte técnico ao código gerado</Translate>
+:::
 
-import ClickShowIframe from "../../../../../src/utils/ClickShowIframe";
+**<Translate id="guides.sdks.availableOperations">Operações disponíveis:</Translate>**
 
-<button className="btn-api"
-	onClick={() =>
-		ClickShowIframe({idMenuOption: "sdk", idOption: "sdk/get/sdks/{language}/options"})
-	}
->
-	<span>SDK generation in several languages</span>
-</button>
-<br /><br />
-<button className="btn-api"
-	onClick={() =>
-		ClickShowIframe({idMenuOption: "sdk", idOption: "sdk/post/sdks/{language}"})
-	}
->
-	<span>List SDK generation options</span>
-</button>
+<div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+	<button className="btn-api"
+		onClick={() =>
+			ClickShowIframe({idMenuOption: "sdk", idOption: "sdk/get/sdks/{language}/options"})
+		}
+	>
+		<span><Translate id="guides.sdks.generateButton">Geração de SDK em múltiplas linguagens</Translate></span>
+	</button>
+	<button className="btn-api"
+		onClick={() =>
+			ClickShowIframe({idMenuOption: "sdk", idOption: "sdk/post/sdks/{language}"})
+		}
+	>
+		<span><Translate id="guides.sdks.listOptionsButton">Listar opções de geração do SDK</Translate></span>
+	</button>
+</div>

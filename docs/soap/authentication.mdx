@@ -1,0 +1,65 @@
+---
+sidebar_position: 2
+title: Autenticação
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+# <Translate id="soap.authentication.title">Autenticação</Translate>
+
+<Translate id="soap.authentication.intro">O sistema verifica as credencias da plataforma integrada, é fornecida uma chave secreta para permitir realizar pedidos ao webservice. Para cada pedido do webservice deve ser enviada a seguinte hash de autenticação:</Translate>
+
+<br/>
+<br/>
+
+```
+sha256([Chave de encriptação] + [Data do pedido])
+```
+* <Translate id="soap.authentication.encryptionKey">Chave de encriptação - Chave privada da plataforma de integração.</Translate>
+* <Translate id="soap.authentication.requestDate">Data do pedido - Formato da data ISO8601 (ex: 2014-09-27T18&colon;30&colon;49-03&colon;00).</Translate>
+
+<Translate id="soap.authentication.hashValidity">A hash ficará inválida após a data do pedido ultrapassar a data-hora atual em 90 minutos.</Translate>
+
+#### <Translate id="soap.authentication.testCredentials">Credenciais de testes</Translate>
+
+<Translate id="soap.authentication.requestCredentials">Solicitar credenciais</Translate> <a href="mailto:apoio@paypay.pt">@apoio</a> <Translate id="soap.authentication.requestCredentials2">indicando o motivo/finalidade da integração.</Translate>
+
+### <Translate id="soap.authentication.testEnvironment">Ambiente de Testes</Translate>
+
+<Translate id="soap.authentication.testEnvironmentDesc">Deverá testar a integração da sua aplicação com o PayPay, nos seguintes endereços:</Translate>
+
+<br/>
+<br/>
+
+WSDL
+
+```
+https://paypay.acin.pt/paypaybeta/paypayservices/paypayservices_c/wsdl
+```
+
+<Translate id="soap.authentication.server">Servidor</Translate>
+
+<br/>
+<br/>
+
+```
+https://paypay.acin.pt/paypaybeta/paypayservices/paypayservices_c/server
+```
+
+### <Translate id="soap.authentication.productionEnvironment">Ambiente de Produção</Translate>
+
+WSDL
+
+```
+https://paypay.pt/paypay/paypayservices/paypayservices_c/wsdl
+```
+
+<Translate id="soap.authentication.server">Servidor</Translate>
+
+<br/>
+<br/>
+
+```
+https://paypay.pt/paypay/paypayservices/paypayservices_c/server
+```

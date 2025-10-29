@@ -1,0 +1,29 @@
+---
+sidebar_position: 2
+title: Tipos de eventos disponibles
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+# <Translate id="webhooks.eventTypes.title">Tipos de eventos disponíveis</Translate>
+
+### <Translate id="webhooks.eventTypes.paymentRelated">Relacionados com pagamentos</Translate>
+
+| <Translate id="webhooks.eventTypes.table.action">Ação</Translate> | <Translate id="webhooks.eventTypes.table.description">Descrição</Translate> |
+| :- | :- |
+| **payment_authorized** | <Translate id="webhooks.eventTypes.paymentAuthorized">Ação é desencadeada quando um pagamento é autorizado.</Translate> |
+| **payment_confirmed** | <Translate id="webhooks.eventTypes.paymentConfirmed">Ação é desencadeada quando um pagamento é confirmado.</Translate> |
+| **payment_expired** | <Translate id="webhooks.eventTypes.paymentExpired">Ação é desencadeada quando a data limite de pagamento é ultrapassada.</Translate> |
+| **payment_cancelled** | <Translate id="webhooks.eventTypes.paymentCancelled">Ação é desencadeada quando um pagamento é cancelado pelo comerciante utilizador.</Translate> |
+| **payment_refunded** | <Translate id="webhooks.eventTypes.paymentRefunded">Ação é desencadeada quando um pagamento é devolvido pelo comerciante.</Translate> |
+| **payment_method_error** | <Translate id="webhooks.eventTypes.paymentMethodError">Ação é desencadeada quando um método de pagamento utilizado retorna erro assíncrono.</Translate> |
+
+### <Translate id="webhooks.eventTypes.entityRelated">Relacionados com entidades associadas a integração</Translate>
+
+| <Translate id="webhooks.eventTypes.table.action">Ação</Translate> | <Translate id="webhooks.eventTypes.table.description">Descrição</Translate> |
+| :- | :- |
+| **entity_pending** | <Translate id="webhooks.eventTypes.entityPending">Ação é desencadeada quando a entidade transita para o estado de aprovação "Pendente".</Translate> |
+| **entity_approved** | <Translate id="webhooks.eventTypes.entityApproved">Ação é desencadeada quando a entidade transita para o estado de aprovação "Aprovada"</Translate> |
+| **entity_declined** | <Translate id="webhooks.eventTypes.entityDeclined">Ação é desencadeada quando a entidade transita para o estado de aprovação "Recusada"</Translate> |

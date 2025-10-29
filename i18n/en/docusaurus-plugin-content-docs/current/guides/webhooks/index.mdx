@@ -1,13 +1,19 @@
 ---
 sidebar_position: 1
+title: Initiation
+description: ''
+hide_table_of_contents: true
 ---
 
-# Initiation
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
 
-Webhook is a mechanism that allows you to subscribe to events via WEB, being a practical method for an app or system to receive real-time information from PayPay.
+# <Translate id="webhooks.index.title">Início</Translate>
 
-import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+<Translate id="webhooks.index.intro">O webhook é um mecanismo que permite subscrever a eventos via WEB, sendo um método prático para um app ou sistema receber informações em tempo real da PayPay.</Translate>
 
-<button onClick={() => ClickShowIframe({idMenuOption: "webhooks", idOption: "webhooks/post/webhooks"})} className="btn-api btn-api--float-right">
-	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+<br/>
+
+<button className="btn-api btn-api--float-right" onClick={() => ClickShowIframe({idMenuOption: "webhooks", idOption: "webhooks/post/webhooks"})}>
+	<span><Translate id="webhooks.index.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>

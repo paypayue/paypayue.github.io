@@ -1,0 +1,31 @@
+---
+sidebar_position: 3
+title: 'Parâmetros do pedido POST'
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+| <Translate id="soap.webhooks.postParameters.table.action">Ação</Translate> | <Translate id="soap.webhooks.postParameters.table.type">Tipo</Translate> | <Translate id="soap.webhooks.postParameters.table.description">Descrição</Translate>
+|:--- |:-----------|:-----|
+| **hookAction** | String | <Translate id="soap.webhooks.postParameters.hookAction">A designação da ação desencadeada</Translate> |
+| **hookDate** | String | <Translate id="soap.webhooks.postParameters.hookDate">A data do pedido</Translate> |
+| **hookHash** | String | <Translate id="soap.webhooks.postParameters.hookHash">A hash do pedido</Translate> |
+| **payments** | Array | <Translate id="soap.webhooks.postParameters.payments">Lista de pagamentos encontrados</Translate> |
+| **- paymentId** | Int | <Translate id="soap.webhooks.postParameters.paymentId">Id do pagamento</Translate>  |
+| **- referenceEntity** | String | <Translate id="soap.webhooks.postParameters.referenceEntity">Entidade multibanco (5 dígitos)</Translate> |
+| **- reference** | String | <Translate id="soap.webhooks.postParameters.reference">Referência do pagamento</Translate> |
+| **- paymentMethodCode** | String | <Translate id="soap.webhooks.postParameters.paymentMethodCode">Código da forma de pagamento utilizada</Translate> (<a href="../resources#c%C3%B3digos-de-formas-de-pagamento">Ver tabela</a>) |
+| **- paymentCancelled** | Boolean | <Translate id="soap.webhooks.postParameters.paymentCancelled">Indica se o pagamento está cancelado</Translate> |
+| **- paymentDate** | String | <Translate id="soap.webhooks.postParameters.paymentDate">Data de pagamento</Translate> |
+| **- paymentAmount** | Int | <Translate id="soap.webhooks.postParameters.paymentAmount">Montante do pagamento (em cêntimos, ex: 1000=10,00EUR)</Translate>  |
+| **- productCode** | String | <Translate id="soap.webhooks.postParameters.productCode">Código do produto (opcional)</Translate> |
+| **- productDesc** | String | <Translate id="soap.webhooks.postParameters.productDesc">Descrição do produto (opcional)</Translate> |
+| **- paymentNetFee** | Float | <Translate id="soap.webhooks.postParameters.paymentNetFee">Valor líquido</Translate> |
+| **- paymentTaxFee** | Float | <Translate id="soap.webhooks.postParameters.paymentTaxFee">Valores de imposto IVA</Translate> |
+| **- originalPaymentId** | Int | <Translate id="soap.webhooks.postParameters.originalPaymentId">Id do pagamento origem (ex: caso seja devolução corresponde ao pagamento inicial)</Translate> |
+| **- additionalData** | Array | <Translate id="soap.webhooks.postParameters.additionalData">Lista de campos adicionais associados ao pagamento</Translate> |
+| **-- key** | String | <Translate id="soap.webhooks.postParameters.key">Chave do campo adicional</Translate> |
+| **-- value** | String | <Translate id="soap.webhooks.postParameters.value">Valor do campo adicional</Translate> |
+| **-- type** | String | <Translate id="soap.webhooks.postParameters.type">Tipo de dado do campo adicional</Translate> |

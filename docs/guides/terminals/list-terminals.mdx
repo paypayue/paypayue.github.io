@@ -1,10 +1,14 @@
 ---
 sidebar_position: 2
-title: 'Listar terminais'
-description: 'Obtenha a lista de todos os terminais associados à integração, com opções de filtro e paginação'
+title: Listar terminais
+description: ''
+hide_table_of_contents: true
 ---
 
-import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -14,45 +18,40 @@ import ClickShowIframe from "../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="terminals.listTerminals.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-# Listar terminais
+# <Translate id="terminals.listTerminals.title">Listar terminais</Translate>
 
-Obtenha a lista de todos os terminais associados à integração, com opções de filtro e paginação.
+<Translate id="terminals.listTerminals.intro">Obtenha a lista de todos os terminais associados à integração, com opções de filtro e paginação.</Translate>
 
-## Endpoint
+<br/>
 
-> **GET** /terminals
+## <Translate id="terminals.listTerminals.searchParameters">Parâmetros de pesquisa</Translate>
 
-## Parâmetros de pesquisa
+<p><Translate id="terminals.listTerminals.parametersDescription">Todos os parâmetros são opcionais e podem ser combinados para refinar a pesquisa:</Translate></p>
 
-Todos os parâmetros são opcionais e podem ser combinados para refinar a pesquisa:
-
-| Parâmetro | Tipo | Descrição | Exemplo |
+| <Translate id="terminals.listTerminals.table.parameter">Parâmetro</Translate> | <Translate id="terminals.listTerminals.table.type">Tipo</Translate> | <Translate id="terminals.listTerminals.table.description">Descrição</Translate> | <Translate id="terminals.listTerminals.table.example">Exemplo</Translate> |
 |-----------|------|-----------|---------|
-| `terminalId` | string | Filtrar pelo id do terminal | `123456789` |
-| `name` | string | Filtrar pelo nome do terminal | `loja-centro`, `armazem-norte` |
-| `page` | integer | Número da página (paginação) | `1`, `2`, `3` |
-| `limit` | string | Número de resultados por página | `10`, `25`, `50` (max: 500) |
-| `sort` | string | Ordenar resultados | `createdAt`, `-created_at`, `terminalId` |
+| <code>terminalId</code> | string | <Translate id="terminals.listTerminals.param.terminalId">Filtrar pelo id do terminal</Translate> | <code>123456789</code> |
+| <code>name</code> | string | <Translate id="terminals.listTerminals.param.name">Filtrar pelo nome do terminal</Translate> | <code>loja-centro</code>, <code>armazem-norte</code> |
+| <code>page</code> | integer | <Translate id="terminals.listTerminals.param.page">Número da página (paginação)</Translate> | <code>1</code>, <code>2</code>, <code>3</code> |
+| <code>limit</code> | string | <Translate id="terminals.listTerminals.param.limit">Número de resultados por página</Translate> | <code>10</code>, <code>25</code>, <code>50</code> (max: 500) |
+| <code>sort</code> | string | <Translate id="terminals.listTerminals.param.sort">Ordenar resultados</Translate> | <code>createdAt</code>, <code>-created_at</code>, <code>terminalId</code> |
 
-## Exemplos
+## <Translate id="terminals.listTerminals.examples">Exemplos</Translate>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
-### Listar todos os terminais
+### <Translate id="terminals.listTerminals.example1">Listar todos os terminais</Translate>
 
 <Tabs>
-<TabItem value="pedido-1" label="Pedido">
+<TabItem value="pedido-1" label={<Translate id="terminals.listTerminals.tabs.request">Pedido</Translate>}>
 
-```js
+```php
 GET /terminals
 ```
 
 </TabItem>
-<TabItem value="resposta-1" label="Resposta">
+<TabItem value="resposta-1" label={<Translate id="terminals.listTerminals.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -106,17 +105,17 @@ GET /terminals
 </TabItem>
 </Tabs>
 
-### Múltiplos filtros combinados
+### <Translate id="terminals.listTerminals.example2">Múltiplos filtros combinados</Translate>
 
 <Tabs>
-<TabItem value="pedido-2" label="Pedido">
+<TabItem value="pedido-2" label={<Translate id="terminals.listTerminals.tabs.request">Pedido</Translate>}>
 
 ```js
 GET /terminals?terminalId=806030356&sort=-createdAt
 ```
 
 </TabItem>
-<TabItem value="resposta-2" label="Resposta">
+<TabItem value="resposta-2" label={<Translate id="terminals.listTerminals.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -154,29 +153,31 @@ GET /terminals?terminalId=806030356&sort=-createdAt
 </TabItem>
 </Tabs>
 
-## Estrutura da Resposta
+## <Translate id="terminals.listTerminals.responseStructure">Estrutura da Resposta</Translate>
 
-| Campo | Tipo | Descrição |
+| <Translate id="terminals.listTerminals.responseTable.field">Campo</Translate> | <Translate id="terminals.listTerminals.responseTable.type">Tipo</Translate> | <Translate id="terminals.listTerminals.responseTable.description">Descrição</Translate> |
 |-------|------|-----------|
-| `uuid` | string | Identificador único do terminal |
-| `terminalId` | string | Id do terminal |
-| `name` | string | Nome do terminal |
-| `model` | string | Modelo do terminal |
-| `processor` | string | Nome do processador das transações |
-| `supplier` | datetime | Nome do fornecedor do terminal |
-| `features.allowRemoteTransactions` | boolean | Indica se o terminal aceita transações remotas (Suportado apenas em terminais cloud) |
-| `features.allowGenerateQrCode` | boolean | Indica se o terminal tem a possibilidade de gerar QR Codes |
-| `features.allowRealTimeTransactionSinchronization` | boolean | Indica se o terminal sincroniza as transações em realtime com o backoffice PayPay |
-| `createdAt` | datetime | Data de criação do registo |
-| `updatedAt` | datetime | Data da última atualização |
+| <code>uuid</code> | string | <Translate id="terminals.listTerminals.field.uuid">Identificador único do terminal</Translate> |
+| <code>terminalId</code> | string | <Translate id="terminals.listTerminals.field.terminalId">Id do terminal</Translate> |
+| <code>name</code> | string | <Translate id="terminals.listTerminals.field.name">Nome do terminal</Translate> |
+| <code>model</code> | string | <Translate id="terminals.listTerminals.field.model">Modelo do terminal</Translate> |
+| <code>processor</code> | string | <Translate id="terminals.listTerminals.field.processor">Nome do processador das transações</Translate> |
+| <code>supplier</code> | datetime | <Translate id="terminals.listTerminals.field.supplier">Nome do fornecedor do terminal</Translate> |
+| <code>features.allowRemoteTransactions</code> | boolean | <Translate id="terminals.listTerminals.field.allowRemoteTransactions">Indica se o terminal aceita transações remotas (Suportado apenas em terminais cloud)</Translate> |
+| <code>features.allowGenerateQrCode</code> | boolean | <Translate id="terminals.listTerminals.field.allowGenerateQrCode">Indica se o terminal tem a possibilidade de gerar QR Codes</Translate> |
+| <code>features.allowRealTimeTransactionSinchronization</code> | boolean | <Translate id="terminals.listTerminals.field.allowRealTimeTransactionSinchronization">Indica se o terminal sincroniza as transações em realtime com o backoffice PayPay</Translate> |
+| <code>createdAt</code> | datetime | <Translate id="terminals.listTerminals.field.createdAt">Data de criação do registo</Translate> |
+| <code>updatedAt</code> | datetime | <Translate id="terminals.listTerminals.field.updatedAt">Data da última atualização</Translate> |
 
-:::important Terminais Cloud
-Os terminais que têm a funcionalidade **_allowRemoteTransactions_** ativa, são os terminais do tipo Cloud.
+<br/>
+
+:::important
+<Translate id="terminals.listTerminals.cloudTerminalsDescription">Os terminais que têm a funcionalidade</Translate> <strong><em> allowRemoteTransactions </em></strong> <Translate id="terminals.listTerminals.cloudTerminalsDescription2">ativa, são os terminais do tipo Cloud.</Translate>
 :::
 
-## Próximos Passos
+## <Translate id="terminals.listTerminals.nextSteps">Próximos Passos</Translate>
 
-Agora que sabe listar terminais, explore:
+<p><Translate id="terminals.listTerminals.nextStepsDescription">Agora que sabe listar terminais, explore:</Translate></p>
 
-- **[Informação de Terminal](/docs/guides/terminals/cloud/get-terminal)** - Informações completas de um terminal específico.
-- **[Enviar Pedido de Pagamento](/docs/guides/terminals/cloud/create-payment)** - Enviar pedido de pagamento para terminal cloud.
+- **[<Translate id="terminals.listTerminals.link1">Informação de Terminal</Translate>](/docs/guides/terminals/cloud/get-terminal)** - <Translate id="terminals.listTerminals.link1Description">Informações completas de um terminal específico.</Translate>
+- **[<Translate id="terminals.listTerminals.link2">Enviar Pedido de Pagamento</Translate>](/docs/guides/terminals/cloud/send-payment)** - <Translate id="terminals.listTerminals.link2Description">Enviar pedido de pagamento para terminal cloud.</Translate>

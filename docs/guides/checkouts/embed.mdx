@@ -1,14 +1,24 @@
 ---
 sidebar_position: 2
-description: Embutir na sua página web sem necessidade de sair do seu site.
+title: Incorporar na página web
+description: ''
+hide_table_of_contents: true
 ---
 
-# Incorporar na página web
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-Para obter o link da incorporação é necessário realizar um pedido POST /checkouts com os dados pretendidos.
+# <Translate id="embed.webpage">Incorporar na página web</Translate>
 
-O parâmetro `redirects` do tipo `action` é obrigatório e deverá conter o url para onde o cliente deve ser redireccionado após o processamento do pagamento.
-O parâmetro id do checkout é automaticamente concatenado ao url no momento do redireccionamento.
+<p><Translate id="embed.intro">Para obter o link da incorporação é necessário realizar um pedido POST /checkouts com os dados pretendidos.</Translate></p>
+
+<Translate id="embed.redirectParam">O parâmetro</Translate> <code>redirects</code> <Translate id="embed.redirectParam2">do tipo</Translate> <code>action</code> <Translate id="embed.redirectParam3">é obrigatório e deverá conter o url para onde o cliente deve ser redireccionado após o processamento do pagamento.</Translate>
+<Translate id="embed.checkoutId">O parâmetro id do checkout é automaticamente concatenado ao url no momento do redireccionamento.</Translate>
+
+<br/>
+<br/>
 
 ```json
 {
@@ -23,37 +33,37 @@ O parâmetro id do checkout é automaticamente concatenado ao url no momento do 
 }
 ```
 
-import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+<Translate id="embed.checkoutData">Criação do checkout com os seguintes dados:</Translate>
 
-> **POST** /checkouts <button className="btn-api btn-api--float-right" onClick={() => ClickShowIframe({idMenuOption: "checkouts",  idOption: "checkouts/post/checkouts"}) } > <span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span> </button>
+- **<Translate id="embed.language">Idioma</Translate>:** Português
+- **<Translate id="embed.pageLayout">Layout da página</Translate>:** Incorporado
+- **<Translate id="embed.amount">Montante</Translate>:** 5€
+- **<Translate id="embed.paymentMethod">Método de pagamento</Translate>:** Cartão de Crédito/Débito (CC)
+- **<Translate id="embed.productCode">Código do produto</Translate>:** REFPRODUTO_1
+- **<Translate id="embed.productDescription">Descrição do produto</Translate>:** Computador
+- **<Translate id="embed.customer">Cliente</Translate>:**
+  - **<Translate id="embed.customer.number">Número de cliente</Translate>:** 1
+  - **<Translate id="embed.customer.firstName">Primeiro nome</Translate>:** José
+  - **<Translate id="embed.customer.lastName">Último nome</Translate>:** Silva
+  - **<Translate id="embed.customer.phone">Telefone</Translate>:** 351#961234567
+  - **<Translate id="embed.customer.email">Email</Translate>:** jose.silva@email.com
+- **<Translate id="embed.billingAddress">Morada de cobrança</Translate>:**
+  - **<Translate id="embed.billingAddress.country">País</Translate>:** Portugal
+  - **<Translate id="embed.billingAddress.city">Cidade</Translate>:** Lisboa
+  - **<Translate id="embed.billingAddress.street">Morada</Translate>:** Rua Domingos Monteiro nº 7 A,
+  - **<Translate id="embed.billingAddress.postCode">Código Postal</Translate>:** 1050-074
+- **<Translate id="embed.redirects">Redirecionamentos</Translate>:**
+  - **<Translate id="embed.redirects.afterPayment">Após o pagamento</Translate>:** https://www.url-action.dominio
 
-Criação do checkout com os seguintes dados:
 
-- **Idioma:** Português
-- **Layout da página:** Incorporado
-- **Montante:** 5€
-- **Método de pagamento:** Cartão de Crédito/Débito (CC)
-- **Código do produto:** REFPRODUTO_1
-- **Descrição do produto:** Computador
-- **Cliente:**
-  - **Número de cliente:** 1,
-  - **Primeiro nome:** José,
-  - **Último nome:** Silva,
-  - **Telefone:** 351#961234567,
-  - **Email:** jose.silva@email.com
-- **Morada de cobrança:**
-  - **País:** Portugal,
-  - **Cidade:** Lisboa,
-  - **Morada:** Rua Domingos Monteiro nº 7 A,
-  - **Código Postal:** 1050-074
-- **Redirecionamentos:**
-  - **Após o pagamento:** https://www.url-action.dominio
-
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
+<button className="btn-api btn-api--float-right" onClick={() => ClickShowIframe({idMenuOption: "checkouts",  idOption: "checkouts/post/checkouts"}) } > <span><Translate id="embed.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span> </button>
 
 <Tabs>
-<TabItem value="pedido" label="Pedido">
+<TabItem value="pedido" label={<Translate id="embed.tabs.request">Pedido</Translate>}>
+
+```php
+POST /checkouts
+```
 
 ```json
 {
@@ -92,7 +102,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="resposta" label="Resposta">
+<TabItem value="resposta" label={<Translate id="embed.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -115,8 +125,8 @@ import TabItem from "@theme/TabItem";
 </TabItem>
 </Tabs>
 
-Para criar o formulário de pagamento basta adicionar as seguintes linhas HTML/JavaScript à sua página.
-O `{id}` deve ser substituído pelo id retornado na resposta do pedido,no exemplo anterior seria o 0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb.
+<p><Translate id="embed.htmlInstructions">Para criar o formulário de pagamento basta adicionar as seguintes linhas HTML/JavaScript à sua página.</Translate>
+<Translate id="embed.idReplacement">O</Translate> <code>{'{id}'}</code> <Translate id="embed.idReplacement2">deve ser substituído pelo id retornado na resposta do pedido,no exemplo anterior seria o 0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb.</Translate></p>
 
 ```html
 <form class="paymentWidgets"></form>

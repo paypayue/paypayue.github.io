@@ -1,0 +1,25 @@
+---
+sidebar_position: 4
+title: Authentication
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+# <Translate id="guides.authentication.title">Autenticação</Translate>
+
+<p><Translate id="guides.authentication.intro">O sistema verifica as credencias da plataforma integrada, de forma a autenticar deverá indicar os seguintes elementos em cada pedido:</Translate></p>
+
+<p><Translate id="guides.authentication.headers">Headers de autenticação</Translate></p>
+
+```
+Authorization: Basic <credentials>
+PayPay-ClientId: <clientId>
+```
+
+- `<credentials>` - <Translate id="guides.authentication.credentials.part1">Campo username e password codificado em base64.</Translate> <a href="https://swagger.io/docs/specification/authentication/basic-authentication/"><Translate id="guides.authentication.credentials.link">Mais info</Translate></a>
+
+  - <Translate id="guides.authentication.username">Username: Platform Code</Translate>
+  - <Translate id="guides.authentication.password">Password: Private Key</Translate>
+
+- `<clientId>` - <Translate id="guides.authentication.clientId">NIF da entidade</Translate>

@@ -1,23 +1,26 @@
 ---
 sidebar_position: 5
-description: Save the MB WAY method for future purchases
+title: Tokenize MB WAY
+description: ''
+hide_table_of_contents: true
 ---
 
-# Save MB WAY
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-To save the MB WAY method for future purchases, it is only necessary to make a successful payment via MB WAY.
+# <Translate id="payments.mbwayRegistration.title">Guardar MB WAY</Translate>
 
-The process works as follows:
+<p><Translate id="payments.mbwayRegistration.intro">Para guardar o método MB WAY para compras futuras basta realizar um pagamento através de MB WAY com sucesso.</Translate></p>
 
-1. Notify [MB WAY payment](../payments/payment-mbway.mdx) indicating the flag `createRegistration=true` and the UUID of the customer;
-2. User confirms payment in the application;
-3. View payment or View customer methods.
+<p><Translate id="payments.mbwayRegistration.process">O processo funciona da seguinte forma:</Translate></p>
 
-### 1. Notification of MB WAY payment with registration
+1. <Translate id="payments.mbwayRegistration.step1">Notificar</Translate> [<Translate id="payments.mbwayRegistration.step1Link">pagamento MB WAY</Translate>](/docs/guides/payments/payment-mbway.mdx) <Translate id="payments.mbwayRegistration.step1Part2">c/ indicação da flag</Translate> <code>createRegistration=true</code> <Translate id="payments.mbwayRegistration.step1Part3">e o UUID do cliente;</Translate>
+2. <Translate id="payments.mbwayRegistration.step2">Utilizador confirma pagamento na aplicação;</Translate>
+3. <Translate id="payments.mbwayRegistration.step3">Consulta do pagamento ou Consultar métodos do cliente.</Translate>
 
-> **POST** /payments
-
-import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+### <Translate id="payments.mbwayRegistration.section1">1. Notificação de pagamento MB WAY com registo</Translate>
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -27,14 +30,15 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="payments.mbwayRegistration.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="request" label="Request">
+<TabItem value="pedido" label={<Translate id="payments.mbwayRegistration.tabs.request">Pedido</Translate>}>
+
+```php
+POST /payments
+```
 
 ```json
 {
@@ -54,7 +58,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="response" label="Response">
+<TabItem value="resposta" label={<Translate id="payments.mbwayRegistration.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -93,13 +97,17 @@ import TabItem from "@theme/TabItem";
 </TabItem>
 </Tabs>
 
-### 2. The User validates the payment on the MB WAY application
+### <Translate id="payments.mbwayRegistration.section2">2. O utilizador valida o pagamento na aplicação MB WAY</Translate>
 
-![MB WAY confirmed](../../../../../../_media/mbway-confirmed.jpg)
+![MB WAY confirmed](@site/_media/mbway-confirmed.jpg)
 
-### 3. View the status of the payment
+### <Translate id="payments.mbwayRegistration.section3">3. Consulta do estado do pagamento</Translate>
 
-> **GET** ​/payments/\{id} <button className="btn-api btn-api--float-right btn-api--move-top" onClick={() => ClickShowIframe({ idMenuOption: "payments", idOption: "payments/get/payments/{id}"})}><span>View API &nbsp;&nbsp;&nbsp;{'>'}</span> </button>
+<button className="btn-api btn-api--float-right btn-api--move-top" onClick={() => ClickShowIframe({ idMenuOption: "payments", idOption: "payments/get/payments/{id}"})}><span><Translate id="payments.mbwayRegistration.consultApi2">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span></button>
+
+```php
+GET ​/payments/{id}
+```
 
 ```json
 {

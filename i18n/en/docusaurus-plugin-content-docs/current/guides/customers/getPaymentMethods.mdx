@@ -1,19 +1,22 @@
 ---
 sidebar_position: 7
+title: Listing of payment methods
 description: ''
+hide_table_of_contents: true
 ---
 
-# Listing of payment methods
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-> **GET** /customers/_\{uuid}_/paymentMethods
+# <Translate id="customers.getPaymentMethods.title">Listar métodos de pagamento</Translate>
 
-The list of payment methods can be made using the following filters:
+<p><Translate id="customers.getPaymentMethods.intro">A listagem do métodos de pagamentos pode ser efetuada utilizando os seguintes filtros:</Translate></p>
 
-- **Type** (type)
+- **<Translate id="customers.getPaymentMethods.filter.type">Tipo</Translate>** (<code>type</code>)
 
-**1.** Obtain the payment methods stored by the customer with the _uuid_ e2343605-cf46-43de-b20b-9b7d1c95a9b2
-
-import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+**1.** <Translate id="customers.getPaymentMethods.example1">Obter os métodos de pagamento armazenados pelo cliente com o</Translate> <em>uuid</em> e2343605-cf46-43de-b20b-9b7d1c95a9b2
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -23,21 +26,18 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="customers.getPaymentMethods.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="request" label="Request">
+<TabItem value="pedido" label={<Translate id="customers.getPaymentMethods.tabs.request">Pedido</Translate>}>
 
-```json
-GET /customers/e2343605-cf46-43de-b20b-9b7d1c95a9b2/paymentMethods
+```php
+GET /customers/{uuid}/paymentMethods
 ```
 
 </TabItem>
-<TabItem value="response" label="Response">
+<TabItem value="resposta" label="Resposta">
 
 ```json
 {
@@ -67,17 +67,17 @@ GET /customers/e2343605-cf46-43de-b20b-9b7d1c95a9b2/paymentMethods
 </TabItem>
 </Tabs>
 
-**2.** Obtain the payment methods by credit/debit card saved by the customer with the _uuid_ e2343605-cf46-43de-b20b-9b7d1c95a9b2
+**2.** <Translate id="customers.getPaymentMethods.example2">Obter os métodos de pagamento através do cartão de crédito/débito guardados pelo cliente com o</Translate> <em>uuid</em> e2343605-cf46-43de-b20b-9b7d1c95a9b2
 
 <Tabs>
-<TabItem value="request" label="Request">
+<TabItem value="pedido" label={<Translate id="customers.getPaymentMethods.tabs2.request">Pedido</Translate>}>
 
-```json
+```php
 GET /customers/e2343605-cf46-43de-b20b-9b7d1c95a9b2/paymentMethods?type=CC
 ```
 
 </TabItem>
-<TabItem value="response" label="Response">
+<TabItem value="resposta" label={<Translate id="customers.getPaymentMethods.tabs2.response">Resposta</Translate>}>
 
 ```json
 {

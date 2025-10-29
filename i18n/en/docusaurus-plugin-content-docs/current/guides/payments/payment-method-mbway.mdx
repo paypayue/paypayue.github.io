@@ -1,27 +1,34 @@
 ---
-description: Communicate the payment request to the final customer's MB WAY application without the need for a mobile phone number.
+title: Tokenized MB WAY
+description: ''
+hide_table_of_contents: true
 ---
 
-# MB WAY payment with registered mobile phone number
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-With a registered MB WAY mobile phone it is now possible to immediately request payment.
+# <Translate id="payments.methodMbway.title">Pagamento MB WAY com número de telemóvel registado</Translate>
 
-1. Obtain UUID of registered payment method;
-2. Payment with sending payment method.
+<p><Translate id="payments.methodMbway.intro">Ao dispôr de um telemóvel MB WAY registado já é possível solicitar de imediato o pagamento.</Translate></p>
 
-### 1. OObtain UUID of registered payment method
+1. <Translate id="payments.methodMbway.step1">Obter UUID do método de pagamento registado;</Translate>
+2. <Translate id="payments.methodMbway.step2">Pagamento com envio do método de pagamento.</Translate>
 
-Obtaining the UUID of the payment method can be done via [View payment methods saved by the customer](../customers/getPaymentMethods.mdx)
+### <Translate id="payments.methodMbway.section1">1. Obter UUID do método de pagamento registado</Translate>
 
-### 2. Payment with sending payment method
+<Translate id="payments.methodMbway.section1Description">A obtenção do UUID do método de pagamento pode ser feito através da Consulta dos métodos de pagamento guardados pelo cliente</Translate>
 
-Make a payment request by sending the UUID of the customer and the UUID of the payment method.
+### <Translate id="payments.methodMbway.section2">2. Pagamento com envio do método de pagamento</Translate>
 
-> In the case of MB WAY it always requires validation in the application.
+<p><Translate id="payments.methodMbway.section2Description">Realizar pedido de pagamento enviando o UUID do cliente e o UUID do método de pagamento.</Translate></p>
 
-> **POST** /payments
+:::info
+<Translate id="payments.methodMbway.note">No caso do MB WAY requer sempre validação na aplicação.</Translate>
+:::
 
-import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+<br/>
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -31,14 +38,15 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="payments.methodMbway.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="request" label="Request">
+<TabItem value="pedido" label={<Translate id="payments.methodMbway.tabs.request">Pedido</Translate>}>
+
+```php
+POST /payments
+```
 
 ```json
 {
@@ -54,7 +62,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="response" label="Response">
+<TabItem value="resposta" label={<Translate id="payments.methodMbway.tabs.response">Resposta</Translate>}>
 
 ```json
 {

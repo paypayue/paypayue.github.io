@@ -1,23 +1,26 @@
 ---
 sidebar_position: 2
+title: Crear cliente
 description: ''
+hide_table_of_contents: true
 ---
 
-# Crear cliente
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-Recomenda-se a utilização do parâmetro `customerId` para evitar registos duplicados.
+# <Translate id="customers.create.title">Criar cliente</Translate>
 
-Crear un cliente con los siguientes datos:
+<p><Translate id="customers.create.recommendation">Recomenda-se a utilização do parâmetro</Translate> <code>customerId</code> <Translate id="customers.create.recommendation2">para evitar registos duplicados.</Translate></p>
 
-- **Identificación del cliente:** 1
-- **Nombre:** José
-- **Apellido:** Silva
-- **Correo electrónico:** jose.silva@email.com
-- **Número de teléfono:** 351#961234567
+<p><Translate id="customers.create.intro">Criação de um cliente com os seguintes dados:</Translate></p>
 
-> **POST** /customers
-
-import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+- **<Translate id="customers.create.customerId">Identificador do cliente</Translate>:** 1
+- **<Translate id="customers.create.firstName">Primeiro nome</Translate>:** José
+- **<Translate id="customers.create.lastName">Último nome</Translate>:** Silva
+- **<Translate id="customers.create.email">Email</Translate>:** jose.silva@email.com
+- **<Translate id="customers.create.phoneNumber">Número de telefone</Translate>:** 351#961234567
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -27,14 +30,15 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="customers.create.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="solicitud" label="Solicitud">
+<TabItem value="pedido" label={<Translate id="customers.create.tabs.request">Pedido</Translate>}>
+
+```php
+POST /customers
+```
 
 ```json
 {
@@ -47,7 +51,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="respuesta" label="Respuesta">
+<TabItem value="resposta" label={<Translate id="customers.create.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -68,4 +72,4 @@ import TabItem from "@theme/TabItem";
 </TabItem>
 </Tabs>
 
-Cuando el cliente es creado con éxito, se genera un identificador único (uuid) que identifica al cliente ante la API.
+<p><Translate id="customers.create.success">Quando o cliente é criado com sucesso é gerado um identificador único (uuid) que identifica o cliente perante a API.</Translate></p>

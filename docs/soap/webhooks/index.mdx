@@ -1,0 +1,26 @@
+---
+sidebar_position: 1
+title: 'Início'
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+<Translate id="soap.webhooks.index.intro">Webhook é uma forma de recebimento de informações, via retorno de chamada web ou HTTP, quando um evento acontece.
+Dessa forma, o webhook, é uma maneira prática para um app ou sistema receber informações em tempo real da PayPay.</Translate>
+
+<br/>
+<br/>
+
+**<Translate id="soap.webhooks.index.method">Método</Translate>**: <code>POST</code>
+**Content-type**: <code>application/x-www-form-urlencoded</code>
+
+### <Translate id="soap.webhooks.index.eventTypes">Tipos de eventos disponíveis</Translate>
+
+| <Translate id="soap.webhooks.index.table.action">Ação</Translate> | <Translate id="soap.webhooks.index.table.description">Descrição</Translate> |
+|:--- |:-----|
+| **payment_confirmed** | <Translate id="soap.webhooks.index.paymentConfirmed">Ação é desencadeada quando um pagamento é confirmado.</Translate><br/><Translate id="soap.webhooks.index.paymentConfirmedNote">Nota: aplica-se apenas a pagamentos emitidos através deste webservice.</Translate> |
+| **payment_expired** | <Translate id="soap.webhooks.index.paymentExpired">Ação é desencadeada quando a data limite de pagamento é ultrapassada.</Translate>  |
+| **payment_cancelled** | <Translate id="soap.webhooks.index.paymentCancelled">Ação é desencadeada quando um pagamento é cancelado pelo comerciante/utilizador.</Translate>  |
+| **payment_refunded** | <Translate id="soap.webhooks.index.paymentRefunded">Ação é desencadeada quando um pagamento é devolvido pelo comerciante.</Translate>  |

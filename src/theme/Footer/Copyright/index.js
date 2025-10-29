@@ -1,6 +1,6 @@
 import React from 'react';
-import Translate from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Translate from '@docusaurus/Translate';
 
 export default function FooterCopyright({copyright}) {
   const {

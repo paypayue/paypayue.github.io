@@ -1,27 +1,33 @@
 ---
-description: Gerar referência MULTIBANCO.
+title: MULTIBANCO
+description: ''
+hide_table_of_contents: true
 ---
 
-# Pagamento com MULTIBANCO
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-Para iniciar um pagamento com MB apenas necessita do gerar uma referência de 9 dígitos e disponibilizar ao consumidor.
+# <Translate id="payments.multibanco.title">Pagamento com MULTIBANCO</Translate>
 
-O processo funciona da seguinte forma:
+<Translate id="payments.multibanco.intro">Para iniciar um pagamento com MB apenas necessita do gerar uma referência de 9 dígitos e disponibilizar ao consumidor.</Translate>
 
-1. Geração de referência Multibanco;
-2. O utilizador paga a referência no Multibanco/Homebanking;
-3. A SIBS comunica à PayPay a confirmação;
-4. A PayPay notifica o estado do pagamento;
+<br/>
+<br/>
 
-O fluxo seguinte ilustra o funcionamento do pagamento por Multibanco:
+<p><Translate id="payments.multibanco.process">O processo funciona da seguinte forma:</Translate></p>
 
-![MB flow](../../../_media/mb_flow.jpg)
+1. <Translate id="payments.multibanco.step1">Geração de referência Multibanco;</Translate>
+2. <Translate id="payments.multibanco.step2">O utilizador paga a referência no Multibanco/Homebanking;</Translate>
+3. <Translate id="payments.multibanco.step3">A SIBS comunica à PayPay a confirmação;</Translate>
+4. <Translate id="payments.multibanco.step4">A PayPay notifica o estado do pagamento;</Translate>
 
-### 1. Gerar referência Multibanco
+<p><Translate id="payments.multibanco.flowDescription">O fluxo seguinte ilustra o funcionamento do pagamento por Multibanco:</Translate></p>
 
-> **POST** /payments/references
+![MB flow](@site/_media/mb_flow.jpg)
 
-import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+### <Translate id="payments.multibanco.section1">1. Gerar referência Multibanco</Translate>
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -31,14 +37,15 @@ import ClickShowIframe from "../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="payments.multibanco.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="pedido" label="Pedido">
+<TabItem value="pedido" label={<Translate id="payments.multibanco.tabs.request">Pedido</Translate>}>
+
+```php
+POST /payments/references
+```
 
 ```json
 {
@@ -58,7 +65,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="resposta" label="Resposta">
+<TabItem value="resposta" label={<Translate id="payments.multibanco.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -96,13 +103,17 @@ import TabItem from "@theme/TabItem";
 </TabItem>
 </Tabs>
 
-### 2. O utilizador paga a referência
+### <Translate id="payments.multibanco.section2">2. O utilizador paga a referência</Translate>
 
-Caso tenha especificado um URL de callback ou Webhook será enviada uma notificação.
+<Translate id="payments.multibanco.section2Description">Caso tenha especificado um URL de callback ou Webhook será enviada uma notificação.</Translate>
 
-### 3. Consultar do estado do pagamento
+### <Translate id="payments.multibanco.section3">3. Consultar do estado do pagamento</Translate>
 
-> **GET** ​/payments/\{id} <button className="btn-api btn-api--float-right btn-api--move-top" onClick={() => ClickShowIframe({ idMenuOption: "payments", idOption: "payments/get/payments/{id}" }) } > <span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span></button>
+<button className="btn-api btn-api--float-right btn-api--move-top" onClick={() => ClickShowIframe({ idMenuOption: "payments", idOption: "payments/get/payments/{id}" }) } > <span><Translate id="payments.multibanco.consultApi2">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span></button>
+
+```php
+GET ​/payments/{id}
+```
 
 ```json
 {

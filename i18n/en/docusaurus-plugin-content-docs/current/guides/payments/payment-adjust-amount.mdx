@@ -1,13 +1,16 @@
 ---
 sidebar_position: 1
-description: Modify the amount of the pre-authorized payment
+title: Adjust the amount
+description: ''
+hide_table_of_contents: true
 ---
 
-# Change the amount of a pre-authorized payment
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-#### PATCH /payments/\{id}/amount
-
-import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+# <Translate id="payments.adjustAmount.title">Alterar montante de um pagamento pré-autorizado</Translate>
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -17,14 +20,15 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="payments.adjustAmount.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="request" label="Request">
+<TabItem value="pedido" label={<Translate id="payments.adjustAmount.tabs.request">Pedido</Translate>}>
+
+```php
+PATCH /payments/{id}/amount
+```
 
 ```json
 {
@@ -33,7 +37,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="response" label="Response">
+<TabItem value="resposta" label={<Translate id="payments.adjustAmount.tabs.response">Resposta</Translate>}>
 
 ```json
 {

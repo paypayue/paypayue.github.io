@@ -1,28 +1,33 @@
 ---
 sidebar_position: 2
-description: Realizar el pago sin necesidad de ingresar datos de la tarjeta.
+title: Tarjeta de crédito/débito tokenizada
+description: ''
+hide_table_of_contents: true
 ---
 
-# Pago con tarjeta de crédito/débito registrada
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-Con un método de pago registrado ya es posible solicitar el pago inmediatamente.
+# <Translate id="payments.methodToken.title">Pagamento com Cartão de Crédito/Débito registado</Translate>
 
-1. Obtener el UUID del método de pago registrado;
-2. Pago con envío de método de pago.
+<p><Translate id="payments.methodToken.intro">Ao dispôr de um método de pagamento registado já é possível solicitar de imediato o pagamento.</Translate></p>
 
-### 1. Obtener el UUID del método de pago registrado
+1. <Translate id="payments.methodToken.step1">Obter UUID do método de pagamento registado;</Translate>
+2. <Translate id="payments.methodToken.step2">Pagamento com indicação do método de pagamento.</Translate>
 
-La obtención del UUID del método de pago puede realizarse a través de [Consulta de los métodos de pago guardados por el cliente](../customers/getPaymentMethods.mdx)
+### <Translate id="payments.methodToken.section1">1. Obter UUID do método de pagamento registado</Translate>
 
-### 2. Pago con envío de método de pago
+<Translate id="payments.methodToken.section1Description">A obtenção do UUID do método de pagamento pode ser feito através da Consulta dos métodos de pagamento guardados pelo cliente</Translate>
 
-Realizar una solicitud de pago enviando el UUID del cliente y el UUID del método de pago.
+### <Translate id="payments.methodToken.section2">2. Pagamento com envio do método de pagamento</Translate>
 
-> El pago es procesado como una operación card not present (CNP) y no debe solicitarse ninguna otra autenticación.
+:::info
+<Translate id="payments.methodToken.section2Description">Realizar pedido de pagamento enviando o UUID do cliente e o UUID do método de pagamento.</Translate>
+:::
 
-#### POST /payments
-
-import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+<br/>
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -32,14 +37,15 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="payments.methodToken.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="solicitud" label="Solicitud">
+<TabItem value="pedido" label={<Translate id="payments.methodToken.tabs.request">Pedido</Translate>}>
+
+```php
+POST /payments
+```
 
 ```json
 {
@@ -55,7 +61,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="respuesta" label="Respuesta">
+<TabItem value="resposta" label={<Translate id="payments.methodToken.tabs.response">Resposta</Translate>}>
 
 ```json
 {

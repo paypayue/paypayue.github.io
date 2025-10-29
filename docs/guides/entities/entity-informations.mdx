@@ -1,18 +1,22 @@
 ---
-description: Informações tais como nome, NIF e estado da adesão.
+title: Consultar dados da entidade
+description: ''
+hide_table_of_contents: true
 ---
 
-# Consultar dados da entidade
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-> **GET** /entities/_\{clientId}_
+# <Translate id="entities.info.title">Consultar dados da entidade</Translate>
 
-O parâmetro **clientId** é o NIF da entidade.
+:::info
+<Translate id="entities.info.noteDescription">Para aceder a esta operação não é necessário autenticar-se com o</Translate> <em>PayPay-ClientId</em>.
+:::
 
-Se existir entidades associadas à integração, as mesmas podem ser consultadas através deste recurso, utilizando o NIF da entidade que pretende consultar.
-
-**Nota:** Para aceder a esta operação não é necessário autenticar-se com o _PayPay-ClientId_.
-
-import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+<p><Translate id="entities.info.parameter">O parâmetro clientId é o NIF da entidade.</Translate></p>
+<p><Translate id="entities.info.description">Se existir entidades associadas à integração, as mesmas podem ser consultadas através deste recurso, utilizando o NIF da entidade que pretende consultar.</Translate></p>
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -22,21 +26,18 @@ import ClickShowIframe from "../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="entities.info.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="pedido" label="Pedido">
+<TabItem value="pedido" label={<Translate id="entities.info.tabs.request">Pedido</Translate>}>
 
 ```php
-    GET /entities/123456789
+GET /entities/{clientId}
 ```
 
 </TabItem>
-<TabItem value="resposta" label="Resposta">
+<TabItem value="resposta" label={<Translate id="entities.info.tabs.response">Resposta</Translate>}>
 
 ```json
 {

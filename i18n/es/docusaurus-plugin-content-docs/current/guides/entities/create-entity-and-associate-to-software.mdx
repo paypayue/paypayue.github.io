@@ -1,0 +1,97 @@
+---
+title: Crear entidad y asociarla a la integración
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# <Translate id="entities.create.title">Criar entidade e associá-la à integração</Translate>
+
+:::info
+<Translate id="entities.create.availability.description">Este recurso apenas está disponível para determinado tipo de integração.</Translate>
+:::
+
+<Translate id="entities.create.intro">Este recurso permite criar uma entidade na PayPay e que a mesma fique asssociada à integração que está a realizar o pedido. Permitindo assim, utilizar os mesmos dados de autenticação e necessitar apenas de alterar o header</Translate> <em>PayPay-ClientId</em> <Translate id="entities.create.intro2">(NIF da entidade) para o da entidade associada e começar a realizar na respetiva entidade.</Translate>
+
+<br/>
+<br/>
+
+:::warning
+<Translate id="entities.create.noteDescription">A criação da entidade através deste recurso seguirá todos os processos de compliance necessários.</Translate>
+:::
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe({
+			idMenuOption: "entities",
+			idOption: "entities/post/entities"
+		})
+	}
+>
+	<span><Translate id="entities.create.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+<Tabs>
+<TabItem value="pedido" label={<Translate id="entities.create.tabs.request">Pedido</Translate>}>
+
+```php
+POST /entities
+```
+
+```json
+{
+    "clientId": "123456789",
+    "name": "Entidade Teste Lda",
+    "phoneNumber": "707451451",
+    "address": "Estrada Regional 104 ",
+    "postCode": "9000-025",
+    "locality": "Funchal",
+    "permanentCertificate": "1234-5678-9101",
+    "economicActivity": {
+        "section": "K",
+        "code": 668
+    },
+    "availableMethods": [
+        {
+            "code": "CC"
+        },
+        {
+            "code": "MB"
+        },
+        {
+            "code": "MW"
+        }
+    ],
+    "user": {
+        "name": "John Doe",
+        "taxNumber": "123456789",
+        "email": "email@email.email",
+        "phoneNumber": "960000000",
+        "isPoliticallyExposedPerson": true
+    }
+}
+```
+
+</TabItem>
+<TabItem value="resposta" label={<Translate id="entities.create.tabs.response">Resposta</Translate>}>
+
+```json
+{
+  "clientId": "123456789",
+  "name": "Entidade PayPay",
+  "createdAt": "2021-10-07T17:01:19+00:00"
+  "stateDetails": {
+	"state": "pending",
+	"updatedAt": "2021-10-07T17:01:19+00:00"
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+<Translate id="entities.create.footer">A estrutura de dados completa, bem como as opções para</Translate> <code>economicActivity</code> <Translate id="entities.create.footer2">e</Translate> <code>availableMethods</code> <Translate id="entities.create.footer3">pode ser consultada</Translate> <button className="link-api" onClick={ () => ClickShowIframe( {typeMenu: "model", idMenuOption: "models", idOption: "model/entityregistration"} ) } > <span><Translate id="entities.create.link">aqui</Translate></span> </button>.

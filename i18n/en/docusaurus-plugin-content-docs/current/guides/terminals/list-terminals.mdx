@@ -1,0 +1,183 @@
+---
+sidebar_position: 2
+title: Teminal listing
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe({
+			idMenuOption: "terminals",
+			idOption: "terminals/get/terminals"
+		})
+	}
+>
+	<span><Translate id="terminals.listTerminals.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+# <Translate id="terminals.listTerminals.title">Listar terminais</Translate>
+
+<Translate id="terminals.listTerminals.intro">Obtenha a lista de todos os terminais associados à integração, com opções de filtro e paginação.</Translate>
+
+<br/>
+
+## <Translate id="terminals.listTerminals.searchParameters">Parâmetros de pesquisa</Translate>
+
+<p><Translate id="terminals.listTerminals.parametersDescription">Todos os parâmetros são opcionais e podem ser combinados para refinar a pesquisa:</Translate></p>
+
+| <Translate id="terminals.listTerminals.table.parameter">Parâmetro</Translate> | <Translate id="terminals.listTerminals.table.type">Tipo</Translate> | <Translate id="terminals.listTerminals.table.description">Descrição</Translate> | <Translate id="terminals.listTerminals.table.example">Exemplo</Translate> |
+|-----------|------|-----------|---------|
+| <code>terminalId</code> | string | <Translate id="terminals.listTerminals.param.terminalId">Filtrar pelo id do terminal</Translate> | <code>123456789</code> |
+| <code>name</code> | string | <Translate id="terminals.listTerminals.param.name">Filtrar pelo nome do terminal</Translate> | <code>loja-centro</code>, <code>armazem-norte</code> |
+| <code>page</code> | integer | <Translate id="terminals.listTerminals.param.page">Número da página (paginação)</Translate> | <code>1</code>, <code>2</code>, <code>3</code> |
+| <code>limit</code> | string | <Translate id="terminals.listTerminals.param.limit">Número de resultados por página</Translate> | <code>10</code>, <code>25</code>, <code>50</code> (max: 500) |
+| <code>sort</code> | string | <Translate id="terminals.listTerminals.param.sort">Ordenar resultados</Translate> | <code>createdAt</code>, <code>-created_at</code>, <code>terminalId</code> |
+
+## <Translate id="terminals.listTerminals.examples">Exemplos</Translate>
+
+### <Translate id="terminals.listTerminals.example1">Listar todos os terminais</Translate>
+
+<Tabs>
+<TabItem value="pedido-1" label={<Translate id="terminals.listTerminals.tabs.request">Pedido</Translate>}>
+
+```js
+GET /terminals
+```
+
+</TabItem>
+<TabItem value="resposta-1" label={<Translate id="terminals.listTerminals.tabs.response">Resposta</Translate>}>
+
+```json
+{
+ "date": "2021-12-07T18:01:19+00:00",
+ "success": true,
+ "data": [
+  {
+    "uuid": "3df21709-b2f5-4ec6-93f9-c5855e0da879",
+    "terminalId": "806030356",
+    "name": "name",
+    "model": "model",
+    "processor": "processor",
+    "supplier": "supplier",
+    "features": {
+      "allowRemoteTransactions": true,
+      "allowGenerateQrCode": false,
+      "allowRealTimeTransactionSinchronization": true
+    },
+    "createdAt": "2025-08-21T09:46:39+01:00",
+    "updatedAt": "2025-08-22T16:16:56+01:00"
+  },
+  {
+    "uuid": "1467a1e6-e6b5-425f-9810-21d428091068",
+    "terminalId": "713149748",
+    "name": "name",
+    "model": "model",
+    "processor": "processor",
+    "supplier": "supplier",
+    "features": {
+      "allowRemoteTransactions": false,
+      "allowGenerateQrCode": false,
+      "allowRealTimeTransactionSinchronization": false
+    },
+    "createdAt": "2025-08-20T17:17:02+01:00",
+    "updatedAt": "2025-08-29T11:06:52+01:00"
+  },
+ ],
+ "meta": {
+   "totalPages": 3,
+   "totalCount": 6,
+   "currentPage": 1
+ },
+ "links": {
+   "first": "https://paypay.pt/api/terminals?sort=-createdAt%2CterminalId&limit=2&page=1",
+   "last": "https://paypay.pt/api/terminals?sort=-createdAt%2CterminalId&limit=2&page=3",
+   "next": "https://paypay.pt/api/terminals?sort=-createdAt%2CterminalId&limit=2&page=2"
+ }
+}
+```
+
+</TabItem>
+</Tabs>
+
+### <Translate id="terminals.listTerminals.example2">Múltiplos filtros combinados</Translate>
+
+<Tabs>
+<TabItem value="pedido-2" label={<Translate id="terminals.listTerminals.tabs.request">Pedido</Translate>}>
+
+```js
+GET /terminals?terminalId=806030356&sort=-createdAt
+```
+
+</TabItem>
+<TabItem value="resposta-2" label={<Translate id="terminals.listTerminals.tabs.response">Resposta</Translate>}>
+
+```json
+{
+ "date": "2021-12-07T18:01:19+00:00",
+ "success": true,
+ "data": [
+  {
+    "uuid": "3df21709-b2f5-4ec6-93f9-c5855e0da879",
+    "terminalId": "806030356",
+    "name": "name",
+    "model": "model",
+    "processor": "processor",
+    "supplier": "supplier",
+    "features": {
+      "allowRemoteTransactions": true,
+      "allowGenerateQrCode": false,
+      "allowRealTimeTransactionSinchronization": true
+    },
+    "createdAt": "2025-08-21T09:46:39+01:00",
+    "updatedAt": "2025-08-22T16:16:56+01:00"
+  }
+ ],
+ "meta": {
+   "totalPages": 1,
+   "totalCount": 1,
+   "currentPage": 1
+ },
+ "links": {
+   "first": "https://paypay.pt/api/terminals?sort=-createdAt%2CterminalId&limit=2&page=1",
+   "last": "https://paypay.pt/api/terminals?sort=-createdAt%2CterminalId&limit=2&page=1"
+ }
+}
+```
+
+</TabItem>
+</Tabs>
+
+## <Translate id="terminals.listTerminals.responseStructure">Estrutura da Resposta</Translate>
+
+| <Translate id="terminals.listTerminals.responseTable.field">Campo</Translate> | <Translate id="terminals.listTerminals.responseTable.type">Tipo</Translate> | <Translate id="terminals.listTerminals.responseTable.description">Descrição</Translate> |
+|-------|------|-----------|
+| <code>uuid</code> | string | <Translate id="terminals.listTerminals.field.uuid">Identificador único do terminal</Translate> |
+| <code>terminalId</code> | string | <Translate id="terminals.listTerminals.field.terminalId">Id do terminal</Translate> |
+| <code>name</code> | string | <Translate id="terminals.listTerminals.field.name">Nome do terminal</Translate> |
+| <code>model</code> | string | <Translate id="terminals.listTerminals.field.model">Modelo do terminal</Translate> |
+| <code>processor</code> | string | <Translate id="terminals.listTerminals.field.processor">Nome do processador das transações</Translate> |
+| <code>supplier</code> | datetime | <Translate id="terminals.listTerminals.field.supplier">Nome do fornecedor do terminal</Translate> |
+| <code>features.allowRemoteTransactions</code> | boolean | <Translate id="terminals.listTerminals.field.allowRemoteTransactions">Indica se o terminal aceita transações remotas (Suportado apenas em terminais cloud)</Translate> |
+| <code>features.allowGenerateQrCode</code> | boolean | <Translate id="terminals.listTerminals.field.allowGenerateQrCode">Indica se o terminal tem a possibilidade de gerar QR Codes</Translate> |
+| <code>features.allowRealTimeTransactionSinchronization</code> | boolean | <Translate id="terminals.listTerminals.field.allowRealTimeTransactionSinchronization">Indica se o terminal sincroniza as transações em realtime com o backoffice PayPay</Translate> |
+| <code>createdAt</code> | datetime | <Translate id="terminals.listTerminals.field.createdAt">Data de criação do registo</Translate> |
+| <code>updatedAt</code> | datetime | <Translate id="terminals.listTerminals.field.updatedAt">Data da última atualização</Translate> |
+
+<br/>
+
+:::important
+<Translate id="terminals.listTerminals.cloudTerminalsDescription">Os terminais que têm a funcionalidade</Translate> <strong><em> allowRemoteTransactions </em></strong> <Translate id="terminals.listTerminals.cloudTerminalsDescription2">ativa, são os terminais do tipo Cloud.</Translate>
+:::
+
+## <Translate id="terminals.listTerminals.nextSteps">Próximos Passos</Translate>
+
+<p><Translate id="terminals.listTerminals.nextStepsDescription">Agora que sabe listar terminais, explore:</Translate></p>
+
+- **[<Translate id="terminals.listTerminals.link1">Informação de Terminal</Translate>](/docs/guides/terminals/cloud/get-terminal)** - <Translate id="terminals.listTerminals.link1Description">Informações completas de um terminal específico.</Translate>
+- **[<Translate id="terminals.listTerminals.link2">Enviar Pedido de Pagamento</Translate>](/docs/guides/terminals/cloud/send-payment)** - <Translate id="terminals.listTerminals.link2Description">Enviar pedido de pagamento para terminal cloud.</Translate>

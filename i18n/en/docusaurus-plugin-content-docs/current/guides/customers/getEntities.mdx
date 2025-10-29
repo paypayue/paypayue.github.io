@@ -1,13 +1,20 @@
 ---
 sidebar_position: 10
+title: List entities associated with the customer
 description: ''
+hide_table_of_contents: true
 ---
 
-# List entities associated with the customer
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-> **GET** /customers/_\{uuid}_/entities
+# <Translate id="customers.getEntities.title">Listar entidades associadas ao cliente</Translate>
 
-import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+:::info
+<Translate id="customers.getEntities.noteDescription">Apenas entidade que criou o cliente, pode consultar as entidades a ele associadas.</Translate>
+:::
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -17,21 +24,18 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="customers.getEntities.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="request" label="Request">
+<TabItem value="pedido" label={<Translate id="customers.getEntities.tabs.request">Pedido</Translate>}>
 
-```js
-GET /customers/_e2343605-cf46-43de-b20b-9b7d1c95a9b2_/entities
+```php
+GET /customers/{uuid}/entities
 ```
 
 </TabItem>
-<TabItem value="response" label="Response">
+<TabItem value="resposta" label={<Translate id="customers.getEntities.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -49,5 +53,3 @@ GET /customers/_e2343605-cf46-43de-b20b-9b7d1c95a9b2_/entities
 
 </TabItem>
 </Tabs>
-
-**Note:** Only the entity that created the client can consult the entities associated with it.

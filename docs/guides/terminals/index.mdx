@@ -1,0 +1,125 @@
+---
+sidebar_position: 1
+title: Início
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+# <Translate id="terminals.index.title">Início</Translate>
+
+<Translate id="terminals.index.intro">A PayPay disponibiliza duas soluções de terminais de pagamento (POS/TPA) para aceitar pagamentos presenciais:</Translate> <strong>Standalone</strong> <Translate id="terminals.index.intro1b">e</Translate> <strong>Cloud</strong>.
+
+<Translate id="terminals.index.intro2">Ambas as soluções permitem aceitar pagamentos com cartão de forma segura e integrada com o backoffice da PayPay.</Translate>
+
+## <Translate id="terminals.index.comparison">Comparação Rápida</Translate>
+
+| <Translate id="terminals.index.table.feature">Característica</Translate> | <Translate id="terminals.index.table.standalone">Standalone</Translate> | <Translate id="terminals.index.table.cloud">Cloud</Translate> |
+|----------------|------------|-------|
+| <Translate id="terminals.index.configuration">Configuração</Translate> | <Translate id="terminals.index.plugPlay">Plug & Play</Translate> | <Translate id="terminals.index.requiresApi">Requer integração API</Translate> |
+| <Translate id="terminals.index.manualValue">Introdução manual de valor</Translate> | <Translate id="terminals.index.yes">Sim</Translate> | <Translate id="terminals.index.noViaApi">Não (via API)</Translate> |
+| <Translate id="terminals.index.softwareIntegration">Integração com software</Translate> | <Translate id="terminals.index.optionalWebhook">Opcional (webhook)</Translate> | <Translate id="terminals.index.completeApiWebhook">Completa (API + webhook)</Translate> |
+| <Translate id="terminals.index.backofficeSync">Sincronização com backoffice</Translate> | <Translate id="terminals.index.yes">Sim</Translate> | <Translate id="terminals.index.yes">Sim</Translate> |
+
+## <Translate id="terminals.index.standaloneTitle">Terminal Standalone</Translate>
+
+<Translate id="terminals.index.standaloneDescription">Solução autónoma ideal para estabelecimentos que precisam de uma forma rápida e simples de aceitar pagamentos.</Translate>
+
+**<Translate id="terminals.index.whenUse">Quando usar</Translate>:**
+- <Translate id="terminals.index.standaloneUse1">Lojas físicas sem sistema de gestão integrado;</Translate>
+- <Translate id="terminals.index.standaloneUse2">Pontos de venda que apenas precisam de processar pagamentos;</Translate>
+- <Translate id="terminals.index.standaloneUse3">Estabelecimentos que valorizam simplicidade e rapidez;</Translate>
+- <Translate id="terminals.index.standaloneUse4">Negócios que não necessitam de integração com software externo.</Translate>
+
+**<Translate id="terminals.index.features">Características</Translate>:**
+- <Translate id="terminals.index.standaloneFeature1">Configuração plug & play - sem necessidade de configurações técnicas;</Translate>
+- <Translate id="terminals.index.standaloneFeature2">Sincronização automática em tempo real com backoffice PayPay;</Translate>
+- <Translate id="terminals.index.standaloneFeature3">Webhook opcional para notificações de transações;</Translate>
+- <Translate id="terminals.index.standaloneFeature4">Funcionamento completamente autónomo;</Translate>
+- <Translate id="terminals.index.standaloneFeature5">Ideal para começar a aceitar pagamentos rapidamente.</Translate>
+
+## <Translate id="terminals.index.cloudTitle">Terminal Cloud</Translate>
+
+<Translate id="terminals.index.cloudDescription">Solução avançada para negócios que precisam de integração completa entre terminal e sistemas de gestão.</Translate>
+
+**<Translate id="terminals.index.whenUse">Quando usar</Translate>:**
+- <Translate id="terminals.index.cloudUse1">E-commerce com loja física que precisa de integração omnicanal;</Translate>
+- <Translate id="terminals.index.cloudUse2">Sistemas POS que precisam de iniciar pagamentos remotamente;</Translate>
+- <Translate id="terminals.index.cloudUse3">Software de faturação com pagamentos integrados;</Translate>
+- <Translate id="terminals.index.cloudUse4">Restaurantes com sistemas de gestão de pedidos;</Translate>
+- <Translate id="terminals.index.cloudUse5">Automação completa de processos de venda e pagamento.</Translate>
+
+**<Translate id="terminals.index.features">Características</Translate>:**
+- <Translate id="terminals.index.cloudFeature1">Comunicar remotamente com o terminal para iniciar uma transação (sem introdução manual do montante);</Translate>
+- <Translate id="terminals.index.cloudFeature2">Sincronização bidirecional em tempo real;</Translate>
+- <Translate id="terminals.index.cloudFeature3">Webhook para confirmação automática de transações no seu sistema;</Translate>
+- <Translate id="terminals.index.cloudFeature4">Integração completa com software de terceiros;</Translate>
+- <Translate id="terminals.index.cloudFeature5">Ideal para automação e experiência de utilizador otimizada.</Translate>
+
+## <Translate id="terminals.index.supportedMethods">Métodos suportados nos 2 terminais</Translate>
+- **<Translate id="terminals.index.contactless">Contactless (NFC)</Translate>**: <Translate id="terminals.index.contactlessDescription">Aproximação do cartão ou dispositivo móvel.</Translate>
+- **<Translate id="terminals.index.chip">Chip (EMV)</Translate>**: <Translate id="terminals.index.chipDescription">Inserção do cartão com chip.</Translate>
+- **<Translate id="terminals.index.magnetic">Banda magnética</Translate>**: <Translate id="terminals.index.magneticDescription">Passagem do cartão (quando aplicável).</Translate>
+
+## <Translate id="terminals.index.paymentFlow">Fluxo de pagamento no terminal</Translate>
+
+### <Translate id="terminals.index.step1">1. Apresentação do Cartão</Translate>
+
+<p><Translate id="terminals.index.step1Description">Quando o operador introduz o montante a ser pago no terminal (nos terminais standalone) ou envia o pedido remoto para o terminal (nos terminais cloud), o cliente deve:</Translate></p>
+
+1. <Translate id="terminals.index.step1Item1">apresentar o cartão através de um dos seguintes métodos:</Translate>
+   - **<Translate id="terminals.index.contactless">Contactless</Translate>**: <Translate id="terminals.index.contactlessAction">Aproxima cartão ou dispositivo móvel.</Translate>
+   - **<Translate id="terminals.index.chip">Chip</Translate>**: <Translate id="terminals.index.chipAction">Insere cartão no terminal.</Translate>
+   - **<Translate id="terminals.index.magnetic">Banda magnética</Translate>**: <Translate id="terminals.index.magneticAction">Passa o cartão.</Translate>
+2. <Translate id="terminals.index.step1Item2">Terminal faz a leitura dos dados do cartão.</Translate>
+
+### <Translate id="terminals.index.step2">2. Autenticação</Translate>
+
+<p><Translate id="terminals.index.step2Description">Dependendo do valor e tipo de cartão, pode ser necessária autenticação:</Translate></p>
+
+1. <Translate id="terminals.index.step2Item1">Dados do cartão são lidos pelo terminal.</Translate>
+2. <Translate id="terminals.index.step2Item2">Sistema verifica se autenticação é necessária:</Translate>
+   - **<Translate id="terminals.index.ifYes">Se sim</Translate>**: <Translate id="terminals.index.enterPin">Cliente introduz PIN.</Translate>
+     - <Translate id="terminals.index.correctPin">Se PIN correto: Prossegue para autorização.</Translate>
+     - <Translate id="terminals.index.incorrectPin">Se PIN incorreto: Nova tentativa ou cancelamento (máx. 3 tentativas).</Translate>
+   - **<Translate id="terminals.index.ifNo">Se não</Translate>**: <Translate id="terminals.index.directProcessing">Processamento direto para autorização.</Translate>
+
+**<Translate id="terminals.index.authTypes">Tipos de autenticação</Translate>:**
+- **PIN**: <Translate id="terminals.index.pinDescription">Para transações acima do limite contactless.</Translate>
+- **<Translate id="terminals.index.signature">Assinatura</Translate>**: <Translate id="terminals.index.signatureDescription">Para alguns tipos de cartão (menos comum).</Translate>
+- **<Translate id="terminals.index.noAuth">Sem autenticação</Translate>**: <Translate id="terminals.index.noAuthDescription">Para pagamentos contactless de valor reduzido.</Translate>
+
+### <Translate id="terminals.index.step3">3. Processamento e Autorização</Translate>
+
+<p><Translate id="terminals.index.step3Description">O terminal comunica com a rede de pagamentos para autorizar a transação:</Translate></p>
+
+1. <Translate id="terminals.index.step3Item1">Dados validados no terminal (conexão segura e encriptada);</Translate>
+2. <Translate id="terminals.index.step3Item2">Terminal envia pedido para rede de pagamento;</Translate>
+3. <Translate id="terminals.index.step3Item3">Rede contacta banco emissor para validação;</Translate>
+4. <Translate id="terminals.index.step3Item4">Banco verifica fundos disponíveis e limites do cartão;</Translate>
+5. <Translate id="terminals.index.step3Item5">Resposta é enviada de volta ao terminal:</Translate>
+   - **<Translate id="terminals.index.approved">Aprovada</Translate>**: <Translate id="terminals.index.approvedDescription">Transação autorizada e débito efetuado.</Translate>
+   - **<Translate id="terminals.index.declined">Recusada</Translate>**: <Translate id="terminals.index.declinedDescription">Mensagem de erro apresentada.</Translate>
+
+:::info
+<Translate id="terminals.index.avgTimeDescription">O processo de autorização demora normalmente</Translate> <strong><Translate id="terminals.index.avgTime">2-5 segundos</Translate></strong>.
+:::
+
+### <Translate id="terminals.index.step4">4. Confirmação e Comprovativo</Translate>
+
+<p><Translate id="terminals.index.step4Description">Após a autorização, o pagamento é concluído:</Translate></p>
+
+1. <Translate id="terminals.index.step4Item1">Transação aprovada pelo banco;</Translate>
+2. <Translate id="terminals.index.step4Item2">Transação é sincronizada automaticamente com o backoffice PayPay em tempo real;</Translate>
+3. <Translate id="terminals.index.step4Item3">PayPay verifica se webhook está configurado:</Translate>
+   - **<Translate id="terminals.index.ifYes">Se sim</Translate>**: <Translate id="terminals.index.webhookSent">Notificação é enviada para sistema externo.</Translate>
+   - **<Translate id="terminals.index.ifNo">Se não</Translate>**: <Translate id="terminals.index.backofficeOnly">Transação fica visível apenas no backoffice.</Translate>
+
+## <Translate id="terminals.index.nextSteps">Próximos Passos</Translate>
+
+<Translate id="terminals.index.contactTeam">Contacte a equipa de</Translate> [@apoio](mailto:apoio@paypay.pt) <Translate id="terminals.index.acquisitionConsult">para aquisição e consulte os próximos passos:</Translate>
+
+- [<Translate id="terminals.index.linkStandalone">Terminal Standalone</Translate>](/docs/category/standalone)
+- [<Translate id="terminals.index.linkCloud">Terminal Cloud</Translate>](/docs/category/cloud)
+- [<Translate id="terminals.index.linkWebhooks">Webhooks</Translate>](/docs/category/webhooks)

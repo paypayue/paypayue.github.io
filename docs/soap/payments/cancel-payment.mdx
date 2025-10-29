@@ -1,0 +1,43 @@
+---
+sidebar_position: 7
+title: 'Cancelar pagamento'
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+### cancelPayment
+
+<Translate id="soap.payments.cancelPayment.description">Método usado para cancelar um pagamento e formas de pagamento associadas ao pagamento.</Translate>
+
+#### <Translate id="soap.payments.cancelPayment.requestParams">Parâmetros do pedido</Translate>
+
+| <Translate id="soap.payments.cancelPayment.table.field">Campo</Translate> | <Translate id="soap.payments.cancelPayment.table.type">Tipo</Translate> | <Translate id="soap.payments.cancelPayment.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **entity** | RequestEntity | <Translate id="soap.payments.cancelPayment.entity">Dados de integração da entidade</Translate>  |
+| **- platformCode** | String | <Translate id="soap.payments.cancelPayment.platformCode">Código da plataforma</Translate> |
+| **- hash** | String | <Translate id="soap.payments.cancelPayment.hash">Hash de autenticação</Translate>  |
+| **- lang** | String | <Translate id="soap.payments.cancelPayment.lang">Código de idioma</Translate> |
+| **- date** | String | <Translate id="soap.payments.cancelPayment.date">Data de acesso</Translate> |
+| **- nif** | String | <Translate id="soap.payments.cancelPayment.nif">NIF da entidade</Translate> |
+| **requestPaymentCancel** | RequestCancelPayment | <Translate id="soap.payments.cancelPayment.requestPaymentCancel">Detalhes do pagamento a cancelar</Translate> |
+| **- paymentId** | String | <Translate id="soap.payments.cancelPayment.paymentId">ID de pagamento/transação</Translate> |
+| **- hash** | String | <Translate id="soap.payments.cancelPayment.paymentHash">Hash do pagamento</Translate> |
+| **- remarks** | String | <Translate id="soap.payments.cancelPayment.remarks">Observações da operação</Translate> |
+| **- ignoreUnsupported** | Boolean | <Translate id="soap.payments.cancelPayment.ignoreUnsupported">Indica se é para ignorar as formas de pagamento não suportadas</Translate> |
+| ~~**- idTransaction**~~ | ~~String~~ | ~~<Translate id="soap.payments.cancelPayment.idTransaction">ID de pagamento/transação</Translate>~~ |
+
+#### <Translate id="soap.payments.cancelPayment.responseParams">Parâmetros da resposta</Translate>
+
+| <Translate id="soap.payments.cancelPayment.table.field">Campo</Translate> | <Translate id="soap.payments.cancelPayment.table.type">Tipo</Translate> | <Translate id="soap.payments.cancelPayment.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **requestState** | ResponseCancelPayment | <Translate id="soap.payments.cancelPayment.requestState">Contém a informação da integração</Translate> |
+| **- state** | Int | <Translate id="soap.payments.cancelPayment.state">Resultado da operação/integração</Translate> |
+| **- code** | String | <Translate id="soap.payments.cancelPayment.code">Código de erro/sucesso</Translate> |
+| **- message** | Int | <Translate id="soap.payments.cancelPayment.message">Mensagem de erro/sucesso</Translate> |
+| **paymentOptionsResult** | ResponseCancelPaymentOption[] | <Translate id="soap.payments.cancelPayment.paymentOptionsResult">Lista dos estados das formas de pagamento</Translate>  |
+| **- code** | String | <Translate id="soap.payments.cancelPayment.optionCode">Código de forma de pagamento</Translate> (<a href="../resources#c%C3%B3digos-de-formas-de-pagamento">Ver tabela</a>) |
+| **- type** | String | <Translate id="soap.payments.cancelPayment.type">Tipo da forma de pagamento</Translate> (<a href="../resources#c%C3%B3digos-de-tipos-de-emiss%C3%A3o">Ver tabela</a>) |
+| **- status** | String | <Translate id="soap.payments.cancelPayment.status">Estado da forma de pagamento</Translate> |
+| **- message** | String | <Translate id="soap.payments.cancelPayment.resultMessage">Descrição do resultado da operação</Translate> |

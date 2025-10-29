@@ -35,7 +35,7 @@ const config = {
   onBrokenLinks: 'ignore',
 
   customFields : {
-    docsApi: site + api,
+    docsApi: api,
     baseUrl: baseUrl,
     footerCopyrightLinks: [
       {
@@ -105,9 +105,6 @@ const config = {
         {
           maxHits: '8',
           languages: ['pt','es','en'],
-          excludeRoutes: [
-            'docs/manual-oscommerce/**/*'
-          ]//remover após regularização do oscommerce
         }
       )
     ],
@@ -178,7 +175,7 @@ const config = {
           {
             type: 'search',
             position: 'right',
-            className: 'searchbar--on-dark'
+            className: 'searchbar--on-dark',
           }
         ],
       },

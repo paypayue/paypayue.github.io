@@ -1,0 +1,103 @@
+---
+sidebar_position: 6
+title: Recursos
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+### [GitHub](https://github.com/paypayue/paypay-soap)
+
+### <Translate id="soap.resources.paymentMethodCodes">Códigos de formas de pagamento</Translate>
+
+| <Translate id="soap.resources.table.code">Código</Translate> | <Translate id="soap.resources.table.description">Descrição</Translate>  |
+|:--- |:-----------|
+| **MB** | Multibanco |
+| **CC** | <Translate id="soap.resources.creditCard">Cartão de crédito</Translate> |
+| **MW** | MB WAY |
+
+### <Translate id="soap.resources.issueTypeCodes">Códigos de tipos de emissão</Translate>
+
+| <Translate id="soap.resources.table.code">Código</Translate> | <Translate id="soap.resources.table.description">Descrição</Translate>  |
+|:--- |:-----------|
+| **DEFAULT** | <Translate id="soap.resources.default">Emite de acordo com a integração no backoffice</Translate> |
+| **REALTIME** | <Translate id="soap.resources.realtime">Referência MB Real-time (apenas disponível para MB)</Translate> |
+
+### <Translate id="soap.resources.errorCodes">Códigos de Erro</Translate>
+
+#### <Translate id="soap.resources.entityConfigErrors">Erros de configuração da entidade</Translate>
+
+| <Translate id="soap.resources.table.code">Código</Translate> | <Translate id="soap.resources.table.description">Descrição</Translate>  |
+|:--- |:-----------|
+| **00** | <Translate id="soap.resources.error00">Não registada/credenciais inválidas</Translate> |
+| **01** | <Translate id="soap.resources.error01">Registada sem integração</Translate> |
+| **02** | <Translate id="soap.resources.error02">Registada com integração e referências (apta)</Translate> |
+| **03** | <Translate id="soap.resources.error03">Registada com integração e sem referências</Translate> |
+| **04** | <Translate id="soap.resources.error04">Registada com integração e sem gama configurada</Translate>  |
+| **05** | <Translate id="soap.resources.error05">Registada com integração mas sem formas de pagamento configuradas</Translate>  |
+
+#### <Translate id="soap.resources.saveEntityPaymentsErrors">Erros de resposta saveEntityPayments</Translate>
+
+| <Translate id="soap.resources.table.code">Código</Translate> | <Translate id="soap.resources.table.errorMessage">Mensagem de erro</Translate> |
+|:--- |:-----------|
+| **0011** | <Translate id="soap.resources.error0011">Os dados referência não são válidos</Translate> |
+| **0012** | <Translate id="soap.resources.error0012">A referência está fora das gamas definidas para a entidade</Translate> |
+| **0013** | <Translate id="soap.resources.error0013">A referência foi processada anteriormente</Translate> |
+| **0014** | <Translate id="soap.resources.error0014">Parâmetros em falta</Translate> |
+| **0015** | <Translate id="soap.resources.error0015">Parâmetros inválidos</Translate> |
+| **0016** | <Translate id="soap.resources.error0016">Ocorreu um erro ao tentar processar a referência</Translate> |
+| **0017** | <Translate id="soap.resources.error0017">Datas de validade inválidas</Translate> |
+
+#### <Translate id="soap.resources.doWebPaymentErrors">Erros de resposta doWebPayment</Translate>
+
+| <Translate id="soap.resources.table.code">Código</Translate> | <Translate id="soap.resources.table.errorMessage">Mensagem de erro</Translate> |
+|:--- |:-----------|
+| **0031** | <Translate id="soap.resources.error0031">Não foi possível processar o seu pedido</Translate> |
+| **0032** | <Translate id="soap.resources.error0032">Campos em falta \{campos\}</Translate> |
+| **0033** | <Translate id="soap.resources.error0033">Dados inválidos</Translate> |
+| **0034** | <Translate id="soap.resources.error0034">A referência foi processada anteriormente</Translate> |
+| **0035** | <Translate id="soap.resources.error0035">Montante inválido</Translate> |
+| **0036** | <Translate id="soap.resources.error0036">Datas de validade inválidas</Translate> |
+| **0037** | <Translate id="soap.resources.error0037">Formas de pagamento indisponíveis</Translate> |
+| **0038** | <Translate id="soap.resources.error0038">Código de dados bancários inválido</Translate> |
+| **0039** | <Translate id="soap.resources.error0039">Data limite de contrato excedida</Translate> |
+| **0040** | <Translate id="soap.resources.error0040">Montante do plafond excedido</Translate> |
+
+
+#### <Translate id="soap.resources.checkWebPaymentErrors">Erros de resposta checkWebPayment</Translate>
+
+| <Translate id="soap.resources.table.code">Código</Translate> | <Translate id="soap.resources.table.errorMessage">Mensagem de erro</Translate> |
+|:--- |:-----------|
+| **0041** | <Translate id="soap.resources.error0041">Campos em falta \{campos\}</Translate> |
+| **0042** | <Translate id="soap.resources.error0042">Não foi encontrado um pagamento com os dados fornecidos</Translate> |
+
+#### <Translate id="soap.resources.subscribeToWebhookErrors">Erros de resposta subscribeToWebhook</Translate>
+
+| <Translate id="soap.resources.table.code">Código</Translate> | <Translate id="soap.resources.table.errorMessage">Mensagem de erro</Translate> |
+|:--- |:-----------|
+| **0051** | <Translate id="soap.resources.error0051">O parâmetro action não é válido ou não existe</Translate> |
+| **0052** | <Translate id="soap.resources.error0052">O URL não é válido, deve ser especificado o endereço completo</Translate> |
+
+#### <Translate id="soap.resources.createPaymentReferenceErrors">Erros de resposta createPaymentReference</Translate>
+
+| <Translate id="soap.resources.table.code">Código</Translate> | <Translate id="soap.resources.table.errorMessage">Mensagem de erro</Translate> |
+|:---- |:-----------|
+| **0060** | <Translate id="soap.resources.error0060">Não foi possível processar o seu pedido</Translate> |
+| **0061** | <Translate id="soap.resources.error0061">Montante inválido</Translate> |
+| **0062** | <Translate id="soap.resources.error0062">Parâmetros em falta</Translate> |
+| **0063** | <Translate id="soap.resources.error0063">Parâmetros inválidos</Translate>
+| **0064** | <Translate id="soap.resources.error0064">Formas de pagamento indisponíveis</Translate> |
+| **0038** | <Translate id="soap.resources.error0038">Código de dados bancários inválido</Translate> |
+| **0039** | <Translate id="soap.resources.error0039">Data limite de contrato excedida</Translate> |
+| **0040** | <Translate id="soap.resources.error0040">Montante do plafond excedido</Translate> |
+
+#### <Translate id="soap.resources.cancelPaymentErrors">Erros de resposta cancelPayment</Translate>
+
+| <Translate id="soap.resources.table.code">Código</Translate> | <Translate id="soap.resources.table.errorMessage">Mensagem de erro</Translate> |
+|:---- |:-----------|
+| **0031** | <Translate id="soap.resources.error0031">Não foi possível processar o seu pedido</Translate> |
+| **0042** | <Translate id="soap.resources.error0042">Não foi encontrado um pagamento com os dados fornecidos</Translate> |
+| **0062** | <Translate id="soap.resources.error0062">Parâmetros em falta</Translate> |
+| **0070** | <Translate id="soap.resources.error0070">Operação duplicada: O pagamento já se encontra cancelado</Translate> |
+| **0071** | <Translate id="soap.resources.error0071">Operação não permitida para o estado atual do pagamento</Translate> |
+| **0072** | <Translate id="soap.resources.error0072">Operação não permitida devido à impossibilidade de cancelar todas as formas de pagamento</Translate> |

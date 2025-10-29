@@ -1,21 +1,24 @@
 ---
 sidebar_position: 5
+title: Listar clientes
 description: ''
+hide_table_of_contents: true
 ---
 
-# Listar clientes
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-> **GET** /customers
+# <Translate id="customers.list.title">Listar clientes</Translate>
 
-A listagem dos clientes pode ser efetuada utilizando os seguintes filtros:
+<p><Translate id="customers.list.intro">A listagem dos clientes pode ser efetuada utilizando os seguintes filtros:</Translate></p>
 
-- **Email** (email)
-- **Identificador do cliente** (customerId)
-- **Limitar os resultados** (limit)
+- **<Translate id="customers.list.filter.email">Email</Translate>** (<code>email</code>);
+- **<Translate id="customers.list.filter.customerId">Identificador do cliente</Translate>** (<code>customerId</code>);
+- **<Translate id="customers.list.filter.limit">Limitar os resultados</Translate>** (<code>limit</code>).
 
-**1.** Obter o cliente com o email jose.silva@email.com.
-
-import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+**1.** <Translate id="customers.list.example1">Obter o cliente com o email</Translate> jose.silva@email.com.
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -25,21 +28,18 @@ import ClickShowIframe from "../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="customers.list.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="pedido" label="Pedido">
+<TabItem value="pedido" label={<Translate id="customers.list.tabs.request">Pedido</Translate>}>
 
-```
+```php
 GET /customers?email=jose.silva@email.com
 ```
 
 </TabItem>
-<TabItem value="resposta" label="Resposta">
+<TabItem value="resposta" label={<Translate id="customers.list.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -63,17 +63,17 @@ GET /customers?email=jose.silva@email.com
 </TabItem>
 </Tabs>
 
-**2.** Obter os dois primeiros clientes.
+**2.** <Translate id="customers.list.example2">Obter os dois primeiros clientes.</Translate>
 
 <Tabs>
-<TabItem value="pedido" label="Pedido">
+<TabItem value="pedido" label={<Translate id="customers.list.tabs2.request">Pedido</Translate>}>
 
-```
+```php
 GET /customers?limit=2
 ```
 
 </TabItem>
-<TabItem value="resposta" label="Resposta">
+<TabItem value="resposta" label={<Translate id="customers.list.tabs2.response">Resposta</Translate>}>
 
 ```json
 {

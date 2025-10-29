@@ -1,0 +1,18 @@
+---
+sidebar_position: 6
+title: Webhooks
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+## <Translate id="terminals.webhooks.configuration">Configuração de Webhooks</Translate>
+
+<p><Translate id="terminals.webhooks.intro">Se pretender receber notificações das transações num sistema externo, pode configurar webhooks para ser notificado automaticamente quando uma transação é concluída.</Translate></p>
+
+[<Translate id="terminals.webhooks.availableEvents">Eventos disponíveis</Translate>](/docs/guides/webhooks/event-types#relacionados-com-pagamentos)
+
+:::info
+<Translate id="terminals.webhooks.paymentCancellationDescription">O evento</Translate> <strong><em>payment_cancelled</em></strong>, <Translate id="terminals.webhooks.paymentCancellationDescription2">só é desencadeado se a data de validade do pagamento expirar, ou se for realizado um</Translate> <strong><em>void</em></strong> <Translate id="terminals.webhooks.paymentCancellationDescription3">(devolução realizada antes do fecho do dia) do pagamento.</Translate>
+:::

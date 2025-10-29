@@ -1,0 +1,23 @@
+---
+sidebar_position: 3
+title: 'Autenticação dos pedidos'
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+<Translate id="soap.webhooks.authentication.intro">Um header</Translate> <code>PayPay-Signature</code> <Translate id="soap.webhooks.authentication.intro2">é enviado junto com o pedido HTTP de forma a permitir verificar a sua integridade e autenticidade.</Translate>
+
+<br/>
+<br/>
+
+```
+PayPay-Signature: hash=14d06cc11e0479c2ffe138d963462bc0f0ad94e8e006cf4f1f494c5e30bd1830,ts=1615826436
+```
+
+<Translate id="soap.webhooks.authentication.description">O header é composto pela assinatura</Translate> <code>hash</code> <Translate id="soap.webhooks.authentication.description2">e o timestamp</Translate> <code>ts</code>. <Translate id="soap.webhooks.authentication.description3">Para verificar se o pedido é válido a seguinte hash deverá ser igual à</Translate> <code>hash</code> <Translate id="soap.webhooks.authentication.description4">do header:</Translate>
+
+```
+hash_hmac("SHA256", [corpo do pedido] + [ts], [Chave de encriptação])
+```

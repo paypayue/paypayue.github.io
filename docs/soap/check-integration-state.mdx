@@ -1,0 +1,33 @@
+---
+sidebar_position: 3
+title: Consultar o estado da integração
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+# <Translate id="soap.checkIntegrationState.title">Consultar o estado da integração</Translate>
+
+### checkIntegrationState
+
+<Translate id="soap.checkIntegrationState.description">O método checkIntegrationState permite verificar o estado da integração.</Translate>
+
+#### <Translate id="soap.checkIntegrationState.requestParams">Parâmetros do pedido</Translate>
+
+| <Translate id="soap.checkIntegrationState.table.field">Campo</Translate> | <Translate id="soap.checkIntegrationState.table.type">Tipo</Translate> | <Translate id="soap.checkIntegrationState.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **entity** | RequestEntity | <Translate id="soap.checkIntegrationState.entity">Dados de integração da entidade</Translate>  |
+| **- platformCode** | String | <Translate id="soap.checkIntegrationState.platformCode">Código da plataforma</Translate> |
+| **- hash** | String | <Translate id="soap.checkIntegrationState.hash">Hash de autenticação</Translate> |
+| **- lang** | String | <Translate id="soap.checkIntegrationState.lang">Código de idioma</Translate> |
+| **- date** | String | <Translate id="soap.checkIntegrationState.date">Data de acesso</Translate> |
+| **- nif** | String | <Translate id="soap.checkIntegrationState.nif">NIF da entidade</Translate> |
+
+#### <Translate id="soap.checkIntegrationState.responseParams">Parâmetros da resposta</Translate>
+
+| <Translate id="soap.checkIntegrationState.table.field">Campo</Translate> | <Translate id="soap.checkIntegrationState.table.type">Tipo</Translate> | <Translate id="soap.checkIntegrationState.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **requestState** | ResponseIntegrationState | <Translate id="soap.checkIntegrationState.requestState">Contém a informação da integração</Translate> |
+| **- state** | String | <Translate id="soap.checkIntegrationState.state">Estado da integração</Translate> |
+| **- code** | String | <Translate id="soap.checkIntegrationState.code">Código do estado de integração</Translate> |
+| **- message** | String | <Translate id="soap.checkIntegrationState.message">Mensagem do estado de integração</Translate> |

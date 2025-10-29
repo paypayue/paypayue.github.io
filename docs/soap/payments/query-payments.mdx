@@ -1,0 +1,119 @@
+---
+sidebar_position: 6
+title: 'Métodos para consultar pagamentos'
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+### checkEntityPayments
+
+<Translate id="soap.payments.checkEntityPayments.description">Permite verificar os detalhes de uma lista de pagamentos ou referências.</Translate>
+
+#### <Translate id="soap.payments.checkEntityPayments.requestParams">Parâmetros do pedido</Translate>
+
+| <Translate id="soap.payments.checkEntityPayments.table.field">Campo</Translate> | <Translate id="soap.payments.checkEntityPayments.table.type">Tipo</Translate> | <Translate id="soap.payments.checkEntityPayments.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **entity** | RequestEntity | <Translate id="soap.payments.checkEntityPayments.entity">Dados de integração da entidade</Translate>  |
+| **- platformCode** | String | <Translate id="soap.payments.checkEntityPayments.platformCode">Código da plataforma</Translate> |
+| **- hash** | String | <Translate id="soap.payments.checkEntityPayments.hash">Hash de autenticação</Translate>  |
+| **- lang** | String | <Translate id="soap.payments.checkEntityPayments.lang">Código de idioma</Translate> |
+| **- date** | String | <Translate id="soap.payments.checkEntityPayments.date">Data de acesso</Translate> |
+| **- nif** | String | <Translate id="soap.payments.checkEntityPayments.nif">NIF da entidade</Translate> |
+| **requestPayments** | RequestEntityPayments | <Translate id="soap.payments.checkEntityPayments.requestPayments">Pedido de pagamentos a verificar</Translate> |
+| **- payments** | RequestReferenceDetails[] | <Translate id="soap.payments.checkEntityPayments.payments">Lista de referências de pagamentos</Translate> |
+| **-- reference** | String | <Translate id="soap.payments.checkEntityPayments.reference">Referência do pagamento</Translate> |
+| **-- paymentId** | Int | <Translate id="soap.payments.checkEntityPayments.paymentId">Id do pagamento</Translate>  |
+
+#### <Translate id="soap.payments.checkEntityPayments.responseParams">Parâmetros da resposta</Translate>
+
+| <Translate id="soap.payments.checkEntityPayments.table.field">Campo</Translate> | <Translate id="soap.payments.checkEntityPayments.table.type">Tipo</Translate> | <Translate id="soap.payments.checkEntityPayments.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **response** | ResponseEntityPaymentsDetails | <Translate id="soap.payments.checkEntityPayments.response">Contém a informação da referência</Translate> |
+| **- state** | ResponseIntegrationState | <Translate id="soap.payments.checkEntityPayments.state">Informação do estado da integração</Translate> |
+| **- payments** | PaymentDetails[] | <Translate id="soap.payments.checkEntityPayments.paymentsResponse">Lista de detalhes de pagamentos</Translate> |
+| **-- state** | Int | <Translate id="soap.payments.checkEntityPayments.stateResult">Resultado da pesquisa do pagamento</Translate> |
+| **-- code** | String | <Translate id="soap.payments.checkEntityPayments.code">Código da mensagem</Translate> |
+| **-- message** | Int | <Translate id="soap.payments.checkEntityPayments.message">Mensagem de erro/sucesso</Translate> |
+| **-- reference** | String | <Translate id="soap.payments.checkEntityPayments.referenceResponse">Referência do pagamento</Translate> |
+| **-- paymentState** | Int | <Translate id="soap.payments.checkEntityPayments.paymentState">Estado do pagamento (0. Pendente 1. Pago)</Translate> |
+| **-- paymentStateId** | Int | <Translate id="soap.payments.checkEntityPayments.paymentStateId">Identificador do estado do pagamento</Translate>  |
+| **-- paymentBlocked** | Int | <Translate id="soap.payments.checkEntityPayments.paymentBlocked">Indica se o pagamento está bloqueado</Translate>  |
+| **-- paymentCancelled** | Int | <Translate id="soap.payments.checkEntityPayments.paymentCancelled">Indica se o pagamento foi cancelado</Translate> |
+| **-- paymentDate** | String | <Translate id="soap.payments.checkEntityPayments.paymentDate">Data de pagamento</Translate> |
+| **-- paymentMode** | String | <Translate id="soap.payments.checkEntityPayments.paymentMode">Modo de pagamento:</Translate><br/>1. <Translate id="soap.payments.checkEntityPayments.paymentMode1">Cartão de crédito;</Translate><br/>2. <Translate id="soap.payments.checkEntityPayments.paymentMode2">Multibanco;</Translate><br/>4. <Translate id="soap.payments.checkEntityPayments.paymentMode3">MB WAY.</Translate> |
+| **-- paymentId** | Int | <Translate id="soap.payments.checkEntityPayments.paymentIdResponse">Id do pagamento</Translate>  |
+| **-- paymentAmount** | Int | <Translate id="soap.payments.checkEntityPayments.paymentAmount">Montante do pagamento (em cêntimos, ex: 1000=10,00EUR)</Translate>  |
+| **-- paymentFee** | PaymentFee | <Translate id="soap.payments.checkEntityPayments.paymentFee">Valores da comissão</Translate> |
+| **--- netAmount** | Float | <Translate id="soap.payments.checkEntityPayments.netAmount">Valor líquido</Translate> |
+| **--- taxAmount** | Float | <Translate id="soap.payments.checkEntityPayments.taxAmount">Valores de imposto IVA</Translate> |
+| **--- invoiceDetails** | InvoiceDetails | <Translate id="soap.payments.checkEntityPayments.invoiceDetails">Detalhes da fatura</Translate> |
+| **---- invoiceNumber** | String | <Translate id="soap.payments.checkEntityPayments.invoiceNumber">Número da fatura</Translate> |
+| **---- invoiceDate** | String | <Translate id="soap.payments.checkEntityPayments.invoiceDate">Data de faturação</Translate> |
+| **-- transferDetails** | TransferDetails | <Translate id="soap.payments.checkEntityPayments.transferDetails">Detalhes da transferência</Translate> |
+| **--- payerReference** | String | <Translate id="soap.payments.checkEntityPayments.payerReference">Referência de ordenante</Translate> |
+| **--- transferDate** | String | <Translate id="soap.payments.checkEntityPayments.transferDate">Data da transferência</Translate> |
+| **--- bankAccountIban** | String | <Translate id="soap.payments.checkEntityPayments.bankAccountIban">IBAN da conta destino</Translate> |
+| **-- paymentRefunds** | paymentRefund[] | <Translate id="soap.payments.checkEntityPayments.paymentRefunds">Lista de devoluções do pagamento</Translate> |
+| **--- paymentId** | Int | <Translate id="soap.payments.checkEntityPayments.refundPaymentId">Id do pagamento-devolução</Translate> |
+| **--- amount** | Int | <Translate id="soap.payments.checkEntityPayments.refundAmount">Valor devolvido</Translate> |
+| **--- refundDate** | String | <Translate id="soap.payments.checkEntityPayments.refundDate">Data da devolução</Translate> |
+
+### getEntityPayments
+
+<Translate id="soap.payments.getEntityPayments.description">Este método permite pesquisar pagamentos por data da última atualização. Os pagamentos são atualizados quando ocorre algum dos seguintes eventos:</Translate>
+* <Translate id="soap.payments.getEntityPayments.event1">confirmado;</Translate>
+* <Translate id="soap.payments.getEntityPayments.event2">cancelado;</Translate>
+* <Translate id="soap.payments.getEntityPayments.event3">devolvido (parcial ou total);</Translate>
+* <Translate id="soap.payments.getEntityPayments.event4">transferido;</Translate>
+* <Translate id="soap.payments.getEntityPayments.event5">faturado.</Translate>
+
+#### <Translate id="soap.payments.getEntityPayments.requestParams">Parâmetros do pedido</Translate>
+
+| <Translate id="soap.payments.getEntityPayments.table.field">Campo</Translate> | <Translate id="soap.payments.getEntityPayments.table.type">Tipo</Translate> | <Translate id="soap.payments.getEntityPayments.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **entity** | RequestEntity | <Translate id="soap.payments.getEntityPayments.entity">Dados de integração da entidade</Translate>  |
+| **- platformCode** | String | <Translate id="soap.payments.getEntityPayments.platformCode">Código da plataforma</Translate> |
+| **- hash** | String | <Translate id="soap.payments.getEntityPayments.hash">Hash de autenticação</Translate>  |
+| **- lang** | String | <Translate id="soap.payments.getEntityPayments.lang">Código de idioma</Translate> |
+| **- date** | String | <Translate id="soap.payments.getEntityPayments.date">Data de acesso</Translate> |
+| **- nif** | String | <Translate id="soap.payments.getEntityPayments.nif">NIF da entidade</Translate> |
+| **dateTimeInterval** | RequestInterval | <Translate id="soap.payments.getEntityPayments.dateTimeInterval">Intervalo de datas de pesquisa</Translate> |
+| **- startDate**\*\* | ISO8601 | <Translate id="soap.payments.getEntityPayments.startDate">Data de início da pesquisa</Translate> |
+| **- endDate**\*\* | ISO8601 | <Translate id="soap.payments.getEntityPayments.endDate">Data de fim da pesquisa</Translate> |
+
+\*\* <Translate id="soap.payments.getEntityPayments.dateNote">As datas de pesquisa devem estar no formato ISO8601 (ex: 2014-09-27T18&colon;30&colon;49-03&colon;00).</Translate>
+
+#### <Translate id="soap.payments.getEntityPayments.responseParams">Parâmetros da resposta</Translate>
+
+| <Translate id="soap.payments.getEntityPayments.table.field">Campo</Translate> | <Translate id="soap.payments.getEntityPayments.table.type">Tipo</Translate> | <Translate id="soap.payments.getEntityPayments.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **response** | ResponseEntityPaymentsDetails | <Translate id="soap.payments.getEntityPayments.response">Contém a informação da referência</Translate> |
+| **- state** | ResponseIntegrationState | <Translate id="soap.payments.getEntityPayments.state">Informação do estado da integração</Translate> |
+| **- payments** | ResponsePayment[] | <Translate id="soap.payments.getEntityPayments.payments">Lista de detalhes de pagamentos</Translate> |
+| **-- paymentId** | Int | <Translate id="soap.payments.getEntityPayments.paymentId">Id do pagamento</Translate>  |
+| **-- referenceEntity** | String | <Translate id="soap.payments.getEntityPayments.referenceEntity">Entidade multibanco (5 dígitos)</Translate> |
+| **-- reference** | String | <Translate id="soap.payments.getEntityPayments.reference">Referência do pagamento</Translate> |
+| **-- paymentMethodCode** | String | <Translate id="soap.payments.getEntityPayments.paymentMethodCode">Código da forma de pagamento utilizada</Translate> (<a href="../resources#c%C3%B3digos-de-formas-de-pagamento">Ver tabela</a>) |
+| **-- paymentCancelled** | Boolean | <Translate id="soap.payments.getEntityPayments.paymentCancelled">Indica se o pagamento está cancelado</Translate> |
+| **-- paymentDate** | String | <Translate id="soap.payments.getEntityPayments.paymentDate">Data de pagamento</Translate> |
+| **-- paymentAmount** | Int | <Translate id="soap.payments.getEntityPayments.paymentAmount">Montante do pagamento (em cêntimos, ex: 1000=10,00EUR)</Translate>  |
+| **-- productCode** | String | <Translate id="soap.payments.getEntityPayments.productCode">Código do produto (opcional)</Translate> |
+| **-- productDesc** | String | <Translate id="soap.payments.getEntityPayments.productDesc">Descrição do produto (opcional)</Translate> |
+| **-- validStartDate\*** | ISO8601 | <Translate id="soap.payments.getEntityPayments.validStartDate">Data de início da validade da referência.</Translate> |
+| **-- validEndDate\*** | ISO8601 | <Translate id="soap.payments.getEntityPayments.validEndDate">Data limite de pagamento da referência.</Translate>  |
+| **-- paymentFee** | PaymentFee | <Translate id="soap.payments.getEntityPayments.paymentFee">Valores da comissão</Translate> |
+| **--- netAmount** | Float | <Translate id="soap.payments.getEntityPayments.netAmount">Valor líquido</Translate> |
+| **--- taxAmount** | Float | <Translate id="soap.payments.getEntityPayments.taxAmount">Valores de imposto IVA</Translate> |
+| **--- invoiceDetails** | InvoiceDetails | <Translate id="soap.payments.getEntityPayments.invoiceDetails">Detalhes da fatura</Translate> |
+| **---- invoiceNumber** | String | <Translate id="soap.payments.getEntityPayments.invoiceNumber">Número da fatura</Translate> |
+| **---- invoiceDate** | String | <Translate id="soap.payments.getEntityPayments.invoiceDate">Data de faturação</Translate> |
+| **-- transferDetails** | TransferDetails | <Translate id="soap.payments.getEntityPayments.transferDetails">Detalhes da transferência</Translate> |
+| **--- payerReference** | String | <Translate id="soap.payments.getEntityPayments.payerReference">Referência de ordenante</Translate> |
+| **--- transferDate** | String | <Translate id="soap.payments.getEntityPayments.transferDate">Data da transferência</Translate> |
+| **--- bankAccountIban** | String | <Translate id="soap.payments.getEntityPayments.bankAccountIban">IBAN da conta destino</Translate> |
+| **-- paymentRefunds** | paymentRefund[] | <Translate id="soap.payments.getEntityPayments.paymentRefunds">Lista de devoluções do pagamento</Translate> |
+| **--- paymentId** | Int | <Translate id="soap.payments.getEntityPayments.refundPaymentId">Id do pagamento-devolução</Translate> |
+| **--- amount** | Int | <Translate id="soap.payments.getEntityPayments.refundAmount">Valor devolvido</Translate> |
+| **--- refundDate** | String | <Translate id="soap.payments.getEntityPayments.refundDate">Data da devolução</Translate> |

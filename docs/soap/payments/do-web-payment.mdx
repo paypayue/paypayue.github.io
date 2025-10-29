@@ -1,0 +1,99 @@
+---
+sidebar_position: 3
+title: 'Gerar pagamento com token (via redirect)'
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+# <Translate id="soap.payments.doWebPayment.title">Pedido de pagamento com token (via redirect)</Translate>
+
+<p><Translate id="soap.payments.doWebPayment.intro">De seguida apresentamos o processo de pagamento com redirecionamento para a página de pagamentos PayPay.</Translate></p>
+* <Translate id="soap.payments.doWebPayment.step1">O servidor do site/aplicação comunica com a PayPay com o objetivo de obter um token de pagamento para a(s) forma(s) de pagamento pretendidas;</Translate>
+* <Translate id="soap.payments.doWebPayment.step2">A PayPay responde com o</Translate> <code>redirectURL</code>, <code>paymentId</code> <Translate id="soap.payments.doWebPayment.step2b">e</Translate> <code>token</code>:
+  * <Translate id="soap.payments.doWebPayment.step2a">O</Translate> <code>paymentId</code> <Translate id="soap.payments.doWebPayment.step2a2">e</Translate> <code>token</code> <Translate id="soap.payments.doWebPayment.step2a3">da resposta deverão ser guardados no servidor do site/aplicação;</Translate>
+  * <Translate id="soap.payments.doWebPayment.step2b2">De seguida o site/aplicação deverá redirecionar o cliente para o</Translate> <code>redirectURL</code> <Translate id="soap.payments.doWebPayment.step2b3">da resposta;</Translate>
+* <Translate id="soap.payments.doWebPayment.step3">Em caso de sucesso, o cliente será redirecionado para o</Translate> <code>returnUrlSuccess</code> <Translate id="soap.payments.doWebPayment.step3b">ou em caso de cancelamento para o</Translate> <code>returnUrlCancel</code>;
+* <Translate id="soap.payments.doWebPayment.step4">O servidor do site/aplicação deverá verificar se o</Translate> <code>?token=XYZ</code> <Translate id="soap.payments.doWebPayment.step4b">do url de retorno é válido e verificar o estado do token para confirmar se o pagamento foi confirmado.</Translate> (<a href="../payments/check-web-payment">Ver checkWebPayment</a>);
+* <Translate id="soap.payments.doWebPayment.step5">Se, por qualquer razão, o o cliente não regressar ao site/aplicação é recomendada a consulta ao estado do pagamento após um intervalo de referência de 30 minutos*.</Translate> (<a href="../payments/query-payments#checkentitypayments">Ver checkEntityPayments</a>)
+
+\* <Translate id="soap.payments.doWebPayment.validityNote">A validade do pagamento é configurável por pedido no parâmetro</Translate> <code>validEndDate</code> <Translate id="soap.payments.doWebPayment.validityNote2">ou nas configurações da integração.</Translate>
+### doWebPayment
+
+<Translate id="soap.payments.doWebPayment.description">Gera um token de pagamento via WEB para as formas de pagamento pretendidas.</Translate>
+
+#### <Translate id="soap.payments.doWebPayment.requestParams">Parâmetros do pedido</Translate>
+
+| <Translate id="soap.payments.doWebPayment.table.field">Campo</Translate> | <Translate id="soap.payments.doWebPayment.table.type">Tipo</Translate> | <Translate id="soap.payments.doWebPayment.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **entity** | RequestEntity | <Translate id="soap.payments.doWebPayment.entity">Dados de integração da entidade</Translate>  |
+| **- platformCode** | String | <Translate id="soap.payments.doWebPayment.platformCode">Código da plataforma</Translate> |
+| **- hash** | String | <Translate id="soap.payments.doWebPayment.hash">Hash de autenticação</Translate>  |
+| **- lang** | String | <Translate id="soap.payments.doWebPayment.lang">Código de idioma</Translate> |
+| **- date** | String | <Translate id="soap.payments.doWebPayment.date">Data de acesso</Translate> |
+| **- nif** | String | <Translate id="soap.payments.doWebPayment.nif">NIF da entidade</Translate> |
+| **payment** | RequestCreditCardPayment | <Translate id="soap.payments.doWebPayment.payment">Dados relativos ao pagamento e redirecionamento</Translate> |
+| **- order** | RequestPaymentOrder | <Translate id="soap.payments.doWebPayment.order">Informação do pagamento</Translate> |
+| **-- amount** | Int | <Translate id="soap.payments.doWebPayment.amount">Montante pretendido para a criação do pagamento (obrigatório)</Translate> |
+| **-- reference** | String | <Translate id="soap.payments.doWebPayment.reference">Referência do pagamento</Translate> |
+| **-- hash** | String | <Translate id="soap.payments.doWebPayment.orderHash">Hash do pagamento</Translate> |
+| **-- paymentId** | String | <Translate id="soap.payments.doWebPayment.paymentId">ID de pagamento</Translate> |
+| **-- productCode** | String | <Translate id="soap.payments.doWebPayment.productCode">Código do produto/serviço (opcional)</Translate> |
+| **-- productDesc** | String | <Translate id="soap.payments.doWebPayment.productDesc">Descrição do produto/serviço (opcional)</Translate> |
+| **-- validStartDate\*\*\*\*\*** | ISO8601 | <Translate id="soap.payments.doWebPayment.validStartDate">Data de início da validade da referência.</Translate> |
+| **-- validEndDate\*\*\*\*\*** | ISO8601 | <Translate id="soap.payments.doWebPayment.validEndDate">Data limite de pagamento da referência.</Translate>  |
+| ~~**-- idTransaction**~~ | ~~String~~ | ~~<Translate id="soap.payments.doWebPayment.idTransaction">ID de pagamento</Translate>~~ |
+| **- method\*\*\*\*** | String | <Translate id="soap.payments.doWebPayment.method">Código da forma de pagamento que vai ser utilizada. Ex: "MB" ou separado por vírgula "MB,CC,MW".</Translate> |
+| **- returnUrlSuccess** | String | <Translate id="soap.payments.doWebPayment.returnUrlSuccess">URL de redirecionamento caso o cliente realize o pagamento com sucesso</Translate> |
+| **- returnUrlCancel** | String | <Translate id="soap.payments.doWebPayment.returnUrlCancel">URL de redirecionamento em caso de cancelamento pelo cliente</Translate> |
+| **- returnUrlBack** | String | <Translate id="soap.payments.doWebPayment.returnUrlBack">URL de redirecionamento em caso de retrocedimento pelo cliente</Translate> |
+| **- bankAccountCode\*\*\*\*\*\*** | String | <Translate id="soap.payments.doWebPayment.bankAccountCode">Código que identifica o IBAN para o qual o pagamento deverá ser transferido.</Translate> |
+| **- buyer** | RequestBuyerInfo | <Translate id="soap.payments.doWebPayment.buyer">Informação do cliente</Translate> |
+| **-- firstName** | String | <Translate id="soap.payments.doWebPayment.firstName">Nome do cliente</Translate> |
+| **-- lastName** | String | <Translate id="soap.payments.doWebPayment.lastName">Apelido do cliente</Translate> |
+| **-- customerId** | String | <Translate id="soap.payments.doWebPayment.customerId">Id do cliente</Translate> |
+| **-- email** | String | <Translate id="soap.payments.doWebPayment.email">Email do cliente</Translate> |
+| **-- phoneNumber** | String | <Translate id="soap.payments.doWebPayment.phoneNumber">Telefone do cliente</Translate> |
+| **- billingAddress** | RequestBillingAddress | <Translate id="soap.payments.doWebPayment.billingAddress">Endereço de faturação</Translate> |
+| **-- country** | String | <Translate id="soap.payments.doWebPayment.billingCountry">País (Formato: ISO 3166-1)</Translate> |
+| **-- state** | String | <Translate id="soap.payments.doWebPayment.billingState">Código do Estado/Distrito (Formato: ISO 3166-2)</Translate> |
+| **-- stateName** | String | <Translate id="soap.payments.doWebPayment.billingStateName">Nome do Estado/Distrito</Translate> |
+| **-- city** | String | <Translate id="soap.payments.doWebPayment.billingCity">Nome da cidade</Translate> |
+| **-- street1** | String | <Translate id="soap.payments.doWebPayment.billingStreet1">Morada (Linha 1)</Translate> |
+| **-- street2** | String | <Translate id="soap.payments.doWebPayment.billingStreet2">Morada (Linha 2)</Translate> |
+| **-- postCode** | String | <Translate id="soap.payments.doWebPayment.billingPostCode">Código Postal</Translate> |
+ **- shippingAddress** | RequestShippingAddress | <Translate id="soap.payments.doWebPayment.shippingAddress">Endereço de expedição</Translate> |
+| **-- country** | String | <Translate id="soap.payments.doWebPayment.shippingCountry">País (Formato: ISO 3166-1)</Translate> |
+| **-- state** | String | <Translate id="soap.payments.doWebPayment.shippingState">Código do Estado/Distrito (Formato: ISO 3166-2)</Translate> |
+| **-- stateName** | String | <Translate id="soap.payments.doWebPayment.shippingStateName">Nome do Estado/Distrito</Translate> |
+| **-- city** | String | <Translate id="soap.payments.doWebPayment.shippingCity">Nome da cidade</Translate> |
+| **-- street1** | String | <Translate id="soap.payments.doWebPayment.shippingStreet1">Morada (Linha 1)</Translate> |
+| **-- street2** | String | <Translate id="soap.payments.doWebPayment.shippingStreet2">Morada (Linha 2)</Translate> |
+| **-- postCode** | String | <Translate id="soap.payments.doWebPayment.shippingPostCode">Código Postal</Translate> |
+
+\* <Translate id="soap.payments.doWebPayment.note1">Deverá ser enviado quando se pretende criar um pagamento.</Translate>
+
+\*\* <Translate id="soap.payments.doWebPayment.note2">Estes dados deverão ser enviados para efetuar um pagamento por cartão de crédito de pagamento criados através de outros webservice, não descritos neste documento.</Translate>
+
+\*\*\* <Translate id="soap.payments.doWebPayment.note3">Neste caso é obrigatório especificar o montante (amount) do pagamento. Caso o montante não coincida com o montante do pagamento com paymentId será criado um novo pagamento.</Translate>
+
+\*\*\*\* <Translate id="soap.payments.doWebPayment.note4">Caso não seja especificado por defeito é escolhido o código CC - Cartão de Crédito.</Translate>
+
+\*\*\*\*\* <Translate id="soap.payments.doWebPayment.note5">As datas de validade devem estar no formato ISO8601 (ex: 2014-09-27T18&colon;30&colon;49-03&colon;00).</Translate>
+
+\*\*\*\*\*\* <Translate id="soap.payments.doWebPayment.note6">Os códigos de IBAN podem ser consultados na área de dados bancários do backoffice.</Translate>
+
+#### <Translate id="soap.payments.doWebPayment.responseParams">Parâmetros da resposta</Translate>
+
+| <Translate id="soap.payments.doWebPayment.table.field">Campo</Translate> | <Translate id="soap.payments.doWebPayment.table.type">Tipo</Translate> | <Translate id="soap.payments.doWebPayment.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **requestState** | ResponseIntegrationState | <Translate id="soap.payments.doWebPayment.requestState">Contém a informação da integração</Translate> |
+| **- state** | Int | <Translate id="soap.payments.doWebPayment.state">Resultado da pesquisa do pagamento</Translate> |
+| **- code** | String | <Translate id="soap.payments.doWebPayment.code">Código da mensagem</Translate> |
+| **- message** | String | <Translate id="soap.payments.doWebPayment.message">Mensagem de erro/sucesso</Translate> |
+| **redirectUrl** | String | <Translate id="soap.payments.doWebPayment.redirectUrl">Endereço de redirecionamento para a página de pagamento PayPay</Translate> |
+| **paymentId** | Int | <Translate id="soap.payments.doWebPayment.responsePaymentId">Lista de detalhes de pagamentos</Translate> |
+| **token** | String | <Translate id="soap.payments.doWebPayment.token">Lista de detalhes de pagamentos</Translate> |
+| ~~**url**~~ | ~~String~~ | ~~<Translate id="soap.payments.doWebPayment.url">Endereço de redirecionamento para a página de pagamentos da PayPay</Translate>~~ |
+| ~~**idTransaction**~~ | ~~Int~~ | ~~<Translate id="soap.payments.doWebPayment.responseIdTransaction">Lista de detalhes de pagamentos</Translate>~~ |

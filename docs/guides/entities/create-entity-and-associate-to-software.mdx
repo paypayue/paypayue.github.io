@@ -1,18 +1,28 @@
 ---
-description: Criar entidade e associá-la a integração
+title: Criar entidade e associá-la à integração
+description: ''
+hide_table_of_contents: true
 ---
 
-# Criar entidade e associá-la à integração
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-:::info Disponibilidade
-Este recurso apenas está disponível para determinado tipo de integração.
+# <Translate id="entities.create.title">Criar entidade e associá-la à integração</Translate>
+
+:::info
+<Translate id="entities.create.availability.description">Este recurso apenas está disponível para determinado tipo de integração.</Translate>
 :::
 
-Este recurso permite criar uma entidade na PayPay e que a mesma fique asssociada à integração que está a realizar o pedido. Permitindo assim, utilizar os mesmos dados de autenticação e necessitar apenas de alterar o header _PayPay-ClientId_ (NIF da entidade) para o da entidade associada e começar a realizar na respetiva entidade.
+<Translate id="entities.create.intro">Este recurso permite criar uma entidade na PayPay e que a mesma fique asssociada à integração que está a realizar o pedido. Permitindo assim, utilizar os mesmos dados de autenticação e necessitar apenas de alterar o header</Translate> <em>PayPay-ClientId</em> <Translate id="entities.create.intro2">(NIF da entidade) para o da entidade associada e começar a realizar na respetiva entidade.</Translate>
 
-**Nota:** A criação da entidade através deste recurso seguirá todos os processos de compliance necessários.
+<br/>
+<br/>
 
-import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+:::warning
+<Translate id="entities.create.noteDescription">A criação da entidade através deste recurso seguirá todos os processos de compliance necessários.</Translate>
+:::
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -22,17 +32,14 @@ import ClickShowIframe from "../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="entities.create.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="pedido" label="Pedido">
+<TabItem value="pedido" label={<Translate id="entities.create.tabs.request">Pedido</Translate>}>
 
 ```php
-    POST /entities
+POST /entities
 ```
 
 ```json
@@ -70,7 +77,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="resposta" label="Resposta">
+<TabItem value="resposta" label={<Translate id="entities.create.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -87,4 +94,4 @@ import TabItem from "@theme/TabItem";
 </TabItem>
 </Tabs>
 
-A estrutura de dados completa, bem como as opções para economicActivity e availableMethods pode ser consultada aqui.
+<Translate id="entities.create.footer">A estrutura de dados completa, bem como as opções para</Translate> <code>economicActivity</code> <Translate id="entities.create.footer2">e</Translate> <code>availableMethods</code> <Translate id="entities.create.footer3">pode ser consultada</Translate> <button className="link-api" onClick={ () => ClickShowIframe( {typeMenu: "model", idMenuOption: "models", idOption: "model/entityregistration"} ) } > <span><Translate id="entities.create.link">aqui</Translate></span> </button>.

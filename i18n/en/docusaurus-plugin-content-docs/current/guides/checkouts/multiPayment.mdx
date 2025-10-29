@@ -1,26 +1,29 @@
 ---
 sidebar_position: 2
-description: Embedding the checkout with redirection to your website.
+title: Redirect link to PayPay
+description: ''
+hide_table_of_contents: true
 ---
 
-# Embedding on a web page
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-> **POST** /checkouts
+# <Translate id="multiPayment.title">Link de redireccionamento para a PayPay</Translate>
 
-Creation of the checkout with the following data:
+<p><Translate id="multiPayment.intro">Criação do checkout com os seguintes dados:</Translate></p>
 
-- **Language:** Portuguese
-- **Page Layout:** web
-- **Amount:** 5 euros
-- **Payment method:** Credit/Debit card (CC), ATM (MB) and MBWay (MW)
-- **Product code:** REFPRODUCT_1
-- **Description of product:** Computer
-- **Redirections:**
-  - **After successful payment:** https://www.url-apos-sucesso.dominio
-  - **After cancellation of payment:** https://www.url-apos-cancelamento.dominio
-  - **Back button:** https://www.url-voltar.dominio
-
-import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+- **<Translate id="multiPayment.language">Idioma</Translate>:** Português
+- **<Translate id="multiPayment.pageLayout">Layout da página</Translate>:** web
+- **<Translate id="multiPayment.amount">Montante</Translate>:** 5€
+- **<Translate id="multiPayment.paymentMethod">Método de pagamento</Translate>:** Cartão de Crédito/Débito (CC), Multibanco (MB) e MBWay (MW)
+- **<Translate id="multiPayment.productCode">Código do produto</Translate>:** REFPRODUTO_1
+- **<Translate id="multiPayment.productDescription">Descrição do produto</Translate>:** Computador
+- **<Translate id="multiPayment.redirects">Redirecionamentos</Translate>:**
+  - **<Translate id="multiPayment.redirects.success">Após sucesso no pagamento</Translate>:** https://www.url-apos-sucesso.dominio
+  - **<Translate id="multiPayment.redirects.cancel">Após cancelamento do pagamento</Translate>:** https://www.url-apos-cancelamento.dominio
+  - **<Translate id="multiPayment.redirects.back">Botão voltar</Translate>:** https://www.url-voltar.dominio
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -30,14 +33,15 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>View API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="multiPayment.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="request" label="Request">
+<TabItem value="pedido" label={<Translate id="multiPayment.tabs.request">Pedido</Translate>}>
+
+```php
+POST /checkouts
+```
 
 ```json
 {
@@ -80,7 +84,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="response" label="Response">
+<TabItem value="resposta" label={<Translate id="multiPayment.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -103,10 +107,14 @@ import TabItem from "@theme/TabItem";
 </TabItem>
 </Tabs>
 
-The response returns the `id` which identifies the checkout to the API.
-The `checkoutUrl` is the link to access the page and make the payment.
-The `paymentId` is the id that identifies the payment.
+<Translate id="multiPayment.response.intro">Na resposta é devolvido o</Translate> <code>id</code> <Translate id="multiPayment.response.intro2">que identifica o checkout perante a API.</Translate>
+<Translate id="multiPayment.response.checkoutUrl">O</Translate> <code>checkoutUrl</code> <Translate id="multiPayment.response.checkoutUrl2">é o link para aceder a página e realizar o pagamento.</Translate>
+<Translate id="multiPayment.response.paymentId">O</Translate> <code>paymentId</code> <Translate id="multiPayment.response.paymentId2">é o id que identifica o pagamento.</Translate>
 
-Accessing the `checkoutUrl` displays the following page:
+<br/><br/>
 
-![Checkout CC](../../../../../../_media/checkout-multi-payment.png)
+<Translate id="multiPayment.response.pagePreview">Ao aceder ao</Translate> <code>checkoutUrl</code> <Translate id="multiPayment.response.pagePreview2">é apresentada a seguinte página:</Translate>
+
+<br/><br/>
+
+![Checkout CC](@site/_media/checkout-multi-payment.png)

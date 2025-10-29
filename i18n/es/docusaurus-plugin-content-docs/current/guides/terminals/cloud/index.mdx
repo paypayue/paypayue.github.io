@@ -1,0 +1,50 @@
+---
+sidebar_position: 1
+title: Iniciación
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+# <Translate id="terminals.cloud.index.title">Início</Translate>
+
+<p><Translate id="terminals.cloud.index.intro">O Terminal Cloud é uma solução avançada que permite integração completa entre o terminal de pagamento e o sistema do cliente através de API REST, possibilitando automação e controlo remoto das transações.</Translate></p>
+
+## <Translate id="terminals.cloud.index.architecture">Arquitetura da Integração</Translate>
+
+<pre>
+{`┌─────────────────┐      API REST       ┌──────────────────┐
+│  `}<Translate id="terminals.cloud.index.diagram.yourSystem">Seu Sistema</Translate>{`    │ ←─────────────────→ │   `}<Translate id="terminals.cloud.index.diagram.apiPayPay">API PayPay</Translate>{`     │
+│  (POS/ERP)      │                     │                  │
+└─────────────────┘                     └──────────────────┘
+        ↑                                        ↓
+        │                                   ┌────────────┐
+        │          Webhook                  │  `}<Translate id="terminals.cloud.index.diagram.terminal">Terminal</Translate>{`  │
+        └───────────────────────────────────┤   Cloud    │
+                 (`}<Translate id="terminals.cloud.index.diagram.notification">notificação</Translate>{`)              └────────────┘
+                                                   ↕
+                                            ┌──────────────┐
+                                            │    `}<Translate id="terminals.cloud.index.diagram.network">Rede de</Translate>{`   │
+                                            │  `}<Translate id="terminals.cloud.index.diagram.payments">Pagamentos</Translate>{`  │
+                                            └──────────────┘`}
+</pre>
+
+## <Translate id="terminals.cloud.index.troubleshooting">Resolução de Problemas Comuns</Translate>
+
+| <Translate id="terminals.cloud.index.table.problem">Problema</Translate> | <Translate id="terminals.cloud.index.table.cause">Causa Provável</Translate> | <Translate id="terminals.cloud.index.table.solution">Solução</Translate> |
+|----------|----------------|---------|
+| <Translate id="terminals.cloud.index.problem1">Terminal não responde</Translate> | <Translate id="terminals.cloud.index.cause1">Terminal offline ou UUID incorreto</Translate> | <Translate id="terminals.cloud.index.solution1">Verificar conexão e UUID do Terminal</Translate> |
+| <Translate id="terminals.cloud.index.problem2">Webhook não recebido</Translate> | <Translate id="terminals.cloud.index.cause2">Endpoint não configurado ou inacessível</Translate> | <Translate id="terminals.cloud.index.solution2">Verificar URL e firewall</Translate> |
+| <Translate id="terminals.cloud.index.problem3">Transação recusada</Translate> | <Translate id="terminals.cloud.index.solution3">Verificar fundos, validade do cartão ou contactar banco emissor</Translate> |
+| <Translate id="terminals.cloud.index.problem4">Terminal não responde</Translate> | <Translate id="terminals.cloud.index.solution4">Verificar conexão à internet e reiniciar terminal</Translate> |
+| <Translate id="terminals.cloud.index.problem5">Erro na impressão</Translate> | <Translate id="terminals.cloud.index.solution5">Verificar papel e configurações de impressão</Translate> |
+| <Translate id="terminals.cloud.index.problem6">PIN incorreto</Translate> | <Translate id="terminals.cloud.index.solution6">Cliente pode tentar novamente (máximo 3 tentativas)</Translate> |
+
+
+## <Translate id="terminals.cloud.index.nextSteps">Próximos Passos</Translate>
+
+<p><Translate id="terminals.cloud.index.explore">Explore a documentação completa para integração:</Translate></p>
+
+- **[<Translate id="terminals.cloud.index.link1">Configuração de Webhooks</Translate>](/docs/guides/terminals/webhooks/)** - <Translate id="terminals.cloud.index.link1Description">Setup de notificações.</Translate>
+- **[<Translate id="terminals.cloud.index.link2">Enviar Pedido de Pagamento</Translate>](/docs/guides/terminals/cloud/send-payment)** - <Translate id="terminals.cloud.index.link2Description">Enviar pedido de pagamento para terminal cloud.</Translate>

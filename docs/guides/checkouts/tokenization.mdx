@@ -1,33 +1,38 @@
 ---
 sidebar_position: 6
-description: Guardar o método de pagamento para utilizações futuras.
+title: Tokenização do método de pagamento
+description: ''
+hide_table_of_contents: true
 ---
 
-# Tokenização do método de pagamento
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-A tokenização é o processo que permite armazenar os dados de pagamento confidenciais dos clientes de forma segura por meio da criação de um token.
+# <Translate id="tokenization.title">Tokenização do método de pagamento</Translate>
 
-**Nota:** O aramazenamento do método de pagamento apenas esta disponível para os **pagamentos** com **Cartão de Crédito/Débito e MBWay** e no `layout` **basic** e **default**.
+<p><Translate id="tokenization.intro">A tokenização é o processo que permite armazenar os dados de pagamento confidenciais dos clientes de forma segura por meio da criação de um token.</Translate></p>
 
-Para criar um token devem ser seguidos os seguintes passos:
+:::info
+<Translate id="tokenization.availability">O armazenamento do método de pagamento apenas esta disponível para os</Translate> <strong>pagamentos</strong> <Translate id="tokenization.availability2">com</Translate> <strong>Cartão de Crédito/Débito e MBWay</strong> <Translate id="tokenization.availability3">e no</Translate> <code>layout</code> <strong>basic</strong> <Translate id="tokenization.availability4">e</Translate> <strong>default</strong>.
+:::
 
-1. Obter o UUID do cliente;
-2. Compra através de checkout usando o id do cliente registado.
+<p><Translate id="tokenization.steps">Para criar um token devem ser seguidos os seguintes passos:</Translate></p>
 
-### 1. Obter o UUID do cliente
+1. <Translate id="tokenization.step1">Obter o UUID do cliente;</Translate>
+2. <Translate id="tokenization.step2">Compra através de checkout usando o id do cliente registado.</Translate>
 
-O primeiro passo é obter o UUID do cliente que pretende registar o seu método de pagamento. Isso pode ser feito através de:
+### <Translate id="tokenization.getUuid.title">1. Obter o UUID do cliente</Translate>
 
-- [Criar cliente](../customers/create.mdx)
-- [Consultar cliente](../customers/get.mdx)
+<p><Translate id="tokenization.getUuid.description">O primeiro passo é obter o UUID do cliente que pretende registar o seu método de pagamento. Isso pode ser feito através de:</Translate></p>
 
-### 2. Concluir pagamento através de checkout
+- [<Translate id="tokenization.getUuid.createCustomer">Criar cliente</Translate>](/docs/guides/customers/create)
+- [<Translate id="tokenization.getUuid.getCustomer">Consultar cliente</Translate>](/docs/guides/customers/get)
 
-Para o método de pagamento ser disponibilizado é necessário concluir um pagamento com sucesso.
+### <Translate id="tokenization.completePayment.title">2. Concluir pagamento através de checkout</Translate>
 
-> **POST** /checkouts
-
-import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+<p><Translate id="tokenization.completePayment.description">Para o método de pagamento ser disponibilizado é necessário concluir um pagamento com sucesso.</Translate></p>
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -37,14 +42,15 @@ import ClickShowIframe from "../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="tokenization.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="pedido" label="Pedido">
+<TabItem value="pedido" label={<Translate id="tokenization.tabs.request">Pedido</Translate>}>
+
+```php
+POST /checkouts
+```
 
 ```json
 {
@@ -70,7 +76,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="resposta" label="Resposta">
+<TabItem value="resposta" label={<Translate id="tokenization.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -93,11 +99,13 @@ import TabItem from "@theme/TabItem";
 </TabItem>
 </Tabs>
 
-### 3. Consultar métodos de pagamento do cliente
+### <Translate id="tokenization.queryMethods.title">3. Consultar métodos de pagamento do cliente</Translate>
 
-Após o pagamento com sucesso o método de pagamento é adicionado aos métodos de pagamento do cliente.
+<p><Translate id="tokenization.queryMethods.description">Após o pagamento com sucesso o método de pagamento é adicionado aos métodos de pagamento do cliente.</Translate></p>
 
-> **GET** ​/customers​/\{uuid}​/paymentMethods
+```php
+GET ​/customers​/{uuid}​/paymentMethods
+```
 
 <button className="btn-api btn-api--float-right btn-api--move-top"
 	onClick={() =>
@@ -107,8 +115,10 @@ Após o pagamento com sucesso o método de pagamento é adicionado aos métodos 
 		})
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="tokenization.queryMethods.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
+
+<br/>
 
 ```json
 {
@@ -135,10 +145,10 @@ Após o pagamento com sucesso o método de pagamento é adicionado aos métodos 
 }
 ```
 
-# Tokenização com consentimento do cliente
+## <Translate id="tokenization.consent.title">Tokenização com consentimento do cliente</Translate>
 
 <Tabs>
-<TabItem value="pedido" label="Pedido">
+<TabItem value="pedido" label={<Translate id="tokenization.consent.tabs.request">Pedido</Translate>}>
 
 ```json
 {
@@ -170,7 +180,7 @@ Após o pagamento com sucesso o método de pagamento é adicionado aos métodos 
 ```
 
 </TabItem>
-<TabItem value="resposta" label="Resposta">
+<TabItem value="resposta" label={<Translate id="tokenization.consent.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -193,10 +203,23 @@ Após o pagamento com sucesso o método de pagamento é adicionado aos métodos 
 </TabItem>
 </Tabs>
 
-Na resposta é devolvido o `id` que identifica o checkout perante a API.
-O `checkoutUrl` é o link para aceder a página e realizar o pagamento.
-O `paymentId` é o id que identifica o pagamento.
 
-Ao aceder ao `checkoutUrl` é apresentada a seguinte página:
+<Translate id="tokenization.consent.response.intro">Na resposta é devolvido o</Translate> <code>id</code> <Translate id="tokenization.consent.response.intro2">que identifica o checkout perante a API.</Translate>
 
-![Checkout registration](../../../_media/checkout-cc-registration.png)
+<br/>
+
+<Translate id="tokenization.consent.response.checkoutUrl">O</Translate> <code>checkoutUrl</code> <Translate id="tokenization.consent.response.checkoutUrl2">é o link para aceder a página e realizar o pagamento.</Translate>
+
+<br/>
+
+<Translate id="tokenization.consent.response.paymentId">O</Translate> <code>paymentId</code> <Translate id="tokenization.consent.response.paymentId2">é o id que identifica o pagamento.</Translate>
+
+<br/>
+<br/>
+
+<Translate id="tokenization.consent.response.pagePreview">Ao aceder ao</Translate> <code>checkoutUrl</code> <Translate id="tokenization.consent.response.pagePreview2">é apresentada a seguinte página:</Translate>
+
+<br/>
+<br/>
+
+![Checkout registration](@site/_media/checkout-cc-registration.png)

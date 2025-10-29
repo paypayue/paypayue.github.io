@@ -1,43 +1,49 @@
 ---
 sidebar_position: 7
-description: Exemplo utilizando o cartão de crédito/débito
+title: Cartão de Crédito/Débito
+description: ''
+hide_table_of_contents: true
 ---
 
-# Cartão de Crédito/Débito
-
-import ClickShowIframe from "../../../src/utils/ClickShowIframe";
-
-> **POST** /checkouts <button className="btn-api btn-api--float-right" onClick={() => ClickShowIframe({idMenuOption: "checkouts",  idOption: "checkouts/post/checkouts"}) } > <span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span> </button>
-
-Criação do checkout com os seguintes dados:
-
-- **Idioma:** Português
-- **Layout da página:** web
-- **Montante:** 5€
-- **Método de pagamento:** Cartão de Crédito/Débito (CC)
-- **Código do produto:** REFPRODUTO_1
-- **Descrição do produto:** Computador
-- **Cliente:**
-  - **Número de cliente:** 1,
-  - **Primeiro nome:** José,
-  - **Último nome:** Silva,
-  - **Telefone:** 351#961234567,
-  - **Email:** jose.silva@email.com
-- **Morada de cobrança:**
-  - **País:** Portugal,
-  - **Cidade:** Lisboa,
-  - **Morada:** Rua Domingos Monteiro nº 7 A,
-  - **Código Postal:** 1050-074
-- **Redirecionamentos:**
-  - **Após sucesso no pagamento:** https://www.url-apos-sucesso.dominio
-  - **Após cancelamento do pagamento:** https://www.url-apos-cancelamento.dominio
-  - **Botão voltar:** https://www.url-voltar.dominio
-
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Translate from '@docusaurus/Translate';
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
+# <Translate id="cc.cartaoCreditoDebito">Cartão de Crédito/Débito</Translate>
+
+<p><Translate id="cc.intro">Criação do checkout com os seguintes dados:</Translate></p>
+
+- **<Translate id="cc.language">Idioma</Translate>:** Português
+- **<Translate id="cc.pageLayout">Layout da página</Translate>:** web
+- **<Translate id="cc.amount">Montante</Translate>:** 5€
+- **<Translate id="cc.paymentMethod">Método de pagamento</Translate>:** Cartão de Crédito/Débito (CC)
+- **<Translate id="cc.productCode">Código do produto</Translate>:** REFPRODUTO_1
+- **<Translate id="cc.productDescription">Descrição do produto</Translate>:** Computador
+- **<Translate id="cc.customer">Cliente</Translate>:**
+  - **<Translate id="cc.customer.number">Número de cliente</Translate>:** 1
+  - **<Translate id="cc.customer.firstName">Primeiro nome</Translate>:** José
+  - **<Translate id="cc.customer.lastName">Último nome</Translate>:** Silva
+  - **<Translate id="cc.customer.phone">Telefone</Translate>:** 351#961234567
+  - **<Translate id="cc.customer.email">Email</Translate>:** jose.silva@email.com
+- **<Translate id="cc.billingAddress">Morada de cobrança</Translate>:**
+  - **<Translate id="cc.billingAddress.country">País</Translate>:** Portugal
+  - **<Translate id="cc.billingAddress.city">Cidade</Translate>:** Lisboa
+  - **<Translate id="cc.billingAddress.street">Morada</Translate>:** Rua Domingos Monteiro nº 7 A,
+  - **<Translate id="cc.billingAddress.postCode">Código Postal</Translate>:** 1050-074
+- **<Translate id="cc.redirects">Redirecionamentos</Translate>:**
+  - **<Translate id="cc.redirects.success">Após sucesso no pagamento</Translate>:** https://www.url-apos-sucesso.dominio
+  - **<Translate id="cc.redirects.cancel">Após cancelamento do pagamento</Translate>:** https://www.url-apos-cancelamento.dominio
+  - **<Translate id="cc.redirects.back">Botão voltar</Translate>:** https://www.url-voltar.dominio
+
+<button className="btn-api btn-api--float-right" onClick={() => ClickShowIframe({idMenuOption: "checkouts",  idOption: "checkouts/post/checkouts"}) } > <span><Translate id="cc.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span> </button>
+
 <Tabs>
-<TabItem value="pedido" label="Pedido">
+<TabItem value="pedido" label={<Translate id="cc.tabs.request">Pedido</Translate>}>
+
+```php
+POST /checkouts
+```
 
 ```json
 {
@@ -84,7 +90,7 @@ import TabItem from "@theme/TabItem";
 ```
 
 </TabItem>
-<TabItem value="resposta" label="Resposta">
+<TabItem value="resposta" label={<Translate id="cc.tabs.response">Resposta</Translate>}>
 
 ```json
 {
@@ -107,10 +113,22 @@ import TabItem from "@theme/TabItem";
 </TabItem>
 </Tabs>
 
-Na resposta é devolvido o `id` que identifica o checkout perante a API.
-O `checkoutUrl` é o link para aceder a página e realizar o pagamento.
-O `paymentId` é o id que identifica o pagamento.
+<Translate id="cc.response.intro">Na resposta é devolvido o</Translate> <code>id</code> <Translate id="cc.response.intro2">que identifica o checkout perante a API.</Translate>
 
-Ao aceder ao `checkoutUrl` é apresentada a seguinte página:
+<br/>
 
-![Checkout CC](../../../_media/checkout-cc.jpg)
+<Translate id="cc.response.checkoutUrl">O</Translate> <code>checkoutUrl</code> <Translate id="cc.response.checkoutUrl2">é o link para aceder a página e realizar o pagamento.</Translate>
+
+<br/>
+
+<Translate id="cc.response.paymentId">O</Translate> <code>paymentId</code> <Translate id="cc.response.paymentId2">é o id que identifica o pagamento.</Translate>
+
+
+<br/>
+<br/>
+<Translate id="cc.response.pagePreview">Ao aceder ao</Translate> <code>checkoutUrl</code> <Translate id="cc.response.pagePreview2">é apresentada a seguinte página:</Translate>
+
+<br/>
+<br/>
+
+![Checkout CC](@site/_media/checkout-cc.jpg)

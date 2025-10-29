@@ -1,0 +1,40 @@
+---
+sidebar_position: 4
+title: 'Verificar o estado da transação/token'
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+# checkWebPayment
+
+<Translate id="soap.payments.checkWebPayment.description">Este método permite verificar o estado de uma determinada transação/token. Deverá ser invocado sempre que o URL de sucesso seja acedido.</Translate>
+
+<br/>
+
+#### <Translate id="soap.payments.checkWebPayment.requestParams">Parâmetros do pedido</Translate>
+
+| <Translate id="soap.payments.checkWebPayment.table.field">Campo</Translate> | <Translate id="soap.payments.checkWebPayment.table.type">Tipo</Translate> | <Translate id="soap.payments.checkWebPayment.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **entity** | RequestEntity | <Translate id="soap.payments.checkWebPayment.entity">Dados de integração da entidade</Translate>  |
+| **- platformCode** | String | <Translate id="soap.payments.checkWebPayment.platformCode">Código da plataforma</Translate> |
+| **- hash** | String | <Translate id="soap.payments.checkWebPayment.hash">Hash de autenticação</Translate>  |
+| **- lang** | String | <Translate id="soap.payments.checkWebPayment.lang">Código de idioma</Translate> |
+| **- date** | String | <Translate id="soap.payments.checkWebPayment.date">Data de acesso</Translate> |
+| **- nif** | String | <Translate id="soap.payments.checkWebPayment.nif">NIF da entidade</Translate> |
+| **request** | RequestEntity | <Translate id="soap.payments.checkWebPayment.request">Dados de integração da entidade</Translate>  |
+| **- token** | String | <Translate id="soap.payments.checkWebPayment.token">Token do pagamento</Translate> |
+| **- paymentId** | Int | <Translate id="soap.payments.checkWebPayment.paymentId">Identificador do pagamento</Translate> |
+| ~~**- idTransaction**~~ | ~~Int~~ | ~~<Translate id="soap.payments.checkWebPayment.idTransaction">Identificador do pagamento</Translate>~~ |
+
+#### <Translate id="soap.payments.checkWebPayment.responseParams">Parâmetros da resposta</Translate>
+
+| <Translate id="soap.payments.checkWebPayment.table.field">Campo</Translate> | <Translate id="soap.payments.checkWebPayment.table.type">Tipo</Translate> | <Translate id="soap.payments.checkWebPayment.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **- requestState** | ResponseIntegrationState | <Translate id="soap.payments.checkWebPayment.requestState">Contém a informação da integração</Translate> |
+| **- state** | Int | <Translate id="soap.payments.checkWebPayment.state">Resultado da pesquisa do pagamento</Translate> |
+| **- code** | String | <Translate id="soap.payments.checkWebPayment.code">Código de erro/sucesso</Translate> |
+| **- message** | Int | <Translate id="soap.payments.checkWebPayment.message">Mensagem de erro/sucesso</Translate> |
+| **paymentDate** | Int | <Translate id="soap.payments.checkWebPayment.paymentDate">Data do pagamento</Translate> |
+| **paid** | Int | <Translate id="soap.payments.checkWebPayment.paid">Indica se o pagamento está pago</Translate>   |

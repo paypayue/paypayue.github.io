@@ -1,0 +1,48 @@
+---
+sidebar_position: 2
+title: Sandbox
+hide_table_of_contents: true
+---
+
+import Translate, {translate} from '@docusaurus/Translate';
+
+<Translate id="sandbox.intro.part1">A PayPay disponibiliza um ambiente de</Translate>
+{' '}
+<a href="https://paypay.acin.pt/api"><Translate id="sandbox.intro.link">testes</Translate></a>
+{' '}
+<Translate id="sandbox.intro.part2">de forma a garantir a qualidade e a confiabilidade das integrações com a nossa solução.</Translate>
+
+## <Translate id="sandbox.requirements.title">Requisitos</Translate>
+
+- <Translate id="sandbox.requirements.merchant">O comerciante deverá estar registado e aprovado na plataforma PayPay</Translate>
+- <Translate id="sandbox.requirements.credentials.part1">Solicitar à nossa equipa de apoio um acesso ao ambiente de testes e as credenciais da API através do email</Translate> <a href="mailto:apoio@paypay.pt">@apoio</a>
+- <Translate id="sandbox.requirements.paymentMethods">Indicar quais os métodos de pagamento que desejam testar</Translate>
+- <Translate id="sandbox.requirements.cardData">Solicitar os dados de um cartão de crédito/débito se pretender realizar pagamentos através deste método</Translate>
+- <Translate id="sandbox.requirements.mbway">Se pretender realizar pagamentos através do MB WAY devem indicar os números de telemóveis desejados. São aceites números estrangeiros</Translate>
+- <Translate id="sandbox.requirements.terminals">Caso pretender integrar com terminais de pagamento, deverá indicar-nos o tipo de terminal (Standalone ou Cloud)</Translate>
+
+#### <Translate id="sandbox.requirements.mbReference.title">Pagamento de referências Multibanco</Translate>
+
+<Translate id="sandbox.requirements.mbReference.part1">Caso seja pretendido colocar como pagas as referências multibanco é necessário indicar-nos quais e enviar para o email</Translate>{' '}<a href="mailto:apoio@paypay.pt">@apoio</a>.
+
+### <Translate id="sandbox.environments.title">Ambientes</Translate>
+
+#### <Translate id="sandbox.environments.testing">Testes</Translate>
+```
+https://paypay.acin.pt/api
+```
+
+#### <Translate id="sandbox.environments.production">Produção</Translate>
+
+<Translate id="sandbox.environments.production.part1">Após realizados os testes de integração e estar tudo funcional, devem ser geradas as credenciais da API o ambiente de produção. Para isso, devem realizar login na</Translate>
+{' '}
+<a href="https://paypay.pt"><Translate id="sandbox.environments.production.link">PayPay</Translate></a>
+{' '}
+<Translate id="sandbox.environments.production.part2">aceder ao menu Configurações-&gt;Integrações e criar uma nova integração e utilizar o endereço:</Translate>
+
+<br/>
+<br/>
+
+```
+https://paypay.pt/api
+```

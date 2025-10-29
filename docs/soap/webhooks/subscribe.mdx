@@ -1,0 +1,35 @@
+---
+sidebar_position: 2
+title: 'Subscrever a um webhook'
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+<Translate id="soap.webhooks.subscribe.description">Este método permite subscrever a um webhook especificando o URL onde pretende receber os dados da ação pretendida.</Translate>
+
+<br/>
+
+#### <Translate id="soap.webhooks.subscribe.requestParams">Parâmetros do pedido</Translate>
+
+| <Translate id="soap.webhooks.subscribe.table.field">Campo</Translate> | <Translate id="soap.webhooks.subscribe.table.type">Tipo</Translate> | <Translate id="soap.webhooks.subscribe.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **entity** | RequestEntity | <Translate id="soap.webhooks.subscribe.entity">Dados de integração da entidade</Translate>  |
+| **- platformCode** | String | <Translate id="soap.webhooks.subscribe.platformCode">Código da plataforma</Translate> |
+| **- hash** | String | <Translate id="soap.webhooks.subscribe.hash">Hash de autenticação</Translate>  |
+| **- lang** | String | <Translate id="soap.webhooks.subscribe.lang">Código de idioma</Translate> |
+| **- date** | String | <Translate id="soap.webhooks.subscribe.date">Data de acesso</Translate> |
+| **- nif** | String | <Translate id="soap.webhooks.subscribe.nif">NIF da entidade</Translate> |
+| **webhook** | RequestWebhook | <Translate id="soap.webhooks.subscribe.webhook">Intervalo de datas de pesquisa</Translate> |
+| **- action** | String | <Translate id="soap.webhooks.subscribe.action">Ação do webhook</Translate> (<a href="../webhooks/index.md#tipos-de-eventos-dispon%C3%ADveis">Ver tabela</a>) |
+| **- url** | String | <Translate id="soap.webhooks.subscribe.url">URL completo do webhook</Translate> |
+
+
+| <Translate id="soap.webhooks.subscribe.table.field">Campo</Translate> | <Translate id="soap.webhooks.subscribe.table.type">Tipo</Translate> | <Translate id="soap.webhooks.subscribe.table.description">Descrição</Translate> |
+|:--- |:-----------|:-----|
+| **webhookResponse** | ResponseWebhook | |
+| **- integrationState** | ResponseIntegrationState | <Translate id="soap.webhooks.subscribe.integrationState">Contém a informação da integração</Translate>  |
+| **-- state** | Int | <Translate id="soap.webhooks.subscribe.state">Resultado da pesquisa do pagamento</Translate> |
+| **-- code** | String | <Translate id="soap.webhooks.subscribe.code">Código de erro/sucesso</Translate> |
+| **-- message** | Int | <Translate id="soap.webhooks.subscribe.message">Mensagem de erro/sucesso</Translate> |

@@ -1,13 +1,16 @@
 ---
 sidebar_position: 3
+title: Consultar cliente
 description: ''
+hide_table_of_contents: true
 ---
 
-# Consultar cliente
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-> **GET** /customers/_\{uuid}_
-
-import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
+# <Translate id="customers.get.title">Consultar cliente</Translate>
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -17,21 +20,18 @@ import ClickShowIframe from "../../../../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="customers.get.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="solicitud" label="Solicitud">
+<TabItem value="pedido" label={<Translate id="customers.get.tabs.request">Pedido</Translate>}>
 
-```js
-GET /customers/_e2343605-cf46-43de-b20b-9b7d1c95a9b2_
+```php
+GET /customers/{uuid}
 ```
 
 </TabItem>
-<TabItem value="respuesta" label="Respuesta">
+<TabItem value="resposta" label={<Translate id="customers.get.tabs.response">Resposta</Translate>}>
 
 ```json
 {

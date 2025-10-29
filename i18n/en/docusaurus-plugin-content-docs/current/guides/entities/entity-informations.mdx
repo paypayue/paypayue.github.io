@@ -1,0 +1,55 @@
+---
+title: Retrieve entity information
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# <Translate id="entities.info.title">Consultar dados da entidade</Translate>
+
+:::info
+<Translate id="entities.info.noteDescription">Para aceder a esta operação não é necessário autenticar-se com o</Translate> <em>PayPay-ClientId</em>.
+:::
+
+<p><Translate id="entities.info.parameter">O parâmetro clientId é o NIF da entidade.</Translate></p>
+<p><Translate id="entities.info.description">Se existir entidades associadas à integração, as mesmas podem ser consultadas através deste recurso, utilizando o NIF da entidade que pretende consultar.</Translate></p>
+
+<button className="btn-api btn-api--float-right"
+	onClick={() =>
+		ClickShowIframe({
+			idMenuOption: "entities",
+			idOption: "entities/get/entities/{clientId}"
+		})
+	}
+>
+	<span><Translate id="entities.info.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+<Tabs>
+<TabItem value="pedido" label={<Translate id="entities.info.tabs.request">Pedido</Translate>}>
+
+```php
+GET /entities/{clientId}
+```
+
+</TabItem>
+<TabItem value="resposta" label={<Translate id="entities.info.tabs.response">Resposta</Translate>}>
+
+```json
+{
+  "clientId": "123456789",
+  "name": "Entidade PayPay",
+  "createdAt": "2021-10-07T17:01:19+00:00"
+  "stateDetails": {
+	"state": "approved",
+	"updatedAt": "2021-10-07T17:01:19+00:00"
+  }
+}
+```
+
+</TabItem>
+</Tabs>

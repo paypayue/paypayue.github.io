@@ -1,15 +1,22 @@
 ---
 sidebar_position: 11
+title: Eliminar entidade associada ao cliente
 description: ''
+hide_table_of_contents: true
 ---
 
-# Eliminar entidade associada ao cliente
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-> **DELETE** /customers/_\{uuid}_/entities/_\{clientId}_
+# <Translate id="customers.deleteEntities.title">Eliminar entidade associada ao cliente</Translate>
 
-Para remover a associação do cliente com uma entidade é necessário conhecer o _uuid_ do cliente e o _clientId_ da entidade.
+:::info
+<Translate id="customers.deleteEntities.noteDescription">Apenas entidade que criou o cliente, pode desassocia-lo de outra entidade.</Translate>
+:::
 
-import ClickShowIframe from "../../../src/utils/ClickShowIframe";
+<Translate id="customers.deleteEntities.description">Para remover a associação do cliente com uma entidade é necessário conhecer o</Translate> <em>uuid</em> <Translate id="customers.deleteEntities.description2">do cliente e o</Translate> <em>clientId</em> <Translate id="customers.deleteEntities.description3">da entidade.</Translate>
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -19,21 +26,18 @@ import ClickShowIframe from "../../../src/utils/ClickShowIframe";
 		})
 	}
 >
-	<span>Consultar API &nbsp;&nbsp;&nbsp;{'>'}</span>
+	<span><Translate id="customers.deleteEntities.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 <Tabs>
-<TabItem value="pedido" label="Pedido">
+<TabItem value="pedido" label={<Translate id="customers.deleteEntities.tabs.request">Pedido</Translate>}>
 
-```js
-DELETE /customers/_e2343605-cf46-43de-b20b-9b7d1c95a9b2_/entities/_523308191_
+```php
+DELETE /customers/{uuid}/entities/{clientId}
 ```
 
 </TabItem>
-<TabItem value="resposta" label="Resposta">
+<TabItem value="resposta" label={<Translate id="customers.deleteEntities.tabs.response">Resposta</Translate>}>
 
 ```js
 HTTP Code: 204
@@ -41,5 +45,3 @@ HTTP Code: 204
 
 </TabItem>
 </Tabs>
-
-**Nota:** Apenas entidade que criou o cliente, pode desassocia-lo de outra entidade.
