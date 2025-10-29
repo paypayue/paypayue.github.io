@@ -13,6 +13,7 @@ const apiUrlSpecification = process.env.API_URL_SPECIFICATION || 'http://10.11.1
 const footerElogios = process.env.FOOTER_ELOGIOS || 'https://www.paypay.pt/elogios-sugestoes-reclamacoes';
 const footerPoliticasPrivacidade = process.env.FOOTER_POLITICAS_PRIVACIDADE || 'https://www.paypay.pt/politica-de-privacidade';
 const footerPoliticasSeguranca = process.env.FOOTER_POLITICAS_SEGURANCA || 'https://www.paypay.pt/politica-de-seguranca';
+const paypayUrl = process.env.PAYPAY_URL || 'http://10.11.16.38/luis/paypay';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -53,8 +54,8 @@ const config = {
         title: 'Elogios, Sugestões e Reclamações',
         link: footerElogios
       },
-    ]
-
+    ],
+    paypayUrl: paypayUrl,
   },
 
   // Even if you don't use internalization, you can use this field to set useful

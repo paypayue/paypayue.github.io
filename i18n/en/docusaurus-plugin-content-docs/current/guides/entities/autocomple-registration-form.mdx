@@ -8,7 +8,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export const AderirLink = () => {
   const {siteConfig} = useDocusaurusContext();
-  return <a href={`${siteConfig.url}/aderir`}>{siteConfig.url}/aderir</a>;
+  return <a href={`${siteConfig.customFields.paypayUrl}/aderir`}>{siteConfig.customFields.paypayUrl}/aderir</a>;
 };
 
 import Translate from '@docusaurus/Translate';
