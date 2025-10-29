@@ -32,6 +32,7 @@ jobs:
                   FOOTER_ELOGIOS: ${{vars.FOOTER_ELOGIOS}}
                   FOOTER_POLITICAS_PRIVACIDADE: ${{vars.FOOTER_POLITICAS_PRIVACIDADE}}
                   FOOTER_POLITICAS_SEGURANCA: ${{vars.FOOTER_POLITICAS_SEGURANCA}}
+                  PAYPAY_URL: ${{vars.PAYPAY_URL}}
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
