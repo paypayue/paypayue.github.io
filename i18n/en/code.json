@@ -2398,6 +2398,10 @@
     "message": "The payment can only be refunded if it is in state",
     "description": "Translation for terminals.cloud.sendRefund.paymentStateDescription"
   },
+  "terminals.cloud.sendRefund.confirmed": {
+    "message": "Confirmed",
+    "description": "Translation for terminals.cloud.sendRefund.confirmed"
+  },
   "terminals.cloud.sendRefund.checkState": {
     "message": "You can check the payment status at the endpoint:",
     "description": "Translation for terminals.cloud.sendRefund.checkState"
@@ -2477,6 +2481,10 @@
   "terminals.cloud.sendRefund.step2": {
     "message": "PayPay API communicates with the terminal in a",
     "description": "Translation for terminals.cloud.sendRefund.step2"
+  },
+  "terminals.cloud.sendRefund.async": {
+    "message": "asynchronous",
+    "description": "Translation for terminals.cloud.sendRefund.async"
   },
   "terminals.cloud.sendRefund.step3": {
     "message": "The terminal automatically receives and displays the amount to the operator;",
@@ -2738,6 +2746,306 @@
     "message": "Configure webhooks to receive automatic notifications of the refund result. The API response only indicates that the request has been sent to the terminal, not the final outcome.",
     "description": "Translation for terminals.cloud.sendRefund.webhookEssentialDescription"
   },
+  "terminals.cloud.sendReversal.paymentStateDescription": {
+    "message": "The payment can only be reversed if it is in state",
+    "description": "Translation for terminals.cloud.sendReversal.paymentStateDescription"
+  },
+  "terminals.cloud.sendReversal.authorized": {
+    "message": "Authorised",
+    "description": "Translation for terminals.cloud.sendReversal.authorized"
+  },
+  "terminals.cloud.sendReversal.checkState": {
+    "message": "You can check the payment status at the endpoint:",
+    "description": "Translation for terminals.cloud.sendReversal.checkState"
+  },
+  "terminals.cloud.sendReversal.whatIsReversal": {
+    "message": "What is a Reversal?",
+    "description": "Translation for terminals.cloud.sendReversal.whatIsReversal"
+  },
+  "terminals.cloud.sendReversal.whatIsReversalDescription": {
+    "message": "A reversal cancels a transaction that has not yet been settled. Unlike a refund, a reversal prevents funds from being transferred by cancelling the authorisation before settlement.",
+    "description": "Translation for terminals.cloud.sendReversal.whatIsReversalDescription"
+  },
+  "terminals.cloud.sendReversal.timeLimit": {
+    "message": "Reversals can only be made before the daily settlement. After settlement, you must use a refund.",
+    "description": "Translation for terminals.cloud.sendReversal.timeLimit"
+  },
+  "terminals.cloud.sendReversal.consultApi": {
+    "message": "Consult API",
+    "description": "Translation for terminals.cloud.sendReversal.consultApi"
+  },
+  "terminals.cloud.sendReversal.section1": {
+    "message": "1. Reversal Initiation (via API)",
+    "description": "Translation for terminals.cloud.sendReversal.section1"
+  },
+  "terminals.cloud.sendReversal.section1Description": {
+    "message": "Your system initiates the reversal remotely via the PayPay API:",
+    "description": "Translation for terminals.cloud.sendReversal.section1Description"
+  },
+  "terminals.cloud.sendReversal.step1": {
+    "message": "The system sends the request to the PayPay API:",
+    "description": "Translation for terminals.cloud.sendReversal.step1"
+  },
+  "terminals.cloud.sendReversal.endpoint": {
+    "message": "Endpoint",
+    "description": "Translation for terminals.cloud.sendReversal.endpoint"
+  },
+  "terminals.cloud.sendReversal.parameters": {
+    "message": "Parameters",
+    "description": "Translation for terminals.cloud.sendReversal.parameters"
+  },
+  "terminals.cloud.sendReversal.table.parameter": {
+    "message": "Parameter",
+    "description": "Translation for terminals.cloud.sendReversal.table.parameter"
+  },
+  "terminals.cloud.sendReversal.table.type": {
+    "message": "Type",
+    "description": "Translation for terminals.cloud.sendReversal.table.type"
+  },
+  "terminals.cloud.sendReversal.table.required": {
+    "message": "Required",
+    "description": "Translation for terminals.cloud.sendReversal.table.required"
+  },
+  "terminals.cloud.sendReversal.table.description": {
+    "message": "Description",
+    "description": "Translation for terminals.cloud.sendReversal.table.description"
+  },
+  "terminals.cloud.sendReversal.yes": {
+    "message": "Yes",
+    "description": "Translation for terminals.cloud.sendReversal.yes"
+  },
+  "terminals.cloud.sendReversal.no": {
+    "message": "No",
+    "description": "Translation for terminals.cloud.sendReversal.no"
+  },
+  "terminals.cloud.sendReversal.param.uuid": {
+    "message": "UUID of the terminal where the original payment was made",
+    "description": "Translation for terminals.cloud.sendReversal.param.uuid"
+  },
+  "terminals.cloud.sendReversal.param.paymentId": {
+    "message": "PayPay payment ID to be reversed",
+    "description": "Translation for terminals.cloud.sendReversal.param.paymentId"
+  },
+  "terminals.cloud.sendReversal.param.remarks.text": {
+    "message": "Optional text remarks for the reversal",
+    "description": "Translation for terminals.cloud.sendReversal.param.remarks.text"
+  },
+  "terminals.cloud.sendReversal.step2": {
+    "message": "PayPay API communicates with the payment network and processes the reversal in a",
+    "description": "Translation for terminals.cloud.sendReversal.step2"
+  },
+  "terminals.cloud.sendReversal.sync": {
+    "message": "synchronous",
+    "description": "Translation for terminals.cloud.sendReversal.sync"
+  },
+  "terminals.cloud.sendReversal.step3": {
+    "message": "PayPay API returns the response with the reversal result.",
+    "description": "Translation for terminals.cloud.sendReversal.step3"
+  },
+  "terminals.cloud.sendReversal.apiResponse": {
+    "message": "API Response",
+    "description": "Translation for terminals.cloud.sendReversal.apiResponse"
+  },
+  "terminals.cloud.sendReversal.responseStructure": {
+    "message": "Response Structure",
+    "description": "Translation for terminals.cloud.sendReversal.responseStructure"
+  },
+  "terminals.cloud.sendReversal.responseTable.field": {
+    "message": "Field",
+    "description": "Translation for terminals.cloud.sendReversal.responseTable.field"
+  },
+  "terminals.cloud.sendReversal.responseTable.type": {
+    "message": "Type",
+    "description": "Translation for terminals.cloud.sendReversal.responseTable.type"
+  },
+  "terminals.cloud.sendReversal.responseTable.description": {
+    "message": "Description",
+    "description": "Translation for terminals.cloud.sendReversal.responseTable.description"
+  },
+  "terminals.cloud.sendReversal.field.id": {
+    "message": "PayPay reversal ID",
+    "description": "Translation for terminals.cloud.sendReversal.field.id"
+  },
+  "terminals.cloud.sendReversal.field.clientId": {
+    "message": "Tax ID of the entity associated with the payment",
+    "description": "Translation for terminals.cloud.sendReversal.field.clientId"
+  },
+  "terminals.cloud.sendReversal.field.type": {
+    "message": "Operation type",
+    "description": "Translation for terminals.cloud.sendReversal.field.type"
+  },
+  "terminals.cloud.sendReversal.field.amount": {
+    "message": "Reversed amount",
+    "description": "Translation for terminals.cloud.sendReversal.field.amount"
+  },
+  "terminals.cloud.sendReversal.field.initialPaymentId": {
+    "message": "Original payment ID",
+    "description": "Translation for terminals.cloud.sendReversal.field.initialPaymentId"
+  },
+  "terminals.cloud.sendReversal.field.state": {
+    "message": "Reversal state",
+    "description": "Translation for terminals.cloud.sendReversal.field.state"
+  },
+  "terminals.cloud.sendReversal.field.stateCreatedAt": {
+    "message": "State date",
+    "description": "Translation for terminals.cloud.sendReversal.field.stateCreatedAt"
+  },
+  "terminals.cloud.sendReversal.field.cancellation.cancelled": {
+    "message": "Cancellation success",
+    "description": "Translation for terminals.cloud.sendReversal.field.cancellation.cancelled"
+  },
+  "terminals.cloud.sendReversal.field.cancellation.cancelledAt": {
+    "message": "Cancellation date",
+    "description": "Translation for terminals.cloud.sendReversal.field.cancellation.cancelledAt"
+  },
+  "terminals.cloud.sendReversal.field.cancellation.reason": {
+    "message": "Cancellation reason",
+    "description": "Translation for terminals.cloud.sendReversal.field.cancellation.reason"
+  },
+  "terminals.cloud.sendReversal.field.paymentMethod": {
+    "message": "Original payment method",
+    "description": "Translation for terminals.cloud.sendReversal.field.paymentMethod"
+  },
+  "terminals.cloud.sendReversal.field.createdAt": {
+    "message": "Record creation date",
+    "description": "Translation for terminals.cloud.sendReversal.field.createdAt"
+  },
+  "terminals.cloud.sendReversal.field.updatedAt": {
+    "message": "Last update date",
+    "description": "Translation for terminals.cloud.sendReversal.field.updatedAt"
+  },
+  "terminals.cloud.sendReversal.processing": {
+    "message": "Reversal Processing",
+    "description": "Translation for terminals.cloud.sendReversal.processing"
+  },
+  "terminals.cloud.sendReversal.processingDescription": {
+    "message": "After the reversal request is sent via the API, the process follows these steps:",
+    "description": "Translation for terminals.cloud.sendReversal.processingDescription"
+  },
+  "terminals.cloud.sendReversal.section2": {
+    "message": "2. Communication with Payment Network",
+    "description": "Translation for terminals.cloud.sendReversal.section2"
+  },
+  "terminals.cloud.sendReversal.section2Description": {
+    "message": "The terminal communicates with the payment network to cancel the authorisation:",
+    "description": "Translation for terminals.cloud.sendReversal.section2Description"
+  },
+  "terminals.cloud.sendReversal.section2Step1": {
+    "message": "Terminal receives the reversal request;",
+    "description": "Translation for terminals.cloud.sendReversal.section2Step1"
+  },
+  "terminals.cloud.sendReversal.section2Step2": {
+    "message": "System sends cancellation request to the payment network;",
+    "description": "Translation for terminals.cloud.sendReversal.section2Step2"
+  },
+  "terminals.cloud.sendReversal.section2Step3": {
+    "message": "Network contacts issuing bank to cancel the authorisation;",
+    "description": "Translation for terminals.cloud.sendReversal.section2Step3"
+  },
+  "terminals.cloud.sendReversal.section2Step4": {
+    "message": "Response is sent back to the terminal:",
+    "description": "Translation for terminals.cloud.sendReversal.section2Step4"
+  },
+  "terminals.cloud.sendReversal.approved": {
+    "message": "Approved",
+    "description": "Translation for terminals.cloud.sendReversal.approved"
+  },
+  "terminals.cloud.sendReversal.approvedDescription": {
+    "message": "Reversal processed successfully, authorisation cancelled.",
+    "description": "Translation for terminals.cloud.sendReversal.approvedDescription"
+  },
+  "terminals.cloud.sendReversal.declined": {
+    "message": "Declined",
+    "description": "Translation for terminals.cloud.sendReversal.declined"
+  },
+  "terminals.cloud.sendReversal.declinedDescription": {
+    "message": "Error message displayed (e.g.: payment already settled).",
+    "description": "Translation for terminals.cloud.sendReversal.declinedDescription"
+  },
+  "terminals.cloud.sendReversal.noCardRequired": {
+    "message": "Reversals do not require the card to be presented, as it is a cancellation of the original authorisation.",
+    "description": "Translation for terminals.cloud.sendReversal.noCardRequired"
+  },
+  "terminals.cloud.sendReversal.section3": {
+    "message": "3. System Notification",
+    "description": "Translation for terminals.cloud.sendReversal.section3"
+  },
+  "terminals.cloud.sendReversal.section3Description": {
+    "message": "After confirmation, your system is notified:",
+    "description": "Translation for terminals.cloud.sendReversal.section3Description"
+  },
+  "terminals.cloud.sendReversal.section3Step1": {
+    "message": "The transaction is synchronised with PayPay backoffice in real time;",
+    "description": "Translation for terminals.cloud.sendReversal.section3Step1"
+  },
+  "terminals.cloud.sendReversal.section3Step2": {
+    "message": "PayPay notifies via",
+    "description": "Translation for terminals.cloud.sendReversal.section3Step2"
+  },
+  "terminals.cloud.sendReversal.section3Step2b": {
+    "message": "your system with the reversal details.",
+    "description": "Translation for terminals.cloud.sendReversal.section3Step2b"
+  },
+  "terminals.cloud.sendReversal.webhookEssentialDescription": {
+    "message": "Configure webhooks to receive automatic notifications when the reversal status is updated. Although the API response already contains the reversal result, webhooks help keep your system synchronized.",
+    "description": "Translation for terminals.cloud.sendReversal.webhookEssentialDescription"
+  },
+  "terminals.cloud.sendReversal.reversalVsRefund": {
+    "message": "Reversal vs Refund",
+    "description": "Translation for terminals.cloud.sendReversal.reversalVsRefund"
+  },
+  "terminals.cloud.sendReversal.comparison.aspect": {
+    "message": "Aspect",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.aspect"
+  },
+  "terminals.cloud.sendReversal.comparison.reversal": {
+    "message": "Reversal",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.reversal"
+  },
+  "terminals.cloud.sendReversal.comparison.refund": {
+    "message": "Refund",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.refund"
+  },
+  "terminals.cloud.sendReversal.comparison.timing": {
+    "message": "When to use",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.timing"
+  },
+  "terminals.cloud.sendReversal.comparison.timingReversal": {
+    "message": "Before settlement",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.timingReversal"
+  },
+  "terminals.cloud.sendReversal.comparison.timingRefund": {
+    "message": "After settlement",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.timingRefund"
+  },
+  "terminals.cloud.sendReversal.comparison.cardRequired": {
+    "message": "Card required",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.cardRequired"
+  },
+  "terminals.cloud.sendReversal.comparison.no": {
+    "message": "No",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.no"
+  },
+  "terminals.cloud.sendReversal.comparison.yes": {
+    "message": "Yes",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.yes"
+  },
+  "terminals.cloud.sendReversal.comparison.partial": {
+    "message": "Partial",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.partial"
+  },
+  "terminals.cloud.sendReversal.comparison.fundMovement": {
+    "message": "Fund movement",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.fundMovement"
+  },
+  "terminals.cloud.sendReversal.comparison.fundMovementReversal": {
+    "message": "Cancels authorisation",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.fundMovementReversal"
+  },
+  "terminals.cloud.sendReversal.comparison.fundMovementRefund": {
+    "message": "Returns funds",
+    "description": "Translation for terminals.cloud.sendReversal.comparison.fundMovementRefund"
+  },
   "terminals.faq.title": {
     "message": "Frequently Asked Questions",
     "description": "Translation for terminals.faq.title"
@@ -2779,7 +3087,7 @@
     "description": "Translation for terminals.faq.a2"
   },
   "terminals.faq.scenario1": {
-    "message": "📋 Scenario 1: Valid date still active",
+    "message": "📋 Scenario 1: If the webhook arrives later",
     "description": "Translation for terminals.faq.scenario1"
   },
   "terminals.faq.result": {
@@ -2795,60 +3103,28 @@
     "description": "Translation for terminals.faq.authorized"
   },
   "terminals.faq.scenario2": {
-    "message": "📋 Scenario 2: Expired date, but payment within grace period",
+    "message": "📋 Scenario 2: If the webhook arrives later",
     "description": "Translation for terminals.faq.scenario2"
   },
   "terminals.faq.scenario2Result": {
-    "message": "The payment is accepted and remains in",
+    "message": "When the settlement is received, the Authorisation and Settled operations are recorded.",
     "description": "Translation for terminals.faq.scenario2Result"
   },
   "terminals.faq.authorizedCanceled": {
     "message": "Authorised (Cancelled)",
     "description": "Translation for terminals.faq.authorizedCanceled"
   },
-  "terminals.faq.scenario3": {
-    "message": "📋 Scenario 3: Expired date + flag",
-    "description": "Translation for terminals.faq.scenario3"
-  },
-  "terminals.faq.scenario3b": {
-    "message": "enabled",
-    "description": "Translation for terminals.faq.scenario3b"
-  },
   "terminals.faq.condition": {
     "message": "Condition",
     "description": "Translation for terminals.faq.condition"
-  },
-  "terminals.faq.scenario3Condition": {
-    "message": "The payment request included the flag",
-    "description": "Translation for terminals.faq.scenario3Condition"
-  },
-  "terminals.faq.scenario3Result": {
-    "message": "The payment is voided and remains in",
-    "description": "Translation for terminals.faq.scenario3Result"
   },
   "terminals.faq.canceled": {
     "message": "Cancelled",
     "description": "Translation for terminals.faq.canceled"
   },
-  "terminals.faq.scenario3Result2": {
-    "message": "even if the payment date is within the validity period.",
-    "description": "Translation for terminals.faq.scenario3Result2"
-  },
   "terminals.faq.requestExample": {
     "message": "Request Example",
     "description": "Translation for terminals.faq.requestExample"
-  },
-  "terminals.faq.scenario4": {
-    "message": "📋 Scenario 4: Expired date and payment outside grace period",
-    "description": "Translation for terminals.faq.scenario4"
-  },
-  "terminals.faq.scenario4Result": {
-    "message": "The payment is",
-    "description": "Translation for terminals.faq.scenario4Result"
-  },
-  "terminals.faq.scenario4Result2": {
-    "message": "and remains in",
-    "description": "Translation for terminals.faq.scenario4Result2"
   },
   "terminals.faq.q3": {
     "message": "3. Once a payment is in \"Settled\" status, what is the maximum time to process a refund?",
@@ -3693,6 +3969,18 @@
   "terminals.standalone.paymentFlowLink": {
     "message": "payment flow",
     "description": "Translation for terminals.standalone.paymentFlowLink"
+  },
+  "terminals.standalone.reversalsRefunds": {
+    "message": "Reversals and Refunds",
+    "description": "Translation for terminals.standalone.reversalsRefunds"
+  },
+  "terminals.standalone.reversalsRefundsDescription": {
+    "message": "Reversal and refund operations are performed directly on the terminal, without the need for integration with external systems.",
+    "description": "Translation for terminals.standalone.reversalsRefundsDescription"
+  },
+  "terminals.standalone.reversalsRefundsInfo": {
+    "message": "To perform a reversal or refund, the operator must access the terminal menu and follow the on-screen instructions.",
+    "description": "Translation for terminals.standalone.reversalsRefundsInfo"
   },
   "terminals.standalone.troubleshooting": {
     "message": "Common Troubleshooting",

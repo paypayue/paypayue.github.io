@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 description: ''
 title: Send a refund request
 hide_table_of_contents: true
@@ -9,7 +9,7 @@ import Translate from '@docusaurus/Translate';
 import ClickShowIframe from "@site/src/utils/ClickShowIframe";
 
 :::info
-<Translate id="terminals.cloud.sendRefund.paymentStateDescription">O pagamento só pode ser devolvido se tiver no estado</Translate> <strong>Confirmado</strong>.
+<Translate id="terminals.cloud.sendRefund.paymentStateDescription">O pagamento só pode ser devolvido se tiver no estado</Translate> <strong><Translate id="terminals.cloud.sendRefund.confirmed">Confirmado</Translate></strong>.
 :::
 
 <p><Translate id="terminals.cloud.sendRefund.checkState">Pode consultar o estado do pagamento no endpoint:</Translate></p>
@@ -61,7 +61,7 @@ POST /terminals/{uuid}/refunds/{paymentId}
 | <code>amount</code> | integer | ✅ <Translate id="terminals.cloud.sendRefund.yes">Sim</Translate> | <Translate id="terminals.cloud.sendRefund.param.amount">Montante que deseja devolver</Translate> |
 
 
-2. <Translate id="terminals.cloud.sendRefund.step2">API PayPay comunica com o terminal de forma</Translate> <strong>assíncrona</strong>;
+2. <Translate id="terminals.cloud.sendRefund.step2">API PayPay comunica com o terminal de forma</Translate> <strong><Translate id="terminals.cloud.sendRefund.async">assíncrona</Translate></strong>;
 3. <Translate id="terminals.cloud.sendRefund.step3">Terminal recebe e apresenta o valor automaticamente ao operador;</Translate>
 
 :::info

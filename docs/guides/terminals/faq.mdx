@@ -23,28 +23,11 @@ import Translate from '@docusaurus/Translate';
 
 <Translate id="terminals.faq.a2">O comportamento depende da data de validade do pagamento e das configurações enviadas:</Translate>
 
-#### <Translate id="terminals.faq.scenario1">📋 Cenário 1: Data de validade ainda vigente</Translate>
+#### <Translate id="terminals.faq.scenario1">📋 Cenário 1:  Se o webhook chegar mais tarde</Translate>
 - **<Translate id="terminals.faq.result">Resultado</Translate>:** <Translate id="terminals.faq.scenario1Result">O pagamento é aceite e transita para o estado</Translate> <strong><Translate id="terminals.faq.authorized">Autorizado</Translate></strong>.
 
-#### <Translate id="terminals.faq.scenario2">📋 Cenário 2: Data de validade expirada, mas pagamento dentro do prazo</Translate>
-- **<Translate id="terminals.faq.result">Resultado</Translate>:** <Translate id="terminals.faq.scenario2Result">O pagamento é aceite e fica no estado</Translate> <strong><Translate id="terminals.faq.authorizedCanceled">Autorizado (Cancelado)</Translate></strong>.
-
-#### <Translate id="terminals.faq.scenario3">📋 Cenário 3: Data de validade expirada + flag</Translate> <code>blockLatePayment</code> <Translate id="terminals.faq.scenario3b">ativada</Translate>
-- **<Translate id="terminals.faq.condition">Condição</Translate>:** <Translate id="terminals.faq.scenario3Condition">No pedido de solicitação do pagamento foi enviada a flag</Translate> <code>"validDate": {"{"}"blockLatePayment": true{"}"}</code>.
-- **<Translate id="terminals.faq.result">Resultado</Translate>:** <Translate id="terminals.faq.scenario3Result">É feito o void do pagamento e fica no estado</Translate> <strong><Translate id="terminals.faq.canceled">Cancelado</Translate></strong>, <Translate id="terminals.faq.scenario3Result2">mesmo que a data do pagamento esteja dentro do prazo de validade.</Translate>
-
-**<Translate id="terminals.faq.requestExample">Exemplo do pedido</Translate>:**
-```json
-{
-  "amount": 100,
-  "validDate": {
-    "blockLatePayment": true
-  }
-}
-```
-
-#### <Translate id="terminals.faq.scenario4">📋 Cenário 4: Data de validade expirada e pagamento fora do prazo</Translate>
-- **<Translate id="terminals.faq.result">Resultado</Translate>:** <Translate id="terminals.faq.scenario4Result">É feito o</Translate> <em>void</em> <Translate id="terminals.faq.scenario4Result2">do pagamento e fica no estado</Translate> <strong><Translate id="terminals.faq.canceled">Cancelado</Translate></strong>.
+#### <Translate id="terminals.faq.scenario2">📋 Cenário 2: Se o webhook chegar mais tarde</Translate>
+- **<Translate id="terminals.faq.result">Resultado</Translate>:** <Translate id="terminals.faq.scenario2Result">Quando recebermos o settlement é registado a operação da Autorização e a do Settled.</Translate>
 
 ### <Translate id="terminals.faq.q3">3. Após um pagamento estar no estado "Settled", qual é o prazo máximo para realizar uma devolução?</Translate>
 
