@@ -25,17 +25,17 @@ hash_hmac("SHA256", [payload] + [ts], [Password/Private Key])
 
 ```php
 private function has_valid_signature( $private_key ) {
-    if ( ! isset( $_SERVER['HTTP_PAYPAY_SIGNATURE'] ) ) {
+    if (!isset($_SERVER['HTTP_PAYPAY_SIGNATURE'])) {
         return false;
     }
 
-    $body = file_get_contents( 'php://input' );
+    $body = file_get_contents('php://input');
 
-    $signature = str_replace( ',', '&', $_SERVER['HTTP_PAYPAY_SIGNATURE'] ); // phpcs:ignore
+    $signature = str_replace(',', '&', $_SERVER['HTTP_PAYPAY_SIGNATURE']);
 
-    parse_str( $signature, $output );
+    parse_str($signature, $output);
 
-    return (int) ( $output['ts'] ) > ( time() - 1800 ) &&
-        hash_equals( $output['hash'], hash_hmac( 'sha256', $body . $output['ts'], $private_key ) );
+    return (int) ($output['ts'] ) > (time() - 1800 ) &&
+        hash_equals($output['hash'], hash_hmac('sha256', $body . $output['ts'], $private_key));
 }
 ```
