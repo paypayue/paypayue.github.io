@@ -4166,6 +4166,10 @@
     "message": "del encabezado:",
     "description": "Translation for webhooks.requestAuth.verification4"
   },
+  "webhooks.requestAuth.example": {
+    "message": "Ejemplo de una función en PHP para la validación de la firma",
+    "description": "Translation for webhooks.requestAuth.phpExample"
+  },
   "webhooks.responseStatus.title": {
     "message": "Tratamiento de la respuesta obtenida",
     "description": "Translation for webhooks.responseStatus.title"

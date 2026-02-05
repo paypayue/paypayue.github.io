@@ -4158,6 +4158,10 @@
     "message": "do header:",
     "description": "Translation for webhooks.requestAuth.verification4"
   },
+  "webhooks.requestAuth.example": {
+    "message": "Exemplo de uma função em PHP para validação da assinatura",
+    "description": "Translation for webhooks.requestAuth.phpExample"
+  },
   "webhooks.responseStatus.title": {
     "message": "Tratamento da resposta obtida",
     "description": "Translation for webhooks.responseStatus.title"

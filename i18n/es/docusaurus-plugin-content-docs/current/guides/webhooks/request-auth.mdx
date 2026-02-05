@@ -20,3 +20,22 @@ PayPay-Signature: hash=14d06cc11e0479c2ffe138d963462bc0f0ad94e8e006cf4f1f494c5e3
 ```php
 hash_hmac("SHA256", [payload] + [ts], [Password/Private Key])
 ```
+
+<Translate id="webhooks.requestAuth.example">Exemplo de uma função em PHP para validação da assinatura</Translate>
+
+```php
+private function has_valid_signature( $private_key ) {
+    if ( ! isset( $_SERVER['HTTP_PAYPAY_SIGNATURE'] ) ) {
+        return false;
+    }
+
+    $body = file_get_contents( 'php://input' );
+
+    $signature = str_replace( ',', '&', $_SERVER['HTTP_PAYPAY_SIGNATURE'] ); // phpcs:ignore
+
+    parse_str( $signature, $output );
+
+    return (int) ( $output['ts'] ) > ( time() - 1800 ) &&
+        hash_equals( $output['hash'], hash_hmac( 'sha256', $body . $output['ts'], $private_key ) );
+}
+```
