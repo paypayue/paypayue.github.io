@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const site = process.env.SITE || 'http://localhost:3000';
 const api = '/api'
 const baseUrl = '/'
-const apiUrlSpecification = process.env.API_URL_SPECIFICATION ? '/api-spec' : '/api-dev-spec';
+const apiUrlSpecification = process.env.API_BASE_URL ? '/api-spec' : '/api-dev-spec';
 const footerElogios = process.env.FOOTER_ELOGIOS || 'https://www.paypay.pt/elogios-sugestoes-reclamacoes';
 const footerPoliticasPrivacidade = process.env.FOOTER_POLITICAS_PRIVACIDADE || 'https://www.paypay.pt/politica-de-privacidade';
 const footerPoliticasSeguranca = process.env.FOOTER_POLITICAS_SEGURANCA || 'https://www.paypay.pt/politica-de-seguranca';
@@ -115,7 +115,7 @@ const config = {
                 },
                 {
                   context: ['/api-spec'],
-                  target: process.env.API_URL_SPECIFICATION,
+                  target: process.env.API_BASE_URL,
                   changeOrigin: true,
                   pathRewrite: { '^/api-spec': '/api/docs/api.json' },
                 },
