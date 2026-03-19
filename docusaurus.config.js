@@ -9,8 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const site = process.env.SITE || 'http://localhost:3000';
 const api = '/api'
 const baseUrl = '/'
-const apiUrlSpecification = process.env.API_URL_SPECIFICATION ||
-  (site === 'https://paypayue-dev.github.io' ? '/api-test-spec' : '/api-dev-spec');
+const apiUrlSpecification = process.env.API_URL_SPECIFICATION ? '/api-spec' : '/api-dev-spec';
 const footerElogios = process.env.FOOTER_ELOGIOS || 'https://www.paypay.pt/elogios-sugestoes-reclamacoes';
 const footerPoliticasPrivacidade = process.env.FOOTER_POLITICAS_PRIVACIDADE || 'https://www.paypay.pt/politica-de-privacidade';
 const footerPoliticasSeguranca = process.env.FOOTER_POLITICAS_SEGURANCA || 'https://www.paypay.pt/politica-de-seguranca';
@@ -101,9 +100,9 @@ const config = {
   ],
 
   plugins: [
-    function devProxy() {
+    function proxy() {
       return {
-        name: 'dev-proxy',
+        name: 'proxy',
         configureWebpack() {
           return {
             devServer: {
@@ -115,10 +114,10 @@ const config = {
                   pathRewrite: { '^/api-dev-spec': '/luis/paypay/api/docs/api.json' },
                 },
                 {
-                  context: ['/api-test-spec'],
-                  target: 'https://paypay-test.acin.pt',
+                  context: ['/api-spec'],
+                  target: site,
                   changeOrigin: true,
-                  pathRewrite: { '^/api-test-spec': '/api/docs/api.json' },
+                  pathRewrite: { '^/api-spec': '/api/docs/api.json' },
                 },
               ],
             },
