@@ -15,21 +15,21 @@ import TabItem from "@theme/TabItem";
 <p><Translate id="embed.intro">Para obter o link da incorporação é necessário realizar um pedido POST /checkouts com os dados pretendidos.</Translate></p>
 
 <Translate id="embed.redirectParam">O parâmetro</Translate> <code>redirects</code> <Translate id="embed.redirectParam2">do tipo</Translate> <code>action</code> <Translate id="embed.redirectParam3">é obrigatório e deverá conter o url para onde o cliente deve ser redireccionado após o processamento do pagamento.</Translate>
-<Translate id="embed.checkoutId">O parâmetro id do checkout é automaticamente concatenado ao url no momento do redireccionamento.</Translate>
+<Translate id="embed.redirectParam">O parâmetro</Translate> <code>id</code> <Translate id="embed.checkoutId">do checkout é automaticamente concatenado ao url no momento do redireccionamento.</Translate>
 
 <br/>
 <br/>
 
 ```json
 {
-	...
+  ...
 
-	"redirects": [
-		{
-			"type": "action", // <== Redireccionamento obrigatório
-			"url": "https://www.url-action.dominio"
-		}
-	]
+  "redirects": [
+    {
+      "type": "action", // <== Redireccionamento obrigatório
+      "url": "https://www.url-action.dominio"
+    }
+  ]
 }
 ```
 
@@ -68,37 +68,37 @@ POST /checkouts
 
 ```json
 {
-	"payment": {
-		"amount": 500,
-		"code": "REFPRODUTO_1",
-		"summary": "Computador",
-		"customer": {
-			"customerId": "1",
-			"firstName": "José",
-			"lastName": "Silva",
-			"phoneNumber": "351#961234567",
-			"email": "jose.silva@email.com"
-		},
-		"billingAddress": {
-			"country": "PT",
-			"city": "Lisboa",
-			"street1": "Rua Domingos Monteiro nº 7 A",
-			"postCode": "1050-074"
-		},
-		"paymentMethod": {
-			"code": "CC" // <== Método de pagamento
-		}
-	},
-	"page": {
-		"language": "PT",
-		"layout": "embed" // <== Incorporado
-	},
-	"redirects": [
-		{
-			"type": "action", // <== Redireccionamento obrigatório
-			"url": "https://www.url-action.dominio"
-		}
-	]
+  "payment": {
+    "amount": 500,
+    "code": "REFPRODUTO_1",
+    "summary": "Computador",
+    "customer": {
+      "customerId": "1",
+      "firstName": "José",
+      "lastName": "Silva",
+      "phoneNumber": "351#961234567",
+      "email": "jose.silva@email.com"
+    },
+    "billingAddress": {
+      "country": "PT",
+      "city": "Lisboa",
+      "street1": "Rua Domingos Monteiro nº 7 A",
+      "postCode": "1050-074"
+    },
+    "paymentMethod": {
+      "code": "CC" // <== Método de pagamento
+    }
+  },
+  "page": {
+    "language": "PT",
+    "layout": "embed" // <== Incorporado
+  },
+  "redirects": [
+    {
+      "type": "action", // <== Redireccionamento obrigatório
+      "url": "https://www.url-action.dominio"
+    }
+  ]
 }
 ```
 
@@ -107,19 +107,18 @@ POST /checkouts
 
 ```json
 {
-	"apiVersion": "1.0",
-	"date": "2022-01-03T14:16:17+00:00",
-	"success": true,
-	"data": {
-		"id": "0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb",
-		"createdAt": "2022-01-03 14:16:17",
-		"checkoutUrl": "https://paypay.pt/paypay/checkout/v2/embed/0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb?page_layout=embed",
-		"paymentId": "42690",
-		"stateDetails": {
-			"state": "PaymentReady",
-			"timestamp": "2022-01-03T14:16:17+00:00"
-		}
-	}
+  "date": "2022-01-03T14:16:17+00:00",
+  "success": true,
+  "data": {
+    "id": "0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb",
+    "createdAt": "2022-01-03 14:16:17",
+    "checkoutUrl": "https://paypay.pt/paypay/checkout/v2/embed/0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb?page_layout=embed",
+    "paymentId": "42690",
+    "stateDetails": {
+      "state": "PaymentReady",
+      "timestamp": "2022-01-03T14:16:17+00:00"
+    }
+  }
 }
 ```
 

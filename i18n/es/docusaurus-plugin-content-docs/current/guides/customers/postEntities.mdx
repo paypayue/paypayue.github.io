@@ -26,14 +26,14 @@ import TabItem from "@theme/TabItem";
 <Translate id="customers.postEntities.example">Associar o cliente com o</Translate> <em>uuid</em> e2343605-cf46-43de-b20b-9b7d1c95a9b2 <Translate id="customers.postEntities.example2">a entidade com o</Translate> <em>clientId</em> 523308191 e 559514166
 
 <button className="btn-api btn-api--float-right"
-	onClick={() =>
-		ClickShowIframe({
-			idMenuOption: "customer-entities",
-			idOption: "customer-entities/post/customers/{uuid}/entities"
-		})
-	}
+  onClick={() =>
+    ClickShowIframe({
+      idMenuOption: "customer-entities",
+      idOption: "customer-entities/post/customers/{uuid}/entities"
+    })
+  }
 >
-	<span><Translate id="customers.postEntities.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+  <span><Translate id="customers.postEntities.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
 <Tabs>
@@ -43,7 +43,7 @@ import TabItem from "@theme/TabItem";
 
 ```json
 {
-	"clientId": "523308191"
+  "clientId": "523308191"
 }
 ```
 
@@ -52,12 +52,11 @@ import TabItem from "@theme/TabItem";
 
 ```json
 {
-	"apiVersion": "1.0",
-	"success": true,
-	"data": {
-		"clientId": "523308191",
-		"createdAt": "2021-09-23T10:35:08+01:00"
-	}
+  "success": true,
+  "data": {
+    "clientId": "523308191",
+    "createdAt": "2021-09-23T10:35:08+01:00"
+  }
 }
 ```
 

@@ -19,14 +19,14 @@ import TabItem from "@theme/TabItem";
 <Translate id="customers.deleteEntities.description">Para remover a associação do cliente com uma entidade é necessário conhecer o</Translate> <em>uuid</em> <Translate id="customers.deleteEntities.description2">do cliente e o</Translate> <em>clientId</em> <Translate id="customers.deleteEntities.description3">da entidade.</Translate>
 
 <button className="btn-api btn-api--float-right"
-	onClick={() =>
-		ClickShowIframe({
-			idMenuOption: "customer-entities",
-			idOption: "customer-entities/delete/customers/{uuid}/entities/{clientId}"
-		})
-	}
+  onClick={() =>
+    ClickShowIframe({
+      idMenuOption: "customer-entities",
+      idOption: "customer-entities/delete/customers/{uuid}/entities/{clientId}"
+    })
+  }
 >
-	<span><Translate id="customers.deleteEntities.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+  <span><Translate id="customers.deleteEntities.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
 <Tabs>

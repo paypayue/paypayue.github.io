@@ -1,0 +1,54 @@
+---
+sidebar_position: 4
+title: Layouts
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+
+# <Translate id="layouts.title">Layouts</Translate>
+
+<p><Translate id="layouts.intro">O checkout disponibiliza diferentes layouts de apresentação, adaptáveis ao contexto de integração. O layout é configurado através do parâmetro</Translate> <code>page.layout</code> <Translate id="layouts.intro2">no corpo do pedido de criação do checkout.</Translate></p>
+
+---
+
+## <Translate id="layouts.web.title">Web</Translate>
+
+<p><Translate id="layouts.web.description">Layout de página completa para utilização em browsers de desktop e dispositivos móveis. Adequado para redireccionamento direto do cliente para a página de pagamento. Com a opção de exportação.</Translate></p>
+
+**<Translate id="layouts.parameter">Parâmetro</Translate>:** <code>page.layout: "web"</code>
+
+<div style={{textAlign: 'center'}}>
+
+![Layout-web](@site/_media/layout-web.png)
+
+</div>
+
+---
+
+## <Translate id="layouts.embed.title">Incorporado</Translate>
+
+<p><Translate id="layouts.embed.description">Layout otimizado para incorporação em páginas web através de iframe. A página de pagamento atarvés do CC é apresentada diretamente no website do lojista.</Translate></p>
+
+**<Translate id="layouts.parameter">Parâmetro</Translate>:** <code>page.layout: "embed"</code>
+
+<div style={{textAlign: 'center'}}>
+
+![Layout-cc-form](@site/_media/layout-cc-form.png)
+
+</div>
+
+---
+
+## <Translate id="layouts.inApp.title">Aplicação Móvel</Translate>
+
+<p><Translate id="layouts.inApp.description">Layout otimizado para incorporação em aplicações móveis através do componente WebView.</Translate></p>
+
+**<Translate id="layouts.parameter">Parâmetro</Translate>:** <code>page.layout: "inApp"</code>
+
+<div style={{textAlign: 'center'}}>
+
+![Layout-inApp](@site/_media/layout-inapp.png)
+
+</div>

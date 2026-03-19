@@ -41,37 +41,37 @@ POST /checkouts
 
 ```json
 {
-	"payment": {
-		"amount": 500,
-		"code": "REFPRODUTO_1",
-		"summary": "Computador",
-		"customer": {
-			"customerId": "1",
-			"firstName": "José",
-			"lastName": "Silva",
-			"phoneNumber": "351#961234567",
-			"email": "jose.silva@email.com"
-		},
-		"billingAddress": {
-			"country": "PT",
-			"city": "Lisboa",
-			"street1": "Rua Domingos Monteiro nº 7 A",
-			"postCode": "1050-074"
-		},
-		"paymentMethod": {
-			"code": "CC" // <== Método de pagamento
-		}
-	},
-	"page": {
-		"language": "PT",
-		"layout": "default" // <== Incorporado
-	},
-	"redirects": [
-		{
-			"type": "action",
-			"url": "https://www.myapp.com" // <== URL deep Link
-		}
-	]
+  "payment": {
+    "amount": 500,
+    "code": "REFPRODUTO_1",
+    "summary": "Computador",
+    "customer": {
+      "customerId": "1",
+      "firstName": "José",
+      "lastName": "Silva",
+      "phoneNumber": "351#961234567",
+      "email": "jose.silva@email.com"
+    },
+    "billingAddress": {
+      "country": "PT",
+      "city": "Lisboa",
+      "street1": "Rua Domingos Monteiro nº 7 A",
+      "postCode": "1050-074"
+    },
+    "paymentMethod": {
+      "code": "CC" // <== Método de pagamento
+    }
+  },
+  "page": {
+    "language": "PT",
+    "layout": "default" // <== Incorporado
+  },
+  "redirects": [
+    {
+      "type": "action",
+      "url": "https://www.myapp.com" // <== URL deep Link
+    }
+  ]
 }
 ```
 
@@ -80,19 +80,18 @@ POST /checkouts
 
 ```json
 {
-	"apiVersion": "1.0",
-	"date": "2022-01-03T14:16:17+00:00",
-	"success": true,
-	"data": {
-		"id": "0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb",
-		"createdAt": "2022-01-03 14:16:17",
-		"checkoutUrl": "https://paypay.pt/paypay/checkout/v2/embed/0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb?page_layout=default",
-		"paymentId": "42690",
-		"stateDetails": {
-			"state": "PaymentReady",
-			"timestamp": "2022-01-03T14:16:17+00:00"
-		}
-	}
+  "date": "2022-01-03T14:16:17+00:00",
+  "success": true,
+  "data": {
+    "id": "0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb",
+    "createdAt": "2022-01-03 14:16:17",
+    "checkoutUrl": "https://paypay.pt/paypay/checkout/v2/embed/0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb?page_layout=default",
+    "paymentId": "42690",
+    "stateDetails": {
+      "state": "PaymentReady",
+      "timestamp": "2022-01-03T14:16:17+00:00"
+    }
+  }
 }
 ```
 

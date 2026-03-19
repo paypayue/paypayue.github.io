@@ -538,6 +538,218 @@
     "message": "se muestra la siguiente página:",
     "description": "Translation for cc.response.pagePreview2"
   },
+  "availableMethods.title": {
+    "message": "Métodos de pago",
+    "description": "Translation for availableMethods.title"
+  },
+  "availableMethods.intro": {
+    "message": "El recurso",
+    "description": "Translation for availableMethods.intro"
+  },
+  "availableMethods.intro2": {
+    "message": "admite los siguientes métodos de pago, que pueden especificarse de forma individual o simultánea al crear un checkout.",
+    "description": "Translation for availableMethods.intro2"
+  },
+  "availableMethods.table.code": {
+    "message": "Código",
+    "description": "Translation for availableMethods.table.code"
+  },
+  "availableMethods.table.method": {
+    "message": "Método de pago",
+    "description": "Translation for availableMethods.table.method"
+  },
+  "availableMethods.table.description": {
+    "message": "Descripción",
+    "description": "Translation for availableMethods.table.description"
+  },
+  "availableMethods.table.cc": {
+    "message": "Tarjeta de Crédito/Débito",
+    "description": "Translation for availableMethods.table.cc"
+  },
+  "availableMethods.table.cc.description": {
+    "message": "Pago con tarjeta de crédito o débito.",
+    "description": "Translation for availableMethods.table.cc.description"
+  },
+  "availableMethods.table.mb": {
+    "message": "Cajero Automático - Multibanco",
+    "description": "Translation for availableMethods.table.mb"
+  },
+  "availableMethods.table.mb.description": {
+    "message": "Generación de referencia Multibanco pagadera en cajeros automáticos o a través de la banca online.",
+    "description": "Translation for availableMethods.table.mb.description"
+  },
+  "availableMethods.table.mw.description": {
+    "message": "Pago mediante número de teléfono móvil a través de la aplicación MB WAY.",
+    "description": "Translation for availableMethods.table.mw.description"
+  },
+  "availableMethods.table.ap.description": {
+    "message": "Pago mediante Apple Pay en dispositivos Apple compatibles.",
+    "description": "Translation for availableMethods.table.ap.description"
+  },
+  "availableMethods.table.gp.description": {
+    "message": "Pago a través de Google Pay en dispositivos Android y navegadores compatibles.",
+    "description": "Translation for availableMethods.table.gp.description"
+  },
+  "availableMethods.singleMethod.title": {
+    "message": "Especificar un único método de pago",
+    "description": "Translation for availableMethods.singleMethod.title"
+  },
+  "availableMethods.singleMethod.description": {
+    "message": "Para dirigir al cliente a un método de pago específico, utilice el campo",
+    "description": "Translation for availableMethods.singleMethod.description"
+  },
+  "availableMethods.singleMethod.description2": {
+    "message": "en el texto de la solicitud.",
+    "description": "Translation for availableMethods.singleMethod.description2"
+  },
+  "availableMethods.multiMethod.title": {
+    "message": "Especificar varios métodos de pago",
+    "description": "Translation for availableMethods.multiMethod.title"
+  },
+  "availableMethods.multiMethod.description": {
+    "message": "Para permitir al cliente elegir el método de pago, utilice el campo",
+    "description": "Translation for availableMethods.multiMethod.description"
+  },
+  "availableMethods.multiMethod.description2": {
+    "message": "con la lista de códigos deseados. De este modo, el cliente elige el método directamente en la página de pago.",
+    "description": "Translation for availableMethods.multiMethod.description2"
+  },
+  "availableMethods.multiMethod.note": {
+    "message": "Cuando",
+    "description": "Translation for availableMethods.multiMethod.note"
+  },
+  "availableMethods.multiMethod.note2": {
+    "message": "se utiliza, el campo",
+    "description": "Translation for availableMethods.multiMethod.note2"
+  },
+  "availableMethods.multiMethod.note3": {
+    "message": "no debe especificarse. Si no se rellenan ninguno de los dos campos, se crea el checkout con los métodos de pago disponibles en la integración.",
+    "description": "Translation for availableMethods.multiMethod.note3"
+  },
+  "availableMethods.consultApi": {
+    "message": "Consultar API",
+    "description": "Translation for availableMethods.consultApi"
+  },
+  "availableMethods.tabs.request": {
+    "message": "Solicitud",
+    "description": "Translation for availableMethods.tabs.request"
+  },
+  "availableMethods.tabs.response": {
+    "message": "Respuesta",
+    "description": "Translation for availableMethods.tabs.response"
+  },
+  "availableMethods.response.id": {
+    "message": "En la respuesta se devuelve el",
+    "description": "Translation for availableMethods.response.id"
+  },
+  "availableMethods.response.id2": {
+    "message": "que identifica el checkout ante la API.",
+    "description": "Translation for availableMethods.response.id2"
+  },
+  "availableMethods.response.checkoutUrl": {
+    "message": "El",
+    "description": "Translation for availableMethods.response.checkoutUrl"
+  },
+  "availableMethods.response.checkoutUrl2": {
+    "message": "es el enlace para acceder a la página y realizar el pago.",
+    "description": "Translation for availableMethods.response.checkoutUrl2"
+  },
+  "availableMethods.response.paymentId": {
+    "message": "El",
+    "description": "Translation for availableMethods.response.paymentId"
+  },
+  "availableMethods.response.paymentId2": {
+    "message": "es el ID que identifica el pago.",
+    "description": "Translation for availableMethods.response.paymentId2"
+  },
+  "availableMethods.notes.title": {
+    "message": "Notas por método",
+    "description": "Translation for availableMethods.notes.title"
+  },
+  "availableMethods.notes.cc.title": {
+    "message": "Tarjeta de Crédito/Débito",
+    "description": "Translation for availableMethods.notes.cc.title"
+  },
+  "availableMethods.notes.cc.layouts": {
+    "message": "Disponible en todos los diseños:",
+    "description": "Translation for availableMethods.notes.cc.layouts"
+  },
+  "availableMethods.notes.cc.layouts.and": {
+    "message": "y",
+    "description": "Translation for availableMethods.notes.cc.layouts.and"
+  },
+  "availableMethods.notes.cc.redirects": {
+    "message": "Admite redireccionamientos",
+    "description": "Translation for availableMethods.notes.cc.redirects"
+  },
+  "availableMethods.notes.cc.and": {
+    "message": "y",
+    "description": "Translation for availableMethods.notes.cc.and"
+  },
+  "availableMethods.notes.cc.redirects.embed.redirect": {
+    "message": "El redireccionamiento",
+    "description": "Translation for availableMethods.notes.cc.redirects.embed.redirect"
+  },
+  "availableMethods.notes.cc.redirects.embed.redirect.accept": {
+    "message": "es el único que se acepta en el diseño",
+    "description": "Translation for availableMethods.notes.cc.redirects.embed.redirect.accept"
+  },
+  "availableMethods.notes.mb.title": {
+    "message": "Cajero Automático - Multibanco",
+    "description": "Translation for availableMethods.notes.mb.title"
+  },
+  "availableMethods.notes.mb.layouts": {
+    "message": "Disponible en los diseños:",
+    "description": "Translation for availableMethods.notes.mb.layouts"
+  },
+  "availableMethods.notes.mb.noRedirects": {
+    "message": "No admite redireccionamientos — tras crear el checkout, se genera una referencia Multibanco a la que se puede acceder inmediatamente a través de",
+    "description": "Translation for availableMethods.notes.mb.noRedirects"
+  },
+  "availableMethods.notes.mw.layouts": {
+    "message": "Disponible en todos los diseños:",
+    "description": "Translation for availableMethods.notes.mw.layouts"
+  },
+  "availableMethods.notes.mw.redirects": {
+    "message": "Admite redireccionamientos",
+    "description": "Translation for availableMethods.notes.mw.redirects"
+  },
+  "availableMethods.notes.mw.and": {
+    "message": "y",
+    "description": "Translation for availableMethods.notes.mw.and"
+  },
+  "availableMethods.notes.ap.layouts": {
+    "message": "Disponible en los diseños:",
+    "description": "Translation for availableMethods.notes.ap.layouts"
+  },
+  "availableMethods.notes.ap.redirects": {
+    "message": "Admite redireccionamientos",
+    "description": "Translation for availableMethods.notes.ap.redirects"
+  },
+  "availableMethods.notes.ap.and": {
+    "message": "y",
+    "description": "Translation for availableMethods.notes.ap.and"
+  },
+  "availableMethods.notes.ap.requirement": {
+    "message": "Requiere que el usuario utilice un dispositivo Apple compatible (iPhone, iPad, Mac) con Apple Pay configurado.",
+    "description": "Translation for availableMethods.notes.ap.requirement"
+  },
+  "availableMethods.notes.gp.layouts": {
+    "message": "Disponible en todos los diseños:",
+    "description": "Translation for availableMethods.notes.gp.layouts"
+  },
+  "availableMethods.notes.gp.redirects": {
+    "message": "Admite redireccionamientos",
+    "description": "Translation for availableMethods.notes.gp.redirects"
+  },
+  "availableMethods.notes.gp.and": {
+    "message": "y",
+    "description": "Translation for availableMethods.notes.gp.and"
+  },
+  "availableMethods.notes.gp.requirement": {
+    "message": "Requiere que el usuario tenga Google Pay configurado en un dispositivo Android o en un navegador compatible.",
+    "description": "Translation for availableMethods.notes.gp.requirement"
+  },
   "embed.webpage": {
     "message": "Incorporar en la página web",
     "description": "Translation for embed.webpage"
@@ -559,7 +771,7 @@
     "description": "Translation for embed.redirectParam3"
   },
   "embed.checkoutId": {
-    "message": "El parámetro id del checkout se concatena automáticamente a la URL en el momento del redireccionamiento.",
+    "message": "del checkout se concatena automáticamente a la URL en el momento del redireccionamiento.",
     "description": "Translation for embed.checkoutId"
   },
   "embed.consultApi": {
@@ -666,6 +878,46 @@
     "message": "debe sustituirse por el id devuelto en la respuesta a la solicitud, en el ejemplo anterior sería 0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb.",
     "description": "Translation for embed.idReplacement2"
   },
+  "layouts.title": {
+    "message": "Layouts",
+    "description": "Translation for layouts.title"
+  },
+  "layouts.intro": {
+    "message": "El checkout proporciona diferentes layouts de presentación, adaptables al contexto de integración deseado. El layout se configura mediante el parámetro",
+    "description": "Translation for layouts.intro"
+  },
+  "layouts.intro2": {
+    "message": "en el cuerpo de la solicitud de creación del checkout.",
+    "description": "Translation for layouts.intro2"
+  },
+  "layouts.parameter": {
+    "message": "Parámetro",
+    "description": "Translation for layouts.parameter"
+  },
+  "layouts.web.title": {
+    "message": "Web",
+    "description": "Translation for layouts.web.title"
+  },
+  "layouts.web.description": {
+    "message": "Layout de página completa para uso en navegadores de escritorio y dispositivos móviles. Adecuado para la redirección directa del cliente a la página de pago.",
+    "description": "Translation for layouts.web.description"
+  },
+  "layouts.embed.title": {
+    "message": "Incorporado",
+    "description": "Translation for layouts.embed.title"
+  },
+  "layouts.embed.description": {
+    "message": "Layout optimizado para incorporación en páginas web mediante iframe. La página de pago se presenta directamente en el sitio web del comerciante.",
+    "description": "Translation for layouts.embed.description"
+  },
+  "layouts.inApp.title": {
+    "message": "Aplicación Móvil",
+    "description": "Translation for layouts.inApp.title"
+  },
+  "layouts.inApp.description": {
+    "message": "Layout optimizado para incorporación en aplicaciones móviles mediante el componente WebView.",
+    "description": "Translation for layouts.inApp.description"
+  },
   "checkouts.index.title": {
     "message": "Iniciación",
     "description": "Translation for checkouts.index.title"
@@ -687,7 +939,7 @@
     "description": "Translation for checkouts.index.feature1"
   },
   "checkouts.index.feature2": {
-    "message": "SCompatibilidad para almacenar el método de pago y utilizarlo en futuros pagos",
+    "message": "Compatibilidad para almacenar el método de pago y utilizarlo en futuros pagos",
     "description": "Translation for checkouts.index.feature2"
   },
   "checkouts.index.feature3": {
@@ -1761,6 +2013,22 @@
   "payments.mbwayRegistration.consultApi2": {
     "message": "Consultar API",
     "description": "Translation for payments.mbwayRegistration.consultApi2"
+  },
+  "payments.mbwayRegistration.paymentMethods.parameter": {
+    "message": "En la respuesta del pago, en el parámetro",
+    "description": "Translation for payments.mbwayRegistration.paymentMethods.parameter"
+  },
+  "payments.mbwayRegistration.paymentMethods.uuid": {
+    "message": "se encuentra el identificador del método de pago guardado.",
+    "description": "Translation for payments.mbwayRegistration.paymentMethods.uuid"
+  },
+  "payments.mbwayRegistration.paymentMethods.customer": {
+    "message": "Para consultar todos los métodos de pago asociados al cliente, puede hacerlo a través del",
+    "description": "Translation for payments.mbwayRegistration.paymentMethods.customer"
+  },
+  "payments.mbwayRegistration.paymentMethods.getCustomerPaymentMethods": {
+    "message": "consultar métodos",
+    "description": "Translation for payments.mbwayRegistration.paymentMethods.getCustomerPaymentMethods"
   },
   "payments.mbway.title": {
     "message": "Pago con MB WAY utilizando el número de teléfono móvil",
@@ -3045,6 +3313,10 @@
   "terminals.cloud.sendReversal.comparison.fundMovementRefund": {
     "message": "Devuelve fondos",
     "description": "Translation for terminals.cloud.sendReversal.comparison.fundMovementRefund"
+  },
+  "terminals.cloud.sendReversal.basicExample": {
+    "message": "Ejemplo básico",
+    "description": "Translation for terminals.cloud.sendReversal.basicExample"
   },
   "terminals.faq.title": {
     "message": "Preguntas Frecuentes",

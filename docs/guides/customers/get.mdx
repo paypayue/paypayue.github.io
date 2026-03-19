@@ -13,14 +13,14 @@ import TabItem from "@theme/TabItem";
 # <Translate id="customers.get.title">Consultar cliente</Translate>
 
 <button className="btn-api btn-api--float-right"
-	onClick={() =>
-		ClickShowIframe({
-			idMenuOption: "customers",
-			idOption: "customers/get/customers/{uuid}"
-		})
-	}
+  onClick={() =>
+    ClickShowIframe({
+      idMenuOption: "customers",
+      idOption: "customers/get/customers/{uuid}"
+    })
+  }
 >
-	<span><Translate id="customers.get.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+  <span><Translate id="customers.get.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
 <Tabs>
@@ -35,17 +35,16 @@ GET /customers/{uuid}
 
 ```json
 {
-	"apiVersion": "1.0",
-	"date": "2021-12-07T18:01:19+00:00",
-	"success": true,
-	"data": {
-		"uuid": "e2343605-cf46-43de-b20b-9b7d1c95a9b2",
-		"customerId": "123",
-		"firstName": "José",
-		"lastName": "Silva",
-		"email": "jose.silva@email.com",
-		"phoneNumber": "351#961234567"
-	}
+  "date": "2021-12-07T18:01:19+00:00",
+  "success": true,
+  "data": {
+    "uuid": "e2343605-cf46-43de-b20b-9b7d1c95a9b2",
+    "customerId": "123",
+    "firstName": "José",
+    "lastName": "Silva",
+    "email": "jose.silva@email.com",
+    "phoneNumber": "351#961234567"
+  }
 }
 ```
 

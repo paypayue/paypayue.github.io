@@ -24,45 +24,45 @@ import ClickShowIframe from "@site/src/utils/ClickShowIframe";
 
 ```json
 {
-    "clientId": "123456789",
-    "name": "Entidade Teste Lda",
-    "phoneNumber": "707451451",
-    "address": "Estrada Regional 104 ",
-    "postCode": "9000-025",
-    "locality": "Funchal",
-    "permanentCertificate": "1234-5678-9101",
-    "economicActivity": {
-        "section": "K",
-        "code": 668
+  "clientId": "123456789",
+  "name": "Entidade Teste Lda",
+  "phoneNumber": "707451451",
+  "address": "Estrada Regional 104 ",
+  "postCode": "9000-025",
+  "locality": "Funchal",
+  "permanentCertificate": "1234-5678-9101",
+  "economicActivity": {
+    "section": "K",
+    "code": 668
+  },
+  "availableMethods": [
+    {
+      "code": "CC",
+      "required": true // <== Indica que o método é obrigatório na adesão
     },
-    "availableMethods": [
-        {
-            "code": "CC",
-            "required": true // <== Indica que o método é obrigatório na adesão
-        },
-        {
-            "code": "MB"
-        },
-        {
-            "code": "MW"
-        },
-        {
-            "code": "AP"
-        },
-        {
-            "code": "GP"
-        },
-        {
-            "code": "TPA"
-        }
-    ],
-    "user": {
-        "name": "John Doe",
-        "taxNumber": "123456789",
-        "email": "email@email.email",
-        "phoneNumber": "960000000",
-        "isPoliticallyExposedPerson": true
+    {
+      "code": "MB"
+    },
+    {
+      "code": "MW"
+    },
+    {
+      "code": "AP"
+    },
+    {
+      "code": "GP"
+    },
+    {
+      "code": "TPA"
     }
+  ],
+  "user": {
+    "name": "John Doe",
+    "taxNumber": "123456789",
+    "email": "email@email.email",
+    "phoneNumber": "960000000",
+    "isPoliticallyExposedPerson": true
+  }
 }
 ```
 

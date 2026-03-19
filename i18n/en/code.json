@@ -538,6 +538,218 @@
     "message": "the following page is displayed:",
     "description": "Translation for cc.response.pagePreview2"
   },
+  "availableMethods.title": {
+    "message": "Payment methods",
+    "description": "Translation for availableMethods.title"
+  },
+  "availableMethods.intro": {
+    "message": "The resource",
+    "description": "Translation for availableMethods.intro"
+  },
+  "availableMethods.intro2": {
+    "message": "supports the following payment methods, which can be specified individually or in combination when creating a checkout.",
+    "description": "Translation for availableMethods.intro2"
+  },
+  "availableMethods.table.code": {
+    "message": "Code",
+    "description": "Translation for availableMethods.table.code"
+  },
+  "availableMethods.table.method": {
+    "message": "Payment method",
+    "description": "Translation for availableMethods.table.method"
+  },
+  "availableMethods.table.description": {
+    "message": "Description",
+    "description": "Translation for availableMethods.table.description"
+  },
+  "availableMethods.table.cc": {
+    "message": "Credit/Debit Card",
+    "description": "Translation for availableMethods.table.cc"
+  },
+  "availableMethods.table.cc.description": {
+    "message": "Payment by credit or debit card.",
+    "description": "Translation for availableMethods.table.cc.description"
+  },
+  "availableMethods.table.mb": {
+    "message": "ATM - Multibanco",
+    "description": "Translation for availableMethods.table.mb"
+  },
+  "availableMethods.table.mb.description": {
+    "message": "Multibanco reference number payable at ATMs or via online banking.",
+    "description": "Translation for availableMethods.table.mb.description"
+  },
+  "availableMethods.table.mw.description": {
+    "message": "Payment via mobile number using the MB WAY app.",
+    "description": "Translation for availableMethods.table.mw.description"
+  },
+  "availableMethods.table.ap.description": {
+    "message": "Payment via Apple Pay on compatible Apple devices.",
+    "description": "Translation for availableMethods.table.ap.description"
+  },
+  "availableMethods.table.gp.description": {
+    "message": "Payment via Google Pay on Android devices and compatible browsers.",
+    "description": "Translation for availableMethods.table.gp.description"
+  },
+  "availableMethods.singleMethod.title": {
+    "message": "Specify a single payment method",
+    "description": "Translation for availableMethods.singleMethod.title"
+  },
+  "availableMethods.singleMethod.description": {
+    "message": "To direct the customer to a specific payment method, use the field",
+    "description": "Translation for availableMethods.singleMethod.description"
+  },
+  "availableMethods.singleMethod.description2": {
+    "message": "in the body of the request.",
+    "description": "Translation for availableMethods.singleMethod.description2"
+  },
+  "availableMethods.multiMethod.title": {
+    "message": "Specify multiple payment methods",
+    "description": "Translation for availableMethods.multiMethod.title"
+  },
+  "availableMethods.multiMethod.description": {
+    "message": "To allow the customer to choose a payment method, use the field",
+    "description": "Translation for availableMethods.multiMethod.description"
+  },
+  "availableMethods.multiMethod.description2": {
+    "message": "with the list of desired codes. This way, the customer can select the method directly on the payment page.",
+    "description": "Translation for availableMethods.multiMethod.description2"
+  },
+  "availableMethods.multiMethod.note": {
+    "message": "When",
+    "description": "Translation for availableMethods.multiMethod.note"
+  },
+  "availableMethods.multiMethod.note2": {
+    "message": "this field is used",
+    "description": "Translation for availableMethods.multiMethod.note2"
+  },
+  "availableMethods.multiMethod.note3": {
+    "message": "it must not be specified. If neither field is provided, the checkout is created using the payment methods available in the integration.",
+    "description": "Translation for availableMethods.multiMethod.note3"
+  },
+  "availableMethods.consultApi": {
+    "message": "Consult API",
+    "description": "Translation for availableMethods.consultApi"
+  },
+  "availableMethods.tabs.request": {
+    "message": "Request",
+    "description": "Translation for availableMethods.tabs.request"
+  },
+  "availableMethods.tabs.response": {
+    "message": "Response",
+    "description": "Translation for availableMethods.tabs.response"
+  },
+  "availableMethods.response.id": {
+    "message": "The response returns the",
+    "description": "Translation for availableMethods.response.id"
+  },
+  "availableMethods.response.id2": {
+    "message": "which identifies the checkout to the API.",
+    "description": "Translation for availableMethods.response.id2"
+  },
+  "availableMethods.response.checkoutUrl": {
+    "message": "The",
+    "description": "Translation for availableMethods.response.checkoutUrl"
+  },
+  "availableMethods.response.checkoutUrl2": {
+    "message": "is the link to access the page and make the payment.",
+    "description": "Translation for availableMethods.response.checkoutUrl2"
+  },
+  "availableMethods.response.paymentId": {
+    "message": "The",
+    "description": "Translation for availableMethods.response.paymentId"
+  },
+  "availableMethods.response.paymentId2": {
+    "message": "is the ID that identifies the payment.",
+    "description": "Translation for availableMethods.response.paymentId2"
+  },
+  "availableMethods.notes.title": {
+    "message": "Notes by method",
+    "description": "Translation for availableMethods.notes.title"
+  },
+  "availableMethods.notes.cc.title": {
+    "message": "Credit/Debit Card",
+    "description": "Translation for availableMethods.notes.cc.title"
+  },
+  "availableMethods.notes.cc.layouts": {
+    "message": "Available in all layouts:",
+    "description": "Translation for availableMethods.notes.cc.layouts"
+  },
+  "availableMethods.notes.cc.layouts.and": {
+    "message": "and",
+    "description": "Translation for availableMethods.notes.cc.layouts.and"
+  },
+  "availableMethods.notes.cc.redirects": {
+    "message": "Supports redirects",
+    "description": "Translation for availableMethods.notes.cc.redirects"
+  },
+  "availableMethods.notes.cc.and": {
+    "message": "and",
+    "description": "Translation for availableMethods.notes.cc.and"
+  },
+  "availableMethods.notes.cc.redirects.embed.redirect": {
+    "message": "The redirect",
+    "description": "Translation for availableMethods.notes.cc.redirects.embed.redirect"
+  },
+  "availableMethods.notes.cc.redirects.embed.redirect.accept": {
+    "message": "is the only one accepted in the layout",
+    "description": "Translation for availableMethods.notes.cc.redirects.embed.redirect.accept"
+  },
+  "availableMethods.notes.mb.title": {
+    "message": "ATM - Multibanco",
+    "description": "Translation for availableMethods.notes.mb.title"
+  },
+  "availableMethods.notes.mb.layouts": {
+    "message": "Available in the layouts:",
+    "description": "Translation for availableMethods.notes.mb.layouts"
+  },
+  "availableMethods.notes.mb.noRedirects": {
+    "message": "Does not support redirects -” once the checkout has been created, a Multibanco reference is generated which is immediately accessible via",
+    "description": "Translation for availableMethods.notes.mb.noRedirects"
+  },
+  "availableMethods.notes.mw.layouts": {
+    "message": "Available in all layouts:",
+    "description": "Translation for availableMethods.notes.mw.layouts"
+  },
+  "availableMethods.notes.mw.redirects": {
+    "message": "Supports redirects",
+    "description": "Translation for availableMethods.notes.mw.redirects"
+  },
+  "availableMethods.notes.mw.and": {
+    "message": "and",
+    "description": "Translation for availableMethods.notes.mw.and"
+  },
+  "availableMethods.notes.ap.layouts": {
+    "message": "Available in the layouts:",
+    "description": "Translation for availableMethods.notes.ap.layouts"
+  },
+  "availableMethods.notes.ap.redirects": {
+    "message": "Supports redirects",
+    "description": "Translation for availableMethods.notes.ap.redirects"
+  },
+  "availableMethods.notes.ap.and": {
+    "message": "and",
+    "description": "Translation for availableMethods.notes.ap.and"
+  },
+  "availableMethods.notes.ap.requirement": {
+    "message": "Requires the user to be on a compatible Apple device (iPhone, iPad, Mac) with Apple Pay set up.",
+    "description": "Translation for availableMethods.notes.ap.requirement"
+  },
+  "availableMethods.notes.gp.layouts": {
+    "message": "Available in the layouts:",
+    "description": "Translation for availableMethods.notes.gp.layouts"
+  },
+  "availableMethods.notes.gp.redirects": {
+    "message": "Supports redirects",
+    "description": "Translation for availableMethods.notes.gp.redirects"
+  },
+  "availableMethods.notes.gp.and": {
+    "message": "and",
+    "description": "Translation for availableMethods.notes.gp.and"
+  },
+  "availableMethods.notes.gp.requirement": {
+    "message": "Requires the user to have Google Pay set up on an Android device or a compatible browser.",
+    "description": "Translation for availableMethods.notes.gp.requirement"
+  },
   "embed.webpage": {
     "message": "Embed in webpage",
     "description": "Translation for embed.webpage"
@@ -559,7 +771,7 @@
     "description": "Translation for embed.redirectParam3"
   },
   "embed.checkoutId": {
-    "message": "The checkout id parameter is automatically appended to the URL at the moment of redirection.",
+    "message": "is automatically appended to the URL at the moment of redirection.",
     "description": "Translation for embed.checkoutId"
   },
   "embed.consultApi": {
@@ -665,6 +877,46 @@
   "embed.idReplacement2": {
     "message": "must be replaced with the id returned in the request response; in the previous example it would be 0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb.",
     "description": "Translation for embed.idReplacement2"
+  },
+  "layouts.title": {
+    "message": "Layouts",
+    "description": "Translation for layouts.title"
+  },
+  "layouts.intro": {
+    "message": "The checkout provides different presentation layouts, adaptable to the intended integration context. The layout is configured via the",
+    "description": "Translation for layouts.intro"
+  },
+  "layouts.intro2": {
+    "message": "parameter in the checkout creation request body.",
+    "description": "Translation for layouts.intro2"
+  },
+  "layouts.parameter": {
+    "message": "Parameter",
+    "description": "Translation for layouts.parameter"
+  },
+  "layouts.web.title": {
+    "message": "Web",
+    "description": "Translation for layouts.web.title"
+  },
+  "layouts.web.description": {
+    "message": "Full page layout for use in desktop and mobile browsers. Suitable for direct redirection of the customer to the payment page.",
+    "description": "Translation for layouts.web.description"
+  },
+  "layouts.embed.title": {
+    "message": "Embedded",
+    "description": "Translation for layouts.embed.title"
+  },
+  "layouts.embed.description": {
+    "message": "Layout optimised for embedding in web pages via iframe. The payment page is presented directly on the merchant's website.",
+    "description": "Translation for layouts.embed.description"
+  },
+  "layouts.inApp.title": {
+    "message": "Mobile App",
+    "description": "Translation for layouts.inApp.title"
+  },
+  "layouts.inApp.description": {
+    "message": "Layout optimised for embedding in mobile applications via the WebView component.",
+    "description": "Translation for layouts.inApp.description"
   },
   "checkouts.index.title": {
     "message": "Home",
@@ -1761,6 +2013,22 @@
   "payments.mbwayRegistration.consultApi2": {
     "message": "Consult API",
     "description": "Translation for payments.mbwayRegistration.consultApi2"
+  },
+  "payments.mbwayRegistration.paymentMethods.parameter": {
+    "message": "In the payment response, in the parameter",
+    "description": "Translation for payments.mbwayRegistration.paymentMethods.parameter"
+  },
+  "payments.mbwayRegistration.paymentMethods.uuid": {
+    "message": "you can find the identifier of the saved payment method.",
+    "description": "Translation for payments.mbwayRegistration.paymentMethods.uuid"
+  },
+  "payments.mbwayRegistration.paymentMethods.customer": {
+    "message": "To retrieve all payment methods associated with the customer, you can do so via the",
+    "description": "Translation for payments.mbwayRegistration.paymentMethods.customer"
+  },
+  "payments.mbwayRegistration.paymentMethods.getCustomerPaymentMethods": {
+    "message": "get payment methods",
+    "description": "Translation for payments.mbwayRegistration.paymentMethods.getCustomerPaymentMethods"
   },
   "payments.mbway.title": {
     "message": "Payment with MB WAY using mobile phone number",
@@ -3045,6 +3313,10 @@
   "terminals.cloud.sendReversal.comparison.fundMovementRefund": {
     "message": "Returns funds",
     "description": "Translation for terminals.cloud.sendReversal.comparison.fundMovementRefund"
+  },
+  "terminals.cloud.sendReversal.basicExample": {
+    "message": "Basic example",
+    "description": "Translation for terminals.cloud.sendReversal.basicExample"
   },
   "terminals.faq.title": {
     "message": "Frequently Asked Questions",

@@ -19,14 +19,14 @@ import TabItem from "@theme/TabItem";
 **1.** <Translate id="customers.getPaymentMethods.example1">Obter os métodos de pagamento armazenados pelo cliente com o</Translate> <em>uuid</em> e2343605-cf46-43de-b20b-9b7d1c95a9b2
 
 <button className="btn-api btn-api--float-right"
-	onClick={() =>
-		ClickShowIframe({
-			idMenuOption: "customer-payment-methods",
-			idOption: "customer-payment-methods/get/customers/{uuid}/paymentMethods"
-		})
-	}
+  onClick={() =>
+    ClickShowIframe({
+      idMenuOption: "customer-payment-methods",
+      idOption: "customer-payment-methods/get/customers/{uuid}/paymentMethods"
+    })
+  }
 >
-	<span><Translate id="customers.getPaymentMethods.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+  <span><Translate id="customers.getPaymentMethods.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
 <Tabs>
@@ -41,26 +41,25 @@ GET /customers/{uuid}/paymentMethods
 
 ```json
 {
-	"apiVersion": "1.0",
-	"date": "2021-12-09T14:54:56+00:00",
-	"success": true,
-	"data": [
-		{
-			"code": "CC",
-			"uuid": "90068f83-7623-4de5-91c7-ac447c504ebf",
-			"brand": "VISA",
-			"last4Digits": "0809",
-			"holder": "Jose Silva",
-			"expiryMonth": "05",
-			"expiryYear": "2026"
-		},
-		{
-			"code": "MW",
-			"uuid": "f1233605-cf46-43de-b20b-9b7d1c95a9b2",
-			"last3Digits": "414",
-			"countryCode": "351"
-		}
-	]
+  "date": "2021-12-09T14:54:56+00:00",
+  "success": true,
+  "data": [
+    {
+      "code": "CC",
+      "uuid": "90068f83-7623-4de5-91c7-ac447c504ebf",
+      "brand": "VISA",
+      "last4Digits": "0809",
+      "holder": "Jose Silva",
+      "expiryMonth": "05",
+      "expiryYear": "2026"
+    },
+    {
+      "code": "MW",
+      "uuid": "f1233605-cf46-43de-b20b-9b7d1c95a9b2",
+      "last3Digits": "414",
+      "countryCode": "351"
+    }
+  ]
 }
 ```
 
@@ -81,20 +80,19 @@ GET /customers/e2343605-cf46-43de-b20b-9b7d1c95a9b2/paymentMethods?type=CC
 
 ```json
 {
-	"apiVersion": "1.0",
-	"date": "2021-12-09T14:54:56+00:00",
-	"success": true,
-	"data": [
-		{
-			"code": "CC",
-			"uuid": "90068f83-7623-4de5-91c7-ac447c504ebf",
-			"brand": "VISA",
-			"last4Digits": "0809",
-			"holder": "Jose Silva",
-			"expiryMonth": "05",
-			"expiryYear": "2026"
-		}
-	]
+  "date": "2021-12-09T14:54:56+00:00",
+  "success": true,
+  "data": [
+    {
+      "code": "CC",
+      "uuid": "90068f83-7623-4de5-91c7-ac447c504ebf",
+      "brand": "VISA",
+      "last4Digits": "0809",
+      "holder": "Jose Silva",
+      "expiryMonth": "05",
+      "expiryYear": "2026"
+    }
+  ]
 }
 ```
 

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-title: Tokenização do método de pagamento
+title: Tokenización de métodos de pago
 description: ''
 hide_table_of_contents: true
 ---
@@ -15,7 +15,7 @@ import TabItem from "@theme/TabItem";
 <p><Translate id="tokenization.intro">A tokenização é o processo que permite armazenar os dados de pagamento confidenciais dos clientes de forma segura por meio da criação de um token.</Translate></p>
 
 :::info
-<Translate id="tokenization.availability">O armazenamento do método de pagamento apenas esta disponível para os</Translate> <strong>pagamentos</strong> <Translate id="tokenization.availability2">com</Translate> <strong>Cartão de Crédito/Débito e MBWay</strong> <Translate id="tokenization.availability3">e no</Translate> <code>layout</code> <strong>basic</strong> <Translate id="tokenization.availability4">e</Translate> <strong>default</strong>.
+<Translate id="tokenization.availability">O armazenamento do método de pagamento apenas esta disponível para os</Translate> <strong>pagamentos</strong> <Translate id="tokenization.availability2">com</Translate> <strong>Cartão de Crédito/Débito e MBWay</strong> <Translate id="tokenization.availability3">e no</Translate> <code>layout</code> <strong>web</strong> <Translate id="tokenization.availability4">e</Translate> <strong>default</strong>.
 :::
 
 <p><Translate id="tokenization.steps">Para criar um token devem ser seguidos os seguintes passos:</Translate></p>
@@ -80,7 +80,6 @@ POST /checkouts
 
 ```json
 {
-	"apiVersion": "1.0",
 	"date": "2021-10-20T11:34:48+01:00",
 	"success": true,
 	"data": {
@@ -122,7 +121,6 @@ GET ​/customers​/{uuid}​/paymentMethods
 
 ```json
 {
-	"apiVersion": "1.0",
 	"date": "2021-09-24T17:57:42+01:00",
 	"success": true,
 	"data": [
@@ -145,7 +143,7 @@ GET ​/customers​/{uuid}​/paymentMethods
 }
 ```
 
-## <Translate id="tokenization.consent.title">Tokenização com consentimento do cliente</Translate>
+# <Translate id="tokenization.consent.title">Tokenização com consentimento do cliente</Translate>
 
 <Tabs>
 <TabItem value="pedido" label={<Translate id="tokenization.consent.tabs.request">Pedido</Translate>}>
@@ -174,7 +172,7 @@ GET ​/customers​/{uuid}​/paymentMethods
 	},
 	"page": {
 		"language": "PT",
-		"layout": "basic" // <== Indicar o layout que permite armazenar o método de pagamento
+		"layout": "web" // <== Indicar o layout que permite armazenar o método de pagamento
 	}
 }
 ```
@@ -184,7 +182,6 @@ GET ​/customers​/{uuid}​/paymentMethods
 
 ```json
 {
-	"apiVersion": "1.0",
 	"date": "2022-01-03T14:16:17+00:00",
 	"success": true,
 	"data": {
