@@ -113,13 +113,13 @@ const config = {
                   changeOrigin: true,
                   pathRewrite: { '^/api-dev-spec': '/luis/paypay/api/docs/api.json' },
                 },
-                {
+                ...(process.env.API_BASE_URL ? [{
                   context: ['/api-spec'],
                   target: process.env.API_BASE_URL,
                   changeOrigin: true,
                   secure: false,
                   pathRewrite: { '^/api-spec': '/api/docs/api.json' },
-                },
+                }] : []),
               ],
             },
           };
