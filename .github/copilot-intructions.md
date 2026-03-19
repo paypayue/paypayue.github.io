@@ -101,8 +101,44 @@ hide_table_of_contents: true   # Used on most pages
 
 ## API Specification (Scalar)
 - Route: `/api`
-- Specification fetched from `API_URL_SPECIFICATION` env var (default: `https://paypay-dev.acin.pt/luis/paypay/api/docs/api.json`)
+- Specification fetched from `API_URL_SPECIFICATION` env var (default: `/api-dev-spec`, resolved via dev proxy)
 - Configured in `docusaurus.config.js` under the `@scalar/docusaurus` plugin
+
+---
+
+## Dev Proxy (webpack devServer)
+A `devProxy` plugin is defined in `docusaurus.config.js` to bypass CORS when loading the OpenAPI spec during local development.
+
+**Important:** the proxy only works with `npm start` (webpack dev server). It has **no effect** with `npm run serve` (static file server) or on GitHub Pages (static hosting).
+
+### Current proxy routes
+| Context path | Target | Rewritten to |
+|---|---|---|
+| `/api-dev-spec` | `https://paypay-dev.acin.pt` | `/luis/paypay/api/docs/api.json` |
+
+### `apiUrlSpecification` logic
+```js
+const apiUrlSpecification = process.env.API_URL_SPECIFICATION || '/api-dev-spec';
+```
+- When `API_URL_SPECIFICATION` is set → use it directly (bypasses proxy, used in CI/production deployments)
+- When not set → uses `/api-dev-spec` which is resolved by the webpack proxy to `paypay-dev.acin.pt`
+
+### Adding a new proxy target (e.g. for a different environment)
+1. Add a new entry to the `proxy` array in the `devProxy` plugin
+2. Use a conditional spread if the target depends on an env var — e.g.:
+```js
+...(process.env.API_BASE_URL ? [{
+  context: ['/api-spec'],
+  target: process.env.API_BASE_URL,
+  changeOrigin: true,
+  secure: false,
+  pathRewrite: { '^/api-spec': '/api/docs/api.json' },
+}] : []),
+```
+3. Update `apiUrlSpecification` to point to the new context path accordingly
+
+### Why `secure: false`?
+Required when proxying to HTTPS servers with self-signed or untrusted certificates. Safe for local dev only.
 
 ---
 
@@ -110,7 +146,7 @@ hide_table_of_contents: true   # Used on most pages
 | Variable | Default | Purpose |
 |---|---|---|
 | `SITE` | `http://localhost:3000` | Production site URL |
-| `API_URL_SPECIFICATION` | `https://paypay-dev.acin.pt/luis/paypay/api/docs/api.json` | OpenAPI spec URL |
+| `API_URL_SPECIFICATION` | `/api-dev-spec` (proxy) | OpenAPI spec URL — when set, used directly (bypasses proxy) |
 | `PAYPAY_URL` | `https://paypay-dev.acin.pt/luis/paypay` | PayPay main site URL |
 | `FOOTER_ELOGIOS` | `https://www.paypay.pt/elogios-sugestoes-reclamacoes` | Footer link |
 | `FOOTER_POLITICAS_PRIVACIDADE` | `https://www.paypay.pt/politica-de-privacidade` | Footer link |
