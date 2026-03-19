@@ -100,9 +100,9 @@ const config = {
   ],
 
   plugins: [
-    function proxy() {
+    function devProxy() {
       return {
-        name: 'proxy',
+        name: 'dev-proxy',
         configureWebpack() {
           return {
             devServer: {
