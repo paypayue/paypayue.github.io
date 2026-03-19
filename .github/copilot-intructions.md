@@ -101,7 +101,7 @@ hide_table_of_contents: true   # Used on most pages
 
 ## API Specification (Scalar)
 - Route: `/api`
-- Specification fetched from `API_BASE_URL` env var (default: `http://10.11.16.38`)
+- Specification fetched from `API_URL_SPECIFICATION` env var (default: `https://paypay-dev.acin.pt/luis/paypay/api/docs/api.json`)
 - Configured in `docusaurus.config.js` under the `@scalar/docusaurus` plugin
 
 ---
@@ -110,8 +110,8 @@ hide_table_of_contents: true   # Used on most pages
 | Variable | Default | Purpose |
 |---|---|---|
 | `SITE` | `http://localhost:3000` | Production site URL |
-| `API_BASE_URL` | `http://10.11.16.38` | OpenAPI spec URL |
-| `PAYPAY_URL` | `http://10.11.16.38/luis/paypay` | PayPay main site URL |
+| `API_URL_SPECIFICATION` | `https://paypay-dev.acin.pt/luis/paypay/api/docs/api.json` | OpenAPI spec URL |
+| `PAYPAY_URL` | `https://paypay-dev.acin.pt/luis/paypay` | PayPay main site URL |
 | `FOOTER_ELOGIOS` | `https://www.paypay.pt/elogios-sugestoes-reclamacoes` | Footer link |
 | `FOOTER_POLITICAS_PRIVACIDADE` | `https://www.paypay.pt/politica-de-privacidade` | Footer link |
 | `FOOTER_POLITICAS_SEGURANCA` | `https://www.paypay.pt/politica-de-seguranca` | Footer link |

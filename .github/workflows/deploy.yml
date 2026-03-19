@@ -28,7 +28,7 @@ jobs:
               env:
                   SITE: ${{vars.SITE}}
                   PROJECT_NAME: ${{vars.PROJECT_NAME}}
-                  API_BASE_URL: ${{vars.API_BASE_URL}}
+                  API_URL_SPECIFICATION: ${{vars.API_URL_SPECIFICATION}}
                   FOOTER_ELOGIOS: ${{vars.FOOTER_ELOGIOS}}
                   FOOTER_POLITICAS_PRIVACIDADE: ${{vars.FOOTER_POLITICAS_PRIVACIDADE}}
                   FOOTER_POLITICAS_SEGURANCA: ${{vars.FOOTER_POLITICAS_SEGURANCA}}
