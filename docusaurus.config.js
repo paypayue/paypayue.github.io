@@ -117,6 +117,7 @@ const config = {
                   context: ['/api-spec'],
                   target: process.env.API_BASE_URL,
                   changeOrigin: true,
+                  secure: false,
                   pathRewrite: { '^/api-spec': '/api/docs/api.json' },
                 },
               ],
