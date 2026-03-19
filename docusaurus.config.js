@@ -112,7 +112,7 @@ const config = {
                   target: 'https://paypay-dev.acin.pt',
                   changeOrigin: true,
                   pathRewrite: { '^/api-dev-spec': '/luis/paypay/api/docs/api.json' },
-                }
+                },
               ],
             },
           };
