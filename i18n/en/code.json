@@ -4563,7 +4563,7 @@
     "description": "Translation for integrations.prestashop.intro.requirement1"
   },
   "integrations.prestashop.intro.requirement2": {
-    "message": "Must have an online store with PrestaShop 8",
+    "message": "Must have an online store with PrestaShop",
     "description": "Translation for integrations.prestashop.intro.requirement2"
   },
   "integrations.prestashop.intro.requirement3": {
