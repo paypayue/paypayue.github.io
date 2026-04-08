@@ -4555,7 +4555,7 @@
     "description": "Translation for integrations.prestashop.intro.requirement1"
   },
   "integrations.prestashop.intro.requirement2": {
-    "message": "Deverá dispor de uma loja online com PrestaShop 8",
+    "message": "Deverá dispor de uma loja online com PrestaShop",
     "description": "Translation for integrations.prestashop.intro.requirement2"
   },
   "integrations.prestashop.intro.requirement3": {
