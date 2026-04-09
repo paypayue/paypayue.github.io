@@ -1923,7 +1923,7 @@
     "description": "Translation for guides.intro.method2"
   },
   "guides.intro.method3": {
-    "message": "Direct payment with specified payment method – e.g.: Payment via mobile number MB WAY or registered card (tokenisation);",
+    "message": "Direct payment with specified payment method – e.g.: Payment via mobile number MB WAY;",
     "description": "Translation for guides.intro.method3"
   },
   "guides.intro.method4": {
