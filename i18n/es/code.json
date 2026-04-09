@@ -1923,7 +1923,7 @@
     "description": "Translation for guides.intro.method2"
   },
   "guides.intro.method3": {
-    "message": "Pago directo con especificación del método de pago - Ej.: Pago con número de teléfono móvil MB WAY o tarjeta registrada (tokenización);",
+    "message": "Pago directo con especificación del método de pago - Ej.: Pago con número de teléfono móvil MB WAY;",
     "description": "Translation for guides.intro.method3"
   },
   "guides.intro.method4": {

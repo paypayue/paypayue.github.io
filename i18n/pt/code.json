@@ -1915,7 +1915,7 @@
     "description": "Translation for guides.intro.method2"
   },
   "guides.intro.method3": {
-    "message": "Pagamento direto com especificação do método de pagamento - Ex: Pagamento com número de telemóvel MB WAY ou cartão registado(tokenização);",
+    "message": "Pagamento direto com especificação do método de pagamento - Ex: Pagamento com número de telemóvel MB WAY;",
     "description": "Translation for guides.intro.method3"
   },
   "guides.intro.method4": {
