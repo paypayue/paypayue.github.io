@@ -4938,10 +4938,6 @@
     "message": "Diseño basado en bloques en la página de checkout de WooCommerce",
     "description": "Translation for integrations.woocommerce.knownIssues.link1"
   },
-  "integrations.woocommerce.knownIssues.link2": {
-    "message": "Almacenamiento de pedidos de alto rendimiento",
-    "description": "Translation for integrations.woocommerce.knownIssues.link2"
-  },
   "integrations.woocommerce.knownIssues.blockLayout": {
     "message": "Diseño basado en bloques en la página de checkout de WooCommerce",
     "description": "Translation for integrations.woocommerce.knownIssues.blockLayout"
@@ -4961,14 +4957,6 @@
   "integrations.woocommerce.knownIssues.blockLayoutStep3": {
     "message": "Si la página de checkout utiliza el diseño de checkout en bloques, aparecerá un aviso en el panel derecho de la página de edición. Haga clic en \"Cambiar al diseño clásico\" y, a continuación, haga clic en \"Actualizar\" para guardar los cambios. Ahora deberían aparecer las formas de pago al realizar el checkout.",
     "description": "Translation for integrations.woocommerce.knownIssues.blockLayoutStep3"
-  },
-  "integrations.woocommerce.knownIssues.highPerformance": {
-    "message": "Almacenamiento de pedidos de alto rendimiento",
-    "description": "Translation for integrations.woocommerce.knownIssues.highPerformance"
-  },
-  "integrations.woocommerce.knownIssues.highPerformanceDescription": {
-    "message": "El plugin WooCommerce de PayPay no es compatible con el almacenamiento de pedidos de alto rendimiento. Si estás utilizando este tipo de almacenamiento, es necesario cambiar a \"WordPress posts storage (legacy)\" y guardar los cambios.",
-    "description": "Translation for integrations.woocommerce.knownIssues.highPerformanceDescription"
   },
   "integrations.woocommerce.payment.login": {
     "message": "Para realizar la compra de un producto/servicio, el cliente deberá iniciar sesión en la tienda WooCommerce.",
