@@ -4938,10 +4938,6 @@
     "message": "Block-based layout on the WooCommerce checkout page",
     "description": "Translation for integrations.woocommerce.knownIssues.link1"
   },
-  "integrations.woocommerce.knownIssues.link2": {
-    "message": "High-performance order storage",
-    "description": "Translation for integrations.woocommerce.knownIssues.link2"
-  },
   "integrations.woocommerce.knownIssues.blockLayout": {
     "message": "Block-based layout on the WooCommerce checkout page",
     "description": "Translation for integrations.woocommerce.knownIssues.blockLayout"
@@ -4961,14 +4957,6 @@
   "integrations.woocommerce.knownIssues.blockLayoutStep3": {
     "message": "If the checkout page uses the block-based layout, a notice will appear on the right panel of the editor. Click \"Switch to classic layout\" and then click \"Update\" to save the changes. Payment methods should now appear at checkout.",
     "description": "Translation for integrations.woocommerce.knownIssues.blockLayoutStep3"
-  },
-  "integrations.woocommerce.knownIssues.highPerformance": {
-    "message": "High-performance order storage",
-    "description": "Translation for integrations.woocommerce.knownIssues.highPerformance"
-  },
-  "integrations.woocommerce.knownIssues.highPerformanceDescription": {
-    "message": "The PayPay WooCommerce plugin is not compatible with high-performance order storage. If you are using this type of storage, you need to switch to \"WordPress posts storage (legacy)\" and save the changes.",
-    "description": "Translation for integrations.woocommerce.knownIssues.highPerformanceDescription"
   },
   "integrations.woocommerce.payment.login": {
     "message": "To purchase a product/service, the customer must log in to the WooCommerce store.",
