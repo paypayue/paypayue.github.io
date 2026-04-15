@@ -6941,5 +6941,61 @@
   "copyright.elogios": {
     "message": "Compliments, suggestions, and complaints",
     "description": "Translation for copyright.elogios"
+  },
+  "integrations.woocommerce.features.paymentMethods": {
+    "message": "Available payment methods:",
+    "description": "Translation for integrations.woocommerce.features.paymentMethods"
+  },
+  "integrations.woocommerce.features.creditCard": {
+    "message": "Credit/Debit Card",
+    "description": "Translation for integrations.woocommerce.features.creditCard"
+  },
+  "integrations.woocommerce.features.mbway": {
+    "message": "MB WAY",
+    "description": "Translation for integrations.woocommerce.features.mbway"
+  },
+  "integrations.woocommerce.features.multibanco": {
+    "message": "MULTIBANCO",
+    "description": "Translation for integrations.woocommerce.features.multibanco"
+  },
+  "integrations.woocommerce.features.languages": {
+    "message": "Available languages:",
+    "description": "Translation for integrations.woocommerce.features.languages"
+  },
+  "integrations.woocommerce.features.portuguese": {
+    "message": "Portuguese",
+    "description": "Translation for integrations.woocommerce.features.portuguese"
+  },
+  "integrations.woocommerce.features.english": {
+    "message": "English",
+    "description": "Translation for integrations.woocommerce.features.english"
+  },
+  "integrations.woocommerce.features.compatibility": {
+    "message": "Compatible with:",
+    "description": "Translation for integrations.woocommerce.features.compatibility"
+  },
+  "integrations.woocommerce.features.compatibility.hpos": {
+    "message": "High-Performance Order Storage (HPOS)",
+    "description": "Translation for integrations.woocommerce.features.compatibility.hpos"
+  },
+  "integrations.woocommerce.features.compatibility.blocks": {
+    "message": "Block-based layout on the checkout page",
+    "description": "Translation for integrations.woocommerce.features.compatibility.blocks"
+  },
+  "integrations.woocommerce.features.integratedCheckout": {
+    "message": "Payment checkout integrated in the store.",
+    "description": "Translation for integrations.woocommerce.features.integratedCheckout"
+  },
+  "integrations.woocommerce.features.realTimeStatus": {
+    "message": "Real-time payment status communication.",
+    "description": "Translation for integrations.woocommerce.features.realTimeStatus"
+  },
+  "integrations.woocommerce.features.testMode": {
+    "message": "Possibility to enable test mode, to simulate payments in a test store",
+    "description": "Translation for integrations.woocommerce.features.testMode"
+  },
+  "integrations.woocommerce.features.testModeWarning": {
+    "message": "Do not use in production store",
+    "description": "Translation for integrations.woocommerce.features.testModeWarning"
   }
 }

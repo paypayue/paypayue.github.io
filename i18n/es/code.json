@@ -6941,5 +6941,61 @@
   "copyright.elogios": {
     "message": "Elogios, sugerencias y reclamaciones",
     "description": "Translation for copyright.elogios"
+  },
+  "integrations.woocommerce.features.paymentMethods": {
+    "message": "Métodos de pago disponibles:",
+    "description": "Translation for integrations.woocommerce.features.paymentMethods"
+  },
+  "integrations.woocommerce.features.creditCard": {
+    "message": "Tarjeta de Crédito/Débito",
+    "description": "Translation for integrations.woocommerce.features.creditCard"
+  },
+  "integrations.woocommerce.features.mbway": {
+    "message": "MB WAY",
+    "description": "Translation for integrations.woocommerce.features.mbway"
+  },
+  "integrations.woocommerce.features.multibanco": {
+    "message": "MULTIBANCO",
+    "description": "Translation for integrations.woocommerce.features.multibanco"
+  },
+  "integrations.woocommerce.features.languages": {
+    "message": "Idiomas disponibles:",
+    "description": "Translation for integrations.woocommerce.features.languages"
+  },
+  "integrations.woocommerce.features.portuguese": {
+    "message": "Portugués",
+    "description": "Translation for integrations.woocommerce.features.portuguese"
+  },
+  "integrations.woocommerce.features.english": {
+    "message": "Inglés",
+    "description": "Translation for integrations.woocommerce.features.english"
+  },
+  "integrations.woocommerce.features.compatibility": {
+    "message": "Compatible con:",
+    "description": "Translation for integrations.woocommerce.features.compatibility"
+  },
+  "integrations.woocommerce.features.compatibility.hpos": {
+    "message": "Almacenamiento de pedidos de alto rendimiento (HPOS)",
+    "description": "Translation for integrations.woocommerce.features.compatibility.hpos"
+  },
+  "integrations.woocommerce.features.compatibility.blocks": {
+    "message": "Diseño basado en bloques en la página de pago",
+    "description": "Translation for integrations.woocommerce.features.compatibility.blocks"
+  },
+  "integrations.woocommerce.features.integratedCheckout": {
+    "message": "Pago integrado en la tienda.",
+    "description": "Translation for integrations.woocommerce.features.integratedCheckout"
+  },
+  "integrations.woocommerce.features.realTimeStatus": {
+    "message": "Comunicación del estado del pago en tiempo real.",
+    "description": "Translation for integrations.woocommerce.features.realTimeStatus"
+  },
+  "integrations.woocommerce.features.testMode": {
+    "message": "Posibilidad de habilitar el modo de prueba, para simular pagos en una tienda de pruebas",
+    "description": "Translation for integrations.woocommerce.features.testMode"
+  },
+  "integrations.woocommerce.features.testModeWarning": {
+    "message": "No usar en la tienda de producción",
+    "description": "Translation for integrations.woocommerce.features.testModeWarning"
   }
 }
