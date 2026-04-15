@@ -6921,5 +6921,61 @@
   "soap.webhooks.subscribe.message": {
     "message": "Mensagem de erro/sucesso",
     "description": "Translation for soap.webhooks.subscribe.message"
+  },
+  "integrations.woocommerce.features.paymentMethods": {
+    "message": "Formas de pagamento disponíveis:",
+    "description": "Translation for integrations.woocommerce.features.paymentMethods"
+  },
+  "integrations.woocommerce.features.creditCard": {
+    "message": "Cartão de Credito/Débito",
+    "description": "Translation for integrations.woocommerce.features.creditCard"
+  },
+  "integrations.woocommerce.features.mbway": {
+    "message": "MB WAY",
+    "description": "Translation for integrations.woocommerce.features.mbway"
+  },
+  "integrations.woocommerce.features.multibanco": {
+    "message": "MULTIBANCO",
+    "description": "Translation for integrations.woocommerce.features.multibanco"
+  },
+  "integrations.woocommerce.features.languages": {
+    "message": "Idiomas disponíveis:",
+    "description": "Translation for integrations.woocommerce.features.languages"
+  },
+  "integrations.woocommerce.features.portuguese": {
+    "message": "Português",
+    "description": "Translation for integrations.woocommerce.features.portuguese"
+  },
+  "integrations.woocommerce.features.english": {
+    "message": "Inglês",
+    "description": "Translation for integrations.woocommerce.features.english"
+  },
+  "integrations.woocommerce.features.compatibility": {
+    "message": "Compatibilidade com:",
+    "description": "Translation for integrations.woocommerce.features.compatibility"
+  },
+  "integrations.woocommerce.features.compatibility.hpos": {
+    "message": "Armazenamento de encomendas de alto desempenho (HPOS)",
+    "description": "Translation for integrations.woocommerce.features.compatibility.hpos"
+  },
+  "integrations.woocommerce.features.compatibility.blocks": {
+    "message": "Checkout em blocos (WooCommerce Blocks)",
+    "description": "Translation for integrations.woocommerce.features.compatibility.blocks"
+  },
+  "integrations.woocommerce.features.integratedCheckout": {
+    "message": "Checkout de pagamento integrado na loja.",
+    "description": "Translation for integrations.woocommerce.features.integratedCheckout"
+  },
+  "integrations.woocommerce.features.realTimeStatus": {
+    "message": "Comunicação do estado do pagamento em tempo real.",
+    "description": "Translation for integrations.woocommerce.features.realTimeStatus"
+  },
+  "integrations.woocommerce.features.testMode": {
+    "message": "Possibilidade de habilitar o modo de teste, para simular pagamentos numa loja de testes",
+    "description": "Translation for integrations.woocommerce.features.testMode"
+  },
+  "integrations.woocommerce.features.testModeWarning": {
+    "message": "Não usar na loja de produção",
+    "description": "Translation for integrations.woocommerce.features.testModeWarning"
   }
 }
