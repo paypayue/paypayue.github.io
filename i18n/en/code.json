@@ -571,11 +571,11 @@
     "description": "Translation for availableMethods.table.cc.description"
   },
   "availableMethods.table.mb": {
-    "message": "ATM - Multibanco",
+    "message": "ATM - MULTIBANCO",
     "description": "Translation for availableMethods.table.mb"
   },
   "availableMethods.table.mb.description": {
-    "message": "Multibanco reference number payable at ATMs or via online banking.",
+    "message": "MULTIBANCO reference number payable at ATMs or via online banking.",
     "description": "Translation for availableMethods.table.mb.description"
   },
   "availableMethods.table.mw.description": {
@@ -695,7 +695,7 @@
     "description": "Translation for availableMethods.notes.cc.redirects.embed.redirect.accept"
   },
   "availableMethods.notes.mb.title": {
-    "message": "ATM - Multibanco",
+    "message": "ATM - MULTIBANCO",
     "description": "Translation for availableMethods.notes.mb.title"
   },
   "availableMethods.notes.mb.layouts": {
@@ -703,7 +703,7 @@
     "description": "Translation for availableMethods.notes.mb.layouts"
   },
   "availableMethods.notes.mb.noRedirects": {
-    "message": "Does not support redirects -” once the checkout has been created, a Multibanco reference is generated which is immediately accessible via",
+    "message": "Does not support redirects -” once the checkout has been created, a MULTIBANCO reference is generated which is immediately accessible via",
     "description": "Translation for availableMethods.notes.mb.noRedirects"
   },
   "availableMethods.notes.mw.layouts": {

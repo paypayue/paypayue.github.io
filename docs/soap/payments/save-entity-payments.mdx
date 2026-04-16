@@ -13,7 +13,7 @@ import Translate from '@docusaurus/Translate';
 
 ### saveEntityPayments
 
-<Translate id="soap.payments.saveEntityPayments.description">Este método permite enviar referências multibanco emitidas localmente por uma aplicação com gama de referências configurada.</Translate>
+<Translate id="soap.payments.saveEntityPayments.description">Este método permite enviar referências MULTIBANCO emitidas localmente por uma aplicação com gama de referências configurada.</Translate>
 
 #### <Translate id="soap.payments.saveEntityPayments.requestParams">Parâmetros do pedido</Translate>
 
@@ -26,7 +26,7 @@ import Translate from '@docusaurus/Translate';
 | **- date** | String | <Translate id="soap.payments.saveEntityPayments.date">Data de acesso</Translate> |
 | **- nif** | String | <Translate id="soap.payments.saveEntityPayments.nif">NIF da entidade</Translate> |
 | **paymentReferences** | RequestPaymentReference[]  | <Translate id="soap.payments.saveEntityPayments.paymentReferences">Lista de referências de pagamento</Translate> |
-| **- referenceEntity** | String | <Translate id="soap.payments.saveEntityPayments.referenceEntity">Entidade multibanco (5 dígitos)</Translate> |
+| **- referenceEntity** | String | <Translate id="soap.payments.saveEntityPayments.referenceEntity">Entidade MULTIBANCO (5 dígitos)</Translate> |
 | **- reference** | String | <Translate id="soap.payments.saveEntityPayments.reference">Número da referência (9 dígitos = 7 dígitos da gama + 2 checkdigits)</Translate> |
 | **- amount** | Int | <Translate id="soap.payments.saveEntityPayments.amount">Montante da referência (em cêntimos, ex: 1000=10,00EUR)</Translate> |
 | **- creationDate** | String | <Translate id="soap.payments.saveEntityPayments.creationDate">Data de emissão da referência</Translate> |
@@ -51,5 +51,5 @@ import Translate from '@docusaurus/Translate';
 | **paymentReferenceErrors** | ResponsePaymentReferenceError[] | Lista de detalhes de pagamentos |
 | **- errorCode** | String | Código de erro  |
 | **- errorMessage** | String | Mensagem do erro  |
-| **- referenceEntity** | String | Entidade multibanco (5 dígitos) |
+| **- referenceEntity** | String | Entidade MULTIBANCO (5 dígitos) |
 | **- reference** | String | Referência do pagamento |

@@ -571,11 +571,11 @@
     "description": "Translation for availableMethods.table.cc.description"
   },
   "availableMethods.table.mb": {
-    "message": "Cajero Automático - Multibanco",
+    "message": "Cajero Automático - MULTIBANCO",
     "description": "Translation for availableMethods.table.mb"
   },
   "availableMethods.table.mb.description": {
-    "message": "Generación de referencia Multibanco pagadera en cajeros automáticos o a través de la banca online.",
+    "message": "Generación de referencia MULTIBANCO pagadera en cajeros automáticos o a través de la banca online.",
     "description": "Translation for availableMethods.table.mb.description"
   },
   "availableMethods.table.mw.description": {
@@ -695,7 +695,7 @@
     "description": "Translation for availableMethods.notes.cc.redirects.embed.redirect.accept"
   },
   "availableMethods.notes.mb.title": {
-    "message": "Cajero Automático - Multibanco",
+    "message": "Cajero Automático - MULTIBANCO",
     "description": "Translation for availableMethods.notes.mb.title"
   },
   "availableMethods.notes.mb.layouts": {
@@ -703,7 +703,7 @@
     "description": "Translation for availableMethods.notes.mb.layouts"
   },
   "availableMethods.notes.mb.noRedirects": {
-    "message": "No admite redireccionamientos — tras crear el checkout, se genera una referencia Multibanco a la que se puede acceder inmediatamente a través de",
+    "message": "No admite redireccionamientos — tras crear el checkout, se genera una referencia MULTIBANCO a la que se puede acceder inmediatamente a través de",
     "description": "Translation for availableMethods.notes.mb.noRedirects"
   },
   "availableMethods.notes.mw.layouts": {
