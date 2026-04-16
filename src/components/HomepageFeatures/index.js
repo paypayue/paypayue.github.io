@@ -86,7 +86,7 @@ export default function HomepageFeatures() {
                 </p>
                 <p className={styles["features__card-description"]}>
                   <Translate id="homepage.integracoesDescription">
-                    A PayPay disponibiliza diversas integrações e plugins gratuitos que permitem unir os serviços de pagamento, por Multibanco, Cartão de Crédito/Débito e MB WAY, com lojas de e-commerce e softwares de faturação.
+                    A PayPay disponibiliza diversas integrações e plugins gratuitos que permitem unir os serviços de pagamento, por MULTIBANCO, Cartão de Crédito/Débito e MB WAY, com lojas de e-commerce e softwares de faturação.
                   </Translate>
                 </p>
                 <Link className={styles["features__card-link"]} to='/docs/integrations/intro'>

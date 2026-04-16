@@ -33,7 +33,7 @@
     "message": "Integrações"
   },
   "homepage.integracoesDescription": {
-    "message": "A PayPay disponibiliza diversas integrações e plugins gratuitos que permitem unir os serviços de pagamento, por Multibanco, Cartão de Crédito/Débito e MB WAY, com lojas de e-commerce e softwares de faturação."
+    "message": "A PayPay disponibiliza diversas integrações e plugins gratuitos que permitem unir os serviços de pagamento, por MULTIBANCO, Cartão de Crédito/Débito e MB WAY, com lojas de e-commerce e softwares de faturação."
   },
   "theme.NavBar.navAriaLabel": {
     "message": "Navegação principal",
@@ -563,11 +563,11 @@
     "description": "Translation for availableMethods.table.cc.description"
   },
   "availableMethods.table.mb": {
-    "message": "Multibanco",
+    "message": "MULTIBANCO",
     "description": "Translation for availableMethods.table.mb"
   },
   "availableMethods.table.mb.description": {
-    "message": "Geração de referência Multibanco pagável em terminais ATM ou homebanking.",
+    "message": "Geração de referência MULTIBANCO pagável em terminais ATM ou homebanking.",
     "description": "Translation for availableMethods.table.mb.description"
   },
   "availableMethods.table.mw.description": {
@@ -687,7 +687,7 @@
     "description": "Translation for availableMethods.notes.cc.redirects.embed.redirect.accept"
   },
   "availableMethods.notes.mb.title": {
-    "message": "Multibanco",
+    "message": "MULTIBANCO",
     "description": "Translation for availableMethods.notes.mb.title"
   },
   "availableMethods.notes.mb.layouts": {
@@ -695,7 +695,7 @@
     "description": "Translation for availableMethods.notes.mb.layouts"
   },
   "availableMethods.notes.mb.noRedirects": {
-    "message": "Não suporta redirecionamentos — após a criação do checkout é gerada uma referência Multibanco imediatamente acessível via",
+    "message": "Não suporta redirecionamentos — após a criação do checkout é gerada uma referência MULTIBANCO imediatamente acessível via",
     "description": "Translation for availableMethods.notes.mb.noRedirects"
   },
   "availableMethods.notes.mw.layouts": {
@@ -2183,11 +2183,11 @@
     "description": "Translation for payments.multibanco.process"
   },
   "payments.multibanco.step1": {
-    "message": "Geração de referência Multibanco;",
+    "message": "Geração de referência MULTIBANCO;",
     "description": "Translation for payments.multibanco.step1"
   },
   "payments.multibanco.step2": {
-    "message": "O utilizador paga a referência no Multibanco/Homebanking;",
+    "message": "O utilizador paga a referência no MULTIBANCO/Homebanking;",
     "description": "Translation for payments.multibanco.step2"
   },
   "payments.multibanco.step3": {
@@ -2199,11 +2199,11 @@
     "description": "Translation for payments.multibanco.step4"
   },
   "payments.multibanco.flowDescription": {
-    "message": "O fluxo seguinte ilustra o funcionamento do pagamento por Multibanco:",
+    "message": "O fluxo seguinte ilustra o funcionamento do pagamento por MULTIBANCO:",
     "description": "Translation for payments.multibanco.flowDescription"
   },
   "payments.multibanco.section1": {
-    "message": "1. Gerar referência Multibanco",
+    "message": "1. Gerar referência MULTIBANCO",
     "description": "Translation for payments.multibanco.section1"
   },
   "payments.multibanco.consultApi": {
@@ -2275,11 +2275,11 @@
     "description": "Translation for sandbox.requirements.terminals"
   },
   "sandbox.requirements.mbReference.title": {
-    "message": "Pagamento de referências Multibanco",
+    "message": "Pagamento de referências MULTIBANCO",
     "description": "Translation for sandbox.requirements.mbReference.title"
   },
   "sandbox.requirements.mbReference.part1": {
-    "message": "Caso seja pretendido colocar como pagas as referências multibanco é necessário indicar-nos quais e enviar para o email",
+    "message": "Caso seja pretendido colocar como pagas as referências MULTIBANCO é necessário indicar-nos quais e enviar para o email",
     "description": "Translation for sandbox.requirements.mbReference.part1"
   },
   "sandbox.environments.title": {
@@ -4483,7 +4483,7 @@
     "description": "Translation for integrations.intro.viewGuide"
   },
   "integrations.intro.description": {
-    "message": "A PayPay disponibiliza diversas integrações e plugins gratuitos que permitem unir os serviços de pagamento, por Multibanco, Cartão de Crédito/Débito e MB WAY, com lojas de e-commerce e softwares de faturação.",
+    "message": "A PayPay disponibiliza diversas integrações e plugins gratuitos que permitem unir os serviços de pagamento, por MULTIBANCO, Cartão de Crédito/Débito e MB WAY, com lojas de e-commerce e softwares de faturação.",
     "description": "Translation for integrations.intro.description"
   },
   "integrations.intro.download": {
@@ -4511,7 +4511,7 @@
     "description": "Translation for integrations.prestashop.features.mbway"
   },
   "integrations.prestashop.features.multibanco": {
-    "message": "Multibanco",
+    "message": "MULTIBANCO",
     "description": "Translation for integrations.prestashop.features.multibanco"
   },
   "integrations.prestashop.features.languages": {
@@ -4571,11 +4571,11 @@
     "description": "Translation for integrations.prestashop.payment.intro"
   },
   "integrations.prestashop.payment.multibanco": {
-    "message": "Ao selecionar a opção 'Multibanco' e encomendar é gerada a referência para pagamento como valor exato da encomenda. Nesta fase o pagamento encontra-se no estado 'Aguardando pagamento'.",
+    "message": "Ao selecionar a opção 'MULTIBANCO' e encomendar é gerada a referência para pagamento como valor exato da encomenda. Nesta fase o pagamento encontra-se no estado 'Aguardando pagamento'.",
     "description": "Translation for integrations.prestashop.payment.multibanco"
   },
   "integrations.prestashop.payment.afterPayment": {
-    "message": "Após efetuar o pagamento numa caixa multibanco ou homebanking, aceda ao histórico de encomendas e confirme o estado da encomenda que deverá estar no estado 'Pago'.",
+    "message": "Após efetuar o pagamento numa caixa MULTIBANCO ou homebanking, aceda ao histórico de encomendas e confirme o estado da encomenda que deverá estar no estado 'Pago'.",
     "description": "Translation for integrations.prestashop.payment.afterPayment"
   },
   "integrations.prestashop.payment.creditCard": {
@@ -4627,7 +4627,7 @@
     "description": "Translation for integrations.prestashop.config.step5"
   },
   "integrations.prestashop.config.infoMessage": {
-    "message": "A sua loja agora está apta para gerar e fornecer os dados de pagamento aos seus clientes, em tempo real, de acordo com o método de pagamento escolhido (Multibanco, Cartão de Crédito/Débito e MB WAY).",
+    "message": "A sua loja agora está apta para gerar e fornecer os dados de pagamento aos seus clientes, em tempo real, de acordo com o método de pagamento escolhido (MULTIBANCO, Cartão de Crédito/Débito e MB WAY).",
     "description": "Translation for integrations.prestashop.config.infoMessage"
   },
   "integrations.prestashop.config.infoMessage2": {
@@ -4715,7 +4715,7 @@
     "description": "Translation for integrations.prestashop.v17.payment.intro"
   },
   "integrations.prestashop.v17.payment.multibanco": {
-    "message": "Ao selecionar a opção 'Multibanco', é gerada a referência para pagamento como valor exato da encomenda. Nesta área poderá consultar o resumo da sua compra.",
+    "message": "Ao selecionar a opção 'MULTIBANCO', é gerada a referência para pagamento como valor exato da encomenda. Nesta área poderá consultar o resumo da sua compra.",
     "description": "Translation for integrations.prestashop.v17.payment.multibanco"
   },
   "integrations.prestashop.v17.payment.awaitingPayment": {
@@ -4723,7 +4723,7 @@
     "description": "Translation for integrations.prestashop.v17.payment.awaitingPayment"
   },
   "integrations.prestashop.v17.payment.afterPayment": {
-    "message": "Após efetuar o pagamento numa caixa multibanco ou homebanking, aceda ao histórico de encomendas e confirme o estado da encomenda que deverá estar no estado 'Pago'. O pagamento poderá levar até 12 horas úteis a ser processado.",
+    "message": "Após efetuar o pagamento numa caixa MULTIBANCO ou homebanking, aceda ao histórico de encomendas e confirme o estado da encomenda que deverá estar no estado 'Pago'. O pagamento poderá levar até 12 horas úteis a ser processado.",
     "description": "Translation for integrations.prestashop.v17.payment.afterPayment"
   },
   "integrations.prestashop.v17.payment.creditCard": {
@@ -4779,7 +4779,7 @@
     "description": "Translation for integrations.prestashop.v17.config.step5"
   },
   "integrations.prestashop.v17.config.infoMessage": {
-    "message": "A sua loja agora está apta para gerar e fornecer os dados de pagamento aos seus clientes, em tempo real, de acordo com o método de pagamento escolhido (Multibanco, Cartão de Crédito/Débito e MB WAY).",
+    "message": "A sua loja agora está apta para gerar e fornecer os dados de pagamento aos seus clientes, em tempo real, de acordo com o método de pagamento escolhido (MULTIBANCO, Cartão de Crédito/Débito e MB WAY).",
     "description": "Translation for integrations.prestashop.v17.config.infoMessage"
   },
   "integrations.prestashop.v17.config.infoMessage2": {
@@ -4871,7 +4871,7 @@
     "description": "Translation for integrations.woocommerce.config.step1"
   },
   "integrations.woocommerce.config.step2": {
-    "message": "Nesta área é possível visualizar o módulo de pagamentos da PayPay (Multibanco, Cartão de Crédito/Débito e MB WAY). Ative o plugin da PayPay.",
+    "message": "Nesta área é possível visualizar o módulo de pagamentos da PayPay (MULTIBANCO, Cartão de Crédito/Débito e MB WAY). Ative o plugin da PayPay.",
     "description": "Translation for integrations.woocommerce.config.step2"
   },
   "integrations.woocommerce.config.step3": {
@@ -4919,7 +4919,7 @@
     "description": "Translation for integrations.woocommerce.config.storeFront"
   },
   "integrations.woocommerce.config.infoMessage": {
-    "message": "A sua loja agora está apta para gerar e fornecer os dados de pagamento aos seus clientes, em tempo real, de acordo com o método de pagamento escolhido (Multibanco, Cartão de Crédito/Débito e MB WAY).",
+    "message": "A sua loja agora está apta para gerar e fornecer os dados de pagamento aos seus clientes, em tempo real, de acordo com o método de pagamento escolhido (MULTIBANCO, Cartão de Crédito/Débito e MB WAY).",
     "description": "Translation for integrations.woocommerce.config.infoMessage"
   },
   "integrations.woocommerce.config.infoMessage2": {
@@ -4963,7 +4963,7 @@
     "description": "Translation for integrations.woocommerce.payment.checkout"
   },
   "integrations.woocommerce.payment.selectPayment": {
-    "message": "Após o preenchimento dos dados de entrega, deverá selecionar o tipo de pagamento (Multibanco, Cartão de Crédito/Débito ou MB WAY).",
+    "message": "Após o preenchimento dos dados de entrega, deverá selecionar o tipo de pagamento (MULTIBANCO, Cartão de Crédito/Débito ou MB WAY).",
     "description": "Translation for integrations.woocommerce.payment.selectPayment"
   },
   "integrations.woocommerce.payment.paymentSettings": {
@@ -4971,7 +4971,7 @@
     "description": "Translation for integrations.woocommerce.payment.paymentSettings"
   },
   "integrations.woocommerce.payment.multibanco": {
-    "message": "Ao selecionar a opção 'Multibanco', é gerada a referência para pagamento do valor exato da encomenda. Nesta área poderá consultar o resumo da sua compra.",
+    "message": "Ao selecionar a opção 'MULTIBANCO', é gerada a referência para pagamento do valor exato da encomenda. Nesta área poderá consultar o resumo da sua compra.",
     "description": "Translation for integrations.woocommerce.payment.multibanco"
   },
   "integrations.woocommerce.payment.orderHistory": {
@@ -5579,7 +5579,7 @@
     "description": "Translation for soap.payments.createPaymentReference.responseAmount"
   },
   "soap.payments.createPaymentReference.atmEntity": {
-    "message": "Entidade multibanco",
+    "message": "Entidade MULTIBANCO",
     "description": "Translation for soap.payments.createPaymentReference.atmEntity"
   },
   "soap.payments.createPaymentReference.reference": {
@@ -5643,7 +5643,7 @@
     "description": "Translation for soap.payments.createPaymentReference.creditCardPayment"
   },
   "soap.payments.createPaymentReference.atmPayment": {
-    "message": "Indica se é possível o pagamento via multibanco",
+    "message": "Indica se é possível o pagamento via MULTIBANCO",
     "description": "Translation for soap.payments.createPaymentReference.atmPayment"
   },
   "soap.payments.createPaymentReference.mbwPayment": {
@@ -5995,7 +5995,7 @@
     "description": "Translation for soap.payments.index.intro"
   },
   "soap.payments.index.scenario1": {
-    "message": "Geração de referências Multibanco com validade (Ex: para incluir em documentos, páginas WEB ou email);",
+    "message": "Geração de referências MULTIBANCO com validade (Ex: para incluir em documentos, páginas WEB ou email);",
     "description": "Translation for soap.payments.index.scenario1"
   },
   "soap.payments.index.scenario2": {
@@ -6299,7 +6299,7 @@
     "description": "Translation for soap.payments.getEntityPayments.paymentId"
   },
   "soap.payments.getEntityPayments.referenceEntity": {
-    "message": "Entidade multibanco (5 dígitos)",
+    "message": "Entidade MULTIBANCO (5 dígitos)",
     "description": "Translation for soap.payments.getEntityPayments.referenceEntity"
   },
   "soap.payments.getEntityPayments.reference": {
@@ -6399,7 +6399,7 @@
     "description": "Translation for soap.payments.saveEntityPayments.intro"
   },
   "soap.payments.saveEntityPayments.description": {
-    "message": "Este método permite enviar referências multibanco emitidas localmente por uma aplicação com gama de referências configurada.",
+    "message": "Este método permite enviar referências MULTIBANCO emitidas localmente por uma aplicação com gama de referências configurada.",
     "description": "Translation for soap.payments.saveEntityPayments.description"
   },
   "soap.payments.saveEntityPayments.requestParams": {
@@ -6447,7 +6447,7 @@
     "description": "Translation for soap.payments.saveEntityPayments.paymentReferences"
   },
   "soap.payments.saveEntityPayments.referenceEntity": {
-    "message": "Entidade multibanco (5 dígitos)",
+    "message": "Entidade MULTIBANCO (5 dígitos)",
     "description": "Translation for soap.payments.saveEntityPayments.referenceEntity"
   },
   "soap.payments.saveEntityPayments.reference": {
@@ -6791,7 +6791,7 @@
     "description": "Translation for soap.webhooks.postParameters.paymentId"
   },
   "soap.webhooks.postParameters.referenceEntity": {
-    "message": "Entidade multibanco (5 dígitos)",
+    "message": "Entidade MULTIBANCO (5 dígitos)",
     "description": "Translation for soap.webhooks.postParameters.referenceEntity"
   },
   "soap.webhooks.postParameters.reference": {
