@@ -867,7 +867,7 @@
     "description": "Translation for embed.idReplacement"
   },
   "embed.idReplacement2": {
-    "message": "deve ser substituído pelo id retornado na resposta do pedido,no exemplo anterior seria o 0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb.",
+    "message": "deve ser substituído pelo checkoutUrl retornado na resposta do pedido.",
     "description": "Translation for embed.idReplacement2"
   },
   "layouts.title": {

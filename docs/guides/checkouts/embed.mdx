@@ -124,10 +124,10 @@ POST /checkouts
 </Tabs>
 
 <p><Translate id="embed.htmlInstructions">Para criar o formulário de pagamento basta adicionar as seguintes linhas HTML/JavaScript à sua página.</Translate>
-<Translate id="embed.idReplacement">O</Translate> <code>{'{id}'}</code> <Translate id="embed.idReplacement2">deve ser substituído pelo id retornado na resposta do pedido,no exemplo anterior seria o 0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb.</Translate></p>
+<Translate id="embed.idReplacement">O</Translate> <code>src</code> <Translate id="embed.idReplacement2">deve ser substituído pelo valor do checkoutUrl retornado na resposta do pedido.</Translate></p>
 
 ```html
 <form class="paymentWidgets"></form>
 
-<script src="https://paypay.pt/paypay/checkout/v2/embed/{id}?page_layout=embed"></script>
+<script src="checkoutUrl"></script>
 ```

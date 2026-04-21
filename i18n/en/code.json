@@ -875,7 +875,7 @@
     "description": "Translation for embed.idReplacement"
   },
   "embed.idReplacement2": {
-    "message": "must be replaced with the id returned in the request response; in the previous example it would be 0uJQvNoxoloZCn4gyuGKIWR8dtU9OnAm0emxYWcb.",
+    "message": "must be replaced with the checkoutUrl returned in the request response.",
     "description": "Translation for embed.idReplacement2"
   },
   "layouts.title": {
