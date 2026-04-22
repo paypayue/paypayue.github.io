@@ -1,0 +1,61 @@
+---
+sidebar_position: 3
+title: Suscribirse a un evento
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# <Translate id="webhooks.subscribe.title">Subscrever um evento</Translate>
+
+<p><Translate id="webhooks.subscribe.intro">Para subscrever a um evento, é necessário indicar o tipo de ação que pretende monitorizar e o URL para onde as notificações serão enviadas. Consulte a página de</Translate> <a href="./event-types"><Translate id="webhooks.subscribe.eventTypesLink">tipos de eventos disponíveis</Translate></a> <Translate id="webhooks.subscribe.intro2">para obter a lista completa de ações suportadas.</Translate></p>
+
+<button className="btn-api btn-api--float-right"
+  onClick={() =>
+    ClickShowIframe({
+      idMenuOption: "webhooks",
+      idOption: "webhooks/post/webhooks"
+    })
+  }
+>
+  <span><Translate id="webhooks.subscribe.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+<Tabs>
+<TabItem value="pedido" label={<Translate id="webhooks.subscribe.tabs.request">Pedido</Translate>}>
+
+```
+POST /webhooks
+```
+
+```json
+{
+  "action": "payment_confirmed",
+  "url": "https://example.com/webhook"
+}
+```
+
+</TabItem>
+<TabItem value="resposta" label={<Translate id="webhooks.subscribe.tabs.response">Resposta</Translate>}>
+
+```json
+{
+  "date": "2024-01-15T10:00:00+00:00",
+  "success": true,
+  "data": {
+    "id": "1",
+    "action": "payment_confirmed",
+    "url": "https://example.com/webhook",
+    "createdAt": "2024-01-15T10:00:00+00:00"
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+<p><Translate id="webhooks.subscribe.success">Quando a subscrição é criada com sucesso é retornado um identificador único (id) que permite gerir o webhook posteriormente.</Translate></p>

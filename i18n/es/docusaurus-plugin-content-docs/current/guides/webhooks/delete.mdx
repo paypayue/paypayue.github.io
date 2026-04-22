@@ -1,0 +1,46 @@
+---
+sidebar_position: 6
+title: Eliminar evento suscrito
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# <Translate id="webhooks.delete.title">Eliminar evento subscrito</Translate>
+
+<p><Translate id="webhooks.delete.intro">Para cancelar a subscrição de um evento, utilize o seu identificador (id). Após a eliminação, o webhook deixará de receber notificações para a ação configurada.</Translate></p>
+
+<button className="btn-api btn-api--float-right"
+  onClick={() =>
+    ClickShowIframe({
+      idMenuOption: "webhooks",
+      idOption: "webhooks/delete/webhooks/{id}"
+    })
+  }
+>
+  <span><Translate id="webhooks.delete.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+<Tabs>
+<TabItem value="pedido" label={<Translate id="webhooks.delete.tabs.request">Pedido</Translate>}>
+
+```
+DELETE /webhooks/{id}
+```
+
+</TabItem>
+<TabItem value="resposta" label={<Translate id="webhooks.delete.tabs.response">Resposta</Translate>}>
+
+```json
+{
+  "date": "2024-01-15T12:00:00+00:00",
+  "success": true
+}
+```
+
+</TabItem>
+</Tabs>

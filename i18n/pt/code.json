@@ -2327,7 +2327,7 @@
     "description": "Translation for guides.sdks.tool.part2"
   },
   "guides.sdks.cautionDescription": {
-    "message": "A PayPay não mantém a ferramenta de geração de código nem fornece suporte técnico ao código gerado.",
+    "message": "Esta ferramenta ajuda-o a configurar a base do seu SDK, mas pode não criar uma solução completa e pronta a utilizar.",
     "description": "Translation for guides.sdks.cautionDescription"
   },
   "guides.sdks.availableOperations": {
@@ -4407,7 +4407,7 @@
     "description": "Translation for webhooks.index.consultApi"
   },
   "webhooks.requestAuth.title": {
-    "message": "Autenticação dos pedidos",
+    "message": "Autenticação das notificações",
     "description": "Translation for webhooks.requestAuth.title"
   },
   "webhooks.requestAuth.intro": {
@@ -4469,6 +4469,114 @@
   "webhooks.responseStatus.retryDescription": {
     "message": "Após a primeira tentativa falhada, a próxima tentativa será realizada após 1 minuto, depois 2, 3, 5 até aos 24 minutos.",
     "description": "Translation for webhooks.responseStatus.retryDescription"
+  },
+  "webhooks.list.title": {
+    "message": "Listar eventos subscritos",
+    "description": "Translation for webhooks.list.title"
+  },
+  "webhooks.list.intro": {
+    "message": "A listagem dos eventos subscritos pode ser efetuada através da seguinte chamada à API:",
+    "description": "Translation for webhooks.list.intro"
+  },
+  "webhooks.list.consultApi": {
+    "message": "Consultar API",
+    "description": "Translation for webhooks.list.consultApi"
+  },
+  "webhooks.list.tabs.request": {
+    "message": "Pedido",
+    "description": "Translation for webhooks.list.tabs.request"
+  },
+  "webhooks.list.tabs.response": {
+    "message": "Resposta",
+    "description": "Translation for webhooks.list.tabs.response"
+  },
+  "webhooks.list.getById.intro": {
+    "message": "Também é possível obter um webhook específico pelo seu identificador:",
+    "description": "Translation for webhooks.list.getById.intro"
+  },
+  "webhooks.list.getById.consultApi": {
+    "message": "Consultar API",
+    "description": "Translation for webhooks.list.getById.consultApi"
+  },
+  "webhooks.list.getById.tabs.request": {
+    "message": "Pedido",
+    "description": "Translation for webhooks.list.getById.tabs.request"
+  },
+  "webhooks.list.getById.tabs.response": {
+    "message": "Resposta",
+    "description": "Translation for webhooks.list.getById.tabs.response"
+  },
+  "webhooks.subscribe.title": {
+    "message": "Subscrever um evento",
+    "description": "Translation for webhooks.subscribe.title"
+  },
+  "webhooks.subscribe.intro": {
+    "message": "Para subscrever a um evento, é necessário indicar o tipo de ação que pretende monitorizar e o URL para onde as notificações serão enviadas. Consulte a página de",
+    "description": "Translation for webhooks.subscribe.intro"
+  },
+  "webhooks.subscribe.eventTypesLink": {
+    "message": "tipos de eventos disponíveis",
+    "description": "Translation for webhooks.subscribe.eventTypesLink"
+  },
+  "webhooks.subscribe.intro2": {
+    "message": "para obter a lista completa de ações suportadas.",
+    "description": "Translation for webhooks.subscribe.intro2"
+  },
+  "webhooks.subscribe.consultApi": {
+    "message": "Consultar API",
+    "description": "Translation for webhooks.subscribe.consultApi"
+  },
+  "webhooks.subscribe.tabs.request": {
+    "message": "Pedido",
+    "description": "Translation for webhooks.subscribe.tabs.request"
+  },
+  "webhooks.subscribe.tabs.response": {
+    "message": "Resposta",
+    "description": "Translation for webhooks.subscribe.tabs.response"
+  },
+  "webhooks.subscribe.success": {
+    "message": "Quando a subscrição é criada com sucesso é retornado um identificador único (id) que permite gerir o webhook posteriormente.",
+    "description": "Translation for webhooks.subscribe.success"
+  },
+  "webhooks.update.title": {
+    "message": "Atualizar evento subscrito",
+    "description": "Translation for webhooks.update.title"
+  },
+  "webhooks.update.intro": {
+    "message": "É possível atualizar o URL e o tipo de ação (action) de um evento já subscrito através do seu identificador (id).",
+    "description": "Translation for webhooks.update.intro"
+  },
+  "webhooks.update.consultApi": {
+    "message": "Consultar API",
+    "description": "Translation for webhooks.update.consultApi"
+  },
+  "webhooks.update.tabs.request": {
+    "message": "Pedido",
+    "description": "Translation for webhooks.update.tabs.request"
+  },
+  "webhooks.update.tabs.response": {
+    "message": "Resposta",
+    "description": "Translation for webhooks.update.tabs.response"
+  },
+  "webhooks.delete.title": {
+    "message": "Eliminar evento subscrito",
+    "description": "Translation for webhooks.delete.title"
+  },
+  "webhooks.delete.intro": {
+    "message": "Para cancelar a subscrição de um evento, utilize o seu identificador (id). Após a eliminação, o webhook deixará de receber notificações para a ação configurada.",
+    "description": "Translation for webhooks.delete.intro"
+  },
+  "webhooks.delete.consultApi": {
+    "message": "Consultar API",
+    "description": "Translation for webhooks.delete.consultApi"
+  },
+  "webhooks.delete.tabs.request": {
+    "message": "Pedido",
+    "description": "Translation for webhooks.delete.tabs.request"
+  },
+  "webhooks.delete.tabs.response": {
+    "message": "Resposta",
+    "description": "Translation for webhooks.delete.tabs.response"
   },
   "integrations.intro.title": {
     "message": "Integrações",

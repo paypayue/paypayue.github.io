@@ -1,0 +1,102 @@
+---
+sidebar_position: 4
+title: List subscribed events
+description: ''
+hide_table_of_contents: true
+---
+
+import Translate from '@docusaurus/Translate';
+import ClickShowIframe from "@site/src/utils/ClickShowIframe";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# <Translate id="webhooks.list.title">Listar eventos subscritos</Translate>
+
+<p><Translate id="webhooks.list.intro">A listagem dos eventos subscritos pode ser efetuada através da seguinte chamada à API:</Translate></p>
+
+<button className="btn-api btn-api--float-right"
+  onClick={() =>
+    ClickShowIframe({
+      idMenuOption: "webhooks",
+      idOption: "webhooks/get/webhooks"
+    })
+  }
+>
+  <span><Translate id="webhooks.list.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+<Tabs>
+<TabItem value="pedido" label={<Translate id="webhooks.list.tabs.request">Pedido</Translate>}>
+
+```
+GET /webhooks
+```
+
+</TabItem>
+<TabItem value="resposta" label={<Translate id="webhooks.list.tabs.response">Resposta</Translate>}>
+
+```json
+{
+  "date": "2024-01-15T10:00:00+00:00",
+  "success": true,
+  "data": [
+    {
+      "id": "1",
+      "action": "payment_confirmed",
+      "url": "https://example.com/webhook",
+      "createdAt": "2024-01-15T09:00:00+00:00"
+    },
+    {
+      "id": "2",
+      "action": "payment_expired",
+      "url": "https://example.com/webhook",
+      "createdAt": "2024-01-15T09:05:00+00:00"
+    }
+  ]
+}
+```
+
+</TabItem>
+</Tabs>
+
+---
+
+<p><Translate id="webhooks.list.getById.intro">Também é possível obter um webhook específico pelo seu identificador:</Translate></p>
+
+<button className="btn-api btn-api--float-right"
+  onClick={() =>
+    ClickShowIframe({
+      idMenuOption: "webhooks",
+      idOption: "webhooks/get/webhooks/{id}"
+    })
+  }
+>
+  <span><Translate id="webhooks.list.getById.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
+</button>
+
+<Tabs>
+<TabItem value="pedido-id" label={<Translate id="webhooks.list.getById.tabs.request">Pedido</Translate>}>
+
+```
+GET /webhooks/{id}
+```
+
+</TabItem>
+<TabItem value="resposta-id" label={<Translate id="webhooks.list.getById.tabs.response">Resposta</Translate>}>
+
+```json
+{
+  "date": "2024-01-15T10:00:00+00:00",
+  "success": true,
+  "data": {
+    "id": "1",
+    "action": "payment_confirmed",
+    "url": "https://example.com/webhook",
+    "createdAt": "2024-01-15T09:00:00+00:00"
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
