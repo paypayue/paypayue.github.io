@@ -2570,10 +2570,6 @@
     "message": "pela apresentação do cartão.",
     "description": "Translation for terminals.cloud.sendPayment.waitTimeDescription2"
   },
-  "terminals.cloud.sendPayment.step4": {
-    "message": "API PayPay devolve a resposta do sucesso ou não do pedido assíncrono, enquanto o terminal aguarda pela apresentação do cartão.",
-    "description": "Translation for terminals.cloud.sendPayment.step4"
-  },
   "terminals.cloud.sendPayment.apiResponse": {
     "message": "Resposta da API",
     "description": "Translation for terminals.cloud.sendPayment.apiResponse"

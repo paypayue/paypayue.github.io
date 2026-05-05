@@ -2578,10 +2578,6 @@
     "message": "for the card to be presented.",
     "description": "Translation for terminals.cloud.sendPayment.waitTimeDescription2"
   },
-  "terminals.cloud.sendPayment.step4": {
-    "message": "The PayPay API returns the success or failure response of the asynchronous request, while the terminal waits for the card to be presented.",
-    "description": "Translation for terminals.cloud.sendPayment.step4"
-  },
   "terminals.cloud.sendPayment.apiResponse": {
     "message": "API Response",
     "description": "Translation for terminals.cloud.sendPayment.apiResponse"
