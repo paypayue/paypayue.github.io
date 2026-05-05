@@ -61,8 +61,6 @@ POST /terminals/{uuid}/payments
 <Translate id="terminals.cloud.sendPayment.waitTimeDescription">O terminal aguarda</Translate> <strong> <Translate id="terminals.cloud.sendPayment.oneMinute">1 minuto</Translate> </strong> <Translate id="terminals.cloud.sendPayment.waitTimeDescription2">pela apresentação do cartão.</Translate>
 :::
 
-4. <Translate id="terminals.cloud.sendPayment.step4">API PayPay devolve a resposta do sucesso ou não do pedido assíncrono, enquanto o terminal aguarda pela apresentação do cartão.</Translate>
-
 ##### <Translate id="terminals.cloud.sendPayment.apiResponse">Resposta da API</Translate>
 
 ```json
@@ -75,13 +73,19 @@ POST /terminals/{uuid}/payments
       "type": "payment",
       "amount": 100,
       "stateDetails": {
-          "state": "pending_confirmation",
+          "state": "authorised",
           "createdAt": "2025-09-01T13:06:22+01:00"
       },
       "paymentMethod": {
-          "code": "CC",
-          "type": "TPA"
-      },
+            "code": "CC",
+            "type": "TPA",
+            "details": {
+                "transactionIdentifier": "151c0d70-db07-491d-b366-6f76e21c0c34",
+                "transactionReference": "051022001423",
+                "brand": "VISA",
+                "last4Digits": "1234"
+            }
+        },
       "code": "order-code",
       "summary": "product-description",
       "availableMethods": [
