@@ -1602,9 +1602,9 @@
     "message": "La lista de métodos de pago se puede realizar utilizando los siguientes filtros:",
     "description": "Translation for customers.getPaymentMethods.intro"
   },
-  "customers.getPaymentMethods.filter.type": {
-    "message": "Tipo",
-    "description": "Translation for customers.getPaymentMethods.filter.type"
+  "customers.getPaymentMethods.filter.code": {
+    "message": "Código",
+    "description": "Translation for customers.getPaymentMethods.filter.code"
   },
   "customers.getPaymentMethods.example1": {
     "message": "Obtener los métodos de pago almacenados por el cliente con el",
