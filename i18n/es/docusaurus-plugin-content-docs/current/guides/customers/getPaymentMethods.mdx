@@ -12,10 +12,6 @@ import TabItem from "@theme/TabItem";
 
 # <Translate id="customers.getPaymentMethods.title">Listar métodos de pagamento</Translate>
 
-<p><Translate id="customers.getPaymentMethods.intro">A listagem do métodos de pagamentos pode ser efetuada utilizando os seguintes filtros:</Translate></p>
-
-- **<Translate id="customers.getPaymentMethods.filter.type">Tipo</Translate>** (<code>type</code>)
-
 **1.** <Translate id="customers.getPaymentMethods.example1">Obter os métodos de pagamento armazenados pelo cliente com o</Translate> <em>uuid</em> e2343605-cf46-43de-b20b-9b7d1c95a9b2
 
 <button className="btn-api btn-api--float-right"
@@ -33,7 +29,7 @@ import TabItem from "@theme/TabItem";
 <TabItem value="pedido" label={<Translate id="customers.getPaymentMethods.tabs.request">Pedido</Translate>}>
 
 ```php
-GET /customers{uuid}/paymentMethods
+GET /customers/{uuid}/paymentMethods
 ```
 
 </TabItem>
@@ -66,13 +62,17 @@ GET /customers{uuid}/paymentMethods
 </TabItem>
 </Tabs>
 
-**2.** <Translate id="customers.getPaymentMethods.example2">Obter os métodos de pagamento através do cartão de crédito/débito guardados pelo cliente com o</Translate> <em>uuid</em> e2343605-cf46-43de-b20b-9b7d1c95a9b2
+<p><Translate id="customers.getPaymentMethods.intro">A listagem do métodos de pagamentos pode ser efetuada utilizando os seguintes filtros:</Translate></p>
+
+- **<Translate id="customers.getPaymentMethods.filter.code">Código</Translate>** (<code>code</code>)
+
+**2.** <Translate id="customers.getPaymentMethods.example2">Obter as tokenizações MB WAY guardados de determinado cliente com o</Translate> <em>uuid</em> e2343605-cf46-43de-b20b-9b7d1c95a9b2
 
 <Tabs>
 <TabItem value="pedido" label={<Translate id="customers.getPaymentMethods.tabs2.request">Pedido</Translate>}>
 
 ```php
-GET /customers/e2343605-cf46-43de-b20b-9b7d1c95a9b2/paymentMethods?type=CC
+GET /customers/e2343605-cf46-43de-b20b-9b7d1c95a9b2/paymentMethods?code=MW
 ```
 
 </TabItem>
@@ -84,13 +84,11 @@ GET /customers/e2343605-cf46-43de-b20b-9b7d1c95a9b2/paymentMethods?type=CC
   "success": true,
   "data": [
     {
-      "code": "CC",
+      "code": "MW",
       "uuid": "90068f83-7623-4de5-91c7-ac447c504ebf",
-      "brand": "VISA",
-      "last4Digits": "0809",
-      "holder": "Jose Silva",
-      "expiryMonth": "05",
-      "expiryYear": "2026"
+      "brand": "MBWAY",
+      "countryCode": "351",
+      "last3Digits": "232"
     }
   ]
 }

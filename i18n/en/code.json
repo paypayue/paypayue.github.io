@@ -1602,9 +1602,9 @@
     "message": "The list of payment methods can be filtered using the following criteria:",
     "description": "Translation for customers.getPaymentMethods.intro"
   },
-  "customers.getPaymentMethods.filter.type": {
-    "message": "Type",
-    "description": "Translation for customers.getPaymentMethods.filter.type"
+  "customers.getPaymentMethods.filter.code": {
+    "message": "Code",
+    "description": "Translation for customers.getPaymentMethods.filter.code"
   },
   "customers.getPaymentMethods.example1": {
     "message": "Retrieve the payment methods stored by the customer with",
