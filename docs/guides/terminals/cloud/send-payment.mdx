@@ -8,11 +8,11 @@ hide_table_of_contents: true
 import Translate from '@docusaurus/Translate';
 import ClickShowIframe from "@site/src/utils/ClickShowIframe";
 
-## <Translate id="terminals.cloud.sendPayment.flow">Fluxo de Pagamento</Translate>
+## <Translate id="terminals.cloud.sendPayment.flow">Fluxo de Pagamento</Translate> {#translate-idterminalscloudsendpaymentflowfluxo-de-pagamentotranslate}
 
 <Translate id="terminals.cloud.sendPayment.flowDescription">O processo de pagamento com o terminal cloud envolve comunicação entre o seu sistema e o terminal:</Translate>
 
-### <Translate id="terminals.cloud.sendPayment.section1">1. Iniciação do Pagamento (via API)</Translate>
+### <Translate id="terminals.cloud.sendPayment.section1">1. Iniciação do Pagamento (via API)</Translate> {#translate-idterminalscloudsendpaymentsection11-iniciação-do-pagamento-via-apitranslate}
 
 <button className="btn-api btn-api--float-right"
 	onClick={() =>
@@ -29,13 +29,13 @@ import ClickShowIframe from "@site/src/utils/ClickShowIframe";
 
 1. <Translate id="terminals.cloud.sendPayment.step1">O sistema envia o pedido para API PayPay:</Translate>
 
-##### <Translate id="terminals.cloud.sendPayment.endpoint">Endpoint</Translate>
+##### <Translate id="terminals.cloud.sendPayment.endpoint">Endpoint</Translate> {#translate-idterminalscloudsendpaymentendpointendpointtranslate}
 
 ```php
 POST /terminals/{uuid}/payments
 ```
 
-##### <Translate id="terminals.cloud.sendPayment.basicExample">Exemplo básico</Translate>
+##### <Translate id="terminals.cloud.sendPayment.basicExample">Exemplo básico</Translate> {#translate-idterminalscloudsendpaymentbasicexampleexemplo-básicotranslate}
 ```json
 {
   "amount": 100,
@@ -44,7 +44,7 @@ POST /terminals/{uuid}/payments
 }
 ```
 
-##### <Translate id="terminals.cloud.sendPayment.parameters">Parâmetros</Translate>
+##### <Translate id="terminals.cloud.sendPayment.parameters">Parâmetros</Translate> {#translate-idterminalscloudsendpaymentparametersparâmetrostranslate}
 
 | <Translate id="terminals.cloud.sendPayment.table.parameter">Parâmetro</Translate> | <Translate id="terminals.cloud.sendPayment.table.type">Tipo</Translate> | <Translate id="terminals.cloud.sendPayment.table.required">Obrigatório</Translate> | <Translate id="terminals.cloud.sendPayment.table.description">Descrição</Translate> |
 |-----------|------|-------------|-----------|
@@ -61,7 +61,7 @@ POST /terminals/{uuid}/payments
 <Translate id="terminals.cloud.sendPayment.waitTimeDescription">O terminal aguarda</Translate> <strong> <Translate id="terminals.cloud.sendPayment.oneMinute">1 minuto</Translate> </strong> <Translate id="terminals.cloud.sendPayment.waitTimeDescription2">pela apresentação do cartão.</Translate>
 :::
 
-##### <Translate id="terminals.cloud.sendPayment.apiResponse">Resposta da API</Translate>
+##### <Translate id="terminals.cloud.sendPayment.apiResponse">Resposta da API</Translate> {#translate-idterminalscloudsendpaymentapiresponseresposta-da-apitranslate}
 
 ```json
 {
@@ -106,7 +106,7 @@ POST /terminals/{uuid}/payments
 }
 ```
 
-## <Translate id="terminals.cloud.sendPayment.responseStructure">Estrutura da Resposta</Translate>
+## <Translate id="terminals.cloud.sendPayment.responseStructure">Estrutura da Resposta</Translate> {#translate-idterminalscloudsendpaymentresponsestructureestrutura-da-respostatranslate}
 
 | <Translate id="terminals.cloud.sendPayment.responseTable.field">Campo</Translate> | <Translate id="terminals.cloud.sendPayment.responseTable.type">Tipo</Translate> | <Translate id="terminals.cloud.sendPayment.responseTable.description">Descrição</Translate> |
 |-------|------|-----------|

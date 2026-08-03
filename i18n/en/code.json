@@ -4646,6 +4646,10 @@
     "message": "Integrated store checkout.",
     "description": "Translation for integrations.prestashop.features.integratedCheckout"
   },
+  "integrations.prestashop.features.compatibleOnePageCheckout": {
+    "message": "Compatible One Page Checkout.",
+    "description": "Translation for integrations.prestashop.features.compatibleOnePageCheckout"
+  },
   "integrations.prestashop.features.realTimeStatus": {
     "message": "Real-time payment status communication.",
     "description": "Translation for integrations.prestashop.features.realTimeStatus"

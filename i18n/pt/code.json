@@ -4638,6 +4638,10 @@
     "message": "Checkout de pagamento integrado na loja.",
     "description": "Translation for integrations.prestashop.features.integratedCheckout"
   },
+  "integrations.prestashop.features.compatibleOnePageCheckout": {
+    "message": "Compatibilidade com One Page Checkout.",
+    "description": "Translation for integrations.prestashop.features.compatibleOnePageCheckout"
+  },
   "integrations.prestashop.features.realTimeStatus": {
     "message": "Comunicação do estado do pagamento em tempo real.",
     "description": "Translation for integrations.prestashop.features.realTimeStatus"

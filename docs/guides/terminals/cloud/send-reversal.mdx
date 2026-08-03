@@ -17,7 +17,7 @@ import ClickShowIframe from "@site/src/utils/ClickShowIframe";
 GET /payments/{id}
 ```
 
-## <Translate id="terminals.cloud.sendReversal.whatIsReversal">O que é uma Reversão?</Translate>
+## <Translate id="terminals.cloud.sendReversal.whatIsReversal">O que é uma Reversão?</Translate> {#translate-idterminalscloudsendreversalwhatisreversalo-que-é-uma-reversãotranslate}
 
 <p><Translate id="terminals.cloud.sendReversal.whatIsReversalDescription">Uma reversão (reversal) cancela uma transação que ainda não foi liquidada (settled). Ao contrário de uma devolução, a reversão impede que os fundos sejam transferidos, cancelando a autorização antes do settlement.</Translate></p>
 
@@ -36,19 +36,19 @@ GET /payments/{id}
 	<span><Translate id="terminals.cloud.sendReversal.consultApi">Consultar API</Translate> &nbsp;&nbsp;&nbsp;{'>'}</span>
 </button>
 
-### <Translate id="terminals.cloud.sendReversal.section1">1. Iniciação da Reversão (via API)</Translate>
+### <Translate id="terminals.cloud.sendReversal.section1">1. Iniciação da Reversão (via API)</Translate> {#translate-idterminalscloudsendreversalsection11-iniciação-da-reversão-via-apitranslate}
 
 <p><Translate id="terminals.cloud.sendReversal.section1Description">O seu sistema inicia a reversão remotamente através da API PayPay:</Translate></p>
 
 1. <Translate id="terminals.cloud.sendReversal.step1">O sistema envia o pedido para API PayPay:</Translate>
 
-##### <Translate id="terminals.cloud.sendReversal.endpoint">Endpoint</Translate>
+##### <Translate id="terminals.cloud.sendReversal.endpoint">Endpoint</Translate> {#translate-idterminalscloudsendreversalendpointendpointtranslate}
 
 ```php
 PATCH /terminals/{uuid}/reversals/{paymentId}
 ```
 
-##### <Translate id="terminals.cloud.sendReversal.basicExample">Exemplo básico</Translate>
+##### <Translate id="terminals.cloud.sendReversal.basicExample">Exemplo básico</Translate> {#translate-idterminalscloudsendreversalbasicexampleexemplo-básicotranslate}
 ```json
 {
   "remarks": {
@@ -57,7 +57,7 @@ PATCH /terminals/{uuid}/reversals/{paymentId}
 }
 ```
 
-##### <Translate id="terminals.cloud.sendReversal.parameters">Parâmetros</Translate>
+##### <Translate id="terminals.cloud.sendReversal.parameters">Parâmetros</Translate> {#translate-idterminalscloudsendreversalparametersparâmetrostranslate}
 
 | <Translate id="terminals.cloud.sendReversal.table.parameter">Parâmetro</Translate> | <Translate id="terminals.cloud.sendReversal.table.type">Tipo</Translate> | <Translate id="terminals.cloud.sendReversal.table.required">Obrigatório</Translate> | <Translate id="terminals.cloud.sendReversal.table.description">Descrição</Translate> |
 |-----------|------|-------------|-----------|
@@ -69,7 +69,7 @@ PATCH /terminals/{uuid}/reversals/{paymentId}
 2. <Translate id="terminals.cloud.sendReversal.step2">API PayPay comunica com a rede de pagamentos e processa a reversão de forma</Translate> <strong><Translate id="terminals.cloud.sendReversal.sync">síncrona</Translate></strong>;
 3. <Translate id="terminals.cloud.sendReversal.step3">API PayPay devolve a resposta com o resultado da reversão.</Translate>
 
-##### <Translate id="terminals.cloud.sendReversal.apiResponse">Resposta da API</Translate>
+##### <Translate id="terminals.cloud.sendReversal.apiResponse">Resposta da API</Translate> {#translate-idterminalscloudsendreversalapiresponseresposta-da-apitranslate}
 
 ```json
 {
@@ -104,7 +104,7 @@ PATCH /terminals/{uuid}/reversals/{paymentId}
 }
 ```
 
-## <Translate id="terminals.cloud.sendReversal.responseStructure">Estrutura da Resposta</Translate>
+## <Translate id="terminals.cloud.sendReversal.responseStructure">Estrutura da Resposta</Translate> {#translate-idterminalscloudsendreversalresponsestructureestrutura-da-respostatranslate}
 
 | <Translate id="terminals.cloud.sendReversal.responseTable.field">Campo</Translate> | <Translate id="terminals.cloud.sendReversal.responseTable.type">Tipo</Translate> | <Translate id="terminals.cloud.sendReversal.responseTable.description">Descrição</Translate> |
 |-------|------|-----------|
@@ -122,7 +122,7 @@ PATCH /terminals/{uuid}/reversals/{paymentId}
 | <code>createdAt</code> | datetime | <Translate id="terminals.cloud.sendReversal.field.createdAt">Data de criação do registo</Translate> |
 | <code>updatedAt</code> | datetime | <Translate id="terminals.cloud.sendReversal.field.updatedAt">Data da última atualização</Translate> |
 
-## <Translate id="terminals.cloud.sendReversal.processing">Processamento da Reversão</Translate>
+## <Translate id="terminals.cloud.sendReversal.processing">Processamento da Reversão</Translate> {#translate-idterminalscloudsendreversalprocessingprocessamento-da-reversãotranslate}
 
 <Translate id="terminals.cloud.sendReversal.processingDescription">Após o pedido de reversão ser enviado pela API, o processo segue estes passos:</Translate>
 
@@ -137,14 +137,14 @@ PATCH /terminals/{uuid}/reversals/{paymentId}
 <Translate id="terminals.cloud.sendReversal.noCardRequired">A reversão não requer a apresentação do cartão, uma vez que é um cancelamento da autorização original.</Translate>
 :::
 
-### <Translate id="terminals.cloud.sendReversal.section3">3. Notificação ao Sistema</Translate>
+### <Translate id="terminals.cloud.sendReversal.section3">3. Notificação ao Sistema</Translate> {#translate-idterminalscloudsendreversalsection33-notificação-ao-sistematranslate}
 
 <Translate id="terminals.cloud.sendReversal.section3Description">Após a confirmação, o seu sistema é notificado:</Translate>
 
 1. <Translate id="terminals.cloud.sendReversal.section3Step1">A Transação é sincronizada com backoffice PayPay em tempo real;</Translate>
 2. <Translate id="terminals.cloud.sendReversal.section3Step2">A PayPay notifica via</Translate> <strong>Webhook</strong> <Translate id="terminals.cloud.sendReversal.section3Step2b">o seu sistema com detalhes da reversão.</Translate>
 
-## <Translate id="terminals.cloud.sendReversal.reversalVsRefund">Reversão vs Devolução</Translate>
+## <Translate id="terminals.cloud.sendReversal.reversalVsRefund">Reversão vs Devolução</Translate> {#translate-idterminalscloudsendreversalreversalvsrefundreversão-vs-devoluçãotranslate}
 
 | <Translate id="terminals.cloud.sendReversal.comparison.aspect"></Translate> | <Translate id="terminals.cloud.sendReversal.comparison.reversal">Reversão</Translate> | <Translate id="terminals.cloud.sendReversal.comparison.refund">Devolução</Translate> |
 |--------|----------|-----------|
