@@ -24,7 +24,7 @@ import TabItem from "@theme/TabItem";
 
 ---
 
-## <Translate id="availableMethods.singleMethod.title">Especificar um único método de pagamento</Translate> {#translate-idavailablemethodssinglemethodtitleespecificar-um-único-método-de-pagamentotranslate}
+## <Translate id="availableMethods.singleMethod.title">Especificar um único método de pagamento</Translate>
 
 <p><Translate id="availableMethods.singleMethod.description">Para direcionar o cliente para um método de pagamento específico, utilize o campo</Translate> <code>paymentMethod.code</code> <Translate id="availableMethods.singleMethod.description2">no corpo do pedido.</Translate></p>
 
@@ -74,7 +74,7 @@ POST /checkouts
 ```
 ---
 
-## <Translate id="availableMethods.multiMethod.title">Especificar múltiplos métodos de pagamento</Translate> {#translate-idavailablemethodsmultimethodtitleespecificar-múltiplos-métodos-de-pagamentotranslate}
+## <Translate id="availableMethods.multiMethod.title">Especificar múltiplos métodos de pagamento</Translate>
 
 <p><Translate id="availableMethods.multiMethod.description">Para disponibilizar ao cliente a escolha do método de pagamento, utilize o campo</Translate> <code>availableMethods</code> <Translate id="availableMethods.multiMethod.description2">com a lista de códigos pretendidos. Desta forma o cliente escolhe o método diretamente na página de pagamento.</Translate></p>
 
@@ -156,14 +156,14 @@ POST /checkouts
 
 ---
 
-## <Translate id="availableMethods.notes.title">Notas por método</Translate> {#translate-idavailablemethodsnotestitlenotas-por-métodotranslate}
+## <Translate id="availableMethods.notes.title">Notas por método</Translate>
 
-### CC — <Translate id="availableMethods.notes.cc.title">Cartão de Crédito/Débito</Translate> {#cc--translate-idavailablemethodsnotescctitlecartão-de-créditodébitotranslate}
+### CC — <Translate id="availableMethods.notes.cc.title">Cartão de Crédito/Débito</Translate>
 
 - <Translate id="availableMethods.notes.cc.layouts">Disponível em todos os layouts:</Translate> `web`, `embed` <Translate id="availableMethods.notes.cc.layouts.and">e</Translate> `inApp`.
 - <Translate id="availableMethods.notes.cc.redirects">Suporta os redirecionamentos</Translate> `success`, `cancel` <Translate id="availableMethods.notes.cc.and">e</Translate> `back`. <Translate id="availableMethods.notes.cc.redirects.embed.redirect">O redirecionamento</Translate> `action` <Translate id="availableMethods.notes.cc.redirects.embed.redirect.accept">é o único aceite no layout</Translate> `embed`.
 
-### MB — <Translate id="availableMethods.notes.mb.title">Multibanco</Translate> {#mb--translate-idavailablemethodsnotesmbtitlemultibancotranslate}
+### MB — <Translate id="availableMethods.notes.mb.title">Multibanco</Translate>
 
 - <Translate id="availableMethods.notes.mb.layouts">Disponível nos layouts:</Translate> `web` <Translate id="availableMethods.notes.cc.layouts.and">e</Translate> `inApp`.
 - <Translate id="availableMethods.notes.mb.noRedirects">Não suporta redirecionamentos — após a criação do checkout é gerada uma referência Multibanco imediatamente acessível via</Translate> `checkoutUrl`.
