@@ -2287,7 +2287,7 @@
     "description": "Translation for sandbox.requirements.mbReference.title"
   },
   "sandbox.requirements.mbReference.part1": {
-    "message": "Si desea incluir las referencias de cajeros automáticos como pagadas, es necesario que nos indique cuáles y nos las envíe por correo electrónico",
+    "message": "Si desea incluir las referencias de cajeros automáticos como pagadas, debe enviar el Header",
     "description": "Translation for sandbox.requirements.mbReference.part1"
   },
   "sandbox.environments.title": {

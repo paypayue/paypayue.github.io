@@ -2279,7 +2279,7 @@
     "description": "Translation for sandbox.requirements.mbReference.title"
   },
   "sandbox.requirements.mbReference.part1": {
-    "message": "Caso seja pretendido colocar como pagas as referências MULTIBANCO é necessário indicar-nos quais e enviar para o email",
+    "message": "Caso seja pretendido colocar como pagas as referências MULTIBANCO é necessário enviar o Header",
     "description": "Translation for sandbox.requirements.mbReference.part1"
   },
   "sandbox.environments.title": {
