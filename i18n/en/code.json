@@ -2287,7 +2287,7 @@
     "description" : "Translation for sandbox.requirements.mbReference.title"
  },
   "sandbox.requirements.mbReference.part1" : {
-    "message" : "If you wish to include ATM references as paid, you must indicate which ones and send them to us via email",
+    "message" : "If you wish to include MULTIBANCO references as payment methods, you must send the Header",
     "description" : "Translation for sandbox.requirements.mbReference.part1"
   },
   "sandbox.environments.title" : {
