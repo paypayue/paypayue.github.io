@@ -6239,8 +6239,20 @@
     "description": "Translation for soap.payments.checkEntityPayments.paymentMode2"
   },
   "soap.payments.checkEntityPayments.paymentMode3": {
-    "message": "MB WAY.",
+    "message": "MB WAY;",
     "description": "Translation for soap.payments.checkEntityPayments.paymentMode3"
+  },
+  "soap.payments.checkEntityPayments.paymentMode4": {
+    "message": "Débito Direto;",
+    "description": "Translation for soap.payments.checkEntityPayments.paymentMode4"
+  },
+  "soap.payments.checkEntityPayments.paymentMode5": {
+    "message": "Google Pay;",
+    "description": "Translation for soap.payments.checkEntityPayments.paymentMode5"
+  },
+  "soap.payments.checkEntityPayments.paymentMode6": {
+    "message": "Apple Pay.",
+    "description": "Translation for soap.payments.checkEntityPayments.paymentMode6"
   },
   "soap.payments.checkEntityPayments.paymentIdResponse": {
     "message": "Id do pagamento",
